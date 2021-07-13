@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Talegen.Storage.Net.Core.Properties {
+namespace Talegen.Storage.Net.AzureBlobs.Properties {
     using System;
     
     
@@ -39,7 +39,7 @@ namespace Talegen.Storage.Net.Core.Properties {
         internal static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
-                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("Talegen.Storage.Net.Core.Properties.Resources", typeof(Resources).Assembly);
+                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("Talegen.Storage.Net.AzureBlobs.Properties.Resources", typeof(Resources).Assembly);
                     resourceMan = temp;
                 }
                 return resourceMan;
@@ -66,6 +66,15 @@ namespace Talegen.Storage.Net.Core.Properties {
         internal static string ExceptionErrorText {
             get {
                 return ResourceManager.GetString("ExceptionErrorText", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The request has failed. The message was &quot;{0}&quot;..
+        /// </summary>
+        internal static string RequestFailedErrorText {
+            get {
+                return ResourceManager.GetString("RequestFailedErrorText", resourceCulture);
             }
         }
         

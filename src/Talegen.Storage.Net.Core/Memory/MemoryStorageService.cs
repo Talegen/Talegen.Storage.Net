@@ -34,16 +34,12 @@ namespace Talegen.Storage.Net.Core.Memory
     public class MemoryStorageService : IStorageService
     {
         /// <summary>
-        /// Contains an exception message to throw.
-        /// </summary>
-        private string exceptionMessage = string.Empty;
-
-        /// <summary>
         /// Initializes a new instance of the <see cref="MemoryStorageService" /> class.
         /// </summary>
         /// <param name="workspacePath">Contains the root path where the local storage folder and file structure begins.</param>
-        public MemoryStorageService(string workspacePath)
-            : this(new MemoryStorageContext(workspacePath))
+        /// <param name="uniqueWorkspace">Contains a value indicating whether the storage service shall use a unique workspace sub-folder.</param>
+        public MemoryStorageService(string workspacePath, bool uniqueWorkspace = false)
+            : this(new MemoryStorageContext(workspacePath, uniqueWorkspace))
         {
         }
 

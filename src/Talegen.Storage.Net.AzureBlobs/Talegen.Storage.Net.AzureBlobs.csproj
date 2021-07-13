@@ -2,33 +2,34 @@
 
   <PropertyGroup>
     <TargetFramework>netcoreapp3.1</TargetFramework>
-    <Copyright>Copyright (c) Talegen, LLC. All rights reserved.</Copyright>
-    <Description>Talegen Storage Abstraction Library for working with folders and files locally or in the cloud.</Description>
-    <Company>Talegen, LLC</Company>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <Version>1.0.0</Version>
     <Authors>Talegen, LLC</Authors>
-    <RepositoryUrl>https://github.com/Talegen/Talegen.Storage.Net</RepositoryUrl>
-    <RepositoryType>git</RepositoryType>
+    <Description>Azure Blob Storage Abstraction for Talegen Storage Library.</Description>
+    <PackageLicenseExpression>Apache-2.0</PackageLicenseExpression>
     <PackageProjectUrl>https://github.com/Talegen/Talegen.Storage.Net</PackageProjectUrl>
-    <PackageTags>storage</PackageTags>
-    <PackageReleaseNotes>Initial release</PackageReleaseNotes>
-    <NeutralLanguage>en</NeutralLanguage>
-    <Version>1.0.1</Version>
-    <AssemblyVersion>1.0.1.0</AssemblyVersion>
-    <FileVersion>1.0.1.0</FileVersion>
-    <EnableNETAnalyzers>true</EnableNETAnalyzers>
-    <ApplicationIcon />
     <PackageIcon>logo.png</PackageIcon>
     <PackageIconUrl />
-    <PackageLicenseExpression>Apache-2.0</PackageLicenseExpression>
-    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <RepositoryUrl>https://github.com/Talegen/Talegen.Storage.Net</RepositoryUrl>
+    <RepositoryType>git</RepositoryType>
+    <PackageTags>storage azure</PackageTags>
+    <PackageReleaseNotes>Initial release</PackageReleaseNotes>
+    <NeutralLanguage>en</NeutralLanguage>
+    <ApplicationIcon />
+    <EnableNETAnalyzers>true</EnableNETAnalyzers>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
-    <DocumentationFile>.\Talegen.Storage.Net.Core.xml</DocumentationFile>
+    <DocumentationFile>.\Talegen.Storage.Net.AzureBlobs.xml</DocumentationFile>
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Talegen.Common.Core" Version="1.0.7" />
+    <PackageReference Include="Azure.Storage.Blobs" Version="12.9.1" />
+    <PackageReference Include="Azure.Storage.Files.Shares" Version="12.7.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Talegen.Storage.Net.Core\Talegen.Storage.Net.Core.csproj" />
   </ItemGroup>
 
   <ItemGroup>

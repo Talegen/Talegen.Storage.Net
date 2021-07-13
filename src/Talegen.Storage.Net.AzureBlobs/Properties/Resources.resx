@@ -120,6 +120,9 @@
   <data name="ExceptionErrorText" xml:space="preserve">
     <value>An internal unhandled error occurred. The message reported was "{0}".</value>
   </data>
+  <data name="RequestFailedErrorText" xml:space="preserve">
+    <value>The request has failed. The message was "{0}".</value>
+  </data>
   <data name="StorageAccessDeniedErrorText" xml:space="preserve">
     <value>The path "{0}" could not be accessed due to permissions. See "{1}"</value>
   </data>

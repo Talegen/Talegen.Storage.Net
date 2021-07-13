@@ -39,8 +39,9 @@ namespace Talegen.Storage.Net.Core.Disk
         /// Initializes a new instance of the <see cref="LocalStorageService" /> class.
         /// </summary>
         /// <param name="workspacePath">Contains the root path where the local storage folder and file structure begins.</param>
-        public LocalStorageService(string workspacePath)
-            : this(new LocalStorageContext(workspacePath))
+        /// <param name="uniqueWorkspace">Contains a value indicating whether the storage service shall use a unique workspace sub-folder.</param>
+        public LocalStorageService(string workspacePath, bool uniqueWorkspace = false)
+            : this(new LocalStorageContext(workspacePath, uniqueWorkspace))
         {
         }
 
