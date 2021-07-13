@@ -1,0 +1,836 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Talegen.Storage.Net.Core</name>
+    </assembly>
+    <members>
+        <member name="T:Talegen.Storage.Net.Core.Disk.ApplicationPaths">
+            <summary>
+            This class contains supporting properties and methods for managing configuration paths and files within a UAC secured Windows environment.
+            </summary>
+        </member>
+        <member name="P:Talegen.Storage.Net.Core.Disk.ApplicationPaths.CurrentExecutablePath">
+            <summary>
+            Gets the full path to the currently running executable.
+            </summary>
+        </member>
+        <member name="P:Talegen.Storage.Net.Core.Disk.ApplicationPaths.ApplicationPath">
+            <summary>
+            Gets the full path to the application base directory.
+            </summary>
+        </member>
+        <member name="M:Talegen.Storage.Net.Core.Disk.ApplicationPaths.ConfigurationFolderExists(System.Boolean,System.String)">
+            <summary>
+            Gets a value indicating whether the configuration folder exists.
+            </summary>
+            <param name="forAllUsers"><c>true</c> if the path is shared for all users on the system; otherwise <c>false</c>.</param>
+            <param name="applicationTitle">Contains the name of the application to append to the path.</param>
+            <returns>Returns a value indicating whether the configuration folder exists.</returns>
+        </member>
+        <member name="M:Talegen.Storage.Net.Core.Disk.ApplicationPaths.ConfigurationFilePath(System.String,System.Boolean,System.String)">
+            <summary>
+            Gets the file path to the application configuration file.
+            </summary>
+            <param name="configurationFileName">Contains the configuration file name.</param>
+            <param name="forAllUsers"><c>true</c> if the path is shared for all users on the system; otherwise <c>false</c>.</param>
+            <param name="applicationTitle">Contains the name of the application to append to the path.</param>
+            <returns>Returns the full path to a configuration file.</returns>
+        </member>
+        <member name="M:Talegen.Storage.Net.Core.Disk.ApplicationPaths.ConfigurationFolderPath(System.Boolean,System.String)">
+            <summary>
+            This method is used to get the folder path where configuration files are stored.
+            </summary>
+            <param name="forAllUsers"><c>true</c> if the path is shared for all users on the system; otherwise <c>false</c>.</param>
+            <param name="applicationTitle">Contains the name of the application to append to the path.</param>
+            <returns>Returns to a common application path where configurations can be stored.</returns>
+        </member>
+        <member name="M:Talegen.Storage.Net.Core.Disk.ApplicationPaths.CreateConfigurationPath(System.Boolean,System.String)">
+            <summary>
+            This method is used to create the configuration path if it doesn't exist already.
+            </summary>
+            <param name="forAllUsers"><c>true</c> if the path is shared for all users on the system; otherwise <c>false</c>.</param>
+            <param name="applicationTitle">Contains the name of the application to append to the path.</param>
+            <returns>Returns a value indicating whether the configuration path was created successfully.</returns>
+        </member>
+        <member name="T:Talegen.Storage.Net.Core.Disk.LocalStorageContext">
+            <summary>
+            This class contains properties related to the storage service interfaces within the application.
+            </summary>
+        </member>
+        <member name="M:Talegen.Storage.Net.Core.Disk.LocalStorageContext.#ctor(System.String,System.Boolean)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Talegen.Storage.Net.Core.Disk.LocalStorageContext" /> class.
+            </summary>
+            <param name="workspacePath">Contains an the root workspace folder Uri path string.</param>
+            <param name="uniqueWorkspace">Contains a value indicating whether the storage service shall use a unique workspace sub-folder.</param>
+        </member>
+        <member name="M:Talegen.Storage.Net.Core.Disk.LocalStorageContext.#ctor(System.Uri,System.Boolean)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Talegen.Storage.Net.Core.Disk.LocalStorageContext" /> class.
+            </summary>
+            <param name="workspaceUri">Contains a root workspace folder Uri.</param>
+            <param name="uniqueWorkspace">Contains a value indicating whether the storage service shall use a unique workspace sub-folder.</param>
+        </member>
+        <member name="P:Talegen.Storage.Net.Core.Disk.LocalStorageContext.StorageType">
+            <summary>
+            Gets the storage type of the context.
+            </summary>
+        </member>
+        <member name="P:Talegen.Storage.Net.Core.Disk.LocalStorageContext.UniqueWorkspace">
+            <summary>
+            Gets a value indicating whether the storage service shall use a unique workspace sub-folder.
+            </summary>
+        </member>
+        <member name="P:Talegen.Storage.Net.Core.Disk.LocalStorageContext.WorkspaceUri">
+            <summary>
+            Gets the root storage workspace URI path.
+            </summary>
+        </member>
+        <member name="P:Talegen.Storage.Net.Core.Disk.LocalStorageContext.RootWorkspaceLocalFolderPath">
+            <summary>
+            Gets the local folder path representation of the root workspace folder Uri.
+            </summary>
+        </member>
+        <member name="T:Talegen.Storage.Net.Core.Disk.LocalStorageService">
+            <summary>
+            This class implements the storage interface for implementing file IO with the local server disk storage.
+            </summary>
+        </member>
+        <member name="F:Talegen.Storage.Net.Core.Disk.LocalStorageService.exceptionMessage">
+            <summary>
+            Contains an exception message to throw.
+            </summary>
+        </member>
+        <member name="M:Talegen.Storage.Net.Core.Disk.LocalStorageService.#ctor(System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Talegen.Storage.Net.Core.Disk.LocalStorageService" /> class.
+            </summary>
+            <param name="workspacePath">Contains the root path where the local storage folder and file structure begins.</param>
+        </member>
+        <member name="M:Talegen.Storage.Net.Core.Disk.LocalStorageService.#ctor(Talegen.Storage.Net.Core.Disk.LocalStorageContext)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Talegen.Storage.Net.Core.Disk.LocalStorageService" /> class.
+            </summary>
+            <param name="storageContext">Contains an implementation of the storage context.</param>
+        </member>
+        <member name="P:Talegen.Storage.Net.Core.Disk.LocalStorageService.StorageId">
+            <summary>
+            Gets or sets the storage identity for this service instance.
+            </summary>
+        </member>
+        <member name="P:Talegen.Storage.Net.Core.Disk.LocalStorageService.RootPath">
+            <summary>
+            Gets or sets the root folder path for this service instance.
+            </summary>
+        </member>
+        <member name="M:Talegen.Storage.Net.Core.Disk.LocalStorageService.Initialize(Talegen.Storage.Net.Core.Disk.LocalStorageContext)">
+            <summary>
+            This method is used to initialize a storage service with the specified settings provided within the <see cref="T:Talegen.Storage.Net.Core.IStorageContext" /> object.
+            </summary>
+            <param name="storageContext">Contains the settings used to initialize the storage service.</param>
+        </member>
+        <member name="M:Talegen.Storage.Net.Core.Disk.LocalStorageService.CreateDirectory(System.String,System.Boolean)">
+            <summary>
+            This method is used to create a temporary directory within the Inspire application path.
+            </summary>
+            <param name="subFolderName">Contains a sub-folder that will be included in the working directory path.</param>
+            <param name="silentExists">Contains a value indicating whether the method is silently return successfully if the folder path already exists.</param>
+            <returns>Returns the name of the directory that was created.</returns>
+            <exception cref="T:Talegen.Storage.Net.Core.StorageException">This exception is thrown if the directory is unable to be created.</exception>
+        </member>
+        <member name="M:Talegen.Storage.Net.Core.Disk.LocalStorageService.DeleteDirectory(System.String,System.Boolean,System.Boolean)">
+            <summary>
+            This method is used to delete a sub-folder directory and all of its files.
+            </summary>
+            <param name="subFolderName">Contains the sub-folder name of the directory off the root working folder that will be deleted.</param>
+            <param name="recursive">Delete all contents within the folder.</param>
+            <param name="silentNoExist">
+            Contains a value indicating whether an exception is thrown if the target folder does not exist. Default is true; no exception is thrown if the
+            folder does not exist.
+            </param>
+            <exception cref="T:Talegen.Storage.Net.Core.StorageException">This exception is thrown if the directory is unable to be deleted.</exception>
+        </member>
+        <member name="M:Talegen.Storage.Net.Core.Disk.LocalStorageService.EmptyDirectory(System.String)">
+            <summary>
+            This method is used to delete all directories and files inside of a sub-folder within the specified workspace root path, however the folder is left
+            in place empty.
+            </summary>
+            <param name="subFolderName">Contains the sub-folder within the within the specified workspace root path to empty.</param>
+        </member>
+        <member name="M:Talegen.Storage.Net.Core.Disk.LocalStorageService.ReadBinaryFile(System.String)">
+            <summary>
+            This method is used to read all the bytes from a binary file.
+            </summary>
+            <param name="path">Contains the path to the file to load and return.</param>
+            <returns>Returns a byte array containing the binary bytes of the target file.</returns>
+        </member>
+        <member name="M:Talegen.Storage.Net.Core.Disk.LocalStorageService.ReadBinaryFile(System.String,System.IO.Stream)">
+            <summary>
+            This method is used to read all the bytes from a binary file to a provided stream.
+            </summary>
+            <param name="path">Contains the path to the file to load into the stream.</param>
+            <param name="outputStream">The stream to write the file to.</param>
+        </member>
+        <member name="M:Talegen.Storage.Net.Core.Disk.LocalStorageService.ReadTextFile(System.String,System.Text.Encoding)">
+            <summary>
+            This method is used to read all the bytes from a text file.
+            </summary>
+            <param name="path">Contains the path to the file to load and return.</param>
+            <param name="encoding">Contains the text encoding type. If none is specified, Encoding.Default is used.</param>
+            <returns>Returns a string containing the content of the target file.</returns>
+        </member>
+        <member name="M:Talegen.Storage.Net.Core.Disk.LocalStorageService.WriteBinaryFile(System.String,System.Byte[])">
+            <summary>
+            This method is used to write content to the specified path.
+            </summary>
+            <param name="path">Contains the fully qualified path, including file name, to the location in which the binary content shall be written.</param>
+            <param name="content">Contains a byte array of the content to be written.</param>
+            <returns>Returns a value indicating whether the write was successful.</returns>
+        </member>
+        <member name="M:Talegen.Storage.Net.Core.Disk.LocalStorageService.WriteBinaryFile(System.String,System.IO.Stream)">
+            <summary>
+            This method is used to write content to the specified path.
+            </summary>
+            <param name="path">Contains the fully qualified path, including file name, to the location in which the binary content shall be written.</param>
+            <param name="inputStream">Contains a stream of the content to be written.</param>
+            <returns>Returns a value indicating whether the write was successful.</returns>
+        </member>
+        <member name="M:Talegen.Storage.Net.Core.Disk.LocalStorageService.WriteBinaryFile(System.IO.FileStream,System.Byte[])">
+            <summary>
+            This method is used to write content to the specified file stream.
+            </summary>
+            <param name="fileStream">Contains the file stream to which the binary content shall be written.</param>
+            <param name="content">Contains a byte array of the content to be written.</param>
+            <returns>Returns a value indicating whether the write was successful.</returns>
+        </member>
+        <member name="M:Talegen.Storage.Net.Core.Disk.LocalStorageService.WriteTextFile(System.String,System.String,System.Text.Encoding)">
+            <summary>
+            This method is used to write content to the specified path.
+            </summary>
+            <param name="path">Contains the fully qualified path, including file name, to the location in which the text content shall be written.</param>
+            <param name="content">Contains a string of the content to be written.</param>
+            <param name="encoding">Contains the text file encoding. If none specified, Encoding.Default is used.</param>
+            <returns>Returns a value indicating whether the write was successful.</returns>
+        </member>
+        <member name="M:Talegen.Storage.Net.Core.Disk.LocalStorageService.DirectoryExists(System.String)">
+            <summary>
+            Contains a value indicating whether the folder already exists.
+            </summary>
+            <param name="subFolderName">Contains the sub-folder name excluding the root folder path.</param>
+            <returns>Returns a value indicating whether the directory exists.</returns>
+        </member>
+        <member name="M:Talegen.Storage.Net.Core.Disk.LocalStorageService.FileExists(System.String)">
+            <summary>
+            Contains a value indicating whether the file exists.
+            </summary>
+            <param name="filePath">Contains the sub-folder path and file name excluding the root folder path to determine if exists.</param>
+            <returns>Returns a value indicating whether the file exists.</returns>
+        </member>
+        <member name="M:Talegen.Storage.Net.Core.Disk.LocalStorageService.DeleteFiles(System.Collections.Generic.List{System.String},System.Boolean)">
+            <summary>
+            This method is used to delete a a list of files.
+            </summary>
+            <param name="filePathNames">Contains a list of file names that will be deleted.</param>
+            <param name="deleteFolders">
+            Contains a value indicating whether the directory or directories the files are within will be deleted. This will only occur if no other files remain
+            in the directory after the list of files have been deleted.
+            </param>
+        </member>
+        <member name="M:Talegen.Storage.Net.Core.Disk.LocalStorageService.DeleteFile(System.String,System.Boolean)">
+            <summary>
+            This method is used to delete a file.
+            </summary>
+            <param name="filePath">Contains a the path to the file that will be deleted.</param>
+            <param name="deleteDirectory">
+            Contains a value indicating whether the directory the file is within will be deleted. This will only occur if no other files remain in the directory
+            after the list of files have been deleted.
+            </param>
+        </member>
+        <member name="M:Talegen.Storage.Net.Core.Disk.LocalStorageService.CopyFile(System.String,System.String)">
+            <summary>
+            This method is used to copy a file.
+            </summary>
+            <param name="sourceFilePath">Contains a the path to the file that will be copied.</param>
+            <param name="targetFilePath">Contains the path to the target where the file is to be copied.</param>
+        </member>
+        <member name="M:Talegen.Storage.Net.Core.Disk.LocalStorageService.MoveFile(System.String,System.String)">
+            <summary>
+            This method is used to move a file.
+            </summary>
+            <param name="sourceFilePath">Contains a the path to the file that will be moved.</param>
+            <param name="targetFilePath">Contains the path to the target where the file is to be moved.</param>
+        </member>
+        <member name="M:Talegen.Storage.Net.Core.Disk.LocalStorageService.FileHash(System.String)">
+            <summary>
+            This method is used to create a hash of the file contents.
+            </summary>
+            <param name="filePath">Contains the path to the file to hash.</param>
+            <returns>Returns a hash of the file contents.</returns>
+        </member>
+        <member name="M:Talegen.Storage.Net.Core.Disk.LocalStorageService.FindFiles(System.String,System.String,System.IO.SearchOption)">
+            <summary>
+            This method is used to get the files from a directory.
+            </summary>
+            <param name="subFolderName">Contains the directory name to get the files.</param>
+            <param name="searchPattern">Contains an optional file name search pattern. If not specified, *.* is used.</param>
+            <param name="searchOption">Contains search options. If not specified, all sub-folders are searched for the file pattern.</param>
+            <returns>Returns a list of files in the directory path.</returns>
+        </member>
+        <member name="M:Talegen.Storage.Net.Core.Disk.LocalStorageService.VerifyDirectoryNameRoot(System.String)">
+            <summary>
+            Verifies the directory name root path.
+            </summary>
+            <param name="subFolderName">Name of the sub folder to verify.</param>
+            <exception cref="T:Talegen.Storage.Net.Core.StorageException">
+            An exception is thrown if the root folder specified in <paramref name="subFolderName" /> is not rooted with workspace root folder path.
+            </exception>
+        </member>
+        <member name="M:Talegen.Storage.Net.Core.Disk.LocalStorageService.IsDirectory(System.String)">
+            <summary>
+            Determines whether the specified path is a directory.
+            </summary>
+            <param name="path">The path.</param>
+            <returns><c>true</c> if the specified path is a directory; otherwise, <c>false</c>.</returns>
+        </member>
+        <member name="T:Talegen.Storage.Net.Core.IStorageContext">
+            <summary>
+            This class contains properties related to the storage service interfaces within the application.
+            </summary>
+        </member>
+        <member name="P:Talegen.Storage.Net.Core.IStorageContext.StorageType">
+            <summary>
+            Gets the type of the storage.
+            </summary>
+        </member>
+        <member name="P:Talegen.Storage.Net.Core.IStorageContext.UniqueWorkspace">
+            <summary>
+            Gets a value indicating whether the storage service shall use a unique workspace sub-folder.
+            </summary>
+        </member>
+        <member name="P:Talegen.Storage.Net.Core.IStorageContext.WorkspaceUri">
+            <summary>
+            Gets the root storage workspace URI path.
+            </summary>
+        </member>
+        <member name="P:Talegen.Storage.Net.Core.IStorageContext.RootWorkspaceLocalFolderPath">
+            <summary>
+            Gets the local folder path representation of the root workspace folder Uri.
+            </summary>
+        </member>
+        <member name="T:Talegen.Storage.Net.Core.IStorageService">
+            <summary>
+            Defines a minimum implementation of a storage service.
+            </summary>
+        </member>
+        <member name="P:Talegen.Storage.Net.Core.IStorageService.StorageId">
+            <summary>
+            Gets or sets the unique identity for the instance of the storage service.
+            </summary>
+        </member>
+        <member name="P:Talegen.Storage.Net.Core.IStorageService.RootPath">
+            <summary>
+            Gets or sets the storage path for the instance of the storage service.
+            </summary>
+        </member>
+        <member name="M:Talegen.Storage.Net.Core.IStorageService.CreateDirectory(System.String,System.Boolean)">
+            <summary>
+            This method is used to create a temporary directory within the Inspire application path.
+            </summary>
+            <param name="subFolderName">Contains a sub-folder that will be included in the working directory path.</param>
+            <param name="silentExists">Contains a value indicating whether the method is silently return successfully if the folder path already exists.</param>
+            <returns>Returns the name of the directory that was created.</returns>
+        </member>
+        <member name="M:Talegen.Storage.Net.Core.IStorageService.DeleteDirectory(System.String,System.Boolean,System.Boolean)">
+            <summary>
+            This method is used to delete a directory and all of its files.
+            </summary>
+            <param name="subFolderName">Contains the name of the directory that will be deleted.</param>
+            <param name="recursive">Delete all contents within the folder.</param>
+            <param name="silentNoExist">
+            Contains a value indicating whether an exception is thrown if the target folder does not exist. Default is true; no exception is thrown if the
+            folder does not exist.
+            </param>
+        </member>
+        <member name="M:Talegen.Storage.Net.Core.IStorageService.EmptyDirectory(System.String)">
+            <summary>
+            This method is used to delete all directories and files inside of a sub-folder within the Inspire application data directory.
+            </summary>
+            <param name="subFolderName">Contains the sub-folder within the Inspire application data directory.</param>
+        </member>
+        <member name="M:Talegen.Storage.Net.Core.IStorageService.ReadTextFile(System.String,System.Text.Encoding)">
+            <summary>
+            This method is used to read all the bytes from a text file.
+            </summary>
+            <param name="path">Contains the path to the file to load and return.</param>
+            <param name="encoding">Contains the text encoding type. If none is specified, Encoding.Default is used.</param>
+            <returns>Returns a string containing the content of the target file.</returns>
+        </member>
+        <member name="M:Talegen.Storage.Net.Core.IStorageService.ReadBinaryFile(System.String)">
+            <summary>
+            This method is used to read all the bytes from a binary file.
+            </summary>
+            <param name="path">Contains the path to the file to load and return.</param>
+            <returns>Returns a byte array containing the binary bytes of the target file.</returns>
+        </member>
+        <member name="M:Talegen.Storage.Net.Core.IStorageService.ReadBinaryFile(System.String,System.IO.Stream)">
+            <summary>
+            This method is used to read all the bytes from a binary file to a provided stream.
+            </summary>
+            <param name="path">Contains the path to the file to load into the stream.</param>
+            <param name="outputStream">The stream to write the file to.</param>
+        </member>
+        <member name="M:Talegen.Storage.Net.Core.IStorageService.WriteBinaryFile(System.String,System.Byte[])">
+            <summary>
+            This method is used to write content to the specified path.
+            </summary>
+            <param name="path">Contains the fully qualified path, including file name, to the location in which the binary content shall be written.</param>
+            <param name="content">Contains a byte array of the content to be written.</param>
+            <returns>Returns a value indicating whether the write was successful.</returns>
+        </member>
+        <member name="M:Talegen.Storage.Net.Core.IStorageService.WriteBinaryFile(System.String,System.IO.Stream)">
+            <summary>
+            This method is used to write content to the specified path.
+            </summary>
+            <param name="path">Contains the fully qualified path, including file name, to the location in which the binary content shall be written.</param>
+            <param name="inputStream">Contains a stream of the content to be written.</param>
+            <returns>Returns a value indicating whether the write was successful.</returns>
+        </member>
+        <member name="M:Talegen.Storage.Net.Core.IStorageService.WriteTextFile(System.String,System.String,System.Text.Encoding)">
+            <summary>
+            This method is used to write content to the specified path.
+            </summary>
+            <param name="path">Contains the fully qualified path, including file name, to the location in which the text content shall be written.</param>
+            <param name="content">Contains a string of the content to be written.</param>
+            <param name="encoding">Contains the text file encoding. If none specified, Encoding.Default is used.</param>
+            <returns>Returns a value indicating whether the write was successful.</returns>
+        </member>
+        <member name="M:Talegen.Storage.Net.Core.IStorageService.DeleteFiles(System.Collections.Generic.List{System.String},System.Boolean)">
+            <summary>
+            This method is used to delete a list of files.
+            </summary>
+            <param name="filePathNames">Contains a list of file names that will be deleted.</param>
+            <param name="deleteDirectory">
+            Contains a value indicating whether the directory or directories the files are within will be deleted. This will only occur if no other files remain
+            in the directory after the list of files have been deleted.
+            </param>
+        </member>
+        <member name="M:Talegen.Storage.Net.Core.IStorageService.DeleteFile(System.String,System.Boolean)">
+            <summary>
+            This method is used to delete a file.
+            </summary>
+            <param name="filePath">Contains a the path to the file that will be deleted.</param>
+            <param name="deleteDirectory">
+            Contains a value indicating whether the directory the file is within will be deleted. This will only occur if no other files remain in the directory
+            after the list of files have been deleted.
+            </param>
+        </member>
+        <member name="M:Talegen.Storage.Net.Core.IStorageService.CopyFile(System.String,System.String)">
+            <summary>
+            This method is used to copy a file.
+            </summary>
+            <param name="sourceFilePath">Contains a the path to the file that will be copied.</param>
+            <param name="targetFilePath">Contains the path to the target where the file is to be copied.</param>
+        </member>
+        <member name="M:Talegen.Storage.Net.Core.IStorageService.MoveFile(System.String,System.String)">
+            <summary>
+            This method is used to move a file.
+            </summary>
+            <param name="sourceFilePath">Contains a the path to the file that will be moved.</param>
+            <param name="targetFilePath">Contains the path to the target where the file is to be moved.</param>
+        </member>
+        <member name="M:Talegen.Storage.Net.Core.IStorageService.DirectoryExists(System.String)">
+            <summary>
+            Contains a value indicating whether the folder already exists.
+            </summary>
+            <param name="subFolderName">Contains the sub-folder name excluding the root folder path.</param>
+            <returns>Returns a value indicating whether the directory exists.</returns>
+        </member>
+        <member name="M:Talegen.Storage.Net.Core.IStorageService.FileExists(System.String)">
+            <summary>
+            Contains a value indicating whether the file exists.
+            </summary>
+            <param name="filePath">Contains the sub-folder path and file name excluding the root folder path to determine if exists.</param>
+            <returns>Returns a value indicating whether the file exists.</returns>
+        </member>
+        <member name="M:Talegen.Storage.Net.Core.IStorageService.FileHash(System.String)">
+            <summary>
+            This method is used to create a hash of the file contents.
+            </summary>
+            <param name="filePath">The path to the file.</param>
+            <returns>Returns a hash of the file contents.</returns>
+        </member>
+        <member name="M:Talegen.Storage.Net.Core.IStorageService.FindFiles(System.String,System.String,System.IO.SearchOption)">
+            <summary>
+            This method is used to get the files from a directory.
+            </summary>
+            <param name="subFolderName">Contains the sub-folder name to get the files.</param>
+            <param name="searchPattern">Contains an optional file name search pattern. If not specified, *.* is used.</param>
+            <param name="searchOption">Contains search options. If not specified, all sub-folders are searched for the file pattern.</param>
+            <returns>Returns a list of files in the directory path.</returns>
+        </member>
+        <member name="T:Talegen.Storage.Net.Core.Memory.MemoryFolderModel">
+            <summary>
+            This class contains properties related to supporting a virtual disk storage system for unit testing.
+            </summary>
+        </member>
+        <member name="P:Talegen.Storage.Net.Core.Memory.MemoryFolderModel.Children">
+            <summary>
+            Gets or sets a dictionary of folders.
+            </summary>
+        </member>
+        <member name="P:Talegen.Storage.Net.Core.Memory.MemoryFolderModel.Files">
+            <summary>
+            Gets or sets a dictionary of files.
+            </summary>
+        </member>
+        <member name="T:Talegen.Storage.Net.Core.Memory.MemoryStorageContext">
+            <summary>
+            This class contains properties related to the storage service interfaces within the application.
+            </summary>
+        </member>
+        <member name="M:Talegen.Storage.Net.Core.Memory.MemoryStorageContext.#ctor(System.String,System.Boolean)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Talegen.Storage.Net.Core.Memory.MemoryStorageContext" /> class.
+            </summary>
+            <param name="workspacePath">Contains an the root workspace folder Uri path string.</param>
+            <param name="uniqueWorkspace">Contains a value indicating whether the storage service shall use a unique workspace sub-folder.</param>
+        </member>
+        <member name="M:Talegen.Storage.Net.Core.Memory.MemoryStorageContext.#ctor(System.Uri,System.Boolean)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Talegen.Storage.Net.Core.Memory.MemoryStorageContext" /> class.
+            </summary>
+            <param name="workspaceUri">Contains a root workspace folder Uri.</param>
+            <param name="uniqueWorkspace">Contains a value indicating whether the storage service shall use a unique workspace sub-folder.</param>
+        </member>
+        <member name="P:Talegen.Storage.Net.Core.Memory.MemoryStorageContext.StorageType">
+            <summary>
+            Gets the storage type of the context.
+            </summary>
+        </member>
+        <member name="P:Talegen.Storage.Net.Core.Memory.MemoryStorageContext.UniqueWorkspace">
+            <summary>
+            Gets a value indicating whether the storage service shall use a unique workspace sub-folder.
+            </summary>
+        </member>
+        <member name="P:Talegen.Storage.Net.Core.Memory.MemoryStorageContext.WorkspaceUri">
+            <summary>
+            Gets the root storage workspace URI path.
+            </summary>
+        </member>
+        <member name="P:Talegen.Storage.Net.Core.Memory.MemoryStorageContext.RootWorkspaceLocalFolderPath">
+            <summary>
+            Gets the local folder path representation of the root workspace folder Uri.
+            </summary>
+        </member>
+        <member name="T:Talegen.Storage.Net.Core.Memory.MemoryStorageService">
+            <summary>
+            This class implements the storage interface for reading and writing to a virtual directory in memory.
+            </summary>
+            <remarks>This is useful for faking storage for unit tests within your application.</remarks>
+            <seealso cref="T:Talegen.Storage.Net.Core.IStorageService" />
+        </member>
+        <member name="F:Talegen.Storage.Net.Core.Memory.MemoryStorageService.exceptionMessage">
+            <summary>
+            Contains an exception message to throw.
+            </summary>
+        </member>
+        <member name="M:Talegen.Storage.Net.Core.Memory.MemoryStorageService.#ctor(System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Talegen.Storage.Net.Core.Memory.MemoryStorageService" /> class.
+            </summary>
+            <param name="workspacePath">Contains the root path where the local storage folder and file structure begins.</param>
+        </member>
+        <member name="M:Talegen.Storage.Net.Core.Memory.MemoryStorageService.#ctor(Talegen.Storage.Net.Core.Memory.MemoryStorageContext)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Talegen.Storage.Net.Core.Memory.MemoryStorageService" /> class.
+            </summary>
+            <param name="storageContext">Contains an implementation of the storage context.</param>
+        </member>
+        <member name="P:Talegen.Storage.Net.Core.Memory.MemoryStorageService.VirtualDisk">
+            <summary>
+            Gets the virtual disk accessor.
+            </summary>
+        </member>
+        <member name="P:Talegen.Storage.Net.Core.Memory.MemoryStorageService.StorageId">
+            <summary>
+            Gets or sets the storage identity for this service instance.
+            </summary>
+        </member>
+        <member name="P:Talegen.Storage.Net.Core.Memory.MemoryStorageService.RootPath">
+            <summary>
+            Gets or sets the root folder path for this service instance.
+            </summary>
+        </member>
+        <member name="M:Talegen.Storage.Net.Core.Memory.MemoryStorageService.Initialize(Talegen.Storage.Net.Core.Memory.MemoryStorageContext)">
+            <summary>
+            This method is used to initialize a storage service with the specified settings provided within the <see cref="!:StorageContext" /> object.
+            </summary>
+            <param name="storageContext">Contains the settings used to initialize the storage service.</param>
+        </member>
+        <member name="M:Talegen.Storage.Net.Core.Memory.MemoryStorageService.CopyFile(System.String,System.String)">
+            <summary>
+            This method is used to copy a file.
+            </summary>
+            <param name="sourceFilePath">Contains a the path to the file that will be copied.</param>
+            <param name="targetFilePath">Contains the path to the target where the file is to be copied.</param>
+            <exception cref="T:System.ArgumentNullException">sourceFilePath or targetFilePath</exception>
+            <exception cref="T:Talegen.Storage.Net.Core.StorageException"></exception>
+        </member>
+        <member name="M:Talegen.Storage.Net.Core.Memory.MemoryStorageService.CreateDirectory(System.String,System.Boolean)">
+            <summary>
+            This method is used to create a temporary directory within the Inspire application path.
+            </summary>
+            <param name="subFolderName">Contains a sub-folder that will be included in the working directory path.</param>
+            <param name="silentExists">Contains a value indicating whether the method is silently return successfully if the folder path already exists.</param>
+            <returns>Returns the name of the directory that was created.</returns>
+            <exception cref="T:System.ArgumentNullException">subFolderName</exception>
+            <exception cref="T:Talegen.Storage.Net.Core.StorageException"></exception>
+        </member>
+        <member name="M:Talegen.Storage.Net.Core.Memory.MemoryStorageService.DeleteDirectory(System.String,System.Boolean,System.Boolean)">
+            <summary>
+            This method is used to delete a directory and all of its files.
+            </summary>
+            <param name="subFolderName">Contains the name of the directory that will be deleted.</param>
+            <param name="recursive">Delete all contents within the folder.</param>
+            <param name="silentNoExist">
+            Contains a value indicating whether an exception is thrown if the target folder does not exist. Default is true; no exception is thrown if the
+            folder does not exist.
+            </param>
+            <exception cref="T:System.ArgumentNullException">subFolderName</exception>
+            <exception cref="T:Talegen.Storage.Net.Core.StorageException">thrown if the specified folder does not exist.</exception>
+        </member>
+        <member name="M:Talegen.Storage.Net.Core.Memory.MemoryStorageService.DeleteFile(System.String,System.Boolean)">
+            <summary>
+            This method is used to delete a file.
+            </summary>
+            <param name="filePath">Contains a the path to the file that will be deleted.</param>
+            <param name="deleteDirectory">
+            Contains a value indicating whether the directory the file is within will be deleted. This will only occur if no other files remain in the directory
+            after the list of files have been deleted.
+            </param>
+        </member>
+        <member name="M:Talegen.Storage.Net.Core.Memory.MemoryStorageService.DeleteFiles(System.Collections.Generic.List{System.String},System.Boolean)">
+            <summary>
+            This method is used to delete a list of files.
+            </summary>
+            <param name="filePathNames">Contains a list of file names that will be deleted.</param>
+            <param name="deleteDirectory">
+            Contains a value indicating whether the directory or directories the files are within will be deleted. This will only occur if no other files remain
+            in the directory after the list of files have been deleted.
+            </param>
+            <exception cref="T:System.ArgumentNullException">filePathNames</exception>
+            <exception cref="T:Talegen.Storage.Net.Core.StorageException"></exception>
+        </member>
+        <member name="M:Talegen.Storage.Net.Core.Memory.MemoryStorageService.DirectoryExists(System.String)">
+            <summary>
+            Contains a value indicating whether the folder already exists.
+            </summary>
+            <param name="subFolderName">Contains the sub-folder name excluding the root folder path.</param>
+            <returns>Returns a value indicating whether the directory exists.</returns>
+            <exception cref="T:System.ArgumentNullException">subFolderName</exception>
+        </member>
+        <member name="M:Talegen.Storage.Net.Core.Memory.MemoryStorageService.EmptyDirectory(System.String)">
+            <summary>
+            This method is used to delete all directories and files inside of a sub-folder within the Inspire application data directory.
+            </summary>
+            <param name="subFolderName">Contains the sub-folder within the Inspire application data directory.</param>
+            <exception cref="T:System.ArgumentNullException">subFolderName</exception>
+            <exception cref="T:Talegen.Storage.Net.Core.StorageException">thrown if the specified folder does not exist.</exception>
+        </member>
+        <member name="M:Talegen.Storage.Net.Core.Memory.MemoryStorageService.FileExists(System.String)">
+            <summary>
+            Contains a value indicating whether the file exists.
+            </summary>
+            <param name="filePath">Contains the sub-folder path and file name excluding the root folder path to determine if exists.</param>
+            <returns>Returns a value indicating whether the file exists.</returns>
+            <exception cref="T:System.ArgumentNullException">filePath</exception>
+        </member>
+        <member name="M:Talegen.Storage.Net.Core.Memory.MemoryStorageService.FileHash(System.String)">
+            <summary>
+            This method is used to create a hash of the file contents.
+            </summary>
+            <param name="filePath">The path to the file.</param>
+            <returns>Returns a hash of the file contents.</returns>
+            <exception cref="T:System.ArgumentNullException">filePath</exception>
+        </member>
+        <member name="M:Talegen.Storage.Net.Core.Memory.MemoryStorageService.FindFiles(System.String,System.String,System.IO.SearchOption)">
+            <summary>
+            This method is used to get the files from a directory.
+            </summary>
+            <param name="subFolderName">Contains the sub-folder name to get the files.</param>
+            <param name="searchPattern">Contains an optional file name search pattern. If not specified, *.* is used.</param>
+            <param name="searchOption">Contains search options. If not specified, all sub-folders are searched for the file pattern.</param>
+            <returns>Returns a list of files in the directory path.</returns>
+            <exception cref="T:System.ArgumentNullException">subFolderName</exception>
+        </member>
+        <member name="M:Talegen.Storage.Net.Core.Memory.MemoryStorageService.MoveFile(System.String,System.String)">
+            <summary>
+            This method is used to move a file.
+            </summary>
+            <param name="sourceFilePath">Contains a the path to the file that will be moved.</param>
+            <param name="targetFilePath">Contains the path to the target where the file is to be moved.</param>
+            <exception cref="T:System.ArgumentNullException">sourceFilePath or targetFilePath</exception>
+            <exception cref="T:Talegen.Storage.Net.Core.StorageException"></exception>
+        </member>
+        <member name="M:Talegen.Storage.Net.Core.Memory.MemoryStorageService.ReadBinaryFile(System.String)">
+            <summary>
+            This method is used to read all the bytes from a binary file.
+            </summary>
+            <param name="path">Contains the path to the file to load and return.</param>
+            <returns>Returns a byte array containing the binary bytes of the target file.</returns>
+            <exception cref="T:System.ArgumentNullException">path</exception>
+            <exception cref="T:Talegen.Storage.Net.Core.StorageException"></exception>
+        </member>
+        <member name="M:Talegen.Storage.Net.Core.Memory.MemoryStorageService.ReadBinaryFile(System.String,System.IO.Stream)">
+            <summary>
+            This method is used to read all the bytes from a binary file to a provided stream.
+            </summary>
+            <param name="path">Contains the path to the file to load into the stream.</param>
+            <param name="outputStream">The stream to write the file to.</param>
+        </member>
+        <member name="M:Talegen.Storage.Net.Core.Memory.MemoryStorageService.ReadTextFile(System.String,System.Text.Encoding)">
+            <summary>
+            This method is used to read all the bytes from a text file.
+            </summary>
+            <param name="path">Contains the path to the file to load and return.</param>
+            <param name="encoding">Contains the text encoding type. If none is specified, Encoding.Default is used.</param>
+            <returns>Returns a string containing the content of the target file.</returns>
+        </member>
+        <member name="M:Talegen.Storage.Net.Core.Memory.MemoryStorageService.WriteBinaryFile(System.String,System.Byte[])">
+            <summary>
+            This method is used to write content to the specified path.
+            </summary>
+            <param name="path">Contains the fully qualified path, including file name, to the location in which the binary content shall be written.</param>
+            <param name="content">Contains a byte array of the content to be written.</param>
+            <returns>Returns a value indicating whether the write was successful.</returns>
+            <exception cref="T:System.ArgumentNullException">path</exception>
+            <exception cref="T:Talegen.Storage.Net.Core.StorageException"></exception>
+        </member>
+        <member name="M:Talegen.Storage.Net.Core.Memory.MemoryStorageService.WriteBinaryFile(System.String,System.IO.Stream)">
+            <summary>
+            This method is used to write content to the specified path.
+            </summary>
+            <param name="path">Contains the fully qualified path, including file name, to the location in which the binary content shall be written.</param>
+            <param name="inputStream">Contains a stream of the content to be written.</param>
+            <returns>Returns a value indicating whether the write was successful.</returns>
+            <exception cref="T:System.ArgumentNullException">Thrown if argument is null.</exception>
+            <exception cref="T:System.IO.IOException">Thrown if stream cannot be read.</exception>
+        </member>
+        <member name="M:Talegen.Storage.Net.Core.Memory.MemoryStorageService.WriteTextFile(System.String,System.String,System.Text.Encoding)">
+            <summary>
+            This method is used to write content to the specified path.
+            </summary>
+            <param name="path">Contains the fully qualified path, including file name, to the location in which the text content shall be written.</param>
+            <param name="content">Contains a string of the content to be written.</param>
+            <param name="encoding">Contains the text file encoding. If none specified, Encoding.Default is used.</param>
+            <returns>Returns a value indicating whether the write was successful.</returns>
+        </member>
+        <member name="M:Talegen.Storage.Net.Core.Memory.MemoryStorageService.VerifyDirectoryNameRoot(System.String)">
+            <summary>
+            Verifies the directory name root path.
+            </summary>
+            <param name="subFolderName">Name of the sub folder to verify.</param>
+            <exception cref="T:Talegen.Storage.Net.Core.StorageException">
+            An exception is thrown if the root folder specified in <paramref name="subFolderName" /> is not rooted with workspace root folder path.
+            </exception>
+        </member>
+        <member name="M:Talegen.Storage.Net.Core.Memory.MemoryStorageService.DeleteFolderWorker(System.String)">
+            <summary>
+            A recursive worker function for deleting virtual folders.
+            </summary>
+            <param name="folderPath">Contains the virtual disk folder path to delete.</param>
+        </member>
+        <member name="T:Talegen.Storage.Net.Core.Properties.Resources">
+            <summary>
+              A strongly-typed resource class, for looking up localized strings, etc.
+            </summary>
+        </member>
+        <member name="P:Talegen.Storage.Net.Core.Properties.Resources.ResourceManager">
+            <summary>
+              Returns the cached ResourceManager instance used by this class.
+            </summary>
+        </member>
+        <member name="P:Talegen.Storage.Net.Core.Properties.Resources.Culture">
+            <summary>
+              Overrides the current thread's CurrentUICulture property for all
+              resource lookups using this strongly typed resource class.
+            </summary>
+        </member>
+        <member name="P:Talegen.Storage.Net.Core.Properties.Resources.ExceptionErrorText">
+            <summary>
+              Looks up a localized string similar to An internal unhandled error occurred. The message reported was &quot;{0}&quot;..
+            </summary>
+        </member>
+        <member name="P:Talegen.Storage.Net.Core.Properties.Resources.StorageAccessDeniedErrorText">
+            <summary>
+              Looks up a localized string similar to The path &quot;{0}&quot; could not be accessed due to permissions. See &quot;{1}&quot;.
+            </summary>
+        </member>
+        <member name="P:Talegen.Storage.Net.Core.Properties.Resources.StorageDirectoryCommandErrorText">
+            <summary>
+              Looks up a localized string similar to The storage folder &quot;{0}&quot; command could not be completed due to &quot;{1}&quot;.
+            </summary>
+        </member>
+        <member name="P:Talegen.Storage.Net.Core.Properties.Resources.StorageDirectoryDoesNotExistErrorText">
+            <summary>
+              Looks up a localized string similar to The storage folder&quot;{0}&quot; does not exist..
+            </summary>
+        </member>
+        <member name="P:Talegen.Storage.Net.Core.Properties.Resources.StorageDirectoryExistsErrorText">
+            <summary>
+              Looks up a localized string similar to The storage folder&quot;{0}&quot; already exists..
+            </summary>
+        </member>
+        <member name="P:Talegen.Storage.Net.Core.Properties.Resources.StorageNotFoundErrorText">
+            <summary>
+              Looks up a localized string similar to The storage path &quot;{0}&quot; was not found..
+            </summary>
+        </member>
+        <member name="P:Talegen.Storage.Net.Core.Properties.Resources.StoragePathSpecifiedNotInRootErrorText">
+            <summary>
+              Looks up a localized string similar to The path specified in &quot;{0}&quot; did not match the root path &quot;{1}&quot;. All folders must be created under the root path..
+            </summary>
+        </member>
+        <member name="P:Talegen.Storage.Net.Core.Properties.Resources.StorageZipFilesNotFoundErrorText">
+            <summary>
+              Looks up a localized string similar to The archive file was not created because one or more files to archive were not found..
+            </summary>
+        </member>
+        <member name="P:Talegen.Storage.Net.Core.Properties.Resources.StreamReadErrorText">
+            <summary>
+              Looks up a localized string similar to The provided stream cannot be read..
+            </summary>
+        </member>
+        <member name="P:Talegen.Storage.Net.Core.Properties.Resources.StreamWriteErrorText">
+            <summary>
+              Looks up a localized string similar to The provided stream cannot be written to..
+            </summary>
+        </member>
+        <member name="T:Talegen.Storage.Net.Core.StorageException">
+            <summary>
+            Implements a custom storage exception to throw on critical errors and handled exceptions.
+            </summary>
+            <seealso cref="T:System.Exception" />
+        </member>
+        <member name="M:Talegen.Storage.Net.Core.StorageException.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Talegen.Storage.Net.Core.StorageException" /> class.
+            </summary>
+        </member>
+        <member name="M:Talegen.Storage.Net.Core.StorageException.#ctor(System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Talegen.Storage.Net.Core.StorageException" /> class.
+            </summary>
+            <param name="message">The message that describes the error.</param>
+        </member>
+        <member name="M:Talegen.Storage.Net.Core.StorageException.#ctor(System.String,System.Exception)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Talegen.Storage.Net.Core.StorageException" /> class.
+            </summary>
+            <param name="message">The error message that explains the reason for the exception.</param>
+            <param name="innerException">
+            The exception that is the cause of the current exception, or a null reference ( <see langword="Nothing" /> in Visual Basic) if no inner exception is specified.
+            </param>
+        </member>
+    </members>
+</doc>
