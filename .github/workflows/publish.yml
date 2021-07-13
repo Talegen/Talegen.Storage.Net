@@ -17,7 +17,7 @@ jobs:
 
       # Publish Core
       - name: publish Core on version change
-        id: publish_nuget
+        id: publish_core_nuget
         uses: brandedoutcast/publish-nuget@v2.5.5
         with:
           # Filepath of the project to be packaged, relative to root of repository
@@ -28,7 +28,7 @@ jobs:
 
       # Publish Azure Blobs
       - name: publish Azure Blobs on version change
-        id: publish_nuget
+        id: publish_azureblobs_nuget
         uses: brandedoutcast/publish-nuget@v2.5.5
         with:
           # Filepath of the project to be packaged, relative to root of repository
