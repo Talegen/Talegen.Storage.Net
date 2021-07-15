@@ -77,26 +77,24 @@ namespace Talegen.Storage.Net.Core.Memory
         /// <param name="storageContext">Contains the settings used to initialize the storage service.</param>
         public void Initialize(MemoryStorageContext storageContext)
         {
-            if (storageContext == null || storageContext.WorkspaceUri == null)
-            {
-                throw new ArgumentNullException(nameof(storageContext));
-            }
-
-            // if the path specified isn't a folder
+            // if the path specified isn't a URL
             if (storageContext.WorkspaceUri.IsFile || storageContext.WorkspaceUri.IsUnc)
             {
-                // TODO: throw error that local folder must be specified.
-                throw new ArgumentOutOfRangeException(nameof(storageContext.RootWorkspaceLocalFolderPath));
-            }
-            else if (storageContext.UniqueWorkspace)
-            {
-                // get the root worker local folder path now concatenate the storage session identifier as a sub-folder name to make this a unique path.
-                this.RootPath = Path.Combine(storageContext.RootWorkspaceLocalFolderPath, this.StorageId);
+                if (storageContext.UniqueWorkspace)
+                {
+                    // get the root worker local folder path now concatenate the storage session identifier as a sub-folder name to make this a unique path.
+                    this.RootPath = Path.Combine(storageContext.RootWorkspaceLocalFolderPath, this.StorageId);
+                }
+                else
+                {
+                    // get the root worker local folder path now concatenate the storage session identifier as a sub-folder name to make this a unique path.
+                    this.RootPath = storageContext.RootWorkspaceLocalFolderPath;
+                }
             }
             else
             {
-                // get the root worker local folder path now concatenate the storage session identifier as a sub-folder name to make this a unique path.
-                this.RootPath = storageContext.RootWorkspaceLocalFolderPath;
+                // TODO: throw error that local folder must be specified.
+                throw new ArgumentOutOfRangeException(nameof(storageContext.RootWorkspaceLocalFolderPath));
             }
 
             // if the folder hasn't been specified
@@ -108,9 +106,10 @@ namespace Talegen.Storage.Net.Core.Memory
         /// </summary>
         /// <param name="sourceFilePath">Contains a the path to the file that will be copied.</param>
         /// <param name="targetFilePath">Contains the path to the target where the file is to be copied.</param>
+        /// <param name="overwrite">Contains a value indicating if the target should be overwritten if it already exists. Default is true.</param>
         /// <exception cref="ArgumentNullException">sourceFilePath or targetFilePath</exception>
         /// <exception cref="Talegen.Storage.Net.Core.StorageException"></exception>
-        public void CopyFile(string sourceFilePath, string targetFilePath)
+        public void CopyFile(string sourceFilePath, string targetFilePath, bool overwrite = true)
         {
             if (string.IsNullOrWhiteSpace(sourceFilePath))
             {
@@ -141,7 +140,14 @@ namespace Talegen.Storage.Net.Core.Memory
 
                 if (this.FileExists(absoluteTargetPath))
                 {
-                    this.DeleteFile(absoluteTargetPath);
+                    if (overwrite)
+                    {
+                        this.DeleteFile(absoluteTargetPath);
+                    }
+                    else
+                    {
+                        throw new StorageException(string.Format(Resources.StorageTargetExistsErrorText, absoluteTargetPath));
+                    }
                 }
 
                 VirtualDisk[targetFolder].Files.Add(absoluteTargetPath, sourceContents);
@@ -210,10 +216,17 @@ namespace Talegen.Storage.Net.Core.Memory
             // delete the directory and its files
             if (this.DirectoryExists(absolutePath))
             {
-                VirtualDisk[this.RootPath].Children.Remove(absolutePath);
+                if (!recursive && VirtualDisk[this.RootPath].Children.Count > 1)
+                {
+                    throw new StorageException(string.Format(Resources.StorageCannotDeleteRecursiveErrorText, absolutePath));
+                }
+                else
+                {
+                    VirtualDisk[this.RootPath].Children.Remove(absolutePath);
 
-                // recursive delete
-                this.DeleteFolderWorker(absolutePath);
+                    // recursive delete
+                    this.DeleteFolderWorker(absolutePath);
+                }
             }
             else
             {
@@ -231,6 +244,11 @@ namespace Talegen.Storage.Net.Core.Memory
         /// </param>
         public void DeleteFile(string filePath, bool deleteDirectory = false)
         {
+            if (filePath == null)
+            {
+                throw new ArgumentNullException(nameof(filePath));
+            }
+
             this.DeleteFiles(new List<string>() { filePath }, deleteDirectory);
         }
 
@@ -259,11 +277,12 @@ namespace Talegen.Storage.Net.Core.Memory
                 {
                     this.VerifyDirectoryNameRoot(filePath);
 
-                    string folderPath = Path.GetDirectoryName(filePath);
+                    string absolutePath = Path.Combine(this.RootPath, filePath);
+                    string folderPath = Path.GetDirectoryName(absolutePath);
 
-                    if (VirtualDisk.ContainsKey(folderPath) && VirtualDisk[folderPath].Files.ContainsKey(filePath))
+                    if (VirtualDisk.ContainsKey(folderPath) && VirtualDisk[folderPath].Files.ContainsKey(absolutePath))
                     {
-                        VirtualDisk[folderPath].Files.Remove(filePath);
+                        VirtualDisk[folderPath].Files.Remove(absolutePath);
 
                         if (deleteDirectory && !directoryNames.Contains(folderPath))
                         {
@@ -278,11 +297,18 @@ namespace Talegen.Storage.Net.Core.Memory
 
                 if (deleteDirectory)
                 {
-                    foreach (var folderPath in directoryNames)
+                    foreach (var folderPath in directoryNames.OrderByDescending(n => n.Length))
                     {
-                        if (VirtualDisk.ContainsKey(folderPath) && !VirtualDisk[folderPath].Files.Any())
+                        if (VirtualDisk.ContainsKey(folderPath))
                         {
-                            VirtualDisk.TryRemove(folderPath, out _);
+                            if (!VirtualDisk[folderPath].Files.Any() && !VirtualDisk[folderPath].Children.Any())
+                            {
+                                VirtualDisk.TryRemove(folderPath, out _);
+                            }
+                            else
+                            {
+                                throw new StorageException(string.Format(Resources.StorageCannotDeleteRecursiveErrorText, folderPath));
+                            }
                         }
                         else
                         {
@@ -419,9 +445,13 @@ namespace Talegen.Storage.Net.Core.Memory
 
             if (this.DirectoryExists(absolutePath))
             {
-                Regex reSearchPattern = new Regex(searchPattern, RegexOptions.IgnoreCase);
+                Regex reSearchPattern = new Regex(Regex.Escape(searchPattern).Replace("\\*", ".*") + "$", RegexOptions.IgnoreCase);
 
                 files = VirtualDisk[absolutePath].Files.Select(file => file.Key).Where(file => reSearchPattern.IsMatch(Path.GetExtension(file))).ToList();
+            }
+            else
+            {
+                throw new StorageException(string.Format(Resources.StorageDirectoryDoesNotExistErrorText, absolutePath));
             }
 
             return files;
@@ -432,9 +462,10 @@ namespace Talegen.Storage.Net.Core.Memory
         /// </summary>
         /// <param name="sourceFilePath">Contains a the path to the file that will be moved.</param>
         /// <param name="targetFilePath">Contains the path to the target where the file is to be moved.</param>
+        /// <param name="overwrite">Contains a value indicating if the target should be overwritten if it already exists. Default is true.</param>
         /// <exception cref="ArgumentNullException">sourceFilePath or targetFilePath</exception>
         /// <exception cref="Talegen.Storage.Net.Core.StorageException"></exception>
-        public void MoveFile(string sourceFilePath, string targetFilePath)
+        public void MoveFile(string sourceFilePath, string targetFilePath, bool overwrite = true)
         {
             if (string.IsNullOrWhiteSpace(sourceFilePath))
             {
@@ -451,6 +482,13 @@ namespace Talegen.Storage.Net.Core.Memory
 
             string absoluteSourcePath = Path.IsPathRooted(sourceFilePath) ? sourceFilePath : Path.Combine(this.RootPath, sourceFilePath);
             string absoluteTargetPath = Path.IsPathRooted(targetFilePath) ? targetFilePath : Path.Combine(this.RootPath, targetFilePath);
+            bool targetIsDirectory = string.IsNullOrWhiteSpace(Path.GetExtension(absoluteTargetPath));
+
+            if (targetIsDirectory)
+            {
+                // ensure path suffix
+                absoluteTargetPath = Path.EndsInDirectorySeparator(absoluteTargetPath) ? absoluteTargetPath : absoluteTargetPath + Path.DirectorySeparatorChar;
+            }
 
             if (this.FileExists(absoluteSourcePath))
             {
@@ -460,12 +498,26 @@ namespace Talegen.Storage.Net.Core.Memory
 
                 if (!this.DirectoryExists(targetFolder))
                 {
-                    VirtualDisk.TryAdd(targetFolder, new MemoryFolderModel());
+                    targetFolder = this.CreateDirectory(targetFolder, true);
+                }
+
+                // is this a directory...
+                if (targetIsDirectory && this.DirectoryExists(targetFolder))
+                {
+                    // reuse the source file name for target path
+                    absoluteTargetPath = Path.Combine(absoluteTargetPath, Path.GetFileName(absoluteSourcePath));
                 }
 
                 if (this.FileExists(absoluteTargetPath))
                 {
-                    this.DeleteFile(absoluteTargetPath);
+                    if (overwrite)
+                    {
+                        this.DeleteFile(absoluteTargetPath);
+                    }
+                    else
+                    {
+                        throw new StorageException(string.Format(Resources.StorageTargetExistsErrorText, absoluteTargetPath));
+                    }
                 }
 
                 VirtualDisk[targetFolder].Files.Add(absoluteTargetPath, sourceContents);
@@ -532,8 +584,7 @@ namespace Talegen.Storage.Net.Core.Memory
                 throw new IOException(Resources.StreamWriteErrorText);
             }
 
-            using MemoryStream ms = new MemoryStream();
-            ms.Write(this.ReadBinaryFile(path));
+            outputStream.Write(this.ReadBinaryFile(path));
         }
 
         /// <summary>
@@ -584,15 +635,15 @@ namespace Talegen.Storage.Net.Core.Memory
                 }
 
                 // if the virtual file already exists...
-                if (folder.Files.ContainsKey(path))
+                if (folder.Files.ContainsKey(absolutePath))
                 {
                     // update contents
-                    folder.Files[path] = content;
+                    folder.Files[absolutePath] = content;
                 }
                 else
                 {
                     // add contents if new virtual file.
-                    folder.Files.Add(path, content);
+                    folder.Files.Add(absolutePath, content);
                 }
             }
             catch (Exception ex)

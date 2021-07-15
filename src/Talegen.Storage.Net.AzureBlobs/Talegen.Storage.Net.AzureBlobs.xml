@@ -213,19 +213,21 @@
             after the list of files have been deleted.
             </param>
         </member>
-        <member name="M:Talegen.Storage.Net.AzureBlobs.AzureBlobStorageService.CopyFile(System.String,System.String)">
+        <member name="M:Talegen.Storage.Net.AzureBlobs.AzureBlobStorageService.CopyFile(System.String,System.String,System.Boolean)">
             <summary>
             This method is used to copy a file.
             </summary>
             <param name="sourceFilePath">Contains a the path to the file that will be copied.</param>
             <param name="targetFilePath">Contains the path to the target where the file is to be copied.</param>
+            <param name="overwrite">Contains a value indicating if the target should be overwritten if it already exists. Default is true.</param>
         </member>
-        <member name="M:Talegen.Storage.Net.AzureBlobs.AzureBlobStorageService.MoveFile(System.String,System.String)">
+        <member name="M:Talegen.Storage.Net.AzureBlobs.AzureBlobStorageService.MoveFile(System.String,System.String,System.Boolean)">
             <summary>
             This method is used to move a file.
             </summary>
             <param name="sourceFilePath">Contains a the path to the file that will be moved.</param>
             <param name="targetFilePath">Contains the path to the target where the file is to be moved.</param>
+            <param name="overwrite">Contains a value indicating if the target should be overwritten if it already exists. Default is true.</param>
         </member>
         <member name="M:Talegen.Storage.Net.AzureBlobs.AzureBlobStorageService.FileHash(System.String)">
             <summary>
@@ -253,12 +255,13 @@
             An exception is thrown if the root folder specified in <paramref name="subFolderName" /> is not rooted with workspace root folder path.
             </exception>
         </member>
-        <member name="M:Talegen.Storage.Net.AzureBlobs.AzureBlobStorageService.LateralCopyInternal(System.String,System.String)">
+        <member name="M:Talegen.Storage.Net.AzureBlobs.AzureBlobStorageService.LateralCopyInternal(System.String,System.String,System.Boolean)">
             <summary>
             Laterals the copy internal.
             </summary>
             <param name="sourceFilePath">The source file path.</param>
             <param name="destFilePath">The dest file path.</param>
+            <param name="overwrite">Contains a value indicating if the target should be overwritten if it already exists.</param>
             <returns>Returns a value indicating copy success.</returns>
         </member>
         <member name="M:Talegen.Storage.Net.AzureBlobs.AzureBlobStorageService.FindFilesInternal(Azure.Storage.Files.Shares.ShareDirectoryClient,System.String,System.IO.SearchOption)">

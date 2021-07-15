@@ -96,11 +96,6 @@
             This class implements the storage interface for implementing file IO with the local server disk storage.
             </summary>
         </member>
-        <member name="F:Talegen.Storage.Net.Core.Disk.LocalStorageService.exceptionMessage">
-            <summary>
-            Contains an exception message to throw.
-            </summary>
-        </member>
         <member name="M:Talegen.Storage.Net.Core.Disk.LocalStorageService.#ctor(System.String,System.Boolean)">
             <summary>
             Initializes a new instance of the <see cref="T:Talegen.Storage.Net.Core.Disk.LocalStorageService" /> class.
@@ -247,19 +242,25 @@
             after the list of files have been deleted.
             </param>
         </member>
-        <member name="M:Talegen.Storage.Net.Core.Disk.LocalStorageService.CopyFile(System.String,System.String)">
+        <member name="M:Talegen.Storage.Net.Core.Disk.LocalStorageService.CopyFile(System.String,System.String,System.Boolean)">
             <summary>
             This method is used to copy a file.
             </summary>
             <param name="sourceFilePath">Contains a the path to the file that will be copied.</param>
             <param name="targetFilePath">Contains the path to the target where the file is to be copied.</param>
+            <param name="overwrite">Contains a value indicating if the target should be overwritten if it already exists. Default is true.</param>
+            <exception cref="T:System.ArgumentNullException">sourceFilePath or targetFilePath</exception>
+            <exception cref="T:Talegen.Storage.Net.Core.StorageException"></exception>
         </member>
-        <member name="M:Talegen.Storage.Net.Core.Disk.LocalStorageService.MoveFile(System.String,System.String)">
+        <member name="M:Talegen.Storage.Net.Core.Disk.LocalStorageService.MoveFile(System.String,System.String,System.Boolean)">
             <summary>
             This method is used to move a file.
             </summary>
             <param name="sourceFilePath">Contains a the path to the file that will be moved.</param>
             <param name="targetFilePath">Contains the path to the target where the file is to be moved.</param>
+            <param name="overwrite">Contains a value indicating if the target should be overwritten if it already exists. Default is true.</param>
+            <exception cref="T:System.ArgumentNullException">sourceFilePath or targetFilePath</exception>
+            <exception cref="T:Talegen.Storage.Net.Core.StorageException"></exception>
         </member>
         <member name="M:Talegen.Storage.Net.Core.Disk.LocalStorageService.FileHash(System.String)">
             <summary>
@@ -425,19 +426,21 @@
             after the list of files have been deleted.
             </param>
         </member>
-        <member name="M:Talegen.Storage.Net.Core.IStorageService.CopyFile(System.String,System.String)">
+        <member name="M:Talegen.Storage.Net.Core.IStorageService.CopyFile(System.String,System.String,System.Boolean)">
             <summary>
             This method is used to copy a file.
             </summary>
             <param name="sourceFilePath">Contains a the path to the file that will be copied.</param>
             <param name="targetFilePath">Contains the path to the target where the file is to be copied.</param>
+            <param name="overwrite">Contains a value indicating if the target should be overwritten if it already exists. Default is true.</param>
         </member>
-        <member name="M:Talegen.Storage.Net.Core.IStorageService.MoveFile(System.String,System.String)">
+        <member name="M:Talegen.Storage.Net.Core.IStorageService.MoveFile(System.String,System.String,System.Boolean)">
             <summary>
             This method is used to move a file.
             </summary>
             <param name="sourceFilePath">Contains a the path to the file that will be moved.</param>
             <param name="targetFilePath">Contains the path to the target where the file is to be moved.</param>
+            <param name="overwrite">Contains a value indicating if the target should be overwritten if it already exists. Default is true.</param>
         </member>
         <member name="M:Talegen.Storage.Net.Core.IStorageService.DirectoryExists(System.String)">
             <summary>
@@ -564,12 +567,13 @@
             </summary>
             <param name="storageContext">Contains the settings used to initialize the storage service.</param>
         </member>
-        <member name="M:Talegen.Storage.Net.Core.Memory.MemoryStorageService.CopyFile(System.String,System.String)">
+        <member name="M:Talegen.Storage.Net.Core.Memory.MemoryStorageService.CopyFile(System.String,System.String,System.Boolean)">
             <summary>
             This method is used to copy a file.
             </summary>
             <param name="sourceFilePath">Contains a the path to the file that will be copied.</param>
             <param name="targetFilePath">Contains the path to the target where the file is to be copied.</param>
+            <param name="overwrite">Contains a value indicating if the target should be overwritten if it already exists. Default is true.</param>
             <exception cref="T:System.ArgumentNullException">sourceFilePath or targetFilePath</exception>
             <exception cref="T:Talegen.Storage.Net.Core.StorageException"></exception>
         </member>
@@ -660,12 +664,13 @@
             <returns>Returns a list of files in the directory path.</returns>
             <exception cref="T:System.ArgumentNullException">subFolderName</exception>
         </member>
-        <member name="M:Talegen.Storage.Net.Core.Memory.MemoryStorageService.MoveFile(System.String,System.String)">
+        <member name="M:Talegen.Storage.Net.Core.Memory.MemoryStorageService.MoveFile(System.String,System.String,System.Boolean)">
             <summary>
             This method is used to move a file.
             </summary>
             <param name="sourceFilePath">Contains a the path to the file that will be moved.</param>
             <param name="targetFilePath">Contains the path to the target where the file is to be moved.</param>
+            <param name="overwrite">Contains a value indicating if the target should be overwritten if it already exists. Default is true.</param>
             <exception cref="T:System.ArgumentNullException">sourceFilePath or targetFilePath</exception>
             <exception cref="T:Talegen.Storage.Net.Core.StorageException"></exception>
         </member>
@@ -763,6 +768,11 @@
               Looks up a localized string similar to The path &quot;{0}&quot; could not be accessed due to permissions. See &quot;{1}&quot;.
             </summary>
         </member>
+        <member name="P:Talegen.Storage.Net.Core.Properties.Resources.StorageCannotDeleteRecursiveErrorText">
+            <summary>
+              Looks up a localized string similar to The storage folder &quot;{0}&quot; cannot be deleted because its contents are not empty..
+            </summary>
+        </member>
         <member name="P:Talegen.Storage.Net.Core.Properties.Resources.StorageDirectoryCommandErrorText">
             <summary>
               Looks up a localized string similar to The storage folder &quot;{0}&quot; command could not be completed due to &quot;{1}&quot;.
@@ -775,7 +785,7 @@
         </member>
         <member name="P:Talegen.Storage.Net.Core.Properties.Resources.StorageDirectoryExistsErrorText">
             <summary>
-              Looks up a localized string similar to The storage folder&quot;{0}&quot; already exists..
+              Looks up a localized string similar to The storage folder &quot;{0}&quot; already exists..
             </summary>
         </member>
         <member name="P:Talegen.Storage.Net.Core.Properties.Resources.StorageNotFoundErrorText">
@@ -786,6 +796,11 @@
         <member name="P:Talegen.Storage.Net.Core.Properties.Resources.StoragePathSpecifiedNotInRootErrorText">
             <summary>
               Looks up a localized string similar to The path specified in &quot;{0}&quot; did not match the root path &quot;{1}&quot;. All folders must be created under the root path..
+            </summary>
+        </member>
+        <member name="P:Talegen.Storage.Net.Core.Properties.Resources.StorageTargetExistsErrorText">
+            <summary>
+              Looks up a localized string similar to The target path &quot;{0}&quot; already exists..
             </summary>
         </member>
         <member name="P:Talegen.Storage.Net.Core.Properties.Resources.StorageZipFilesNotFoundErrorText">

@@ -31,11 +31,6 @@ namespace Talegen.Storage.Net.Core.Disk
     public class LocalStorageService : IStorageService
     {
         /// <summary>
-        /// Contains an exception message to throw.
-        /// </summary>
-        private string exceptionMessage = string.Empty;
-
-        /// <summary>
         /// Initializes a new instance of the <see cref="LocalStorageService" /> class.
         /// </summary>
         /// <param name="workspacePath">Contains the root path where the local storage folder and file structure begins.</param>
@@ -129,13 +124,11 @@ namespace Talegen.Storage.Net.Core.Disk
             }
             catch (UnauthorizedAccessException accessEx)
             {
-                this.exceptionMessage = string.Format(Resources.StorageAccessDeniedErrorText, workingPath, accessEx.Message);
-                throw new StorageException(this.exceptionMessage, accessEx);
+                throw new StorageException(string.Format(Resources.StorageAccessDeniedErrorText, workingPath, accessEx.Message), accessEx);
             }
             catch (Exception ex)
             {
-                this.exceptionMessage = string.Format(Resources.StorageDirectoryCommandErrorText, workingPath, ex.Message);
-                throw new StorageException(this.exceptionMessage, ex);
+                throw new StorageException(string.Format(Resources.StorageDirectoryCommandErrorText, workingPath, ex.Message), ex);
             }
 
             return workingPath;
@@ -176,13 +169,11 @@ namespace Talegen.Storage.Net.Core.Disk
             }
             catch (UnauthorizedAccessException accessEx)
             {
-                this.exceptionMessage = string.Format(Resources.StorageAccessDeniedErrorText, workingPath, accessEx.Message);
-                throw new StorageException(this.exceptionMessage, accessEx);
+                throw new StorageException(string.Format(Resources.StorageAccessDeniedErrorText, workingPath, accessEx.Message), accessEx);
             }
             catch (Exception ex)
             {
-                this.exceptionMessage = string.Format(Resources.StorageDirectoryCommandErrorText, workingPath, ex.Message);
-                throw new StorageException(this.exceptionMessage, ex);
+                throw new StorageException(string.Format(Resources.StorageDirectoryCommandErrorText, workingPath, ex.Message), ex);
             }
         }
 
@@ -233,13 +224,11 @@ namespace Talegen.Storage.Net.Core.Disk
             }
             catch (UnauthorizedAccessException accessEx)
             {
-                this.exceptionMessage = string.Format(Resources.StorageAccessDeniedErrorText, workingPath, accessEx.Message);
-                throw new StorageException(this.exceptionMessage, accessEx);
+                throw new StorageException(string.Format(Resources.StorageAccessDeniedErrorText, workingPath, accessEx.Message), accessEx);
             }
             catch (Exception ex)
             {
-                this.exceptionMessage = string.Format(Resources.StorageDirectoryCommandErrorText, workingPath, ex.Message);
-                throw new StorageException(this.exceptionMessage, ex);
+                throw new StorageException(string.Format(Resources.StorageDirectoryCommandErrorText, workingPath, ex.Message), ex);
             }
         }
 
@@ -268,13 +257,11 @@ namespace Talegen.Storage.Net.Core.Disk
             }
             catch (UnauthorizedAccessException accessEx)
             {
-                this.exceptionMessage = string.Format(Resources.StorageAccessDeniedErrorText, workingPath, accessEx.Message);
-                throw new StorageException(this.exceptionMessage, accessEx);
+                throw new StorageException(string.Format(Resources.StorageAccessDeniedErrorText, workingPath, accessEx.Message), accessEx);
             }
             catch (Exception ex)
             {
-                this.exceptionMessage = string.Format(Resources.ExceptionErrorText, ex.Message);
-                throw new StorageException(this.exceptionMessage, ex);
+                throw new StorageException(string.Format(Resources.ExceptionErrorText, ex.Message), ex);
             }
 
             return result;
@@ -313,13 +300,11 @@ namespace Talegen.Storage.Net.Core.Disk
             }
             catch (UnauthorizedAccessException accessEx)
             {
-                this.exceptionMessage = string.Format(Resources.StorageAccessDeniedErrorText, workingPath, accessEx.Message);
-                throw new StorageException(this.exceptionMessage, accessEx);
+                throw new StorageException(string.Format(Resources.StorageAccessDeniedErrorText, workingPath, accessEx.Message), accessEx);
             }
             catch (Exception ex)
             {
-                this.exceptionMessage = string.Format(Resources.ExceptionErrorText, ex.Message);
-                throw new StorageException(this.exceptionMessage, ex);
+                throw new StorageException(string.Format(Resources.ExceptionErrorText, ex.Message), ex);
             }
         }
 
@@ -348,13 +333,11 @@ namespace Talegen.Storage.Net.Core.Disk
             }
             catch (UnauthorizedAccessException accessEx)
             {
-                this.exceptionMessage = string.Format(Resources.StorageAccessDeniedErrorText, workingPath, accessEx.Message);
-                throw new StorageException(this.exceptionMessage, accessEx);
+                throw new StorageException(string.Format(Resources.StorageAccessDeniedErrorText, workingPath, accessEx.Message), accessEx);
             }
             catch (Exception ex)
             {
-                this.exceptionMessage = string.Format(Resources.ExceptionErrorText, ex.Message);
-                throw new StorageException(this.exceptionMessage, ex);
+                throw new StorageException(string.Format(Resources.ExceptionErrorText, ex.Message), ex);
             }
 
             return result;
@@ -386,13 +369,11 @@ namespace Talegen.Storage.Net.Core.Disk
             }
             catch (UnauthorizedAccessException accessEx)
             {
-                this.exceptionMessage = string.Format(Resources.StorageAccessDeniedErrorText, workingPath, accessEx.Message);
-                throw new StorageException(this.exceptionMessage, accessEx);
+                throw new StorageException(string.Format(Resources.StorageAccessDeniedErrorText, workingPath, accessEx.Message), accessEx);
             }
             catch (Exception ex)
             {
-                this.exceptionMessage = string.Format(Resources.ExceptionErrorText, ex.Message);
-                throw new StorageException(this.exceptionMessage, ex);
+                throw new StorageException(string.Format(Resources.ExceptionErrorText, ex.Message), ex);
             }
 
             return result;
@@ -434,13 +415,11 @@ namespace Talegen.Storage.Net.Core.Disk
             }
             catch (UnauthorizedAccessException accessEx)
             {
-                this.exceptionMessage = string.Format(Resources.StorageAccessDeniedErrorText, workingPath, accessEx.Message);
-                throw new StorageException(this.exceptionMessage, accessEx);
+                throw new StorageException(string.Format(Resources.StorageAccessDeniedErrorText, workingPath, accessEx.Message), accessEx);
             }
             catch (Exception ex)
             {
-                this.exceptionMessage = string.Format(Resources.ExceptionErrorText, ex.Message);
-                throw new StorageException(this.exceptionMessage, ex);
+                throw new StorageException(string.Format(Resources.ExceptionErrorText, ex.Message), ex);
             }
 
             return result;
@@ -478,8 +457,7 @@ namespace Talegen.Storage.Net.Core.Disk
             }
             catch (Exception ex)
             {
-                this.exceptionMessage = string.Format(Resources.ExceptionErrorText, ex.Message);
-                throw new StorageException(this.exceptionMessage, ex);
+                throw new StorageException(string.Format(Resources.ExceptionErrorText, ex.Message), ex);
             }
 
             return result;
@@ -512,13 +490,11 @@ namespace Talegen.Storage.Net.Core.Disk
             }
             catch (UnauthorizedAccessException accessEx)
             {
-                this.exceptionMessage = string.Format(Resources.StorageAccessDeniedErrorText, workingPath, accessEx.Message);
-                throw new StorageException(this.exceptionMessage, accessEx);
+                throw new StorageException(string.Format(Resources.StorageAccessDeniedErrorText, workingPath, accessEx.Message), accessEx);
             }
             catch (Exception ex)
             {
-                this.exceptionMessage = string.Format(Resources.ExceptionErrorText, ex.Message);
-                throw new StorageException(this.exceptionMessage, ex);
+                throw new StorageException(string.Format(Resources.ExceptionErrorText, ex.Message), ex);
             }
 
             return result;
@@ -630,8 +606,7 @@ namespace Talegen.Storage.Net.Core.Disk
             }
             catch (Exception ex)
             {
-                this.exceptionMessage = string.Format(Resources.ExceptionErrorText, ex.Message);
-                throw new StorageException(this.exceptionMessage, ex);
+                throw new StorageException(string.Format(Resources.ExceptionErrorText, ex.Message), ex);
             }
         }
 
@@ -653,7 +628,10 @@ namespace Talegen.Storage.Net.Core.Disk
         /// </summary>
         /// <param name="sourceFilePath">Contains a the path to the file that will be copied.</param>
         /// <param name="targetFilePath">Contains the path to the target where the file is to be copied.</param>
-        public void CopyFile(string sourceFilePath, string targetFilePath)
+        /// <param name="overwrite">Contains a value indicating if the target should be overwritten if it already exists. Default is true.</param>
+        /// <exception cref="System.ArgumentNullException">sourceFilePath or targetFilePath</exception>
+        /// <exception cref="StorageException"></exception>
+        public void CopyFile(string sourceFilePath, string targetFilePath, bool overwrite = true)
         {
             if (string.IsNullOrWhiteSpace(sourceFilePath))
             {
@@ -673,17 +651,15 @@ namespace Talegen.Storage.Net.Core.Disk
 
             try
             {
-                File.Copy(absoluteSourcePath, absoluteTargetPath);
+                File.Copy(absoluteSourcePath, absoluteTargetPath, overwrite);
             }
             catch (UnauthorizedAccessException accessEx)
             {
-                this.exceptionMessage = string.Format(Resources.StorageAccessDeniedErrorText, absoluteSourcePath, accessEx.Message);
-                throw new StorageException(this.exceptionMessage, accessEx);
+                throw new StorageException(string.Format(Resources.StorageAccessDeniedErrorText, absoluteSourcePath, accessEx.Message), accessEx);
             }
             catch (Exception ex)
             {
-                this.exceptionMessage = string.Format(Resources.ExceptionErrorText, ex.Message);
-                throw new StorageException(this.exceptionMessage, ex);
+                throw new StorageException(string.Format(Resources.ExceptionErrorText, ex.Message), ex);
             }
         }
 
@@ -692,7 +668,10 @@ namespace Talegen.Storage.Net.Core.Disk
         /// </summary>
         /// <param name="sourceFilePath">Contains a the path to the file that will be moved.</param>
         /// <param name="targetFilePath">Contains the path to the target where the file is to be moved.</param>
-        public void MoveFile(string sourceFilePath, string targetFilePath)
+        /// <param name="overwrite">Contains a value indicating if the target should be overwritten if it already exists. Default is true.</param>
+        /// <exception cref="System.ArgumentNullException">sourceFilePath or targetFilePath</exception>
+        /// <exception cref="StorageException"></exception>
+        public void MoveFile(string sourceFilePath, string targetFilePath, bool overwrite = true)
         {
             if (string.IsNullOrWhiteSpace(sourceFilePath))
             {
@@ -712,17 +691,15 @@ namespace Talegen.Storage.Net.Core.Disk
 
             try
             {
-                File.Move(absoluteSourcePath, absoluteTargetPath);
+                File.Move(absoluteSourcePath, absoluteTargetPath, overwrite);
             }
             catch (UnauthorizedAccessException accessEx)
             {
-                this.exceptionMessage = string.Format(Resources.StorageAccessDeniedErrorText, absoluteSourcePath, accessEx.Message);
-                throw new StorageException(this.exceptionMessage, accessEx);
+                throw new StorageException(string.Format(Resources.StorageAccessDeniedErrorText, absoluteSourcePath, accessEx.Message), accessEx);
             }
             catch (Exception ex)
             {
-                this.exceptionMessage = string.Format(Resources.ExceptionErrorText, ex.Message);
-                throw new StorageException(this.exceptionMessage, ex);
+                throw new StorageException(string.Format(Resources.ExceptionErrorText, ex.Message), ex);
             }
         }
 
@@ -745,8 +722,6 @@ namespace Talegen.Storage.Net.Core.Disk
 
             byte[] content = this.ReadBinaryFile(workingPath);
             string hash = content?.ToHashString();
-            content = null;
-
             return hash;
         }
 
@@ -778,13 +753,11 @@ namespace Talegen.Storage.Net.Core.Disk
                 }
                 catch (UnauthorizedAccessException accessEx)
                 {
-                    this.exceptionMessage = string.Format(Resources.StorageAccessDeniedErrorText, workingPath, accessEx.Message);
-                    throw new StorageException(this.exceptionMessage, accessEx);
+                    throw new StorageException(string.Format(Resources.StorageAccessDeniedErrorText, workingPath, accessEx.Message), accessEx);
                 }
                 catch (Exception ex)
                 {
-                    this.exceptionMessage = string.Format(Resources.ExceptionErrorText, ex.Message);
-                    throw new StorageException(this.exceptionMessage, ex);
+                    throw new StorageException(string.Format(Resources.ExceptionErrorText, ex.Message), ex);
                 }
             }
 
@@ -832,8 +805,7 @@ namespace Talegen.Storage.Net.Core.Disk
             }
             catch (Exception ex)
             {
-                this.exceptionMessage = string.Format(Resources.ExceptionErrorText, ex.Message);
-                throw new StorageException(this.exceptionMessage, ex);
+                throw new StorageException(string.Format(Resources.ExceptionErrorText, ex.Message), ex);
             }
 
             return result;

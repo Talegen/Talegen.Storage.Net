@@ -79,6 +79,15 @@ namespace Talegen.Storage.Net.Core.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to The storage folder &quot;{0}&quot; cannot be deleted because its contents are not empty..
+        /// </summary>
+        internal static string StorageCannotDeleteRecursiveErrorText {
+            get {
+                return ResourceManager.GetString("StorageCannotDeleteRecursiveErrorText", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to The storage folder &quot;{0}&quot; command could not be completed due to &quot;{1}&quot;.
         /// </summary>
         internal static string StorageDirectoryCommandErrorText {
@@ -97,7 +106,7 @@ namespace Talegen.Storage.Net.Core.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to The storage folder&quot;{0}&quot; already exists..
+        ///   Looks up a localized string similar to The storage folder &quot;{0}&quot; already exists..
         /// </summary>
         internal static string StorageDirectoryExistsErrorText {
             get {
@@ -120,6 +129,15 @@ namespace Talegen.Storage.Net.Core.Properties {
         internal static string StoragePathSpecifiedNotInRootErrorText {
             get {
                 return ResourceManager.GetString("StoragePathSpecifiedNotInRootErrorText", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The target path &quot;{0}&quot; already exists..
+        /// </summary>
+        internal static string StorageTargetExistsErrorText {
+            get {
+                return ResourceManager.GetString("StorageTargetExistsErrorText", resourceCulture);
             }
         }
         

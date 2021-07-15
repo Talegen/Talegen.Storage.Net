@@ -131,14 +131,16 @@ namespace Talegen.Storage.Net.Core
         /// </summary>
         /// <param name="sourceFilePath">Contains a the path to the file that will be copied.</param>
         /// <param name="targetFilePath">Contains the path to the target where the file is to be copied.</param>
-        void CopyFile(string sourceFilePath, string targetFilePath);
+        /// <param name="overwrite">Contains a value indicating if the target should be overwritten if it already exists. Default is true.</param>
+        void CopyFile(string sourceFilePath, string targetFilePath, bool overwrite = true);
 
         /// <summary>
         /// This method is used to move a file.
         /// </summary>
         /// <param name="sourceFilePath">Contains a the path to the file that will be moved.</param>
         /// <param name="targetFilePath">Contains the path to the target where the file is to be moved.</param>
-        void MoveFile(string sourceFilePath, string targetFilePath);
+        /// <param name="overwrite">Contains a value indicating if the target should be overwritten if it already exists. Default is true.</param>
+        void MoveFile(string sourceFilePath, string targetFilePath, bool overwrite = true);
 
         /// <summary>
         /// Contains a value indicating whether the folder already exists.

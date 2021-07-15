@@ -521,7 +521,8 @@ namespace Talegen.Storage.Net.AzureBlobs
         /// </summary>
         /// <param name="sourceFilePath">Contains a the path to the file that will be copied.</param>
         /// <param name="targetFilePath">Contains the path to the target where the file is to be copied.</param>
-        public void CopyFile(string sourceFilePath, string targetFilePath)
+        /// <param name="overwrite">Contains a value indicating if the target should be overwritten if it already exists. Default is true.</param>
+        public void CopyFile(string sourceFilePath, string targetFilePath, bool overwrite = true)
         {
             if (string.IsNullOrWhiteSpace(sourceFilePath))
             {
@@ -536,7 +537,7 @@ namespace Talegen.Storage.Net.AzureBlobs
             this.VerifyDirectoryNameRoot(sourceFilePath);
             this.VerifyDirectoryNameRoot(targetFilePath);
 
-            this.LateralCopyInternal(sourceFilePath, targetFilePath);
+            this.LateralCopyInternal(sourceFilePath, targetFilePath, overwrite);
         }
 
         /// <summary>
@@ -544,7 +545,8 @@ namespace Talegen.Storage.Net.AzureBlobs
         /// </summary>
         /// <param name="sourceFilePath">Contains a the path to the file that will be moved.</param>
         /// <param name="targetFilePath">Contains the path to the target where the file is to be moved.</param>
-        public void MoveFile(string sourceFilePath, string targetFilePath)
+        /// <param name="overwrite">Contains a value indicating if the target should be overwritten if it already exists. Default is true.</param>
+        public void MoveFile(string sourceFilePath, string targetFilePath, bool overwrite = true)
         {
             if (string.IsNullOrWhiteSpace(sourceFilePath))
             {
@@ -556,7 +558,7 @@ namespace Talegen.Storage.Net.AzureBlobs
                 throw new ArgumentNullException(nameof(targetFilePath));
             }
 
-            if (this.LateralCopyInternal(sourceFilePath, targetFilePath))
+            if (this.LateralCopyInternal(sourceFilePath, targetFilePath, overwrite))
             {
                 this.DeleteFile(sourceFilePath);
             }
@@ -618,8 +620,9 @@ namespace Talegen.Storage.Net.AzureBlobs
         /// </summary>
         /// <param name="sourceFilePath">The source file path.</param>
         /// <param name="destFilePath">The dest file path.</param>
+        /// <param name="overwrite">Contains a value indicating if the target should be overwritten if it already exists.</param>
         /// <returns>Returns a value indicating copy success.</returns>
-        private bool LateralCopyInternal(string sourceFilePath, string destFilePath)
+        private bool LateralCopyInternal(string sourceFilePath, string destFilePath, bool overwrite)
         {
             string sourceDirectoryPath = Path.GetDirectoryName(sourceFilePath);
             string sourceFileName = Path.GetFileName(sourceFilePath);
@@ -639,8 +642,14 @@ namespace Talegen.Storage.Net.AzureBlobs
 
                 var destFileClient = destDirClient.GetFileClient(destFileName);
 
+                if (overwrite)
+                {
+                    destFileClient.DeleteIfExists();
+                }
+
                 // Start the copy operation
                 destFileClient.StartCopy(sourceFileClient.Uri);
+
                 result = destFileClient.Exists();
             }
 
