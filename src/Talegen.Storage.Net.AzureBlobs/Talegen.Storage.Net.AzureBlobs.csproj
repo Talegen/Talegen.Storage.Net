@@ -1,9 +1,9 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <TargetFramework>netcoreapp3.1</TargetFramework>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-    <Version>1.0.0</Version>
+    <Version>1.0.2</Version>
     <Authors>Talegen, LLC</Authors>
     <Description>Azure Blob Storage Abstraction for Talegen Storage Library.</Description>
     <PackageLicenseExpression>Apache-2.0</PackageLicenseExpression>
@@ -13,7 +13,7 @@
     <RepositoryUrl>https://github.com/Talegen/Talegen.Storage.Net</RepositoryUrl>
     <RepositoryType>git</RepositoryType>
     <PackageTags>storage azure</PackageTags>
-    <PackageReleaseNotes>Initial release</PackageReleaseNotes>
+    <PackageReleaseNotes>Updated to include latest Core library and keep versions in sync.</PackageReleaseNotes>
     <NeutralLanguage>en</NeutralLanguage>
     <ApplicationIcon />
     <EnableNETAnalyzers>true</EnableNETAnalyzers>

@@ -10,11 +10,11 @@
     <RepositoryType>git</RepositoryType>
     <PackageProjectUrl>https://github.com/Talegen/Talegen.Storage.Net</PackageProjectUrl>
     <PackageTags>storage</PackageTags>
-    <PackageReleaseNotes>Initial release</PackageReleaseNotes>
+    <PackageReleaseNotes>Fixes for memory implementation.</PackageReleaseNotes>
     <NeutralLanguage>en</NeutralLanguage>
-    <Version>1.0.1</Version>
-    <AssemblyVersion>1.0.1.0</AssemblyVersion>
-    <FileVersion>1.0.1.0</FileVersion>
+    <Version>1.0.2</Version>
+    <AssemblyVersion>1.0.2.0</AssemblyVersion>
+    <FileVersion>1.0.2.0</FileVersion>
     <EnableNETAnalyzers>true</EnableNETAnalyzers>
     <ApplicationIcon />
     <PackageIcon>logo.png</PackageIcon>
