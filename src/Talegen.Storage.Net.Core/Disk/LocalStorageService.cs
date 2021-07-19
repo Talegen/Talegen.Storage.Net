@@ -74,19 +74,24 @@ namespace Talegen.Storage.Net.Core.Disk
                 throw new ArgumentNullException(nameof(storageContext));
             }
 
-            // if the path specified isn't a folder
+            // if the path specified isn't a URL
             if (storageContext.WorkspaceUri.IsFile || storageContext.WorkspaceUri.IsUnc)
             {
-                throw new ArgumentOutOfRangeException(nameof(storageContext.RootWorkspaceLocalFolderPath));
-            }
-            else if (storageContext.UniqueWorkspace)
-            {
-                // get the root worker local folder path now concatenate the storage session identifier as a sub-folder name to make this a unique path.
-                this.RootPath = Path.Combine(storageContext.RootWorkspaceLocalFolderPath, this.StorageId);
+                if (storageContext.UniqueWorkspace)
+                {
+                    // get the root worker local folder path now concatenate the storage session identifier as a sub-folder name to make this a unique path.
+                    this.RootPath = Path.Combine(storageContext.RootWorkspaceLocalFolderPath, this.StorageId);
+                }
+                else
+                {
+                    // get the root worker local folder path now concatenate the storage session identifier as a sub-folder name to make this a unique path.
+                    this.RootPath = storageContext.RootWorkspaceLocalFolderPath;
+                }
             }
             else
             {
-                this.RootPath = storageContext.RootWorkspaceLocalFolderPath;
+                // TODO: throw error that local folder must be specified.
+                throw new ArgumentOutOfRangeException(nameof(storageContext.RootWorkspaceLocalFolderPath));
             }
         }
 
@@ -157,9 +162,13 @@ namespace Talegen.Storage.Net.Core.Disk
 
             try
             {
-                // delete the directory and any sub-folder/files
-                if (Directory.Exists(workingPath))
+                if (!recursive && Directory.EnumerateFileSystemEntries(workingPath).Any())
                 {
+                    throw new StorageException(string.Format(Resources.StorageCannotDeleteRecursiveErrorText, workingPath));
+                }
+                else if (Directory.Exists(workingPath))
+                {
+                    // delete the directory and any sub-folder/files
                     Directory.Delete(workingPath, recursive);
                 }
                 else if (!silentNoExist)
@@ -361,9 +370,12 @@ namespace Talegen.Storage.Net.Core.Disk
             this.VerifyDirectoryNameRoot(path);
 
             string workingPath = Path.IsPathRooted(path) ? path : Path.Combine(this.RootPath, path);
+            string directoryPath = Path.GetDirectoryName(workingPath);
 
             try
             {
+                directoryPath = this.CreateDirectory(directoryPath, true);
+
                 // write all bytes to the extracted file path
                 File.WriteAllBytes(workingPath, content);
             }
@@ -407,10 +419,12 @@ namespace Talegen.Storage.Net.Core.Disk
             this.VerifyDirectoryNameRoot(path);
 
             string workingPath = Path.IsPathRooted(path) ? path : Path.Combine(this.RootPath, path);
+            string directoryPath = Path.GetDirectoryName(workingPath);
 
             try
             {
-                using FileStream fileStream = new FileStream(workingPath, FileMode.Create);
+                directoryPath = this.CreateDirectory(directoryPath, true);
+                using FileStream fileStream = new FileStream(workingPath, FileMode.OpenOrCreate);
                 inputStream.CopyTo(fileStream);
             }
             catch (UnauthorizedAccessException accessEx)
@@ -575,6 +589,12 @@ namespace Talegen.Storage.Net.Core.Disk
                 else
                 {
                     localAbsoluteFilePaths.Add(absolutePath);
+
+                    string folderPath = Path.GetDirectoryName(absolutePath);
+                    if (deleteFolders && !localAbsoluteDirectoryPaths.Contains(folderPath))
+                    {
+                        localAbsoluteDirectoryPaths.Add(folderPath);
+                    }
                 }
             });
 
@@ -591,6 +611,10 @@ namespace Talegen.Storage.Net.Core.Disk
                     {
                         File.Delete(filePath);
                     }
+                    else
+                    {
+                        throw new StorageException(string.Format(Resources.StorageNotFoundErrorText, filePath));
+                    }
                 });
 
                 if (deleteFolders)
@@ -600,7 +624,21 @@ namespace Talegen.Storage.Net.Core.Disk
                         parallelOptions,
                         directoryPath =>
                     {
-                        this.DeleteDirectory(directoryPath, true);
+                        if (this.DirectoryExists(directoryPath))
+                        {
+                            if (!Directory.EnumerateFileSystemEntries(directoryPath).Any())
+                            {
+                                this.DeleteDirectory(directoryPath, true);
+                            }
+                            else
+                            {
+                                throw new StorageException(string.Format(Resources.StorageCannotDeleteRecursiveErrorText, directoryPath));
+                            }
+                        }
+                        else
+                        {
+                            throw new StorageException(string.Format(Resources.StorageNotFoundErrorText, directoryPath));
+                        }
                     });
                 }
             }
@@ -648,6 +686,27 @@ namespace Talegen.Storage.Net.Core.Disk
 
             string absoluteSourcePath = Path.IsPathRooted(sourceFilePath) ? sourceFilePath : Path.Combine(this.RootPath, sourceFilePath);
             string absoluteTargetPath = Path.IsPathRooted(targetFilePath) ? targetFilePath : Path.Combine(this.RootPath, targetFilePath);
+            bool targetIsDirectory = this.IsDirectory(absoluteTargetPath);
+
+            if (targetIsDirectory)
+            {
+                // ensure path suffix
+                absoluteTargetPath = Path.EndsInDirectorySeparator(absoluteTargetPath) ? absoluteTargetPath : absoluteTargetPath + Path.DirectorySeparatorChar;
+            }
+
+            string targetFolder = Path.GetDirectoryName(absoluteTargetPath);
+
+            if (!this.DirectoryExists(targetFolder))
+            {
+                targetFolder = this.CreateDirectory(targetFolder, true);
+            }
+
+            // is this a directory...
+            if (targetIsDirectory && this.DirectoryExists(targetFolder))
+            {
+                // reuse the source file name for target path
+                absoluteTargetPath = Path.Combine(absoluteTargetPath, Path.GetFileName(absoluteSourcePath));
+            }
 
             try
             {
@@ -689,17 +748,59 @@ namespace Talegen.Storage.Net.Core.Disk
             string absoluteSourcePath = Path.IsPathRooted(sourceFilePath) ? sourceFilePath : Path.Combine(this.RootPath, sourceFilePath);
             string absoluteTargetPath = Path.IsPathRooted(targetFilePath) ? targetFilePath : Path.Combine(this.RootPath, targetFilePath);
 
-            try
+            bool targetIsDirectory = string.IsNullOrWhiteSpace(Path.GetExtension(absoluteTargetPath));
+
+            if (targetIsDirectory)
             {
-                File.Move(absoluteSourcePath, absoluteTargetPath, overwrite);
+                // ensure path suffix
+                absoluteTargetPath = Path.EndsInDirectorySeparator(absoluteTargetPath) ? absoluteTargetPath : absoluteTargetPath + Path.DirectorySeparatorChar;
             }
-            catch (UnauthorizedAccessException accessEx)
+
+            if (this.FileExists(absoluteSourcePath))
             {
-                throw new StorageException(string.Format(Resources.StorageAccessDeniedErrorText, absoluteSourcePath, accessEx.Message), accessEx);
+                string directory = Path.GetDirectoryName(absoluteSourcePath);
+                string targetFolder = Path.GetDirectoryName(absoluteTargetPath);
+
+                if (!this.DirectoryExists(targetFolder))
+                {
+                    targetFolder = this.CreateDirectory(targetFolder, true);
+                }
+
+                // is this a directory...
+                if (targetIsDirectory && this.DirectoryExists(targetFolder))
+                {
+                    // reuse the source file name for target path
+                    absoluteTargetPath = Path.Combine(absoluteTargetPath, Path.GetFileName(absoluteSourcePath));
+                }
+
+                if (this.FileExists(absoluteTargetPath))
+                {
+                    if (overwrite)
+                    {
+                        this.DeleteFile(absoluteTargetPath);
+                    }
+                    else
+                    {
+                        throw new StorageException(string.Format(Resources.StorageTargetExistsErrorText, absoluteTargetPath));
+                    }
+                }
+
+                try
+                {
+                    File.Move(absoluteSourcePath, absoluteTargetPath, overwrite);
+                }
+                catch (UnauthorizedAccessException accessEx)
+                {
+                    throw new StorageException(string.Format(Resources.StorageAccessDeniedErrorText, absoluteSourcePath, accessEx.Message), accessEx);
+                }
+                catch (Exception ex)
+                {
+                    throw new StorageException(string.Format(Resources.ExceptionErrorText, ex.Message), ex);
+                }
             }
-            catch (Exception ex)
+            else
             {
-                throw new StorageException(string.Format(Resources.ExceptionErrorText, ex.Message), ex);
+                throw new StorageException(string.Format(Resources.StorageNotFoundErrorText, absoluteSourcePath));
             }
         }
 
@@ -743,7 +844,7 @@ namespace Talegen.Storage.Net.Core.Disk
 
             // if the folder name specified has an absolute path, otherwise, just a sub-folder name structure was specified, so prefix root path.
             string workingPath = Path.IsPathRooted(subFolderName) ? subFolderName : Path.Combine(this.RootPath, subFolderName);
-            List<string> files = new List<string>();
+            List<string> files;
 
             if (this.DirectoryExists(workingPath))
             {
@@ -759,6 +860,10 @@ namespace Talegen.Storage.Net.Core.Disk
                 {
                     throw new StorageException(string.Format(Resources.ExceptionErrorText, ex.Message), ex);
                 }
+            }
+            else
+            {
+                throw new StorageException(string.Format(Resources.StorageDirectoryDoesNotExistErrorText, workingPath));
             }
 
             return files;
@@ -800,8 +905,15 @@ namespace Talegen.Storage.Net.Core.Disk
 
             try
             {
-                FileAttributes fileAttributes = File.GetAttributes(path);
-                result = fileAttributes.HasFlag(FileAttributes.Directory);
+                if (File.Exists(path) || Directory.Exists(path))
+                {
+                    FileAttributes fileAttributes = File.GetAttributes(path);
+                    result = fileAttributes.HasFlag(FileAttributes.Directory);
+                }
+                else
+                {
+                    result = string.IsNullOrWhiteSpace(Path.GetExtension(path));
+                }
             }
             catch (Exception ex)
             {

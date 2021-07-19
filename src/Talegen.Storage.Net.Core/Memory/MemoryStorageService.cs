@@ -126,6 +126,13 @@ namespace Talegen.Storage.Net.Core.Memory
 
             string absoluteSourcePath = Path.IsPathRooted(sourceFilePath) ? sourceFilePath : Path.Combine(this.RootPath, sourceFilePath);
             string absoluteTargetPath = Path.IsPathRooted(targetFilePath) ? targetFilePath : Path.Combine(this.RootPath, targetFilePath);
+            bool targetIsDirectory = string.IsNullOrWhiteSpace(Path.GetExtension(absoluteTargetPath));
+
+            if (targetIsDirectory)
+            {
+                // ensure path suffix
+                absoluteTargetPath = Path.EndsInDirectorySeparator(absoluteTargetPath) ? absoluteTargetPath : absoluteTargetPath + Path.DirectorySeparatorChar;
+            }
 
             if (this.FileExists(absoluteSourcePath))
             {
@@ -135,7 +142,14 @@ namespace Talegen.Storage.Net.Core.Memory
 
                 if (!this.DirectoryExists(targetFolder))
                 {
-                    VirtualDisk.TryAdd(targetFolder, new MemoryFolderModel());
+                    targetFolder = this.CreateDirectory(targetFolder, true);
+                }
+
+                // is this a directory...
+                if (targetIsDirectory && this.DirectoryExists(targetFolder))
+                {
+                    // reuse the source file name for target path
+                    absoluteTargetPath = Path.Combine(absoluteTargetPath, Path.GetFileName(absoluteSourcePath));
                 }
 
                 if (this.FileExists(absoluteTargetPath))
