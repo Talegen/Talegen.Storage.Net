@@ -14,8 +14,8 @@
     <link rel="stylesheet" href="styles/docfx.vendor.css">
     <link rel="stylesheet" href="styles/docfx.css">
     <link rel="stylesheet" href="styles/main.css">
-    <meta property="docfx:navrel" content="">
-    <meta property="docfx:tocrel" content="">
+    <meta property="docfx:navrel" content="toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
     
     
     
@@ -74,11 +74,11 @@
 <h2 id="where">Where</h2>
 <p>This library source code is available on GitHub to everyone under the standard <a href="https://github.com/talegen/Talegen.PureBlue.Models/blob/main/LICENSE">Apache 2.0 license</a>. The repository is located at Talegen.Storage.Net](<a href="https://github.com/Talegen/Talegen.Storage.Net">https://github.com/Talegen/Talegen.Storage.Net</a>).</p>
 <h2 id="how">How</h2>
-<p>We really like simplicity, so there are a couple of options for implementing this storage library. For specifics on which commands are available for each implementation, you can visit the class reference documentation <a href="#ref">here</a>.</p>
+<p>We really like simplicity, so there are a couple of options for implementing this storage library. For specifics on which commands are available for each implementation, you can visit the class reference documentation <a href="https://talegen.github.io/Talegen.Storage.Net/ref/Talegen.Storage.Net.Core.html">here</a>.</p>
 <h4 id="interfaces">Interfaces</h4>
-<p>The service is comprised of two simple interface classes. <code>IStorageContext</code> and <code>IStorageService</code>. These two interfaces are used to implement a <a href="#disk">Local Disk</a>, <a href="#memory">Memory</a>, and <a href="#azure">Azure File Share</a> storage implementation.</p>
+<p>The service is comprised of two simple interface classes. <a href="https://talegen.github.io/Talegen.Storage.Net/ref/Talegen.Storage.Net.Core.IStorageContext.html"><code>IStorageContext</code></a> and <a href="https://talegen.github.io/Talegen.Storage.Net/ref/Talegen.Storage.Net.Core.IStorageService.html"><code>IStorageService</code></a>. These two interfaces are used to implement a <a href="https://talegen.github.io/Talegen.Storage.Net/ref/Talegen.Storage.Net.Core.Disk.html">Local Disk</a>, <a href="https://talegen.github.io/Talegen.Storage.Net/ref/Talegen.Storage.Net.Core.Memory.html">Memory</a>, and <a href="https://talegen.github.io/Talegen.Storage.Net/ref/Talegen.Storage.Net.AzureBlobs.html">Azure File Share</a> storage implementation.</p>
 <h4 id="exceptions">Exceptions</h4>
-<p>The library has a single exception type, <code>StorageException</code> that is thrown for any exception that is thrown by internal errors within the storage service. In most cases, you should catch these exceptions to log and resolve any issues that occur within the library.</p>
+<p>The library has a single exception type, <a href="https://talegen.github.io/Talegen.Storage.Net/ref/Talegen.Storage.Net.Core.StorageException.html"><code>StorageException</code></a> that is thrown for any exception that is thrown by internal errors within the storage service. In most cases, you should catch these exceptions to log and resolve any issues that occur within the library.</p>
 <h2 id="examples">Examples</h2>
 <p>As with any flexible library, there are a couple of ways to construct your service, but you'll want to know which type of storage implementation you would like to instantiate.</p>
 <pre><code class="lang-c#">// create a new local disk storage context, using a temp root path, and set unique sub-folder workspace to true. 
