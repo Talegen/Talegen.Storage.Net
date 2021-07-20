@@ -46,6 +46,20 @@ namespace Talegen.Storage.Net.AzureBlobs
             this.AccountName = accountName;
             this.AccountKey = accountKey;
             this.UniqueWorkspace = uniqueWorkspace;
+            this.ConnectionString = $"AccountName={this.AccountName};AccountKey={this.AccountKey};BlobEndpoint={this.WorkspaceUri}";
+        }
+
+        /// <summary>
+        /// Initializes a new instance of the <see cref="AzureBlobStorageContext" /> class.
+        /// </summary>
+        /// <param name="connectionString">The connection string.</param>
+        /// <param name="accountName">Name of the account.</param>
+        /// <param name="uniqueWorkspace">Contains a value indicating whether the storage service shall use a unique workspace sub-folder.</param>
+        public AzureBlobStorageContext(string connectionString, string accountName, bool uniqueWorkspace = false)
+        {
+            this.ConnectionString = connectionString;
+            this.AccountName = accountName;
+            this.UniqueWorkspace = uniqueWorkspace;
         }
 
         /// <summary>
@@ -64,7 +78,7 @@ namespace Talegen.Storage.Net.AzureBlobs
         /// Gets the connection string.
         /// </summary>
         /// <value>The connection string.</value>
-        public string ConnectionString => $"AccountName={this.AccountName};AccountKey={this.AccountKey};BlobEndpoint={this.WorkspaceUri}";
+        public string ConnectionString { get; private set; }
 
         /// <summary>
         /// Gets the storage type of the context.

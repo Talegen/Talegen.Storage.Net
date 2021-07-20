@@ -3,7 +3,7 @@
   <PropertyGroup>
     <TargetFramework>netcoreapp3.1</TargetFramework>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-    <Version>1.0.2</Version>
+    <Version>1.0.3</Version>
     <Authors>Talegen, LLC</Authors>
     <Description>Azure Blob Storage Abstraction for Talegen Storage Library.</Description>
     <PackageLicenseExpression>Apache-2.0</PackageLicenseExpression>

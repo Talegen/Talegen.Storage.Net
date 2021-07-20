@@ -18,6 +18,14 @@
             <param name="accountKey">The account key.</param>
             <param name="uniqueWorkspace">Contains a value indicating whether the storage service shall use a unique workspace sub-folder.</param>
         </member>
+        <member name="M:Talegen.Storage.Net.AzureBlobs.AzureBlobStorageContext.#ctor(System.String,System.String,System.Boolean)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Talegen.Storage.Net.AzureBlobs.AzureBlobStorageContext" /> class.
+            </summary>
+            <param name="connectionString">The connection string.</param>
+            <param name="accountName">Name of the account.</param>
+            <param name="uniqueWorkspace">Contains a value indicating whether the storage service shall use a unique workspace sub-folder.</param>
+        </member>
         <member name="P:Talegen.Storage.Net.AzureBlobs.AzureBlobStorageContext.AccountName">
             <summary>
             Gets the name of the account.
@@ -80,8 +88,17 @@
             <summary>
             Initializes a new instance of the <see cref="T:Talegen.Storage.Net.AzureBlobs.AzureBlobStorageService" /> class.
             </summary>
-            <param name="workspacePath">Contains the root path where the local storage folder and file structure begins.</param>
-            <param name="storageShareName">Contains the default storage share to work with.</param>
+            <param name="blobEndpointUri">The BLOB endpoint URI.</param>
+            <param name="accountName">Name of the account.</param>
+            <param name="accountKey">The account key.</param>
+            <param name="uniqueWorkspace">Contains a value indicating whether the storage service shall use a unique workspace sub-folder.</param>
+        </member>
+        <member name="M:Talegen.Storage.Net.AzureBlobs.AzureBlobStorageService.#ctor(System.String,System.String,System.Boolean)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Talegen.Storage.Net.AzureBlobs.AzureBlobStorageService" /> class.
+            </summary>
+            <param name="connectionString">The connection string.</param>
+            <param name="accountName">Name of the account.</param>
             <param name="uniqueWorkspace">Contains a value indicating whether the storage service shall use a unique workspace sub-folder.</param>
         </member>
         <member name="M:Talegen.Storage.Net.AzureBlobs.AzureBlobStorageService.#ctor(Talegen.Storage.Net.AzureBlobs.AzureBlobStorageContext)">

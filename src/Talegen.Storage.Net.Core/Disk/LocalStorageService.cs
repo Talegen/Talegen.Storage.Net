@@ -758,7 +758,6 @@ namespace Talegen.Storage.Net.Core.Disk
 
             if (this.FileExists(absoluteSourcePath))
             {
-                string directory = Path.GetDirectoryName(absoluteSourcePath);
                 string targetFolder = Path.GetDirectoryName(absoluteTargetPath);
 
                 if (!this.DirectoryExists(targetFolder))

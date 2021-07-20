@@ -72,7 +72,7 @@ namespace Talegen.Storage.Net.Core.Memory
         public string RootPath { get; set; }
 
         /// <summary>
-        /// This method is used to initialize a storage service with the specified settings provided within the <see cref="StorageContext" /> object.
+        /// This method is used to initialize a storage service with the specified settings provided within the <see cref="MemoryStorageContext" /> object.
         /// </summary>
         /// <param name="storageContext">Contains the settings used to initialize the storage service.</param>
         public void Initialize(MemoryStorageContext storageContext)

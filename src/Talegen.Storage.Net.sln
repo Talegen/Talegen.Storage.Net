@@ -7,7 +7,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Talegen.Storage.Net.Core", 
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Talegen.Storage.Net.AzureBlobs", "Talegen.Storage.Net.AzureBlobs\Talegen.Storage.Net.AzureBlobs.csproj", "{C55A82C9-4D0D-4D29-BB74-A9A9FD3CDA76}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Talegen.Storage.Net.Tests", "Talegen.Storage.Net.Tests\Talegen.Storage.Net.Tests.csproj", "{1C695BBC-FACE-447C-BE63-8A9FAA60F3C6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Talegen.Storage.Net.Tests", "Talegen.Storage.Net.Tests\Talegen.Storage.Net.Tests.csproj", "{1C695BBC-FACE-447C-BE63-8A9FAA60F3C6}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

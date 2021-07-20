@@ -51,11 +51,23 @@ namespace Talegen.Storage.Net.AzureBlobs
         /// <summary>
         /// Initializes a new instance of the <see cref="AzureBlobStorageService" /> class.
         /// </summary>
-        /// <param name="workspacePath">Contains the root path where the local storage folder and file structure begins.</param>
-        /// <param name="storageShareName">Contains the default storage share to work with.</param>
+        /// <param name="blobEndpointUri">The BLOB endpoint URI.</param>
+        /// <param name="accountName">Name of the account.</param>
+        /// <param name="accountKey">The account key.</param>
         /// <param name="uniqueWorkspace">Contains a value indicating whether the storage service shall use a unique workspace sub-folder.</param>
         public AzureBlobStorageService(Uri blobEndpointUri, string accountName, string accountKey, bool uniqueWorkspace = false)
             : this(new AzureBlobStorageContext(blobEndpointUri, accountName, accountKey, uniqueWorkspace))
+        {
+        }
+
+        /// <summary>
+        /// Initializes a new instance of the <see cref="AzureBlobStorageService" /> class.
+        /// </summary>
+        /// <param name="connectionString">The connection string.</param>
+        /// <param name="accountName">Name of the account.</param>
+        /// <param name="uniqueWorkspace">Contains a value indicating whether the storage service shall use a unique workspace sub-folder.</param>
+        public AzureBlobStorageService(string connectionString, string accountName, bool uniqueWorkspace = false)
+            : this(new AzureBlobStorageContext(connectionString, accountName, uniqueWorkspace))
         {
         }
 
@@ -230,7 +242,7 @@ namespace Talegen.Storage.Net.AzureBlobs
 
             this.VerifyDirectoryNameRoot(path);
 
-            byte[] result = { };
+            byte[] result = Array.Empty<byte>();
             string directoryName = Path.GetDirectoryName(path);
             string fileName = Path.GetFileName(path);
 
@@ -346,8 +358,6 @@ namespace Talegen.Storage.Net.AzureBlobs
         /// <returns>Returns a value indicating whether the write was successful.</returns>
         public bool WriteBinaryFile(string path, Stream inputStream)
         {
-            bool result = true;
-
             if (string.IsNullOrWhiteSpace(path))
             {
                 throw new ArgumentNullException(nameof(path));
@@ -370,6 +380,7 @@ namespace Talegen.Storage.Net.AzureBlobs
 
             var dirClient = this.azureShareClient.GetDirectoryClient(directoryName);
             var fileClient = dirClient.GetFileClient(fileName);
+            bool result;
 
             if (fileClient.Exists())
             {
