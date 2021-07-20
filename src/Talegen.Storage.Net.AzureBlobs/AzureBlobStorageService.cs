@@ -29,7 +29,7 @@ namespace Talegen.Storage.Net.AzureBlobs
     using Talegen.Storage.Net.Core;
 
     /// <summary>
-    /// This class implements the storage interface for implementing file IO with the local server disk storage.
+    /// This class implements the storage interface for implementing file IO with the Azure Blob File Shares.
     /// </summary>
     public class AzureBlobStorageService : IStorageService
     {

@@ -66,7 +66,7 @@
         </member>
         <member name="T:Talegen.Storage.Net.AzureBlobs.AzureBlobStorageService">
             <summary>
-            This class implements the storage interface for implementing file IO with the local server disk storage.
+            This class implements the storage interface for implementing file IO with the Azure Blob File Shares.
             </summary>
         </member>
         <member name="F:Talegen.Storage.Net.AzureBlobs.AzureBlobStorageService.exceptionMessage">

@@ -46,7 +46,7 @@ items:
   assemblies:
   - Talegen.Storage.Net.AzureBlobs
   namespace: Talegen.Storage.Net.AzureBlobs
-  summary: "\nThis class implements the storage interface for implementing file IO with the local server disk storage.\n"
+  summary: "\nThis class implements the storage interface for implementing file IO with the Azure Blob File Shares.\n"
   example: []
   syntax:
     content: 'public class AzureBlobStorageService : IStorageService'
