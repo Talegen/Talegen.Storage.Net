@@ -24,15 +24,15 @@ This library source code is available on GitHub to everyone under the standard [
 
 ## How
 
-We really like simplicity, so there are a couple of options for implementing this storage library. For specifics on which commands are available for each implementation, you can visit the class reference documentation [here](#ref).
+We really like simplicity, so there are a couple of options for implementing this storage library. For specifics on which commands are available for each implementation, you can visit the class reference documentation [here](https://talegen.github.io/Talegen.Storage.Net/ref/Talegen.Storage.Net.Core.html).
 
 #### Interfaces
 
-The service is comprised of two simple interface classes. ```IStorageContext``` and ```IStorageService```. These two interfaces are used to implement a [Local Disk](#disk), [Memory](#memory), and [Azure File Share](#azure) storage implementation.
+The service is comprised of two simple interface classes. [```IStorageContext```](https://talegen.github.io/Talegen.Storage.Net/ref/Talegen.Storage.Net.Core.IStorageContext.html) and [```IStorageService```](https://talegen.github.io/Talegen.Storage.Net/ref/Talegen.Storage.Net.Core.IStorageService.html). These two interfaces are used to implement a [Local Disk](https://talegen.github.io/Talegen.Storage.Net/ref/Talegen.Storage.Net.Core.Disk.html), [Memory](https://talegen.github.io/Talegen.Storage.Net/ref/Talegen.Storage.Net.Core.Memory.html), and [Azure File Share](https://talegen.github.io/Talegen.Storage.Net/ref/Talegen.Storage.Net.AzureBlobs.html) storage implementation.
 
 #### Exceptions
 
-The library has a single exception type, ```StorageException``` that is thrown for any exception that is thrown by internal errors within the storage service. In most cases, you should catch these exceptions to log and resolve any issues that occur within the library.
+The library has a single exception type, [```StorageException```](https://talegen.github.io/Talegen.Storage.Net/ref/Talegen.Storage.Net.Core.StorageException.html) that is thrown for any exception that is thrown by internal errors within the storage service. In most cases, you should catch these exceptions to log and resolve any issues that occur within the library.
 
 ## Examples
 
