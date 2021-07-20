@@ -1,0 +1,46 @@
+### YamlMime:TableOfContent
+- uid: Talegen.Storage.Net.AzureBlobs
+  name: Talegen.Storage.Net.AzureBlobs
+  items:
+  - uid: Talegen.Storage.Net.AzureBlobs.AzureBlobStorageContext
+    name: AzureBlobStorageContext
+  - uid: Talegen.Storage.Net.AzureBlobs.AzureBlobStorageService
+    name: AzureBlobStorageService
+- uid: Talegen.Storage.Net.Core
+  name: Talegen.Storage.Net.Core
+  items:
+  - uid: Talegen.Storage.Net.Core.IStorageContext
+    name: IStorageContext
+  - uid: Talegen.Storage.Net.Core.IStorageService
+    name: IStorageService
+  - uid: Talegen.Storage.Net.Core.StorageException
+    name: StorageException
+- uid: Talegen.Storage.Net.Core.Disk
+  name: Talegen.Storage.Net.Core.Disk
+  items:
+  - uid: Talegen.Storage.Net.Core.Disk.ApplicationPaths
+    name: ApplicationPaths
+  - uid: Talegen.Storage.Net.Core.Disk.LocalStorageContext
+    name: LocalStorageContext
+  - uid: Talegen.Storage.Net.Core.Disk.LocalStorageService
+    name: LocalStorageService
+- uid: Talegen.Storage.Net.Core.Memory
+  name: Talegen.Storage.Net.Core.Memory
+  items:
+  - uid: Talegen.Storage.Net.Core.Memory.MemoryFolderModel
+    name: MemoryFolderModel
+  - uid: Talegen.Storage.Net.Core.Memory.MemoryStorageContext
+    name: MemoryStorageContext
+  - uid: Talegen.Storage.Net.Core.Memory.MemoryStorageService
+    name: MemoryStorageService
+- uid: Talegen.Storage.Net.Tests
+  name: Talegen.Storage.Net.Tests
+  items:
+  - uid: Talegen.Storage.Net.Tests.DiskStorageTests
+    name: DiskStorageTests
+  - uid: Talegen.Storage.Net.Tests.MemoryStorageTests
+    name: MemoryStorageTests
+  - uid: Talegen.Storage.Net.Tests.StorageTestsBase
+    name: StorageTestsBase
+  - uid: Talegen.Storage.Net.Tests.UnitTestBase
+    name: UnitTestBase

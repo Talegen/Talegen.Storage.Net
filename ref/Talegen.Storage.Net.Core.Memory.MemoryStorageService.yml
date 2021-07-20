@@ -1,0 +1,2800 @@
+### YamlMime:ManagedReference
+items:
+- uid: Talegen.Storage.Net.Core.Memory.MemoryStorageService
+  commentId: T:Talegen.Storage.Net.Core.Memory.MemoryStorageService
+  id: MemoryStorageService
+  parent: Talegen.Storage.Net.Core.Memory
+  children:
+  - Talegen.Storage.Net.Core.Memory.MemoryStorageService.#ctor(System.String,System.Boolean)
+  - Talegen.Storage.Net.Core.Memory.MemoryStorageService.#ctor(Talegen.Storage.Net.Core.Memory.MemoryStorageContext)
+  - Talegen.Storage.Net.Core.Memory.MemoryStorageService.CopyFile(System.String,System.String,System.Boolean)
+  - Talegen.Storage.Net.Core.Memory.MemoryStorageService.CreateDirectory(System.String,System.Boolean)
+  - Talegen.Storage.Net.Core.Memory.MemoryStorageService.DeleteDirectory(System.String,System.Boolean,System.Boolean)
+  - Talegen.Storage.Net.Core.Memory.MemoryStorageService.DeleteFile(System.String,System.Boolean)
+  - Talegen.Storage.Net.Core.Memory.MemoryStorageService.DeleteFiles(System.Collections.Generic.List{System.String},System.Boolean)
+  - Talegen.Storage.Net.Core.Memory.MemoryStorageService.DirectoryExists(System.String)
+  - Talegen.Storage.Net.Core.Memory.MemoryStorageService.EmptyDirectory(System.String)
+  - Talegen.Storage.Net.Core.Memory.MemoryStorageService.FileExists(System.String)
+  - Talegen.Storage.Net.Core.Memory.MemoryStorageService.FileHash(System.String)
+  - Talegen.Storage.Net.Core.Memory.MemoryStorageService.FindFiles(System.String,System.String,System.IO.SearchOption)
+  - Talegen.Storage.Net.Core.Memory.MemoryStorageService.Initialize(Talegen.Storage.Net.Core.Memory.MemoryStorageContext)
+  - Talegen.Storage.Net.Core.Memory.MemoryStorageService.MoveFile(System.String,System.String,System.Boolean)
+  - Talegen.Storage.Net.Core.Memory.MemoryStorageService.ReadBinaryFile(System.String)
+  - Talegen.Storage.Net.Core.Memory.MemoryStorageService.ReadBinaryFile(System.String,System.IO.Stream)
+  - Talegen.Storage.Net.Core.Memory.MemoryStorageService.ReadTextFile(System.String,System.Text.Encoding)
+  - Talegen.Storage.Net.Core.Memory.MemoryStorageService.RootPath
+  - Talegen.Storage.Net.Core.Memory.MemoryStorageService.StorageId
+  - Talegen.Storage.Net.Core.Memory.MemoryStorageService.VirtualDisk
+  - Talegen.Storage.Net.Core.Memory.MemoryStorageService.WriteBinaryFile(System.String,System.Byte[])
+  - Talegen.Storage.Net.Core.Memory.MemoryStorageService.WriteBinaryFile(System.String,System.IO.Stream)
+  - Talegen.Storage.Net.Core.Memory.MemoryStorageService.WriteTextFile(System.String,System.String,System.Text.Encoding)
+  langs:
+  - csharp
+  - vb
+  name: MemoryStorageService
+  nameWithType: MemoryStorageService
+  fullName: Talegen.Storage.Net.Core.Memory.MemoryStorageService
+  type: Class
+  source:
+    remote:
+      path: src/Talegen.Storage.Net.Core/Memory/MemoryStorageService.cs
+      branch: main
+      repo: https://github.com/Talegen/Talegen.Storage.Net.git
+    id: MemoryStorageService
+    path: Memory/MemoryStorageService.cs
+    startLine: 33
+  assemblies:
+  - Talegen.Storage.Net.Core
+  namespace: Talegen.Storage.Net.Core.Memory
+  summary: "\nThis class implements the storage interface for reading and writing to a virtual directory in memory.\n"
+  remarks: This is useful for faking storage for unit tests within your application.
+  example: []
+  syntax:
+    content: 'public class MemoryStorageService : IStorageService'
+    content.vb: >-
+      Public Class MemoryStorageService
+          Implements IStorageService
+  seealso:
+  - linkId: Talegen.Storage.Net.Core.IStorageService
+    commentId: T:Talegen.Storage.Net.Core.IStorageService
+  inheritance:
+  - System.Object
+  implements:
+  - Talegen.Storage.Net.Core.IStorageService
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Talegen.Storage.Net.Core.Memory.MemoryStorageService.#ctor(System.String,System.Boolean)
+  commentId: M:Talegen.Storage.Net.Core.Memory.MemoryStorageService.#ctor(System.String,System.Boolean)
+  id: '#ctor(System.String,System.Boolean)'
+  parent: Talegen.Storage.Net.Core.Memory.MemoryStorageService
+  langs:
+  - csharp
+  - vb
+  name: MemoryStorageService(String, Boolean)
+  nameWithType: MemoryStorageService.MemoryStorageService(String, Boolean)
+  fullName: Talegen.Storage.Net.Core.Memory.MemoryStorageService.MemoryStorageService(System.String, System.Boolean)
+  type: Constructor
+  source:
+    remote:
+      path: src/Talegen.Storage.Net.Core/Memory/MemoryStorageService.cs
+      branch: main
+      repo: https://github.com/Talegen/Talegen.Storage.Net.git
+    id: .ctor
+    path: Memory/MemoryStorageService.cs
+    startLine: 40
+  assemblies:
+  - Talegen.Storage.Net.Core
+  namespace: Talegen.Storage.Net.Core.Memory
+  summary: "\nInitializes a new instance of the <xref href=\"Talegen.Storage.Net.Core.Memory.MemoryStorageService\" data-throw-if-not-resolved=\"false\"></xref> class.\n"
+  example: []
+  syntax:
+    content: public MemoryStorageService(string workspacePath, bool uniqueWorkspace = false)
+    parameters:
+    - id: workspacePath
+      type: System.String
+      description: Contains the root path where the local storage folder and file structure begins.
+    - id: uniqueWorkspace
+      type: System.Boolean
+      description: Contains a value indicating whether the storage service shall use a unique workspace sub-folder.
+    content.vb: Public Sub New(workspacePath As String, uniqueWorkspace As Boolean = False)
+  overload: Talegen.Storage.Net.Core.Memory.MemoryStorageService.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Talegen.Storage.Net.Core.Memory.MemoryStorageService.#ctor(Talegen.Storage.Net.Core.Memory.MemoryStorageContext)
+  commentId: M:Talegen.Storage.Net.Core.Memory.MemoryStorageService.#ctor(Talegen.Storage.Net.Core.Memory.MemoryStorageContext)
+  id: '#ctor(Talegen.Storage.Net.Core.Memory.MemoryStorageContext)'
+  parent: Talegen.Storage.Net.Core.Memory.MemoryStorageService
+  langs:
+  - csharp
+  - vb
+  name: MemoryStorageService(MemoryStorageContext)
+  nameWithType: MemoryStorageService.MemoryStorageService(MemoryStorageContext)
+  fullName: Talegen.Storage.Net.Core.Memory.MemoryStorageService.MemoryStorageService(Talegen.Storage.Net.Core.Memory.MemoryStorageContext)
+  type: Constructor
+  source:
+    remote:
+      path: src/Talegen.Storage.Net.Core/Memory/MemoryStorageService.cs
+      branch: main
+      repo: https://github.com/Talegen/Talegen.Storage.Net.git
+    id: .ctor
+    path: Memory/MemoryStorageService.cs
+    startLine: 49
+  assemblies:
+  - Talegen.Storage.Net.Core
+  namespace: Talegen.Storage.Net.Core.Memory
+  summary: "\nInitializes a new instance of the <xref href=\"Talegen.Storage.Net.Core.Memory.MemoryStorageService\" data-throw-if-not-resolved=\"false\"></xref> class.\n"
+  example: []
+  syntax:
+    content: public MemoryStorageService(MemoryStorageContext storageContext)
+    parameters:
+    - id: storageContext
+      type: Talegen.Storage.Net.Core.Memory.MemoryStorageContext
+      description: Contains an implementation of the storage context.
+    content.vb: Public Sub New(storageContext As MemoryStorageContext)
+  overload: Talegen.Storage.Net.Core.Memory.MemoryStorageService.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Talegen.Storage.Net.Core.Memory.MemoryStorageService.VirtualDisk
+  commentId: P:Talegen.Storage.Net.Core.Memory.MemoryStorageService.VirtualDisk
+  id: VirtualDisk
+  parent: Talegen.Storage.Net.Core.Memory.MemoryStorageService
+  langs:
+  - csharp
+  - vb
+  name: VirtualDisk
+  nameWithType: MemoryStorageService.VirtualDisk
+  fullName: Talegen.Storage.Net.Core.Memory.MemoryStorageService.VirtualDisk
+  type: Property
+  source:
+    remote:
+      path: src/Talegen.Storage.Net.Core/Memory/MemoryStorageService.cs
+      branch: main
+      repo: https://github.com/Talegen/Talegen.Storage.Net.git
+    id: VirtualDisk
+    path: Memory/MemoryStorageService.cs
+    startLine: 61
+  assemblies:
+  - Talegen.Storage.Net.Core
+  namespace: Talegen.Storage.Net.Core.Memory
+  summary: "\nGets the virtual disk accessor.\n"
+  example: []
+  syntax:
+    content: public static ConcurrentDictionary<string, MemoryFolderModel> VirtualDisk { get; }
+    parameters: []
+    return:
+      type: System.Collections.Concurrent.ConcurrentDictionary{System.String,Talegen.Storage.Net.Core.Memory.MemoryFolderModel}
+    content.vb: Public Shared ReadOnly Property VirtualDisk As ConcurrentDictionary(Of String, MemoryFolderModel)
+  overload: Talegen.Storage.Net.Core.Memory.MemoryStorageService.VirtualDisk*
+  modifiers.csharp:
+  - public
+  - static
+  - get
+  modifiers.vb:
+  - Public
+  - Shared
+  - ReadOnly
+- uid: Talegen.Storage.Net.Core.Memory.MemoryStorageService.StorageId
+  commentId: P:Talegen.Storage.Net.Core.Memory.MemoryStorageService.StorageId
+  id: StorageId
+  parent: Talegen.Storage.Net.Core.Memory.MemoryStorageService
+  langs:
+  - csharp
+  - vb
+  name: StorageId
+  nameWithType: MemoryStorageService.StorageId
+  fullName: Talegen.Storage.Net.Core.Memory.MemoryStorageService.StorageId
+  type: Property
+  source:
+    remote:
+      path: src/Talegen.Storage.Net.Core/Memory/MemoryStorageService.cs
+      branch: main
+      repo: https://github.com/Talegen/Talegen.Storage.Net.git
+    id: StorageId
+    path: Memory/MemoryStorageService.cs
+    startLine: 66
+  assemblies:
+  - Talegen.Storage.Net.Core
+  namespace: Talegen.Storage.Net.Core.Memory
+  summary: "\nGets or sets the storage identity for this service instance.\n"
+  example: []
+  syntax:
+    content: public string StorageId { get; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public ReadOnly Property StorageId As String
+  overload: Talegen.Storage.Net.Core.Memory.MemoryStorageService.StorageId*
+  implements:
+  - Talegen.Storage.Net.Core.IStorageService.StorageId
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Talegen.Storage.Net.Core.Memory.MemoryStorageService.RootPath
+  commentId: P:Talegen.Storage.Net.Core.Memory.MemoryStorageService.RootPath
+  id: RootPath
+  parent: Talegen.Storage.Net.Core.Memory.MemoryStorageService
+  langs:
+  - csharp
+  - vb
+  name: RootPath
+  nameWithType: MemoryStorageService.RootPath
+  fullName: Talegen.Storage.Net.Core.Memory.MemoryStorageService.RootPath
+  type: Property
+  source:
+    remote:
+      path: src/Talegen.Storage.Net.Core/Memory/MemoryStorageService.cs
+      branch: main
+      repo: https://github.com/Talegen/Talegen.Storage.Net.git
+    id: RootPath
+    path: Memory/MemoryStorageService.cs
+    startLine: 71
+  assemblies:
+  - Talegen.Storage.Net.Core
+  namespace: Talegen.Storage.Net.Core.Memory
+  summary: "\nGets or sets the root folder path for this service instance.\n"
+  example: []
+  syntax:
+    content: public string RootPath { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property RootPath As String
+  overload: Talegen.Storage.Net.Core.Memory.MemoryStorageService.RootPath*
+  implements:
+  - Talegen.Storage.Net.Core.IStorageService.RootPath
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Talegen.Storage.Net.Core.Memory.MemoryStorageService.Initialize(Talegen.Storage.Net.Core.Memory.MemoryStorageContext)
+  commentId: M:Talegen.Storage.Net.Core.Memory.MemoryStorageService.Initialize(Talegen.Storage.Net.Core.Memory.MemoryStorageContext)
+  id: Initialize(Talegen.Storage.Net.Core.Memory.MemoryStorageContext)
+  parent: Talegen.Storage.Net.Core.Memory.MemoryStorageService
+  langs:
+  - csharp
+  - vb
+  name: Initialize(MemoryStorageContext)
+  nameWithType: MemoryStorageService.Initialize(MemoryStorageContext)
+  fullName: Talegen.Storage.Net.Core.Memory.MemoryStorageService.Initialize(Talegen.Storage.Net.Core.Memory.MemoryStorageContext)
+  type: Method
+  source:
+    remote:
+      path: src/Talegen.Storage.Net.Core/Memory/MemoryStorageService.cs
+      branch: main
+      repo: https://github.com/Talegen/Talegen.Storage.Net.git
+    id: Initialize
+    path: Memory/MemoryStorageService.cs
+    startLine: 77
+  assemblies:
+  - Talegen.Storage.Net.Core
+  namespace: Talegen.Storage.Net.Core.Memory
+  summary: "\nThis method is used to initialize a storage service with the specified settings provided within the <xref href=\"Talegen.Storage.Net.Core.Memory.MemoryStorageContext\" data-throw-if-not-resolved=\"false\"></xref> object.\n"
+  example: []
+  syntax:
+    content: public void Initialize(MemoryStorageContext storageContext)
+    parameters:
+    - id: storageContext
+      type: Talegen.Storage.Net.Core.Memory.MemoryStorageContext
+      description: Contains the settings used to initialize the storage service.
+    content.vb: Public Sub Initialize(storageContext As MemoryStorageContext)
+  overload: Talegen.Storage.Net.Core.Memory.MemoryStorageService.Initialize*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Talegen.Storage.Net.Core.Memory.MemoryStorageService.CopyFile(System.String,System.String,System.Boolean)
+  commentId: M:Talegen.Storage.Net.Core.Memory.MemoryStorageService.CopyFile(System.String,System.String,System.Boolean)
+  id: CopyFile(System.String,System.String,System.Boolean)
+  parent: Talegen.Storage.Net.Core.Memory.MemoryStorageService
+  langs:
+  - csharp
+  - vb
+  name: CopyFile(String, String, Boolean)
+  nameWithType: MemoryStorageService.CopyFile(String, String, Boolean)
+  fullName: Talegen.Storage.Net.Core.Memory.MemoryStorageService.CopyFile(System.String, System.String, System.Boolean)
+  type: Method
+  source:
+    remote:
+      path: src/Talegen.Storage.Net.Core/Memory/MemoryStorageService.cs
+      branch: main
+      repo: https://github.com/Talegen/Talegen.Storage.Net.git
+    id: CopyFile
+    path: Memory/MemoryStorageService.cs
+    startLine: 111
+  assemblies:
+  - Talegen.Storage.Net.Core
+  namespace: Talegen.Storage.Net.Core.Memory
+  summary: "\nThis method is used to copy a file.\n"
+  example: []
+  syntax:
+    content: public void CopyFile(string sourceFilePath, string targetFilePath, bool overwrite = true)
+    parameters:
+    - id: sourceFilePath
+      type: System.String
+      description: Contains a the path to the file that will be copied.
+    - id: targetFilePath
+      type: System.String
+      description: Contains the path to the target where the file is to be copied.
+    - id: overwrite
+      type: System.Boolean
+      description: Contains a value indicating if the target should be overwritten if it already exists. Default is true.
+    content.vb: Public Sub CopyFile(sourceFilePath As String, targetFilePath As String, overwrite As Boolean = True)
+  overload: Talegen.Storage.Net.Core.Memory.MemoryStorageService.CopyFile*
+  exceptions:
+  - type: System.ArgumentNullException
+    commentId: T:System.ArgumentNullException
+    description: sourceFilePath or targetFilePath
+  - type: Talegen.Storage.Net.Core.StorageException
+    commentId: T:Talegen.Storage.Net.Core.StorageException
+  implements:
+  - Talegen.Storage.Net.Core.IStorageService.CopyFile(System.String,System.String,System.Boolean)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Talegen.Storage.Net.Core.Memory.MemoryStorageService.CreateDirectory(System.String,System.Boolean)
+  commentId: M:Talegen.Storage.Net.Core.Memory.MemoryStorageService.CreateDirectory(System.String,System.Boolean)
+  id: CreateDirectory(System.String,System.Boolean)
+  parent: Talegen.Storage.Net.Core.Memory.MemoryStorageService
+  langs:
+  - csharp
+  - vb
+  name: CreateDirectory(String, Boolean)
+  nameWithType: MemoryStorageService.CreateDirectory(String, Boolean)
+  fullName: Talegen.Storage.Net.Core.Memory.MemoryStorageService.CreateDirectory(System.String, System.Boolean)
+  type: Method
+  source:
+    remote:
+      path: src/Talegen.Storage.Net.Core/Memory/MemoryStorageService.cs
+      branch: main
+      repo: https://github.com/Talegen/Talegen.Storage.Net.git
+    id: CreateDirectory
+    path: Memory/MemoryStorageService.cs
+    startLine: 182
+  assemblies:
+  - Talegen.Storage.Net.Core
+  namespace: Talegen.Storage.Net.Core.Memory
+  summary: "\nThis method is used to create a temporary directory within the Inspire application path.\n"
+  example: []
+  syntax:
+    content: public string CreateDirectory(string subFolderName, bool silentExists = false)
+    parameters:
+    - id: subFolderName
+      type: System.String
+      description: Contains a sub-folder that will be included in the working directory path.
+    - id: silentExists
+      type: System.Boolean
+      description: Contains a value indicating whether the method is silently return successfully if the folder path already exists.
+    return:
+      type: System.String
+      description: Returns the name of the directory that was created.
+    content.vb: Public Function CreateDirectory(subFolderName As String, silentExists As Boolean = False) As String
+  overload: Talegen.Storage.Net.Core.Memory.MemoryStorageService.CreateDirectory*
+  exceptions:
+  - type: System.ArgumentNullException
+    commentId: T:System.ArgumentNullException
+    description: subFolderName
+  - type: Talegen.Storage.Net.Core.StorageException
+    commentId: T:Talegen.Storage.Net.Core.StorageException
+  implements:
+  - Talegen.Storage.Net.Core.IStorageService.CreateDirectory(System.String,System.Boolean)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Talegen.Storage.Net.Core.Memory.MemoryStorageService.DeleteDirectory(System.String,System.Boolean,System.Boolean)
+  commentId: M:Talegen.Storage.Net.Core.Memory.MemoryStorageService.DeleteDirectory(System.String,System.Boolean,System.Boolean)
+  id: DeleteDirectory(System.String,System.Boolean,System.Boolean)
+  parent: Talegen.Storage.Net.Core.Memory.MemoryStorageService
+  langs:
+  - csharp
+  - vb
+  name: DeleteDirectory(String, Boolean, Boolean)
+  nameWithType: MemoryStorageService.DeleteDirectory(String, Boolean, Boolean)
+  fullName: Talegen.Storage.Net.Core.Memory.MemoryStorageService.DeleteDirectory(System.String, System.Boolean, System.Boolean)
+  type: Method
+  source:
+    remote:
+      path: src/Talegen.Storage.Net.Core/Memory/MemoryStorageService.cs
+      branch: main
+      repo: https://github.com/Talegen/Talegen.Storage.Net.git
+    id: DeleteDirectory
+    path: Memory/MemoryStorageService.cs
+    startLine: 218
+  assemblies:
+  - Talegen.Storage.Net.Core
+  namespace: Talegen.Storage.Net.Core.Memory
+  summary: "\nThis method is used to delete a directory and all of its files.\n"
+  example: []
+  syntax:
+    content: public void DeleteDirectory(string subFolderName, bool recursive = true, bool silentNoExist = true)
+    parameters:
+    - id: subFolderName
+      type: System.String
+      description: Contains the name of the directory that will be deleted.
+    - id: recursive
+      type: System.Boolean
+      description: Delete all contents within the folder.
+    - id: silentNoExist
+      type: System.Boolean
+      description: "\nContains a value indicating whether an exception is thrown if the target folder does not exist. Default is true; no exception is thrown if the\nfolder does not exist.\n"
+    content.vb: Public Sub DeleteDirectory(subFolderName As String, recursive As Boolean = True, silentNoExist As Boolean = True)
+  overload: Talegen.Storage.Net.Core.Memory.MemoryStorageService.DeleteDirectory*
+  exceptions:
+  - type: System.ArgumentNullException
+    commentId: T:System.ArgumentNullException
+    description: subFolderName
+  - type: Talegen.Storage.Net.Core.StorageException
+    commentId: T:Talegen.Storage.Net.Core.StorageException
+    description: thrown if the specified folder does not exist.
+  implements:
+  - Talegen.Storage.Net.Core.IStorageService.DeleteDirectory(System.String,System.Boolean,System.Boolean)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Talegen.Storage.Net.Core.Memory.MemoryStorageService.DeleteFile(System.String,System.Boolean)
+  commentId: M:Talegen.Storage.Net.Core.Memory.MemoryStorageService.DeleteFile(System.String,System.Boolean)
+  id: DeleteFile(System.String,System.Boolean)
+  parent: Talegen.Storage.Net.Core.Memory.MemoryStorageService
+  langs:
+  - csharp
+  - vb
+  name: DeleteFile(String, Boolean)
+  nameWithType: MemoryStorageService.DeleteFile(String, Boolean)
+  fullName: Talegen.Storage.Net.Core.Memory.MemoryStorageService.DeleteFile(System.String, System.Boolean)
+  type: Method
+  source:
+    remote:
+      path: src/Talegen.Storage.Net.Core/Memory/MemoryStorageService.cs
+      branch: main
+      repo: https://github.com/Talegen/Talegen.Storage.Net.git
+    id: DeleteFile
+    path: Memory/MemoryStorageService.cs
+    startLine: 258
+  assemblies:
+  - Talegen.Storage.Net.Core
+  namespace: Talegen.Storage.Net.Core.Memory
+  summary: "\nThis method is used to delete a file.\n"
+  example: []
+  syntax:
+    content: public void DeleteFile(string filePath, bool deleteDirectory = false)
+    parameters:
+    - id: filePath
+      type: System.String
+      description: Contains a the path to the file that will be deleted.
+    - id: deleteDirectory
+      type: System.Boolean
+      description: "\nContains a value indicating whether the directory the file is within will be deleted. This will only occur if no other files remain in the directory\nafter the list of files have been deleted.\n"
+    content.vb: Public Sub DeleteFile(filePath As String, deleteDirectory As Boolean = False)
+  overload: Talegen.Storage.Net.Core.Memory.MemoryStorageService.DeleteFile*
+  implements:
+  - Talegen.Storage.Net.Core.IStorageService.DeleteFile(System.String,System.Boolean)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Talegen.Storage.Net.Core.Memory.MemoryStorageService.DeleteFiles(System.Collections.Generic.List{System.String},System.Boolean)
+  commentId: M:Talegen.Storage.Net.Core.Memory.MemoryStorageService.DeleteFiles(System.Collections.Generic.List{System.String},System.Boolean)
+  id: DeleteFiles(System.Collections.Generic.List{System.String},System.Boolean)
+  parent: Talegen.Storage.Net.Core.Memory.MemoryStorageService
+  langs:
+  - csharp
+  - vb
+  name: DeleteFiles(List<String>, Boolean)
+  nameWithType: MemoryStorageService.DeleteFiles(List<String>, Boolean)
+  fullName: Talegen.Storage.Net.Core.Memory.MemoryStorageService.DeleteFiles(System.Collections.Generic.List<System.String>, System.Boolean)
+  type: Method
+  source:
+    remote:
+      path: src/Talegen.Storage.Net.Core/Memory/MemoryStorageService.cs
+      branch: main
+      repo: https://github.com/Talegen/Talegen.Storage.Net.git
+    id: DeleteFiles
+    path: Memory/MemoryStorageService.cs
+    startLine: 278
+  assemblies:
+  - Talegen.Storage.Net.Core
+  namespace: Talegen.Storage.Net.Core.Memory
+  summary: "\nThis method is used to delete a list of files.\n"
+  example: []
+  syntax:
+    content: public void DeleteFiles(List<string> filePathNames, bool deleteDirectory = false)
+    parameters:
+    - id: filePathNames
+      type: System.Collections.Generic.List{System.String}
+      description: Contains a list of file names that will be deleted.
+    - id: deleteDirectory
+      type: System.Boolean
+      description: "\nContains a value indicating whether the directory or directories the files are within will be deleted. This will only occur if no other files remain\nin the directory after the list of files have been deleted.\n"
+    content.vb: Public Sub DeleteFiles(filePathNames As List(Of String), deleteDirectory As Boolean = False)
+  overload: Talegen.Storage.Net.Core.Memory.MemoryStorageService.DeleteFiles*
+  exceptions:
+  - type: System.ArgumentNullException
+    commentId: T:System.ArgumentNullException
+    description: filePathNames
+  - type: Talegen.Storage.Net.Core.StorageException
+    commentId: T:Talegen.Storage.Net.Core.StorageException
+  implements:
+  - Talegen.Storage.Net.Core.IStorageService.DeleteFiles(System.Collections.Generic.List{System.String},System.Boolean)
+  nameWithType.vb: MemoryStorageService.DeleteFiles(List(Of String), Boolean)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+  fullName.vb: Talegen.Storage.Net.Core.Memory.MemoryStorageService.DeleteFiles(System.Collections.Generic.List(Of System.String), System.Boolean)
+  name.vb: DeleteFiles(List(Of String), Boolean)
+- uid: Talegen.Storage.Net.Core.Memory.MemoryStorageService.DirectoryExists(System.String)
+  commentId: M:Talegen.Storage.Net.Core.Memory.MemoryStorageService.DirectoryExists(System.String)
+  id: DirectoryExists(System.String)
+  parent: Talegen.Storage.Net.Core.Memory.MemoryStorageService
+  langs:
+  - csharp
+  - vb
+  name: DirectoryExists(String)
+  nameWithType: MemoryStorageService.DirectoryExists(String)
+  fullName: Talegen.Storage.Net.Core.Memory.MemoryStorageService.DirectoryExists(System.String)
+  type: Method
+  source:
+    remote:
+      path: src/Talegen.Storage.Net.Core/Memory/MemoryStorageService.cs
+      branch: main
+      repo: https://github.com/Talegen/Talegen.Storage.Net.git
+    id: DirectoryExists
+    path: Memory/MemoryStorageService.cs
+    startLine: 345
+  assemblies:
+  - Talegen.Storage.Net.Core
+  namespace: Talegen.Storage.Net.Core.Memory
+  summary: "\nContains a value indicating whether the folder already exists.\n"
+  example: []
+  syntax:
+    content: public bool DirectoryExists(string subFolderName)
+    parameters:
+    - id: subFolderName
+      type: System.String
+      description: Contains the sub-folder name excluding the root folder path.
+    return:
+      type: System.Boolean
+      description: Returns a value indicating whether the directory exists.
+    content.vb: Public Function DirectoryExists(subFolderName As String) As Boolean
+  overload: Talegen.Storage.Net.Core.Memory.MemoryStorageService.DirectoryExists*
+  exceptions:
+  - type: System.ArgumentNullException
+    commentId: T:System.ArgumentNullException
+    description: subFolderName
+  implements:
+  - Talegen.Storage.Net.Core.IStorageService.DirectoryExists(System.String)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Talegen.Storage.Net.Core.Memory.MemoryStorageService.EmptyDirectory(System.String)
+  commentId: M:Talegen.Storage.Net.Core.Memory.MemoryStorageService.EmptyDirectory(System.String)
+  id: EmptyDirectory(System.String)
+  parent: Talegen.Storage.Net.Core.Memory.MemoryStorageService
+  langs:
+  - csharp
+  - vb
+  name: EmptyDirectory(String)
+  nameWithType: MemoryStorageService.EmptyDirectory(String)
+  fullName: Talegen.Storage.Net.Core.Memory.MemoryStorageService.EmptyDirectory(System.String)
+  type: Method
+  source:
+    remote:
+      path: src/Talegen.Storage.Net.Core/Memory/MemoryStorageService.cs
+      branch: main
+      repo: https://github.com/Talegen/Talegen.Storage.Net.git
+    id: EmptyDirectory
+    path: Memory/MemoryStorageService.cs
+    startLine: 366
+  assemblies:
+  - Talegen.Storage.Net.Core
+  namespace: Talegen.Storage.Net.Core.Memory
+  summary: "\nThis method is used to delete all directories and files inside of a sub-folder within the Inspire application data directory.\n"
+  example: []
+  syntax:
+    content: public void EmptyDirectory(string subFolderName)
+    parameters:
+    - id: subFolderName
+      type: System.String
+      description: Contains the sub-folder within the Inspire application data directory.
+    content.vb: Public Sub EmptyDirectory(subFolderName As String)
+  overload: Talegen.Storage.Net.Core.Memory.MemoryStorageService.EmptyDirectory*
+  exceptions:
+  - type: System.ArgumentNullException
+    commentId: T:System.ArgumentNullException
+    description: subFolderName
+  - type: Talegen.Storage.Net.Core.StorageException
+    commentId: T:Talegen.Storage.Net.Core.StorageException
+    description: thrown if the specified folder does not exist.
+  implements:
+  - Talegen.Storage.Net.Core.IStorageService.EmptyDirectory(System.String)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Talegen.Storage.Net.Core.Memory.MemoryStorageService.FileExists(System.String)
+  commentId: M:Talegen.Storage.Net.Core.Memory.MemoryStorageService.FileExists(System.String)
+  id: FileExists(System.String)
+  parent: Talegen.Storage.Net.Core.Memory.MemoryStorageService
+  langs:
+  - csharp
+  - vb
+  name: FileExists(String)
+  nameWithType: MemoryStorageService.FileExists(String)
+  fullName: Talegen.Storage.Net.Core.Memory.MemoryStorageService.FileExists(System.String)
+  type: Method
+  source:
+    remote:
+      path: src/Talegen.Storage.Net.Core/Memory/MemoryStorageService.cs
+      branch: main
+      repo: https://github.com/Talegen/Talegen.Storage.Net.git
+    id: FileExists
+    path: Memory/MemoryStorageService.cs
+    startLine: 404
+  assemblies:
+  - Talegen.Storage.Net.Core
+  namespace: Talegen.Storage.Net.Core.Memory
+  summary: "\nContains a value indicating whether the file exists.\n"
+  example: []
+  syntax:
+    content: public bool FileExists(string filePath)
+    parameters:
+    - id: filePath
+      type: System.String
+      description: Contains the sub-folder path and file name excluding the root folder path to determine if exists.
+    return:
+      type: System.Boolean
+      description: Returns a value indicating whether the file exists.
+    content.vb: Public Function FileExists(filePath As String) As Boolean
+  overload: Talegen.Storage.Net.Core.Memory.MemoryStorageService.FileExists*
+  exceptions:
+  - type: System.ArgumentNullException
+    commentId: T:System.ArgumentNullException
+    description: filePath
+  implements:
+  - Talegen.Storage.Net.Core.IStorageService.FileExists(System.String)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Talegen.Storage.Net.Core.Memory.MemoryStorageService.FileHash(System.String)
+  commentId: M:Talegen.Storage.Net.Core.Memory.MemoryStorageService.FileHash(System.String)
+  id: FileHash(System.String)
+  parent: Talegen.Storage.Net.Core.Memory.MemoryStorageService
+  langs:
+  - csharp
+  - vb
+  name: FileHash(String)
+  nameWithType: MemoryStorageService.FileHash(String)
+  fullName: Talegen.Storage.Net.Core.Memory.MemoryStorageService.FileHash(System.String)
+  type: Method
+  source:
+    remote:
+      path: src/Talegen.Storage.Net.Core/Memory/MemoryStorageService.cs
+      branch: main
+      repo: https://github.com/Talegen/Talegen.Storage.Net.git
+    id: FileHash
+    path: Memory/MemoryStorageService.cs
+    startLine: 426
+  assemblies:
+  - Talegen.Storage.Net.Core
+  namespace: Talegen.Storage.Net.Core.Memory
+  summary: "\nThis method is used to create a hash of the file contents.\n"
+  example: []
+  syntax:
+    content: public string FileHash(string filePath)
+    parameters:
+    - id: filePath
+      type: System.String
+      description: The path to the file.
+    return:
+      type: System.String
+      description: Returns a hash of the file contents.
+    content.vb: Public Function FileHash(filePath As String) As String
+  overload: Talegen.Storage.Net.Core.Memory.MemoryStorageService.FileHash*
+  exceptions:
+  - type: System.ArgumentNullException
+    commentId: T:System.ArgumentNullException
+    description: filePath
+  implements:
+  - Talegen.Storage.Net.Core.IStorageService.FileHash(System.String)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Talegen.Storage.Net.Core.Memory.MemoryStorageService.FindFiles(System.String,System.String,System.IO.SearchOption)
+  commentId: M:Talegen.Storage.Net.Core.Memory.MemoryStorageService.FindFiles(System.String,System.String,System.IO.SearchOption)
+  id: FindFiles(System.String,System.String,System.IO.SearchOption)
+  parent: Talegen.Storage.Net.Core.Memory.MemoryStorageService
+  langs:
+  - csharp
+  - vb
+  name: FindFiles(String, String, SearchOption)
+  nameWithType: MemoryStorageService.FindFiles(String, String, SearchOption)
+  fullName: Talegen.Storage.Net.Core.Memory.MemoryStorageService.FindFiles(System.String, System.String, System.IO.SearchOption)
+  type: Method
+  source:
+    remote:
+      path: src/Talegen.Storage.Net.Core/Memory/MemoryStorageService.cs
+      branch: main
+      repo: https://github.com/Talegen/Talegen.Storage.Net.git
+    id: FindFiles
+    path: Memory/MemoryStorageService.cs
+    startLine: 445
+  assemblies:
+  - Talegen.Storage.Net.Core
+  namespace: Talegen.Storage.Net.Core.Memory
+  summary: "\nThis method is used to get the files from a directory.\n"
+  example: []
+  syntax:
+    content: public List<string> FindFiles(string subFolderName, string searchPattern = "*.*", SearchOption searchOption = SearchOption.AllDirectories)
+    parameters:
+    - id: subFolderName
+      type: System.String
+      description: Contains the sub-folder name to get the files.
+    - id: searchPattern
+      type: System.String
+      description: Contains an optional file name search pattern. If not specified, *.* is used.
+    - id: searchOption
+      type: System.IO.SearchOption
+      description: Contains search options. If not specified, all sub-folders are searched for the file pattern.
+    return:
+      type: System.Collections.Generic.List{System.String}
+      description: Returns a list of files in the directory path.
+    content.vb: Public Function FindFiles(subFolderName As String, searchPattern As String = "*.*", searchOption As SearchOption = SearchOption.AllDirectories) As List(Of String)
+  overload: Talegen.Storage.Net.Core.Memory.MemoryStorageService.FindFiles*
+  exceptions:
+  - type: System.ArgumentNullException
+    commentId: T:System.ArgumentNullException
+    description: subFolderName
+  implements:
+  - Talegen.Storage.Net.Core.IStorageService.FindFiles(System.String,System.String,System.IO.SearchOption)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Talegen.Storage.Net.Core.Memory.MemoryStorageService.MoveFile(System.String,System.String,System.Boolean)
+  commentId: M:Talegen.Storage.Net.Core.Memory.MemoryStorageService.MoveFile(System.String,System.String,System.Boolean)
+  id: MoveFile(System.String,System.String,System.Boolean)
+  parent: Talegen.Storage.Net.Core.Memory.MemoryStorageService
+  langs:
+  - csharp
+  - vb
+  name: MoveFile(String, String, Boolean)
+  nameWithType: MemoryStorageService.MoveFile(String, String, Boolean)
+  fullName: Talegen.Storage.Net.Core.Memory.MemoryStorageService.MoveFile(System.String, System.String, System.Boolean)
+  type: Method
+  source:
+    remote:
+      path: src/Talegen.Storage.Net.Core/Memory/MemoryStorageService.cs
+      branch: main
+      repo: https://github.com/Talegen/Talegen.Storage.Net.git
+    id: MoveFile
+    path: Memory/MemoryStorageService.cs
+    startLine: 481
+  assemblies:
+  - Talegen.Storage.Net.Core
+  namespace: Talegen.Storage.Net.Core.Memory
+  summary: "\nThis method is used to move a file.\n"
+  example: []
+  syntax:
+    content: public void MoveFile(string sourceFilePath, string targetFilePath, bool overwrite = true)
+    parameters:
+    - id: sourceFilePath
+      type: System.String
+      description: Contains a the path to the file that will be moved.
+    - id: targetFilePath
+      type: System.String
+      description: Contains the path to the target where the file is to be moved.
+    - id: overwrite
+      type: System.Boolean
+      description: Contains a value indicating if the target should be overwritten if it already exists. Default is true.
+    content.vb: Public Sub MoveFile(sourceFilePath As String, targetFilePath As String, overwrite As Boolean = True)
+  overload: Talegen.Storage.Net.Core.Memory.MemoryStorageService.MoveFile*
+  exceptions:
+  - type: System.ArgumentNullException
+    commentId: T:System.ArgumentNullException
+    description: sourceFilePath or targetFilePath
+  - type: Talegen.Storage.Net.Core.StorageException
+    commentId: T:Talegen.Storage.Net.Core.StorageException
+  implements:
+  - Talegen.Storage.Net.Core.IStorageService.MoveFile(System.String,System.String,System.Boolean)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Talegen.Storage.Net.Core.Memory.MemoryStorageService.ReadBinaryFile(System.String)
+  commentId: M:Talegen.Storage.Net.Core.Memory.MemoryStorageService.ReadBinaryFile(System.String)
+  id: ReadBinaryFile(System.String)
+  parent: Talegen.Storage.Net.Core.Memory.MemoryStorageService
+  langs:
+  - csharp
+  - vb
+  name: ReadBinaryFile(String)
+  nameWithType: MemoryStorageService.ReadBinaryFile(String)
+  fullName: Talegen.Storage.Net.Core.Memory.MemoryStorageService.ReadBinaryFile(System.String)
+  type: Method
+  source:
+    remote:
+      path: src/Talegen.Storage.Net.Core/Memory/MemoryStorageService.cs
+      branch: main
+      repo: https://github.com/Talegen/Talegen.Storage.Net.git
+    id: ReadBinaryFile
+    path: Memory/MemoryStorageService.cs
+    startLine: 552
+  assemblies:
+  - Talegen.Storage.Net.Core
+  namespace: Talegen.Storage.Net.Core.Memory
+  summary: "\nThis method is used to read all the bytes from a binary file.\n"
+  example: []
+  syntax:
+    content: public byte[] ReadBinaryFile(string path)
+    parameters:
+    - id: path
+      type: System.String
+      description: Contains the path to the file to load and return.
+    return:
+      type: System.Byte[]
+      description: Returns a byte array containing the binary bytes of the target file.
+    content.vb: Public Function ReadBinaryFile(path As String) As Byte()
+  overload: Talegen.Storage.Net.Core.Memory.MemoryStorageService.ReadBinaryFile*
+  exceptions:
+  - type: System.ArgumentNullException
+    commentId: T:System.ArgumentNullException
+    description: path
+  - type: Talegen.Storage.Net.Core.StorageException
+    commentId: T:Talegen.Storage.Net.Core.StorageException
+  implements:
+  - Talegen.Storage.Net.Core.IStorageService.ReadBinaryFile(System.String)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Talegen.Storage.Net.Core.Memory.MemoryStorageService.ReadBinaryFile(System.String,System.IO.Stream)
+  commentId: M:Talegen.Storage.Net.Core.Memory.MemoryStorageService.ReadBinaryFile(System.String,System.IO.Stream)
+  id: ReadBinaryFile(System.String,System.IO.Stream)
+  parent: Talegen.Storage.Net.Core.Memory.MemoryStorageService
+  langs:
+  - csharp
+  - vb
+  name: ReadBinaryFile(String, Stream)
+  nameWithType: MemoryStorageService.ReadBinaryFile(String, Stream)
+  fullName: Talegen.Storage.Net.Core.Memory.MemoryStorageService.ReadBinaryFile(System.String, System.IO.Stream)
+  type: Method
+  source:
+    remote:
+      path: src/Talegen.Storage.Net.Core/Memory/MemoryStorageService.cs
+      branch: main
+      repo: https://github.com/Talegen/Talegen.Storage.Net.git
+    id: ReadBinaryFile
+    path: Memory/MemoryStorageService.cs
+    startLine: 583
+  assemblies:
+  - Talegen.Storage.Net.Core
+  namespace: Talegen.Storage.Net.Core.Memory
+  summary: "\nThis method is used to read all the bytes from a binary file to a provided stream.\n"
+  example: []
+  syntax:
+    content: public void ReadBinaryFile(string path, Stream outputStream)
+    parameters:
+    - id: path
+      type: System.String
+      description: Contains the path to the file to load into the stream.
+    - id: outputStream
+      type: System.IO.Stream
+      description: The stream to write the file to.
+    content.vb: Public Sub ReadBinaryFile(path As String, outputStream As Stream)
+  overload: Talegen.Storage.Net.Core.Memory.MemoryStorageService.ReadBinaryFile*
+  implements:
+  - Talegen.Storage.Net.Core.IStorageService.ReadBinaryFile(System.String,System.IO.Stream)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Talegen.Storage.Net.Core.Memory.MemoryStorageService.ReadTextFile(System.String,System.Text.Encoding)
+  commentId: M:Talegen.Storage.Net.Core.Memory.MemoryStorageService.ReadTextFile(System.String,System.Text.Encoding)
+  id: ReadTextFile(System.String,System.Text.Encoding)
+  parent: Talegen.Storage.Net.Core.Memory.MemoryStorageService
+  langs:
+  - csharp
+  - vb
+  name: ReadTextFile(String, Encoding)
+  nameWithType: MemoryStorageService.ReadTextFile(String, Encoding)
+  fullName: Talegen.Storage.Net.Core.Memory.MemoryStorageService.ReadTextFile(System.String, System.Text.Encoding)
+  type: Method
+  source:
+    remote:
+      path: src/Talegen.Storage.Net.Core/Memory/MemoryStorageService.cs
+      branch: main
+      repo: https://github.com/Talegen/Talegen.Storage.Net.git
+    id: ReadTextFile
+    path: Memory/MemoryStorageService.cs
+    startLine: 609
+  assemblies:
+  - Talegen.Storage.Net.Core
+  namespace: Talegen.Storage.Net.Core.Memory
+  summary: "\nThis method is used to read all the bytes from a text file.\n"
+  example: []
+  syntax:
+    content: public string ReadTextFile(string path, Encoding encoding = null)
+    parameters:
+    - id: path
+      type: System.String
+      description: Contains the path to the file to load and return.
+    - id: encoding
+      type: System.Text.Encoding
+      description: Contains the text encoding type. If none is specified, Encoding.Default is used.
+    return:
+      type: System.String
+      description: Returns a string containing the content of the target file.
+    content.vb: Public Function ReadTextFile(path As String, encoding As Encoding = Nothing) As String
+  overload: Talegen.Storage.Net.Core.Memory.MemoryStorageService.ReadTextFile*
+  implements:
+  - Talegen.Storage.Net.Core.IStorageService.ReadTextFile(System.String,System.Text.Encoding)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Talegen.Storage.Net.Core.Memory.MemoryStorageService.WriteBinaryFile(System.String,System.Byte[])
+  commentId: M:Talegen.Storage.Net.Core.Memory.MemoryStorageService.WriteBinaryFile(System.String,System.Byte[])
+  id: WriteBinaryFile(System.String,System.Byte[])
+  parent: Talegen.Storage.Net.Core.Memory.MemoryStorageService
+  langs:
+  - csharp
+  - vb
+  name: WriteBinaryFile(String, Byte[])
+  nameWithType: MemoryStorageService.WriteBinaryFile(String, Byte[])
+  fullName: Talegen.Storage.Net.Core.Memory.MemoryStorageService.WriteBinaryFile(System.String, System.Byte[])
+  type: Method
+  source:
+    remote:
+      path: src/Talegen.Storage.Net.Core/Memory/MemoryStorageService.cs
+      branch: main
+      repo: https://github.com/Talegen/Talegen.Storage.Net.git
+    id: WriteBinaryFile
+    path: Memory/MemoryStorageService.cs
+    startLine: 623
+  assemblies:
+  - Talegen.Storage.Net.Core
+  namespace: Talegen.Storage.Net.Core.Memory
+  summary: "\nThis method is used to write content to the specified path.\n"
+  example: []
+  syntax:
+    content: public bool WriteBinaryFile(string path, byte[] content)
+    parameters:
+    - id: path
+      type: System.String
+      description: Contains the fully qualified path, including file name, to the location in which the binary content shall be written.
+    - id: content
+      type: System.Byte[]
+      description: Contains a byte array of the content to be written.
+    return:
+      type: System.Boolean
+      description: Returns a value indicating whether the write was successful.
+    content.vb: Public Function WriteBinaryFile(path As String, content As Byte()) As Boolean
+  overload: Talegen.Storage.Net.Core.Memory.MemoryStorageService.WriteBinaryFile*
+  exceptions:
+  - type: System.ArgumentNullException
+    commentId: T:System.ArgumentNullException
+    description: path
+  - type: Talegen.Storage.Net.Core.StorageException
+    commentId: T:Talegen.Storage.Net.Core.StorageException
+  implements:
+  - Talegen.Storage.Net.Core.IStorageService.WriteBinaryFile(System.String,System.Byte[])
+  nameWithType.vb: MemoryStorageService.WriteBinaryFile(String, Byte())
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+  fullName.vb: Talegen.Storage.Net.Core.Memory.MemoryStorageService.WriteBinaryFile(System.String, System.Byte())
+  name.vb: WriteBinaryFile(String, Byte())
+- uid: Talegen.Storage.Net.Core.Memory.MemoryStorageService.WriteBinaryFile(System.String,System.IO.Stream)
+  commentId: M:Talegen.Storage.Net.Core.Memory.MemoryStorageService.WriteBinaryFile(System.String,System.IO.Stream)
+  id: WriteBinaryFile(System.String,System.IO.Stream)
+  parent: Talegen.Storage.Net.Core.Memory.MemoryStorageService
+  langs:
+  - csharp
+  - vb
+  name: WriteBinaryFile(String, Stream)
+  nameWithType: MemoryStorageService.WriteBinaryFile(String, Stream)
+  fullName: Talegen.Storage.Net.Core.Memory.MemoryStorageService.WriteBinaryFile(System.String, System.IO.Stream)
+  type: Method
+  source:
+    remote:
+      path: src/Talegen.Storage.Net.Core/Memory/MemoryStorageService.cs
+      branch: main
+      repo: https://github.com/Talegen/Talegen.Storage.Net.git
+    id: WriteBinaryFile
+    path: Memory/MemoryStorageService.cs
+    startLine: 678
+  assemblies:
+  - Talegen.Storage.Net.Core
+  namespace: Talegen.Storage.Net.Core.Memory
+  summary: "\nThis method is used to write content to the specified path.\n"
+  example: []
+  syntax:
+    content: public bool WriteBinaryFile(string path, Stream inputStream)
+    parameters:
+    - id: path
+      type: System.String
+      description: Contains the fully qualified path, including file name, to the location in which the binary content shall be written.
+    - id: inputStream
+      type: System.IO.Stream
+      description: Contains a stream of the content to be written.
+    return:
+      type: System.Boolean
+      description: Returns a value indicating whether the write was successful.
+    content.vb: Public Function WriteBinaryFile(path As String, inputStream As Stream) As Boolean
+  overload: Talegen.Storage.Net.Core.Memory.MemoryStorageService.WriteBinaryFile*
+  exceptions:
+  - type: System.ArgumentNullException
+    commentId: T:System.ArgumentNullException
+    description: Thrown if argument is null.
+  - type: System.IO.IOException
+    commentId: T:System.IO.IOException
+    description: Thrown if stream cannot be read.
+  implements:
+  - Talegen.Storage.Net.Core.IStorageService.WriteBinaryFile(System.String,System.IO.Stream)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Talegen.Storage.Net.Core.Memory.MemoryStorageService.WriteTextFile(System.String,System.String,System.Text.Encoding)
+  commentId: M:Talegen.Storage.Net.Core.Memory.MemoryStorageService.WriteTextFile(System.String,System.String,System.Text.Encoding)
+  id: WriteTextFile(System.String,System.String,System.Text.Encoding)
+  parent: Talegen.Storage.Net.Core.Memory.MemoryStorageService
+  langs:
+  - csharp
+  - vb
+  name: WriteTextFile(String, String, Encoding)
+  nameWithType: MemoryStorageService.WriteTextFile(String, String, Encoding)
+  fullName: Talegen.Storage.Net.Core.Memory.MemoryStorageService.WriteTextFile(System.String, System.String, System.Text.Encoding)
+  type: Method
+  source:
+    remote:
+      path: src/Talegen.Storage.Net.Core/Memory/MemoryStorageService.cs
+      branch: main
+      repo: https://github.com/Talegen/Talegen.Storage.Net.git
+    id: WriteTextFile
+    path: Memory/MemoryStorageService.cs
+    startLine: 705
+  assemblies:
+  - Talegen.Storage.Net.Core
+  namespace: Talegen.Storage.Net.Core.Memory
+  summary: "\nThis method is used to write content to the specified path.\n"
+  example: []
+  syntax:
+    content: public bool WriteTextFile(string path, string content, Encoding encoding = null)
+    parameters:
+    - id: path
+      type: System.String
+      description: Contains the fully qualified path, including file name, to the location in which the text content shall be written.
+    - id: content
+      type: System.String
+      description: Contains a string of the content to be written.
+    - id: encoding
+      type: System.Text.Encoding
+      description: Contains the text file encoding. If none specified, Encoding.Default is used.
+    return:
+      type: System.Boolean
+      description: Returns a value indicating whether the write was successful.
+    content.vb: Public Function WriteTextFile(path As String, content As String, encoding As Encoding = Nothing) As Boolean
+  overload: Talegen.Storage.Net.Core.Memory.MemoryStorageService.WriteTextFile*
+  implements:
+  - Talegen.Storage.Net.Core.IStorageService.WriteTextFile(System.String,System.String,System.Text.Encoding)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+references:
+- uid: Talegen.Storage.Net.Core.IStorageService
+  commentId: T:Talegen.Storage.Net.Core.IStorageService
+  parent: Talegen.Storage.Net.Core
+  name: IStorageService
+  nameWithType: IStorageService
+  fullName: Talegen.Storage.Net.Core.IStorageService
+- uid: Talegen.Storage.Net.Core.Memory
+  commentId: N:Talegen.Storage.Net.Core.Memory
+  name: Talegen.Storage.Net.Core.Memory
+  nameWithType: Talegen.Storage.Net.Core.Memory
+  fullName: Talegen.Storage.Net.Core.Memory
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Talegen.Storage.Net.Core
+  commentId: N:Talegen.Storage.Net.Core
+  name: Talegen.Storage.Net.Core
+  nameWithType: Talegen.Storage.Net.Core
+  fullName: Talegen.Storage.Net.Core
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Talegen.Storage.Net.Core.Memory.MemoryStorageService
+  commentId: T:Talegen.Storage.Net.Core.Memory.MemoryStorageService
+  name: MemoryStorageService
+  nameWithType: MemoryStorageService
+  fullName: Talegen.Storage.Net.Core.Memory.MemoryStorageService
+- uid: Talegen.Storage.Net.Core.Memory.MemoryStorageService.#ctor*
+  commentId: Overload:Talegen.Storage.Net.Core.Memory.MemoryStorageService.#ctor
+  name: MemoryStorageService
+  nameWithType: MemoryStorageService.MemoryStorageService
+  fullName: Talegen.Storage.Net.Core.Memory.MemoryStorageService.MemoryStorageService
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
+- uid: Talegen.Storage.Net.Core.Memory.MemoryStorageContext
+  commentId: T:Talegen.Storage.Net.Core.Memory.MemoryStorageContext
+  parent: Talegen.Storage.Net.Core.Memory
+  name: MemoryStorageContext
+  nameWithType: MemoryStorageContext
+  fullName: Talegen.Storage.Net.Core.Memory.MemoryStorageContext
+- uid: Talegen.Storage.Net.Core.Memory.MemoryStorageService.VirtualDisk*
+  commentId: Overload:Talegen.Storage.Net.Core.Memory.MemoryStorageService.VirtualDisk
+  name: VirtualDisk
+  nameWithType: MemoryStorageService.VirtualDisk
+  fullName: Talegen.Storage.Net.Core.Memory.MemoryStorageService.VirtualDisk
+- uid: System.Collections.Concurrent.ConcurrentDictionary{System.String,Talegen.Storage.Net.Core.Memory.MemoryFolderModel}
+  commentId: T:System.Collections.Concurrent.ConcurrentDictionary{System.String,Talegen.Storage.Net.Core.Memory.MemoryFolderModel}
+  parent: System.Collections.Concurrent
+  definition: System.Collections.Concurrent.ConcurrentDictionary`2
+  name: ConcurrentDictionary<String, MemoryFolderModel>
+  nameWithType: ConcurrentDictionary<String, MemoryFolderModel>
+  fullName: System.Collections.Concurrent.ConcurrentDictionary<System.String, Talegen.Storage.Net.Core.Memory.MemoryFolderModel>
+  nameWithType.vb: ConcurrentDictionary(Of String, MemoryFolderModel)
+  fullName.vb: System.Collections.Concurrent.ConcurrentDictionary(Of System.String, Talegen.Storage.Net.Core.Memory.MemoryFolderModel)
+  name.vb: ConcurrentDictionary(Of String, MemoryFolderModel)
+  spec.csharp:
+  - uid: System.Collections.Concurrent.ConcurrentDictionary`2
+    name: ConcurrentDictionary
+    nameWithType: ConcurrentDictionary
+    fullName: System.Collections.Concurrent.ConcurrentDictionary
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: Talegen.Storage.Net.Core.Memory.MemoryFolderModel
+    name: MemoryFolderModel
+    nameWithType: MemoryFolderModel
+    fullName: Talegen.Storage.Net.Core.Memory.MemoryFolderModel
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Concurrent.ConcurrentDictionary`2
+    name: ConcurrentDictionary
+    nameWithType: ConcurrentDictionary
+    fullName: System.Collections.Concurrent.ConcurrentDictionary
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: Talegen.Storage.Net.Core.Memory.MemoryFolderModel
+    name: MemoryFolderModel
+    nameWithType: MemoryFolderModel
+    fullName: Talegen.Storage.Net.Core.Memory.MemoryFolderModel
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Concurrent.ConcurrentDictionary`2
+  commentId: T:System.Collections.Concurrent.ConcurrentDictionary`2
+  isExternal: true
+  name: ConcurrentDictionary<TKey, TValue>
+  nameWithType: ConcurrentDictionary<TKey, TValue>
+  fullName: System.Collections.Concurrent.ConcurrentDictionary<TKey, TValue>
+  nameWithType.vb: ConcurrentDictionary(Of TKey, TValue)
+  fullName.vb: System.Collections.Concurrent.ConcurrentDictionary(Of TKey, TValue)
+  name.vb: ConcurrentDictionary(Of TKey, TValue)
+  spec.csharp:
+  - uid: System.Collections.Concurrent.ConcurrentDictionary`2
+    name: ConcurrentDictionary
+    nameWithType: ConcurrentDictionary
+    fullName: System.Collections.Concurrent.ConcurrentDictionary
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: TKey
+    nameWithType: TKey
+    fullName: TKey
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: TValue
+    nameWithType: TValue
+    fullName: TValue
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Concurrent.ConcurrentDictionary`2
+    name: ConcurrentDictionary
+    nameWithType: ConcurrentDictionary
+    fullName: System.Collections.Concurrent.ConcurrentDictionary
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: TKey
+    nameWithType: TKey
+    fullName: TKey
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: TValue
+    nameWithType: TValue
+    fullName: TValue
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Concurrent
+  commentId: N:System.Collections.Concurrent
+  isExternal: true
+  name: System.Collections.Concurrent
+  nameWithType: System.Collections.Concurrent
+  fullName: System.Collections.Concurrent
+- uid: Talegen.Storage.Net.Core.Memory.MemoryStorageService.StorageId*
+  commentId: Overload:Talegen.Storage.Net.Core.Memory.MemoryStorageService.StorageId
+  name: StorageId
+  nameWithType: MemoryStorageService.StorageId
+  fullName: Talegen.Storage.Net.Core.Memory.MemoryStorageService.StorageId
+- uid: Talegen.Storage.Net.Core.IStorageService.StorageId
+  commentId: P:Talegen.Storage.Net.Core.IStorageService.StorageId
+  parent: Talegen.Storage.Net.Core.IStorageService
+  name: StorageId
+  nameWithType: IStorageService.StorageId
+  fullName: Talegen.Storage.Net.Core.IStorageService.StorageId
+- uid: Talegen.Storage.Net.Core.Memory.MemoryStorageService.RootPath*
+  commentId: Overload:Talegen.Storage.Net.Core.Memory.MemoryStorageService.RootPath
+  name: RootPath
+  nameWithType: MemoryStorageService.RootPath
+  fullName: Talegen.Storage.Net.Core.Memory.MemoryStorageService.RootPath
+- uid: Talegen.Storage.Net.Core.IStorageService.RootPath
+  commentId: P:Talegen.Storage.Net.Core.IStorageService.RootPath
+  parent: Talegen.Storage.Net.Core.IStorageService
+  name: RootPath
+  nameWithType: IStorageService.RootPath
+  fullName: Talegen.Storage.Net.Core.IStorageService.RootPath
+- uid: Talegen.Storage.Net.Core.Memory.MemoryStorageService.Initialize*
+  commentId: Overload:Talegen.Storage.Net.Core.Memory.MemoryStorageService.Initialize
+  name: Initialize
+  nameWithType: MemoryStorageService.Initialize
+  fullName: Talegen.Storage.Net.Core.Memory.MemoryStorageService.Initialize
+- uid: System.ArgumentNullException
+  commentId: T:System.ArgumentNullException
+  isExternal: true
+- uid: Talegen.Storage.Net.Core.StorageException
+  commentId: T:Talegen.Storage.Net.Core.StorageException
+  name: StorageException
+  nameWithType: StorageException
+  fullName: Talegen.Storage.Net.Core.StorageException
+- uid: Talegen.Storage.Net.Core.Memory.MemoryStorageService.CopyFile*
+  commentId: Overload:Talegen.Storage.Net.Core.Memory.MemoryStorageService.CopyFile
+  name: CopyFile
+  nameWithType: MemoryStorageService.CopyFile
+  fullName: Talegen.Storage.Net.Core.Memory.MemoryStorageService.CopyFile
+- uid: Talegen.Storage.Net.Core.IStorageService.CopyFile(System.String,System.String,System.Boolean)
+  commentId: M:Talegen.Storage.Net.Core.IStorageService.CopyFile(System.String,System.String,System.Boolean)
+  parent: Talegen.Storage.Net.Core.IStorageService
+  isExternal: true
+  name: CopyFile(String, String, Boolean)
+  nameWithType: IStorageService.CopyFile(String, String, Boolean)
+  fullName: Talegen.Storage.Net.Core.IStorageService.CopyFile(System.String, System.String, System.Boolean)
+  spec.csharp:
+  - uid: Talegen.Storage.Net.Core.IStorageService.CopyFile(System.String,System.String,System.Boolean)
+    name: CopyFile
+    nameWithType: IStorageService.CopyFile
+    fullName: Talegen.Storage.Net.Core.IStorageService.CopyFile
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Boolean
+    name: Boolean
+    nameWithType: Boolean
+    fullName: System.Boolean
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Talegen.Storage.Net.Core.IStorageService.CopyFile(System.String,System.String,System.Boolean)
+    name: CopyFile
+    nameWithType: IStorageService.CopyFile
+    fullName: Talegen.Storage.Net.Core.IStorageService.CopyFile
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Boolean
+    name: Boolean
+    nameWithType: Boolean
+    fullName: System.Boolean
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Talegen.Storage.Net.Core.Memory.MemoryStorageService.CreateDirectory*
+  commentId: Overload:Talegen.Storage.Net.Core.Memory.MemoryStorageService.CreateDirectory
+  name: CreateDirectory
+  nameWithType: MemoryStorageService.CreateDirectory
+  fullName: Talegen.Storage.Net.Core.Memory.MemoryStorageService.CreateDirectory
+- uid: Talegen.Storage.Net.Core.IStorageService.CreateDirectory(System.String,System.Boolean)
+  commentId: M:Talegen.Storage.Net.Core.IStorageService.CreateDirectory(System.String,System.Boolean)
+  parent: Talegen.Storage.Net.Core.IStorageService
+  isExternal: true
+  name: CreateDirectory(String, Boolean)
+  nameWithType: IStorageService.CreateDirectory(String, Boolean)
+  fullName: Talegen.Storage.Net.Core.IStorageService.CreateDirectory(System.String, System.Boolean)
+  spec.csharp:
+  - uid: Talegen.Storage.Net.Core.IStorageService.CreateDirectory(System.String,System.Boolean)
+    name: CreateDirectory
+    nameWithType: IStorageService.CreateDirectory
+    fullName: Talegen.Storage.Net.Core.IStorageService.CreateDirectory
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Boolean
+    name: Boolean
+    nameWithType: Boolean
+    fullName: System.Boolean
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Talegen.Storage.Net.Core.IStorageService.CreateDirectory(System.String,System.Boolean)
+    name: CreateDirectory
+    nameWithType: IStorageService.CreateDirectory
+    fullName: Talegen.Storage.Net.Core.IStorageService.CreateDirectory
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Boolean
+    name: Boolean
+    nameWithType: Boolean
+    fullName: System.Boolean
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Talegen.Storage.Net.Core.Memory.MemoryStorageService.DeleteDirectory*
+  commentId: Overload:Talegen.Storage.Net.Core.Memory.MemoryStorageService.DeleteDirectory
+  name: DeleteDirectory
+  nameWithType: MemoryStorageService.DeleteDirectory
+  fullName: Talegen.Storage.Net.Core.Memory.MemoryStorageService.DeleteDirectory
+- uid: Talegen.Storage.Net.Core.IStorageService.DeleteDirectory(System.String,System.Boolean,System.Boolean)
+  commentId: M:Talegen.Storage.Net.Core.IStorageService.DeleteDirectory(System.String,System.Boolean,System.Boolean)
+  parent: Talegen.Storage.Net.Core.IStorageService
+  isExternal: true
+  name: DeleteDirectory(String, Boolean, Boolean)
+  nameWithType: IStorageService.DeleteDirectory(String, Boolean, Boolean)
+  fullName: Talegen.Storage.Net.Core.IStorageService.DeleteDirectory(System.String, System.Boolean, System.Boolean)
+  spec.csharp:
+  - uid: Talegen.Storage.Net.Core.IStorageService.DeleteDirectory(System.String,System.Boolean,System.Boolean)
+    name: DeleteDirectory
+    nameWithType: IStorageService.DeleteDirectory
+    fullName: Talegen.Storage.Net.Core.IStorageService.DeleteDirectory
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Boolean
+    name: Boolean
+    nameWithType: Boolean
+    fullName: System.Boolean
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Boolean
+    name: Boolean
+    nameWithType: Boolean
+    fullName: System.Boolean
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Talegen.Storage.Net.Core.IStorageService.DeleteDirectory(System.String,System.Boolean,System.Boolean)
+    name: DeleteDirectory
+    nameWithType: IStorageService.DeleteDirectory
+    fullName: Talegen.Storage.Net.Core.IStorageService.DeleteDirectory
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Boolean
+    name: Boolean
+    nameWithType: Boolean
+    fullName: System.Boolean
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Boolean
+    name: Boolean
+    nameWithType: Boolean
+    fullName: System.Boolean
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Talegen.Storage.Net.Core.Memory.MemoryStorageService.DeleteFile*
+  commentId: Overload:Talegen.Storage.Net.Core.Memory.MemoryStorageService.DeleteFile
+  name: DeleteFile
+  nameWithType: MemoryStorageService.DeleteFile
+  fullName: Talegen.Storage.Net.Core.Memory.MemoryStorageService.DeleteFile
+- uid: Talegen.Storage.Net.Core.IStorageService.DeleteFile(System.String,System.Boolean)
+  commentId: M:Talegen.Storage.Net.Core.IStorageService.DeleteFile(System.String,System.Boolean)
+  parent: Talegen.Storage.Net.Core.IStorageService
+  isExternal: true
+  name: DeleteFile(String, Boolean)
+  nameWithType: IStorageService.DeleteFile(String, Boolean)
+  fullName: Talegen.Storage.Net.Core.IStorageService.DeleteFile(System.String, System.Boolean)
+  spec.csharp:
+  - uid: Talegen.Storage.Net.Core.IStorageService.DeleteFile(System.String,System.Boolean)
+    name: DeleteFile
+    nameWithType: IStorageService.DeleteFile
+    fullName: Talegen.Storage.Net.Core.IStorageService.DeleteFile
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Boolean
+    name: Boolean
+    nameWithType: Boolean
+    fullName: System.Boolean
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Talegen.Storage.Net.Core.IStorageService.DeleteFile(System.String,System.Boolean)
+    name: DeleteFile
+    nameWithType: IStorageService.DeleteFile
+    fullName: Talegen.Storage.Net.Core.IStorageService.DeleteFile
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Boolean
+    name: Boolean
+    nameWithType: Boolean
+    fullName: System.Boolean
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Talegen.Storage.Net.Core.Memory.MemoryStorageService.DeleteFiles*
+  commentId: Overload:Talegen.Storage.Net.Core.Memory.MemoryStorageService.DeleteFiles
+  name: DeleteFiles
+  nameWithType: MemoryStorageService.DeleteFiles
+  fullName: Talegen.Storage.Net.Core.Memory.MemoryStorageService.DeleteFiles
+- uid: Talegen.Storage.Net.Core.IStorageService.DeleteFiles(System.Collections.Generic.List{System.String},System.Boolean)
+  commentId: M:Talegen.Storage.Net.Core.IStorageService.DeleteFiles(System.Collections.Generic.List{System.String},System.Boolean)
+  parent: Talegen.Storage.Net.Core.IStorageService
+  isExternal: true
+  name: DeleteFiles(List<String>, Boolean)
+  nameWithType: IStorageService.DeleteFiles(List<String>, Boolean)
+  fullName: Talegen.Storage.Net.Core.IStorageService.DeleteFiles(System.Collections.Generic.List<System.String>, System.Boolean)
+  nameWithType.vb: IStorageService.DeleteFiles(List(Of String), Boolean)
+  fullName.vb: Talegen.Storage.Net.Core.IStorageService.DeleteFiles(System.Collections.Generic.List(Of System.String), System.Boolean)
+  name.vb: DeleteFiles(List(Of String), Boolean)
+  spec.csharp:
+  - uid: Talegen.Storage.Net.Core.IStorageService.DeleteFiles(System.Collections.Generic.List{System.String},System.Boolean)
+    name: DeleteFiles
+    nameWithType: IStorageService.DeleteFiles
+    fullName: Talegen.Storage.Net.Core.IStorageService.DeleteFiles
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Collections.Generic.List`1
+    name: List
+    nameWithType: List
+    fullName: System.Collections.Generic.List
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Boolean
+    name: Boolean
+    nameWithType: Boolean
+    fullName: System.Boolean
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Talegen.Storage.Net.Core.IStorageService.DeleteFiles(System.Collections.Generic.List{System.String},System.Boolean)
+    name: DeleteFiles
+    nameWithType: IStorageService.DeleteFiles
+    fullName: Talegen.Storage.Net.Core.IStorageService.DeleteFiles
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Collections.Generic.List`1
+    name: List
+    nameWithType: List
+    fullName: System.Collections.Generic.List
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Boolean
+    name: Boolean
+    nameWithType: Boolean
+    fullName: System.Boolean
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic.List{System.String}
+  commentId: T:System.Collections.Generic.List{System.String}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.List`1
+  name: List<String>
+  nameWithType: List<String>
+  fullName: System.Collections.Generic.List<System.String>
+  nameWithType.vb: List(Of String)
+  fullName.vb: System.Collections.Generic.List(Of System.String)
+  name.vb: List(Of String)
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    nameWithType: List
+    fullName: System.Collections.Generic.List
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    nameWithType: List
+    fullName: System.Collections.Generic.List
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic.List`1
+  commentId: T:System.Collections.Generic.List`1
+  isExternal: true
+  name: List<T>
+  nameWithType: List<T>
+  fullName: System.Collections.Generic.List<T>
+  nameWithType.vb: List(Of T)
+  fullName.vb: System.Collections.Generic.List(Of T)
+  name.vb: List(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    nameWithType: List
+    fullName: System.Collections.Generic.List
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    nameWithType: List
+    fullName: System.Collections.Generic.List
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: true
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic
+- uid: Talegen.Storage.Net.Core.Memory.MemoryStorageService.DirectoryExists*
+  commentId: Overload:Talegen.Storage.Net.Core.Memory.MemoryStorageService.DirectoryExists
+  name: DirectoryExists
+  nameWithType: MemoryStorageService.DirectoryExists
+  fullName: Talegen.Storage.Net.Core.Memory.MemoryStorageService.DirectoryExists
+- uid: Talegen.Storage.Net.Core.IStorageService.DirectoryExists(System.String)
+  commentId: M:Talegen.Storage.Net.Core.IStorageService.DirectoryExists(System.String)
+  parent: Talegen.Storage.Net.Core.IStorageService
+  isExternal: true
+  name: DirectoryExists(String)
+  nameWithType: IStorageService.DirectoryExists(String)
+  fullName: Talegen.Storage.Net.Core.IStorageService.DirectoryExists(System.String)
+  spec.csharp:
+  - uid: Talegen.Storage.Net.Core.IStorageService.DirectoryExists(System.String)
+    name: DirectoryExists
+    nameWithType: IStorageService.DirectoryExists
+    fullName: Talegen.Storage.Net.Core.IStorageService.DirectoryExists
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Talegen.Storage.Net.Core.IStorageService.DirectoryExists(System.String)
+    name: DirectoryExists
+    nameWithType: IStorageService.DirectoryExists
+    fullName: Talegen.Storage.Net.Core.IStorageService.DirectoryExists
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Talegen.Storage.Net.Core.Memory.MemoryStorageService.EmptyDirectory*
+  commentId: Overload:Talegen.Storage.Net.Core.Memory.MemoryStorageService.EmptyDirectory
+  name: EmptyDirectory
+  nameWithType: MemoryStorageService.EmptyDirectory
+  fullName: Talegen.Storage.Net.Core.Memory.MemoryStorageService.EmptyDirectory
+- uid: Talegen.Storage.Net.Core.IStorageService.EmptyDirectory(System.String)
+  commentId: M:Talegen.Storage.Net.Core.IStorageService.EmptyDirectory(System.String)
+  parent: Talegen.Storage.Net.Core.IStorageService
+  isExternal: true
+  name: EmptyDirectory(String)
+  nameWithType: IStorageService.EmptyDirectory(String)
+  fullName: Talegen.Storage.Net.Core.IStorageService.EmptyDirectory(System.String)
+  spec.csharp:
+  - uid: Talegen.Storage.Net.Core.IStorageService.EmptyDirectory(System.String)
+    name: EmptyDirectory
+    nameWithType: IStorageService.EmptyDirectory
+    fullName: Talegen.Storage.Net.Core.IStorageService.EmptyDirectory
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Talegen.Storage.Net.Core.IStorageService.EmptyDirectory(System.String)
+    name: EmptyDirectory
+    nameWithType: IStorageService.EmptyDirectory
+    fullName: Talegen.Storage.Net.Core.IStorageService.EmptyDirectory
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Talegen.Storage.Net.Core.Memory.MemoryStorageService.FileExists*
+  commentId: Overload:Talegen.Storage.Net.Core.Memory.MemoryStorageService.FileExists
+  name: FileExists
+  nameWithType: MemoryStorageService.FileExists
+  fullName: Talegen.Storage.Net.Core.Memory.MemoryStorageService.FileExists
+- uid: Talegen.Storage.Net.Core.IStorageService.FileExists(System.String)
+  commentId: M:Talegen.Storage.Net.Core.IStorageService.FileExists(System.String)
+  parent: Talegen.Storage.Net.Core.IStorageService
+  isExternal: true
+  name: FileExists(String)
+  nameWithType: IStorageService.FileExists(String)
+  fullName: Talegen.Storage.Net.Core.IStorageService.FileExists(System.String)
+  spec.csharp:
+  - uid: Talegen.Storage.Net.Core.IStorageService.FileExists(System.String)
+    name: FileExists
+    nameWithType: IStorageService.FileExists
+    fullName: Talegen.Storage.Net.Core.IStorageService.FileExists
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Talegen.Storage.Net.Core.IStorageService.FileExists(System.String)
+    name: FileExists
+    nameWithType: IStorageService.FileExists
+    fullName: Talegen.Storage.Net.Core.IStorageService.FileExists
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Talegen.Storage.Net.Core.Memory.MemoryStorageService.FileHash*
+  commentId: Overload:Talegen.Storage.Net.Core.Memory.MemoryStorageService.FileHash
+  name: FileHash
+  nameWithType: MemoryStorageService.FileHash
+  fullName: Talegen.Storage.Net.Core.Memory.MemoryStorageService.FileHash
+- uid: Talegen.Storage.Net.Core.IStorageService.FileHash(System.String)
+  commentId: M:Talegen.Storage.Net.Core.IStorageService.FileHash(System.String)
+  parent: Talegen.Storage.Net.Core.IStorageService
+  isExternal: true
+  name: FileHash(String)
+  nameWithType: IStorageService.FileHash(String)
+  fullName: Talegen.Storage.Net.Core.IStorageService.FileHash(System.String)
+  spec.csharp:
+  - uid: Talegen.Storage.Net.Core.IStorageService.FileHash(System.String)
+    name: FileHash
+    nameWithType: IStorageService.FileHash
+    fullName: Talegen.Storage.Net.Core.IStorageService.FileHash
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Talegen.Storage.Net.Core.IStorageService.FileHash(System.String)
+    name: FileHash
+    nameWithType: IStorageService.FileHash
+    fullName: Talegen.Storage.Net.Core.IStorageService.FileHash
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Talegen.Storage.Net.Core.Memory.MemoryStorageService.FindFiles*
+  commentId: Overload:Talegen.Storage.Net.Core.Memory.MemoryStorageService.FindFiles
+  name: FindFiles
+  nameWithType: MemoryStorageService.FindFiles
+  fullName: Talegen.Storage.Net.Core.Memory.MemoryStorageService.FindFiles
+- uid: Talegen.Storage.Net.Core.IStorageService.FindFiles(System.String,System.String,System.IO.SearchOption)
+  commentId: M:Talegen.Storage.Net.Core.IStorageService.FindFiles(System.String,System.String,System.IO.SearchOption)
+  parent: Talegen.Storage.Net.Core.IStorageService
+  isExternal: true
+  name: FindFiles(String, String, SearchOption)
+  nameWithType: IStorageService.FindFiles(String, String, SearchOption)
+  fullName: Talegen.Storage.Net.Core.IStorageService.FindFiles(System.String, System.String, System.IO.SearchOption)
+  spec.csharp:
+  - uid: Talegen.Storage.Net.Core.IStorageService.FindFiles(System.String,System.String,System.IO.SearchOption)
+    name: FindFiles
+    nameWithType: IStorageService.FindFiles
+    fullName: Talegen.Storage.Net.Core.IStorageService.FindFiles
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.IO.SearchOption
+    name: SearchOption
+    nameWithType: SearchOption
+    fullName: System.IO.SearchOption
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Talegen.Storage.Net.Core.IStorageService.FindFiles(System.String,System.String,System.IO.SearchOption)
+    name: FindFiles
+    nameWithType: IStorageService.FindFiles
+    fullName: Talegen.Storage.Net.Core.IStorageService.FindFiles
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.IO.SearchOption
+    name: SearchOption
+    nameWithType: SearchOption
+    fullName: System.IO.SearchOption
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.IO.SearchOption
+  commentId: T:System.IO.SearchOption
+  parent: System.IO
+  isExternal: true
+  name: SearchOption
+  nameWithType: SearchOption
+  fullName: System.IO.SearchOption
+- uid: System.IO
+  commentId: N:System.IO
+  isExternal: true
+  name: System.IO
+  nameWithType: System.IO
+  fullName: System.IO
+- uid: Talegen.Storage.Net.Core.Memory.MemoryStorageService.MoveFile*
+  commentId: Overload:Talegen.Storage.Net.Core.Memory.MemoryStorageService.MoveFile
+  name: MoveFile
+  nameWithType: MemoryStorageService.MoveFile
+  fullName: Talegen.Storage.Net.Core.Memory.MemoryStorageService.MoveFile
+- uid: Talegen.Storage.Net.Core.IStorageService.MoveFile(System.String,System.String,System.Boolean)
+  commentId: M:Talegen.Storage.Net.Core.IStorageService.MoveFile(System.String,System.String,System.Boolean)
+  parent: Talegen.Storage.Net.Core.IStorageService
+  isExternal: true
+  name: MoveFile(String, String, Boolean)
+  nameWithType: IStorageService.MoveFile(String, String, Boolean)
+  fullName: Talegen.Storage.Net.Core.IStorageService.MoveFile(System.String, System.String, System.Boolean)
+  spec.csharp:
+  - uid: Talegen.Storage.Net.Core.IStorageService.MoveFile(System.String,System.String,System.Boolean)
+    name: MoveFile
+    nameWithType: IStorageService.MoveFile
+    fullName: Talegen.Storage.Net.Core.IStorageService.MoveFile
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Boolean
+    name: Boolean
+    nameWithType: Boolean
+    fullName: System.Boolean
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Talegen.Storage.Net.Core.IStorageService.MoveFile(System.String,System.String,System.Boolean)
+    name: MoveFile
+    nameWithType: IStorageService.MoveFile
+    fullName: Talegen.Storage.Net.Core.IStorageService.MoveFile
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Boolean
+    name: Boolean
+    nameWithType: Boolean
+    fullName: System.Boolean
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Talegen.Storage.Net.Core.Memory.MemoryStorageService.ReadBinaryFile*
+  commentId: Overload:Talegen.Storage.Net.Core.Memory.MemoryStorageService.ReadBinaryFile
+  name: ReadBinaryFile
+  nameWithType: MemoryStorageService.ReadBinaryFile
+  fullName: Talegen.Storage.Net.Core.Memory.MemoryStorageService.ReadBinaryFile
+- uid: Talegen.Storage.Net.Core.IStorageService.ReadBinaryFile(System.String)
+  commentId: M:Talegen.Storage.Net.Core.IStorageService.ReadBinaryFile(System.String)
+  parent: Talegen.Storage.Net.Core.IStorageService
+  isExternal: true
+  name: ReadBinaryFile(String)
+  nameWithType: IStorageService.ReadBinaryFile(String)
+  fullName: Talegen.Storage.Net.Core.IStorageService.ReadBinaryFile(System.String)
+  spec.csharp:
+  - uid: Talegen.Storage.Net.Core.IStorageService.ReadBinaryFile(System.String)
+    name: ReadBinaryFile
+    nameWithType: IStorageService.ReadBinaryFile
+    fullName: Talegen.Storage.Net.Core.IStorageService.ReadBinaryFile
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Talegen.Storage.Net.Core.IStorageService.ReadBinaryFile(System.String)
+    name: ReadBinaryFile
+    nameWithType: IStorageService.ReadBinaryFile
+    fullName: Talegen.Storage.Net.Core.IStorageService.ReadBinaryFile
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Byte[]
+  isExternal: true
+  name: Byte[]
+  nameWithType: Byte[]
+  fullName: System.Byte[]
+  nameWithType.vb: Byte()
+  fullName.vb: System.Byte()
+  name.vb: Byte()
+  spec.csharp:
+  - uid: System.Byte
+    name: Byte
+    nameWithType: Byte
+    fullName: System.Byte
+    isExternal: true
+  - name: '[]'
+    nameWithType: '[]'
+    fullName: '[]'
+  spec.vb:
+  - uid: System.Byte
+    name: Byte
+    nameWithType: Byte
+    fullName: System.Byte
+    isExternal: true
+  - name: ()
+    nameWithType: ()
+    fullName: ()
+- uid: Talegen.Storage.Net.Core.IStorageService.ReadBinaryFile(System.String,System.IO.Stream)
+  commentId: M:Talegen.Storage.Net.Core.IStorageService.ReadBinaryFile(System.String,System.IO.Stream)
+  parent: Talegen.Storage.Net.Core.IStorageService
+  isExternal: true
+  name: ReadBinaryFile(String, Stream)
+  nameWithType: IStorageService.ReadBinaryFile(String, Stream)
+  fullName: Talegen.Storage.Net.Core.IStorageService.ReadBinaryFile(System.String, System.IO.Stream)
+  spec.csharp:
+  - uid: Talegen.Storage.Net.Core.IStorageService.ReadBinaryFile(System.String,System.IO.Stream)
+    name: ReadBinaryFile
+    nameWithType: IStorageService.ReadBinaryFile
+    fullName: Talegen.Storage.Net.Core.IStorageService.ReadBinaryFile
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.IO.Stream
+    name: Stream
+    nameWithType: Stream
+    fullName: System.IO.Stream
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Talegen.Storage.Net.Core.IStorageService.ReadBinaryFile(System.String,System.IO.Stream)
+    name: ReadBinaryFile
+    nameWithType: IStorageService.ReadBinaryFile
+    fullName: Talegen.Storage.Net.Core.IStorageService.ReadBinaryFile
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.IO.Stream
+    name: Stream
+    nameWithType: Stream
+    fullName: System.IO.Stream
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.IO.Stream
+  commentId: T:System.IO.Stream
+  parent: System.IO
+  isExternal: true
+  name: Stream
+  nameWithType: Stream
+  fullName: System.IO.Stream
+- uid: Talegen.Storage.Net.Core.Memory.MemoryStorageService.ReadTextFile*
+  commentId: Overload:Talegen.Storage.Net.Core.Memory.MemoryStorageService.ReadTextFile
+  name: ReadTextFile
+  nameWithType: MemoryStorageService.ReadTextFile
+  fullName: Talegen.Storage.Net.Core.Memory.MemoryStorageService.ReadTextFile
+- uid: Talegen.Storage.Net.Core.IStorageService.ReadTextFile(System.String,System.Text.Encoding)
+  commentId: M:Talegen.Storage.Net.Core.IStorageService.ReadTextFile(System.String,System.Text.Encoding)
+  parent: Talegen.Storage.Net.Core.IStorageService
+  isExternal: true
+  name: ReadTextFile(String, Encoding)
+  nameWithType: IStorageService.ReadTextFile(String, Encoding)
+  fullName: Talegen.Storage.Net.Core.IStorageService.ReadTextFile(System.String, System.Text.Encoding)
+  spec.csharp:
+  - uid: Talegen.Storage.Net.Core.IStorageService.ReadTextFile(System.String,System.Text.Encoding)
+    name: ReadTextFile
+    nameWithType: IStorageService.ReadTextFile
+    fullName: Talegen.Storage.Net.Core.IStorageService.ReadTextFile
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Text.Encoding
+    name: Encoding
+    nameWithType: Encoding
+    fullName: System.Text.Encoding
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Talegen.Storage.Net.Core.IStorageService.ReadTextFile(System.String,System.Text.Encoding)
+    name: ReadTextFile
+    nameWithType: IStorageService.ReadTextFile
+    fullName: Talegen.Storage.Net.Core.IStorageService.ReadTextFile
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Text.Encoding
+    name: Encoding
+    nameWithType: Encoding
+    fullName: System.Text.Encoding
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Text.Encoding
+  commentId: T:System.Text.Encoding
+  parent: System.Text
+  isExternal: true
+  name: Encoding
+  nameWithType: Encoding
+  fullName: System.Text.Encoding
+- uid: System.Text
+  commentId: N:System.Text
+  isExternal: true
+  name: System.Text
+  nameWithType: System.Text
+  fullName: System.Text
+- uid: Talegen.Storage.Net.Core.Memory.MemoryStorageService.WriteBinaryFile*
+  commentId: Overload:Talegen.Storage.Net.Core.Memory.MemoryStorageService.WriteBinaryFile
+  name: WriteBinaryFile
+  nameWithType: MemoryStorageService.WriteBinaryFile
+  fullName: Talegen.Storage.Net.Core.Memory.MemoryStorageService.WriteBinaryFile
+- uid: Talegen.Storage.Net.Core.IStorageService.WriteBinaryFile(System.String,System.Byte[])
+  commentId: M:Talegen.Storage.Net.Core.IStorageService.WriteBinaryFile(System.String,System.Byte[])
+  parent: Talegen.Storage.Net.Core.IStorageService
+  isExternal: true
+  name: WriteBinaryFile(String, Byte[])
+  nameWithType: IStorageService.WriteBinaryFile(String, Byte[])
+  fullName: Talegen.Storage.Net.Core.IStorageService.WriteBinaryFile(System.String, System.Byte[])
+  nameWithType.vb: IStorageService.WriteBinaryFile(String, Byte())
+  fullName.vb: Talegen.Storage.Net.Core.IStorageService.WriteBinaryFile(System.String, System.Byte())
+  name.vb: WriteBinaryFile(String, Byte())
+  spec.csharp:
+  - uid: Talegen.Storage.Net.Core.IStorageService.WriteBinaryFile(System.String,System.Byte[])
+    name: WriteBinaryFile
+    nameWithType: IStorageService.WriteBinaryFile
+    fullName: Talegen.Storage.Net.Core.IStorageService.WriteBinaryFile
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Byte
+    name: Byte
+    nameWithType: Byte
+    fullName: System.Byte
+    isExternal: true
+  - name: '[]'
+    nameWithType: '[]'
+    fullName: '[]'
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Talegen.Storage.Net.Core.IStorageService.WriteBinaryFile(System.String,System.Byte[])
+    name: WriteBinaryFile
+    nameWithType: IStorageService.WriteBinaryFile
+    fullName: Talegen.Storage.Net.Core.IStorageService.WriteBinaryFile
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Byte
+    name: Byte
+    nameWithType: Byte
+    fullName: System.Byte
+    isExternal: true
+  - name: ()
+    nameWithType: ()
+    fullName: ()
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.IO.IOException
+  commentId: T:System.IO.IOException
+  isExternal: true
+- uid: Talegen.Storage.Net.Core.IStorageService.WriteBinaryFile(System.String,System.IO.Stream)
+  commentId: M:Talegen.Storage.Net.Core.IStorageService.WriteBinaryFile(System.String,System.IO.Stream)
+  parent: Talegen.Storage.Net.Core.IStorageService
+  isExternal: true
+  name: WriteBinaryFile(String, Stream)
+  nameWithType: IStorageService.WriteBinaryFile(String, Stream)
+  fullName: Talegen.Storage.Net.Core.IStorageService.WriteBinaryFile(System.String, System.IO.Stream)
+  spec.csharp:
+  - uid: Talegen.Storage.Net.Core.IStorageService.WriteBinaryFile(System.String,System.IO.Stream)
+    name: WriteBinaryFile
+    nameWithType: IStorageService.WriteBinaryFile
+    fullName: Talegen.Storage.Net.Core.IStorageService.WriteBinaryFile
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.IO.Stream
+    name: Stream
+    nameWithType: Stream
+    fullName: System.IO.Stream
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Talegen.Storage.Net.Core.IStorageService.WriteBinaryFile(System.String,System.IO.Stream)
+    name: WriteBinaryFile
+    nameWithType: IStorageService.WriteBinaryFile
+    fullName: Talegen.Storage.Net.Core.IStorageService.WriteBinaryFile
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.IO.Stream
+    name: Stream
+    nameWithType: Stream
+    fullName: System.IO.Stream
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Talegen.Storage.Net.Core.Memory.MemoryStorageService.WriteTextFile*
+  commentId: Overload:Talegen.Storage.Net.Core.Memory.MemoryStorageService.WriteTextFile
+  name: WriteTextFile
+  nameWithType: MemoryStorageService.WriteTextFile
+  fullName: Talegen.Storage.Net.Core.Memory.MemoryStorageService.WriteTextFile
+- uid: Talegen.Storage.Net.Core.IStorageService.WriteTextFile(System.String,System.String,System.Text.Encoding)
+  commentId: M:Talegen.Storage.Net.Core.IStorageService.WriteTextFile(System.String,System.String,System.Text.Encoding)
+  parent: Talegen.Storage.Net.Core.IStorageService
+  isExternal: true
+  name: WriteTextFile(String, String, Encoding)
+  nameWithType: IStorageService.WriteTextFile(String, String, Encoding)
+  fullName: Talegen.Storage.Net.Core.IStorageService.WriteTextFile(System.String, System.String, System.Text.Encoding)
+  spec.csharp:
+  - uid: Talegen.Storage.Net.Core.IStorageService.WriteTextFile(System.String,System.String,System.Text.Encoding)
+    name: WriteTextFile
+    nameWithType: IStorageService.WriteTextFile
+    fullName: Talegen.Storage.Net.Core.IStorageService.WriteTextFile
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Text.Encoding
+    name: Encoding
+    nameWithType: Encoding
+    fullName: System.Text.Encoding
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Talegen.Storage.Net.Core.IStorageService.WriteTextFile(System.String,System.String,System.Text.Encoding)
+    name: WriteTextFile
+    nameWithType: IStorageService.WriteTextFile
+    fullName: Talegen.Storage.Net.Core.IStorageService.WriteTextFile
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Text.Encoding
+    name: Encoding
+    nameWithType: Encoding
+    fullName: System.Text.Encoding
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )

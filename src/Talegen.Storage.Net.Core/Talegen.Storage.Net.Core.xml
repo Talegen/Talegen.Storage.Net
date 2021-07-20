@@ -563,7 +563,7 @@
         </member>
         <member name="M:Talegen.Storage.Net.Core.Memory.MemoryStorageService.Initialize(Talegen.Storage.Net.Core.Memory.MemoryStorageContext)">
             <summary>
-            This method is used to initialize a storage service with the specified settings provided within the <see cref="!:StorageContext" /> object.
+            This method is used to initialize a storage service with the specified settings provided within the <see cref="T:Talegen.Storage.Net.Core.Memory.MemoryStorageContext" /> object.
             </summary>
             <param name="storageContext">Contains the settings used to initialize the storage service.</param>
         </member>

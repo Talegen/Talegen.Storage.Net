@@ -22,34 +22,74 @@ We set out to create a library that does the minimum to get the common jobs we n
 
 This library source code is available on GitHub to everyone under the standard [Apache 2.0 license](https://github.com/talegen/Talegen.PureBlue.Models/blob/main/LICENSE). The repository is located at Talegen.Storage.Net](https://github.com/Talegen/Talegen.Storage.Net).
 
-### Markdown
+## How
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+We really like simplicity, so there are a couple of options for implementing this storage library. For specifics on which commands are available for each implementation, you can visit the class reference documentation [here](#ref).
 
-```markdown
-Syntax highlighted code block
+#### Interfaces
 
-# Header 1
-## Header 2
-### Header 3
+The service is comprised of two simple interface classes. ```IStorageContext``` and ```IStorageService```. These two interfaces are used to implement a [Local Disk](#disk), [Memory](#memory), and [Azure File Share](#azure) storage implementation.
 
-- Bulleted
-- List
+#### Exceptions
 
-1. Numbered
-2. List
+The library has a single exception type, ```StorageException``` that is thrown for any exception that is thrown by internal errors within the storage service. In most cases, you should catch these exceptions to log and resolve any issues that occur within the library.
 
-**Bold** and _Italic_ and `Code` text
+## Examples
 
-[Link](url) and ![Image](src)
+As with any flexible library, there are a couple of ways to construct your service, but you'll want to know which type of storage implementation you would like to instantiate.
+
+```c#
+// create a new local disk storage context, using a temp root path, and set unique sub-folder workspace to true. 
+string rootPath = Path.Combine(Path.GetTempPath(), "StorageTesting");
+IStorageContext context = new LocalStorageContext(rootPath, true); 
+IStorageService service = new LocalStorageService(context);
 ```
 
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
+Alternatively, you can create a new service using similar context parameters:
 
-### Jekyll Themes
+```c#
+// create a new local disk storage service, using a temp root path, and set unique sub-folder workspace to true. 
+string rootPath = Path.Combine(Path.GetTempPath(), "StorageTesting");
+IStorageService service = new LocalStorageService(rootPath, true); 
+```
 
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/Talegen/Talegen.Storage.Net/settings/pages). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
+The example above will create a temporary storage folder named "StorageTesting", and a sub-folder for the workspace consisting of random characters under this root working folder.
 
-### Support or Contact
+#### Creating A Directory
 
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://support.github.com/contact) and we’ll help you sort it out.
+```c#
+// create a directory named "Sub-Folder". 
+string rootPath = Path.Combine(Path.GetTempPath(), "StorageTesting");
+// Something like C:\Users\username\AppData\Local\Temp\StorageTesting
+IStorageService service = new LocalStorageService(rootPath, true);
+
+// Context .RootPath will be similar to C:\Users\username\AppData\Local\Temp\StorageTesting\{random-characters}
+
+// Paths are always relative to the root working folder
+string absolutePath = service.CreateDirectory("Sub-Folder");
+
+Console.WriteLine(absolutePath);
+// C:\Users\username\AppData\Local\Temp\StorageTesting\{random-characters}\Sub-Folder\
+Console.WriteLine("\"{0}\" exists = \"{1}\"", absolutePath, service.DirectoryExists(absolutePath));
+// "C:\Users\username\AppData\Local\Temp\StorageTesting\{random-characters}\Sub-Folder\" exists = "True"
+
+```
+
+#### Creating A File & Reading A File
+
+```C#
+string rootPath = Path.Combine(Path.GetTempPath(), "StorageTesting");
+IStorageService service = new LocalStorageService(rootPath, true);
+string testContents = "write this to storage.";
+string fileName = "readme.txt";
+service.WriteTextFile(fileName, testContents);
+
+if (service.FileExists(fileName))
+{
+    string contentsRead = service.ReadTextFile(sourceFilePath);
+    Console.WriteLine("Contents = \"{0}\"", contentsRead);
+    // Contents = "write this to storage."
+}
+
+```
+

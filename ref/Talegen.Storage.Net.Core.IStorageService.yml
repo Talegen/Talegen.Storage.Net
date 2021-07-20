@@ -1,0 +1,1015 @@
+### YamlMime:ManagedReference
+items:
+- uid: Talegen.Storage.Net.Core.IStorageService
+  commentId: T:Talegen.Storage.Net.Core.IStorageService
+  id: IStorageService
+  parent: Talegen.Storage.Net.Core
+  children:
+  - Talegen.Storage.Net.Core.IStorageService.CopyFile(System.String,System.String,System.Boolean)
+  - Talegen.Storage.Net.Core.IStorageService.CreateDirectory(System.String,System.Boolean)
+  - Talegen.Storage.Net.Core.IStorageService.DeleteDirectory(System.String,System.Boolean,System.Boolean)
+  - Talegen.Storage.Net.Core.IStorageService.DeleteFile(System.String,System.Boolean)
+  - Talegen.Storage.Net.Core.IStorageService.DeleteFiles(System.Collections.Generic.List{System.String},System.Boolean)
+  - Talegen.Storage.Net.Core.IStorageService.DirectoryExists(System.String)
+  - Talegen.Storage.Net.Core.IStorageService.EmptyDirectory(System.String)
+  - Talegen.Storage.Net.Core.IStorageService.FileExists(System.String)
+  - Talegen.Storage.Net.Core.IStorageService.FileHash(System.String)
+  - Talegen.Storage.Net.Core.IStorageService.FindFiles(System.String,System.String,System.IO.SearchOption)
+  - Talegen.Storage.Net.Core.IStorageService.MoveFile(System.String,System.String,System.Boolean)
+  - Talegen.Storage.Net.Core.IStorageService.ReadBinaryFile(System.String)
+  - Talegen.Storage.Net.Core.IStorageService.ReadBinaryFile(System.String,System.IO.Stream)
+  - Talegen.Storage.Net.Core.IStorageService.ReadTextFile(System.String,System.Text.Encoding)
+  - Talegen.Storage.Net.Core.IStorageService.RootPath
+  - Talegen.Storage.Net.Core.IStorageService.StorageId
+  - Talegen.Storage.Net.Core.IStorageService.WriteBinaryFile(System.String,System.Byte[])
+  - Talegen.Storage.Net.Core.IStorageService.WriteBinaryFile(System.String,System.IO.Stream)
+  - Talegen.Storage.Net.Core.IStorageService.WriteTextFile(System.String,System.String,System.Text.Encoding)
+  langs:
+  - csharp
+  - vb
+  name: IStorageService
+  nameWithType: IStorageService
+  fullName: Talegen.Storage.Net.Core.IStorageService
+  type: Interface
+  source:
+    remote:
+      path: src/Talegen.Storage.Net.Core/IStorageService.cs
+      branch: main
+      repo: https://github.com/Talegen/Talegen.Storage.Net.git
+    id: IStorageService
+    path: IStorageService.cs
+    startLine: 24
+  assemblies:
+  - Talegen.Storage.Net.Core
+  namespace: Talegen.Storage.Net.Core
+  summary: "\nDefines a minimum implementation of a storage service.\n"
+  example: []
+  syntax:
+    content: public interface IStorageService
+    content.vb: Public Interface IStorageService
+  modifiers.csharp:
+  - public
+  - interface
+  modifiers.vb:
+  - Public
+  - Interface
+- uid: Talegen.Storage.Net.Core.IStorageService.StorageId
+  commentId: P:Talegen.Storage.Net.Core.IStorageService.StorageId
+  id: StorageId
+  parent: Talegen.Storage.Net.Core.IStorageService
+  langs:
+  - csharp
+  - vb
+  name: StorageId
+  nameWithType: IStorageService.StorageId
+  fullName: Talegen.Storage.Net.Core.IStorageService.StorageId
+  type: Property
+  source:
+    remote:
+      path: src/Talegen.Storage.Net.Core/IStorageService.cs
+      branch: main
+      repo: https://github.com/Talegen/Talegen.Storage.Net.git
+    id: StorageId
+    path: IStorageService.cs
+    startLine: 29
+  assemblies:
+  - Talegen.Storage.Net.Core
+  namespace: Talegen.Storage.Net.Core
+  summary: "\nGets or sets the unique identity for the instance of the storage service.\n"
+  example: []
+  syntax:
+    content: string StorageId { get; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: ReadOnly Property StorageId As String
+  overload: Talegen.Storage.Net.Core.IStorageService.StorageId*
+  modifiers.csharp:
+  - get
+  modifiers.vb:
+  - ReadOnly
+- uid: Talegen.Storage.Net.Core.IStorageService.RootPath
+  commentId: P:Talegen.Storage.Net.Core.IStorageService.RootPath
+  id: RootPath
+  parent: Talegen.Storage.Net.Core.IStorageService
+  langs:
+  - csharp
+  - vb
+  name: RootPath
+  nameWithType: IStorageService.RootPath
+  fullName: Talegen.Storage.Net.Core.IStorageService.RootPath
+  type: Property
+  source:
+    remote:
+      path: src/Talegen.Storage.Net.Core/IStorageService.cs
+      branch: main
+      repo: https://github.com/Talegen/Talegen.Storage.Net.git
+    id: RootPath
+    path: IStorageService.cs
+    startLine: 34
+  assemblies:
+  - Talegen.Storage.Net.Core
+  namespace: Talegen.Storage.Net.Core
+  summary: "\nGets or sets the storage path for the instance of the storage service.\n"
+  example: []
+  syntax:
+    content: string RootPath { get; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: ReadOnly Property RootPath As String
+  overload: Talegen.Storage.Net.Core.IStorageService.RootPath*
+  modifiers.csharp:
+  - get
+  modifiers.vb:
+  - ReadOnly
+- uid: Talegen.Storage.Net.Core.IStorageService.CreateDirectory(System.String,System.Boolean)
+  commentId: M:Talegen.Storage.Net.Core.IStorageService.CreateDirectory(System.String,System.Boolean)
+  id: CreateDirectory(System.String,System.Boolean)
+  parent: Talegen.Storage.Net.Core.IStorageService
+  langs:
+  - csharp
+  - vb
+  name: CreateDirectory(String, Boolean)
+  nameWithType: IStorageService.CreateDirectory(String, Boolean)
+  fullName: Talegen.Storage.Net.Core.IStorageService.CreateDirectory(System.String, System.Boolean)
+  type: Method
+  source:
+    remote:
+      path: src/Talegen.Storage.Net.Core/IStorageService.cs
+      branch: main
+      repo: https://github.com/Talegen/Talegen.Storage.Net.git
+    id: CreateDirectory
+    path: IStorageService.cs
+    startLine: 42
+  assemblies:
+  - Talegen.Storage.Net.Core
+  namespace: Talegen.Storage.Net.Core
+  summary: "\nThis method is used to create a temporary directory within the Inspire application path.\n"
+  example: []
+  syntax:
+    content: string CreateDirectory(string subFolderName, bool silentExists = false)
+    parameters:
+    - id: subFolderName
+      type: System.String
+      description: Contains a sub-folder that will be included in the working directory path.
+    - id: silentExists
+      type: System.Boolean
+      description: Contains a value indicating whether the method is silently return successfully if the folder path already exists.
+    return:
+      type: System.String
+      description: Returns the name of the directory that was created.
+    content.vb: Function CreateDirectory(subFolderName As String, silentExists As Boolean = False) As String
+  overload: Talegen.Storage.Net.Core.IStorageService.CreateDirectory*
+- uid: Talegen.Storage.Net.Core.IStorageService.DeleteDirectory(System.String,System.Boolean,System.Boolean)
+  commentId: M:Talegen.Storage.Net.Core.IStorageService.DeleteDirectory(System.String,System.Boolean,System.Boolean)
+  id: DeleteDirectory(System.String,System.Boolean,System.Boolean)
+  parent: Talegen.Storage.Net.Core.IStorageService
+  langs:
+  - csharp
+  - vb
+  name: DeleteDirectory(String, Boolean, Boolean)
+  nameWithType: IStorageService.DeleteDirectory(String, Boolean, Boolean)
+  fullName: Talegen.Storage.Net.Core.IStorageService.DeleteDirectory(System.String, System.Boolean, System.Boolean)
+  type: Method
+  source:
+    remote:
+      path: src/Talegen.Storage.Net.Core/IStorageService.cs
+      branch: main
+      repo: https://github.com/Talegen/Talegen.Storage.Net.git
+    id: DeleteDirectory
+    path: IStorageService.cs
+    startLine: 53
+  assemblies:
+  - Talegen.Storage.Net.Core
+  namespace: Talegen.Storage.Net.Core
+  summary: "\nThis method is used to delete a directory and all of its files.\n"
+  example: []
+  syntax:
+    content: void DeleteDirectory(string subFolderName, bool recursive = true, bool silentNoExist = true)
+    parameters:
+    - id: subFolderName
+      type: System.String
+      description: Contains the name of the directory that will be deleted.
+    - id: recursive
+      type: System.Boolean
+      description: Delete all contents within the folder.
+    - id: silentNoExist
+      type: System.Boolean
+      description: "\nContains a value indicating whether an exception is thrown if the target folder does not exist. Default is true; no exception is thrown if the\nfolder does not exist.\n"
+    content.vb: Sub DeleteDirectory(subFolderName As String, recursive As Boolean = True, silentNoExist As Boolean = True)
+  overload: Talegen.Storage.Net.Core.IStorageService.DeleteDirectory*
+- uid: Talegen.Storage.Net.Core.IStorageService.EmptyDirectory(System.String)
+  commentId: M:Talegen.Storage.Net.Core.IStorageService.EmptyDirectory(System.String)
+  id: EmptyDirectory(System.String)
+  parent: Talegen.Storage.Net.Core.IStorageService
+  langs:
+  - csharp
+  - vb
+  name: EmptyDirectory(String)
+  nameWithType: IStorageService.EmptyDirectory(String)
+  fullName: Talegen.Storage.Net.Core.IStorageService.EmptyDirectory(System.String)
+  type: Method
+  source:
+    remote:
+      path: src/Talegen.Storage.Net.Core/IStorageService.cs
+      branch: main
+      repo: https://github.com/Talegen/Talegen.Storage.Net.git
+    id: EmptyDirectory
+    path: IStorageService.cs
+    startLine: 59
+  assemblies:
+  - Talegen.Storage.Net.Core
+  namespace: Talegen.Storage.Net.Core
+  summary: "\nThis method is used to delete all directories and files inside of a sub-folder within the Inspire application data directory.\n"
+  example: []
+  syntax:
+    content: void EmptyDirectory(string subFolderName)
+    parameters:
+    - id: subFolderName
+      type: System.String
+      description: Contains the sub-folder within the Inspire application data directory.
+    content.vb: Sub EmptyDirectory(subFolderName As String)
+  overload: Talegen.Storage.Net.Core.IStorageService.EmptyDirectory*
+- uid: Talegen.Storage.Net.Core.IStorageService.ReadTextFile(System.String,System.Text.Encoding)
+  commentId: M:Talegen.Storage.Net.Core.IStorageService.ReadTextFile(System.String,System.Text.Encoding)
+  id: ReadTextFile(System.String,System.Text.Encoding)
+  parent: Talegen.Storage.Net.Core.IStorageService
+  langs:
+  - csharp
+  - vb
+  name: ReadTextFile(String, Encoding)
+  nameWithType: IStorageService.ReadTextFile(String, Encoding)
+  fullName: Talegen.Storage.Net.Core.IStorageService.ReadTextFile(System.String, System.Text.Encoding)
+  type: Method
+  source:
+    remote:
+      path: src/Talegen.Storage.Net.Core/IStorageService.cs
+      branch: main
+      repo: https://github.com/Talegen/Talegen.Storage.Net.git
+    id: ReadTextFile
+    path: IStorageService.cs
+    startLine: 67
+  assemblies:
+  - Talegen.Storage.Net.Core
+  namespace: Talegen.Storage.Net.Core
+  summary: "\nThis method is used to read all the bytes from a text file.\n"
+  example: []
+  syntax:
+    content: string ReadTextFile(string path, Encoding encoding = null)
+    parameters:
+    - id: path
+      type: System.String
+      description: Contains the path to the file to load and return.
+    - id: encoding
+      type: System.Text.Encoding
+      description: Contains the text encoding type. If none is specified, Encoding.Default is used.
+    return:
+      type: System.String
+      description: Returns a string containing the content of the target file.
+    content.vb: Function ReadTextFile(path As String, encoding As Encoding = Nothing) As String
+  overload: Talegen.Storage.Net.Core.IStorageService.ReadTextFile*
+- uid: Talegen.Storage.Net.Core.IStorageService.ReadBinaryFile(System.String)
+  commentId: M:Talegen.Storage.Net.Core.IStorageService.ReadBinaryFile(System.String)
+  id: ReadBinaryFile(System.String)
+  parent: Talegen.Storage.Net.Core.IStorageService
+  langs:
+  - csharp
+  - vb
+  name: ReadBinaryFile(String)
+  nameWithType: IStorageService.ReadBinaryFile(String)
+  fullName: Talegen.Storage.Net.Core.IStorageService.ReadBinaryFile(System.String)
+  type: Method
+  source:
+    remote:
+      path: src/Talegen.Storage.Net.Core/IStorageService.cs
+      branch: main
+      repo: https://github.com/Talegen/Talegen.Storage.Net.git
+    id: ReadBinaryFile
+    path: IStorageService.cs
+    startLine: 74
+  assemblies:
+  - Talegen.Storage.Net.Core
+  namespace: Talegen.Storage.Net.Core
+  summary: "\nThis method is used to read all the bytes from a binary file.\n"
+  example: []
+  syntax:
+    content: byte[] ReadBinaryFile(string path)
+    parameters:
+    - id: path
+      type: System.String
+      description: Contains the path to the file to load and return.
+    return:
+      type: System.Byte[]
+      description: Returns a byte array containing the binary bytes of the target file.
+    content.vb: Function ReadBinaryFile(path As String) As Byte()
+  overload: Talegen.Storage.Net.Core.IStorageService.ReadBinaryFile*
+- uid: Talegen.Storage.Net.Core.IStorageService.ReadBinaryFile(System.String,System.IO.Stream)
+  commentId: M:Talegen.Storage.Net.Core.IStorageService.ReadBinaryFile(System.String,System.IO.Stream)
+  id: ReadBinaryFile(System.String,System.IO.Stream)
+  parent: Talegen.Storage.Net.Core.IStorageService
+  langs:
+  - csharp
+  - vb
+  name: ReadBinaryFile(String, Stream)
+  nameWithType: IStorageService.ReadBinaryFile(String, Stream)
+  fullName: Talegen.Storage.Net.Core.IStorageService.ReadBinaryFile(System.String, System.IO.Stream)
+  type: Method
+  source:
+    remote:
+      path: src/Talegen.Storage.Net.Core/IStorageService.cs
+      branch: main
+      repo: https://github.com/Talegen/Talegen.Storage.Net.git
+    id: ReadBinaryFile
+    path: IStorageService.cs
+    startLine: 81
+  assemblies:
+  - Talegen.Storage.Net.Core
+  namespace: Talegen.Storage.Net.Core
+  summary: "\nThis method is used to read all the bytes from a binary file to a provided stream.\n"
+  example: []
+  syntax:
+    content: void ReadBinaryFile(string path, Stream outputStream)
+    parameters:
+    - id: path
+      type: System.String
+      description: Contains the path to the file to load into the stream.
+    - id: outputStream
+      type: System.IO.Stream
+      description: The stream to write the file to.
+    content.vb: Sub ReadBinaryFile(path As String, outputStream As Stream)
+  overload: Talegen.Storage.Net.Core.IStorageService.ReadBinaryFile*
+- uid: Talegen.Storage.Net.Core.IStorageService.WriteBinaryFile(System.String,System.Byte[])
+  commentId: M:Talegen.Storage.Net.Core.IStorageService.WriteBinaryFile(System.String,System.Byte[])
+  id: WriteBinaryFile(System.String,System.Byte[])
+  parent: Talegen.Storage.Net.Core.IStorageService
+  langs:
+  - csharp
+  - vb
+  name: WriteBinaryFile(String, Byte[])
+  nameWithType: IStorageService.WriteBinaryFile(String, Byte[])
+  fullName: Talegen.Storage.Net.Core.IStorageService.WriteBinaryFile(System.String, System.Byte[])
+  type: Method
+  source:
+    remote:
+      path: src/Talegen.Storage.Net.Core/IStorageService.cs
+      branch: main
+      repo: https://github.com/Talegen/Talegen.Storage.Net.git
+    id: WriteBinaryFile
+    path: IStorageService.cs
+    startLine: 89
+  assemblies:
+  - Talegen.Storage.Net.Core
+  namespace: Talegen.Storage.Net.Core
+  summary: "\nThis method is used to write content to the specified path.\n"
+  example: []
+  syntax:
+    content: bool WriteBinaryFile(string path, byte[] content)
+    parameters:
+    - id: path
+      type: System.String
+      description: Contains the fully qualified path, including file name, to the location in which the binary content shall be written.
+    - id: content
+      type: System.Byte[]
+      description: Contains a byte array of the content to be written.
+    return:
+      type: System.Boolean
+      description: Returns a value indicating whether the write was successful.
+    content.vb: Function WriteBinaryFile(path As String, content As Byte()) As Boolean
+  overload: Talegen.Storage.Net.Core.IStorageService.WriteBinaryFile*
+  nameWithType.vb: IStorageService.WriteBinaryFile(String, Byte())
+  fullName.vb: Talegen.Storage.Net.Core.IStorageService.WriteBinaryFile(System.String, System.Byte())
+  name.vb: WriteBinaryFile(String, Byte())
+- uid: Talegen.Storage.Net.Core.IStorageService.WriteBinaryFile(System.String,System.IO.Stream)
+  commentId: M:Talegen.Storage.Net.Core.IStorageService.WriteBinaryFile(System.String,System.IO.Stream)
+  id: WriteBinaryFile(System.String,System.IO.Stream)
+  parent: Talegen.Storage.Net.Core.IStorageService
+  langs:
+  - csharp
+  - vb
+  name: WriteBinaryFile(String, Stream)
+  nameWithType: IStorageService.WriteBinaryFile(String, Stream)
+  fullName: Talegen.Storage.Net.Core.IStorageService.WriteBinaryFile(System.String, System.IO.Stream)
+  type: Method
+  source:
+    remote:
+      path: src/Talegen.Storage.Net.Core/IStorageService.cs
+      branch: main
+      repo: https://github.com/Talegen/Talegen.Storage.Net.git
+    id: WriteBinaryFile
+    path: IStorageService.cs
+    startLine: 97
+  assemblies:
+  - Talegen.Storage.Net.Core
+  namespace: Talegen.Storage.Net.Core
+  summary: "\nThis method is used to write content to the specified path.\n"
+  example: []
+  syntax:
+    content: bool WriteBinaryFile(string path, Stream inputStream)
+    parameters:
+    - id: path
+      type: System.String
+      description: Contains the fully qualified path, including file name, to the location in which the binary content shall be written.
+    - id: inputStream
+      type: System.IO.Stream
+      description: Contains a stream of the content to be written.
+    return:
+      type: System.Boolean
+      description: Returns a value indicating whether the write was successful.
+    content.vb: Function WriteBinaryFile(path As String, inputStream As Stream) As Boolean
+  overload: Talegen.Storage.Net.Core.IStorageService.WriteBinaryFile*
+- uid: Talegen.Storage.Net.Core.IStorageService.WriteTextFile(System.String,System.String,System.Text.Encoding)
+  commentId: M:Talegen.Storage.Net.Core.IStorageService.WriteTextFile(System.String,System.String,System.Text.Encoding)
+  id: WriteTextFile(System.String,System.String,System.Text.Encoding)
+  parent: Talegen.Storage.Net.Core.IStorageService
+  langs:
+  - csharp
+  - vb
+  name: WriteTextFile(String, String, Encoding)
+  nameWithType: IStorageService.WriteTextFile(String, String, Encoding)
+  fullName: Talegen.Storage.Net.Core.IStorageService.WriteTextFile(System.String, System.String, System.Text.Encoding)
+  type: Method
+  source:
+    remote:
+      path: src/Talegen.Storage.Net.Core/IStorageService.cs
+      branch: main
+      repo: https://github.com/Talegen/Talegen.Storage.Net.git
+    id: WriteTextFile
+    path: IStorageService.cs
+    startLine: 106
+  assemblies:
+  - Talegen.Storage.Net.Core
+  namespace: Talegen.Storage.Net.Core
+  summary: "\nThis method is used to write content to the specified path.\n"
+  example: []
+  syntax:
+    content: bool WriteTextFile(string path, string content, Encoding encoding = null)
+    parameters:
+    - id: path
+      type: System.String
+      description: Contains the fully qualified path, including file name, to the location in which the text content shall be written.
+    - id: content
+      type: System.String
+      description: Contains a string of the content to be written.
+    - id: encoding
+      type: System.Text.Encoding
+      description: Contains the text file encoding. If none specified, Encoding.Default is used.
+    return:
+      type: System.Boolean
+      description: Returns a value indicating whether the write was successful.
+    content.vb: Function WriteTextFile(path As String, content As String, encoding As Encoding = Nothing) As Boolean
+  overload: Talegen.Storage.Net.Core.IStorageService.WriteTextFile*
+- uid: Talegen.Storage.Net.Core.IStorageService.DeleteFiles(System.Collections.Generic.List{System.String},System.Boolean)
+  commentId: M:Talegen.Storage.Net.Core.IStorageService.DeleteFiles(System.Collections.Generic.List{System.String},System.Boolean)
+  id: DeleteFiles(System.Collections.Generic.List{System.String},System.Boolean)
+  parent: Talegen.Storage.Net.Core.IStorageService
+  langs:
+  - csharp
+  - vb
+  name: DeleteFiles(List<String>, Boolean)
+  nameWithType: IStorageService.DeleteFiles(List<String>, Boolean)
+  fullName: Talegen.Storage.Net.Core.IStorageService.DeleteFiles(System.Collections.Generic.List<System.String>, System.Boolean)
+  type: Method
+  source:
+    remote:
+      path: src/Talegen.Storage.Net.Core/IStorageService.cs
+      branch: main
+      repo: https://github.com/Talegen/Talegen.Storage.Net.git
+    id: DeleteFiles
+    path: IStorageService.cs
+    startLine: 116
+  assemblies:
+  - Talegen.Storage.Net.Core
+  namespace: Talegen.Storage.Net.Core
+  summary: "\nThis method is used to delete a list of files.\n"
+  example: []
+  syntax:
+    content: void DeleteFiles(List<string> filePathNames, bool deleteDirectory = false)
+    parameters:
+    - id: filePathNames
+      type: System.Collections.Generic.List{System.String}
+      description: Contains a list of file names that will be deleted.
+    - id: deleteDirectory
+      type: System.Boolean
+      description: "\nContains a value indicating whether the directory or directories the files are within will be deleted. This will only occur if no other files remain\nin the directory after the list of files have been deleted.\n"
+    content.vb: Sub DeleteFiles(filePathNames As List(Of String), deleteDirectory As Boolean = False)
+  overload: Talegen.Storage.Net.Core.IStorageService.DeleteFiles*
+  nameWithType.vb: IStorageService.DeleteFiles(List(Of String), Boolean)
+  fullName.vb: Talegen.Storage.Net.Core.IStorageService.DeleteFiles(System.Collections.Generic.List(Of System.String), System.Boolean)
+  name.vb: DeleteFiles(List(Of String), Boolean)
+- uid: Talegen.Storage.Net.Core.IStorageService.DeleteFile(System.String,System.Boolean)
+  commentId: M:Talegen.Storage.Net.Core.IStorageService.DeleteFile(System.String,System.Boolean)
+  id: DeleteFile(System.String,System.Boolean)
+  parent: Talegen.Storage.Net.Core.IStorageService
+  langs:
+  - csharp
+  - vb
+  name: DeleteFile(String, Boolean)
+  nameWithType: IStorageService.DeleteFile(String, Boolean)
+  fullName: Talegen.Storage.Net.Core.IStorageService.DeleteFile(System.String, System.Boolean)
+  type: Method
+  source:
+    remote:
+      path: src/Talegen.Storage.Net.Core/IStorageService.cs
+      branch: main
+      repo: https://github.com/Talegen/Talegen.Storage.Net.git
+    id: DeleteFile
+    path: IStorageService.cs
+    startLine: 126
+  assemblies:
+  - Talegen.Storage.Net.Core
+  namespace: Talegen.Storage.Net.Core
+  summary: "\nThis method is used to delete a file.\n"
+  example: []
+  syntax:
+    content: void DeleteFile(string filePath, bool deleteDirectory = false)
+    parameters:
+    - id: filePath
+      type: System.String
+      description: Contains a the path to the file that will be deleted.
+    - id: deleteDirectory
+      type: System.Boolean
+      description: "\nContains a value indicating whether the directory the file is within will be deleted. This will only occur if no other files remain in the directory\nafter the list of files have been deleted.\n"
+    content.vb: Sub DeleteFile(filePath As String, deleteDirectory As Boolean = False)
+  overload: Talegen.Storage.Net.Core.IStorageService.DeleteFile*
+- uid: Talegen.Storage.Net.Core.IStorageService.CopyFile(System.String,System.String,System.Boolean)
+  commentId: M:Talegen.Storage.Net.Core.IStorageService.CopyFile(System.String,System.String,System.Boolean)
+  id: CopyFile(System.String,System.String,System.Boolean)
+  parent: Talegen.Storage.Net.Core.IStorageService
+  langs:
+  - csharp
+  - vb
+  name: CopyFile(String, String, Boolean)
+  nameWithType: IStorageService.CopyFile(String, String, Boolean)
+  fullName: Talegen.Storage.Net.Core.IStorageService.CopyFile(System.String, System.String, System.Boolean)
+  type: Method
+  source:
+    remote:
+      path: src/Talegen.Storage.Net.Core/IStorageService.cs
+      branch: main
+      repo: https://github.com/Talegen/Talegen.Storage.Net.git
+    id: CopyFile
+    path: IStorageService.cs
+    startLine: 134
+  assemblies:
+  - Talegen.Storage.Net.Core
+  namespace: Talegen.Storage.Net.Core
+  summary: "\nThis method is used to copy a file.\n"
+  example: []
+  syntax:
+    content: void CopyFile(string sourceFilePath, string targetFilePath, bool overwrite = true)
+    parameters:
+    - id: sourceFilePath
+      type: System.String
+      description: Contains a the path to the file that will be copied.
+    - id: targetFilePath
+      type: System.String
+      description: Contains the path to the target where the file is to be copied.
+    - id: overwrite
+      type: System.Boolean
+      description: Contains a value indicating if the target should be overwritten if it already exists. Default is true.
+    content.vb: Sub CopyFile(sourceFilePath As String, targetFilePath As String, overwrite As Boolean = True)
+  overload: Talegen.Storage.Net.Core.IStorageService.CopyFile*
+- uid: Talegen.Storage.Net.Core.IStorageService.MoveFile(System.String,System.String,System.Boolean)
+  commentId: M:Talegen.Storage.Net.Core.IStorageService.MoveFile(System.String,System.String,System.Boolean)
+  id: MoveFile(System.String,System.String,System.Boolean)
+  parent: Talegen.Storage.Net.Core.IStorageService
+  langs:
+  - csharp
+  - vb
+  name: MoveFile(String, String, Boolean)
+  nameWithType: IStorageService.MoveFile(String, String, Boolean)
+  fullName: Talegen.Storage.Net.Core.IStorageService.MoveFile(System.String, System.String, System.Boolean)
+  type: Method
+  source:
+    remote:
+      path: src/Talegen.Storage.Net.Core/IStorageService.cs
+      branch: main
+      repo: https://github.com/Talegen/Talegen.Storage.Net.git
+    id: MoveFile
+    path: IStorageService.cs
+    startLine: 142
+  assemblies:
+  - Talegen.Storage.Net.Core
+  namespace: Talegen.Storage.Net.Core
+  summary: "\nThis method is used to move a file.\n"
+  example: []
+  syntax:
+    content: void MoveFile(string sourceFilePath, string targetFilePath, bool overwrite = true)
+    parameters:
+    - id: sourceFilePath
+      type: System.String
+      description: Contains a the path to the file that will be moved.
+    - id: targetFilePath
+      type: System.String
+      description: Contains the path to the target where the file is to be moved.
+    - id: overwrite
+      type: System.Boolean
+      description: Contains a value indicating if the target should be overwritten if it already exists. Default is true.
+    content.vb: Sub MoveFile(sourceFilePath As String, targetFilePath As String, overwrite As Boolean = True)
+  overload: Talegen.Storage.Net.Core.IStorageService.MoveFile*
+- uid: Talegen.Storage.Net.Core.IStorageService.DirectoryExists(System.String)
+  commentId: M:Talegen.Storage.Net.Core.IStorageService.DirectoryExists(System.String)
+  id: DirectoryExists(System.String)
+  parent: Talegen.Storage.Net.Core.IStorageService
+  langs:
+  - csharp
+  - vb
+  name: DirectoryExists(String)
+  nameWithType: IStorageService.DirectoryExists(String)
+  fullName: Talegen.Storage.Net.Core.IStorageService.DirectoryExists(System.String)
+  type: Method
+  source:
+    remote:
+      path: src/Talegen.Storage.Net.Core/IStorageService.cs
+      branch: main
+      repo: https://github.com/Talegen/Talegen.Storage.Net.git
+    id: DirectoryExists
+    path: IStorageService.cs
+    startLine: 149
+  assemblies:
+  - Talegen.Storage.Net.Core
+  namespace: Talegen.Storage.Net.Core
+  summary: "\nContains a value indicating whether the folder already exists.\n"
+  example: []
+  syntax:
+    content: bool DirectoryExists(string subFolderName)
+    parameters:
+    - id: subFolderName
+      type: System.String
+      description: Contains the sub-folder name excluding the root folder path.
+    return:
+      type: System.Boolean
+      description: Returns a value indicating whether the directory exists.
+    content.vb: Function DirectoryExists(subFolderName As String) As Boolean
+  overload: Talegen.Storage.Net.Core.IStorageService.DirectoryExists*
+- uid: Talegen.Storage.Net.Core.IStorageService.FileExists(System.String)
+  commentId: M:Talegen.Storage.Net.Core.IStorageService.FileExists(System.String)
+  id: FileExists(System.String)
+  parent: Talegen.Storage.Net.Core.IStorageService
+  langs:
+  - csharp
+  - vb
+  name: FileExists(String)
+  nameWithType: IStorageService.FileExists(String)
+  fullName: Talegen.Storage.Net.Core.IStorageService.FileExists(System.String)
+  type: Method
+  source:
+    remote:
+      path: src/Talegen.Storage.Net.Core/IStorageService.cs
+      branch: main
+      repo: https://github.com/Talegen/Talegen.Storage.Net.git
+    id: FileExists
+    path: IStorageService.cs
+    startLine: 156
+  assemblies:
+  - Talegen.Storage.Net.Core
+  namespace: Talegen.Storage.Net.Core
+  summary: "\nContains a value indicating whether the file exists.\n"
+  example: []
+  syntax:
+    content: bool FileExists(string filePath)
+    parameters:
+    - id: filePath
+      type: System.String
+      description: Contains the sub-folder path and file name excluding the root folder path to determine if exists.
+    return:
+      type: System.Boolean
+      description: Returns a value indicating whether the file exists.
+    content.vb: Function FileExists(filePath As String) As Boolean
+  overload: Talegen.Storage.Net.Core.IStorageService.FileExists*
+- uid: Talegen.Storage.Net.Core.IStorageService.FileHash(System.String)
+  commentId: M:Talegen.Storage.Net.Core.IStorageService.FileHash(System.String)
+  id: FileHash(System.String)
+  parent: Talegen.Storage.Net.Core.IStorageService
+  langs:
+  - csharp
+  - vb
+  name: FileHash(String)
+  nameWithType: IStorageService.FileHash(String)
+  fullName: Talegen.Storage.Net.Core.IStorageService.FileHash(System.String)
+  type: Method
+  source:
+    remote:
+      path: src/Talegen.Storage.Net.Core/IStorageService.cs
+      branch: main
+      repo: https://github.com/Talegen/Talegen.Storage.Net.git
+    id: FileHash
+    path: IStorageService.cs
+    startLine: 163
+  assemblies:
+  - Talegen.Storage.Net.Core
+  namespace: Talegen.Storage.Net.Core
+  summary: "\nThis method is used to create a hash of the file contents.\n"
+  example: []
+  syntax:
+    content: string FileHash(string filePath)
+    parameters:
+    - id: filePath
+      type: System.String
+      description: The path to the file.
+    return:
+      type: System.String
+      description: Returns a hash of the file contents.
+    content.vb: Function FileHash(filePath As String) As String
+  overload: Talegen.Storage.Net.Core.IStorageService.FileHash*
+- uid: Talegen.Storage.Net.Core.IStorageService.FindFiles(System.String,System.String,System.IO.SearchOption)
+  commentId: M:Talegen.Storage.Net.Core.IStorageService.FindFiles(System.String,System.String,System.IO.SearchOption)
+  id: FindFiles(System.String,System.String,System.IO.SearchOption)
+  parent: Talegen.Storage.Net.Core.IStorageService
+  langs:
+  - csharp
+  - vb
+  name: FindFiles(String, String, SearchOption)
+  nameWithType: IStorageService.FindFiles(String, String, SearchOption)
+  fullName: Talegen.Storage.Net.Core.IStorageService.FindFiles(System.String, System.String, System.IO.SearchOption)
+  type: Method
+  source:
+    remote:
+      path: src/Talegen.Storage.Net.Core/IStorageService.cs
+      branch: main
+      repo: https://github.com/Talegen/Talegen.Storage.Net.git
+    id: FindFiles
+    path: IStorageService.cs
+    startLine: 172
+  assemblies:
+  - Talegen.Storage.Net.Core
+  namespace: Talegen.Storage.Net.Core
+  summary: "\nThis method is used to get the files from a directory.\n"
+  example: []
+  syntax:
+    content: List<string> FindFiles(string subFolderName, string searchPattern = "*.*", SearchOption searchOption = SearchOption.AllDirectories)
+    parameters:
+    - id: subFolderName
+      type: System.String
+      description: Contains the sub-folder name to get the files.
+    - id: searchPattern
+      type: System.String
+      description: Contains an optional file name search pattern. If not specified, *.* is used.
+    - id: searchOption
+      type: System.IO.SearchOption
+      description: Contains search options. If not specified, all sub-folders are searched for the file pattern.
+    return:
+      type: System.Collections.Generic.List{System.String}
+      description: Returns a list of files in the directory path.
+    content.vb: Function FindFiles(subFolderName As String, searchPattern As String = "*.*", searchOption As SearchOption = SearchOption.AllDirectories) As List(Of String)
+  overload: Talegen.Storage.Net.Core.IStorageService.FindFiles*
+references:
+- uid: Talegen.Storage.Net.Core
+  commentId: N:Talegen.Storage.Net.Core
+  name: Talegen.Storage.Net.Core
+  nameWithType: Talegen.Storage.Net.Core
+  fullName: Talegen.Storage.Net.Core
+- uid: Talegen.Storage.Net.Core.IStorageService.StorageId*
+  commentId: Overload:Talegen.Storage.Net.Core.IStorageService.StorageId
+  name: StorageId
+  nameWithType: IStorageService.StorageId
+  fullName: Talegen.Storage.Net.Core.IStorageService.StorageId
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Talegen.Storage.Net.Core.IStorageService.RootPath*
+  commentId: Overload:Talegen.Storage.Net.Core.IStorageService.RootPath
+  name: RootPath
+  nameWithType: IStorageService.RootPath
+  fullName: Talegen.Storage.Net.Core.IStorageService.RootPath
+- uid: Talegen.Storage.Net.Core.IStorageService.CreateDirectory*
+  commentId: Overload:Talegen.Storage.Net.Core.IStorageService.CreateDirectory
+  name: CreateDirectory
+  nameWithType: IStorageService.CreateDirectory
+  fullName: Talegen.Storage.Net.Core.IStorageService.CreateDirectory
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
+- uid: Talegen.Storage.Net.Core.IStorageService.DeleteDirectory*
+  commentId: Overload:Talegen.Storage.Net.Core.IStorageService.DeleteDirectory
+  name: DeleteDirectory
+  nameWithType: IStorageService.DeleteDirectory
+  fullName: Talegen.Storage.Net.Core.IStorageService.DeleteDirectory
+- uid: Talegen.Storage.Net.Core.IStorageService.EmptyDirectory*
+  commentId: Overload:Talegen.Storage.Net.Core.IStorageService.EmptyDirectory
+  name: EmptyDirectory
+  nameWithType: IStorageService.EmptyDirectory
+  fullName: Talegen.Storage.Net.Core.IStorageService.EmptyDirectory
+- uid: Talegen.Storage.Net.Core.IStorageService.ReadTextFile*
+  commentId: Overload:Talegen.Storage.Net.Core.IStorageService.ReadTextFile
+  name: ReadTextFile
+  nameWithType: IStorageService.ReadTextFile
+  fullName: Talegen.Storage.Net.Core.IStorageService.ReadTextFile
+- uid: System.Text.Encoding
+  commentId: T:System.Text.Encoding
+  parent: System.Text
+  isExternal: true
+  name: Encoding
+  nameWithType: Encoding
+  fullName: System.Text.Encoding
+- uid: System.Text
+  commentId: N:System.Text
+  isExternal: true
+  name: System.Text
+  nameWithType: System.Text
+  fullName: System.Text
+- uid: Talegen.Storage.Net.Core.IStorageService.ReadBinaryFile*
+  commentId: Overload:Talegen.Storage.Net.Core.IStorageService.ReadBinaryFile
+  name: ReadBinaryFile
+  nameWithType: IStorageService.ReadBinaryFile
+  fullName: Talegen.Storage.Net.Core.IStorageService.ReadBinaryFile
+- uid: System.Byte[]
+  isExternal: true
+  name: Byte[]
+  nameWithType: Byte[]
+  fullName: System.Byte[]
+  nameWithType.vb: Byte()
+  fullName.vb: System.Byte()
+  name.vb: Byte()
+  spec.csharp:
+  - uid: System.Byte
+    name: Byte
+    nameWithType: Byte
+    fullName: System.Byte
+    isExternal: true
+  - name: '[]'
+    nameWithType: '[]'
+    fullName: '[]'
+  spec.vb:
+  - uid: System.Byte
+    name: Byte
+    nameWithType: Byte
+    fullName: System.Byte
+    isExternal: true
+  - name: ()
+    nameWithType: ()
+    fullName: ()
+- uid: System.IO.Stream
+  commentId: T:System.IO.Stream
+  parent: System.IO
+  isExternal: true
+  name: Stream
+  nameWithType: Stream
+  fullName: System.IO.Stream
+- uid: System.IO
+  commentId: N:System.IO
+  isExternal: true
+  name: System.IO
+  nameWithType: System.IO
+  fullName: System.IO
+- uid: Talegen.Storage.Net.Core.IStorageService.WriteBinaryFile*
+  commentId: Overload:Talegen.Storage.Net.Core.IStorageService.WriteBinaryFile
+  name: WriteBinaryFile
+  nameWithType: IStorageService.WriteBinaryFile
+  fullName: Talegen.Storage.Net.Core.IStorageService.WriteBinaryFile
+- uid: Talegen.Storage.Net.Core.IStorageService.WriteTextFile*
+  commentId: Overload:Talegen.Storage.Net.Core.IStorageService.WriteTextFile
+  name: WriteTextFile
+  nameWithType: IStorageService.WriteTextFile
+  fullName: Talegen.Storage.Net.Core.IStorageService.WriteTextFile
+- uid: Talegen.Storage.Net.Core.IStorageService.DeleteFiles*
+  commentId: Overload:Talegen.Storage.Net.Core.IStorageService.DeleteFiles
+  name: DeleteFiles
+  nameWithType: IStorageService.DeleteFiles
+  fullName: Talegen.Storage.Net.Core.IStorageService.DeleteFiles
+- uid: System.Collections.Generic.List{System.String}
+  commentId: T:System.Collections.Generic.List{System.String}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.List`1
+  name: List<String>
+  nameWithType: List<String>
+  fullName: System.Collections.Generic.List<System.String>
+  nameWithType.vb: List(Of String)
+  fullName.vb: System.Collections.Generic.List(Of System.String)
+  name.vb: List(Of String)
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    nameWithType: List
+    fullName: System.Collections.Generic.List
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    nameWithType: List
+    fullName: System.Collections.Generic.List
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic.List`1
+  commentId: T:System.Collections.Generic.List`1
+  isExternal: true
+  name: List<T>
+  nameWithType: List<T>
+  fullName: System.Collections.Generic.List<T>
+  nameWithType.vb: List(Of T)
+  fullName.vb: System.Collections.Generic.List(Of T)
+  name.vb: List(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    nameWithType: List
+    fullName: System.Collections.Generic.List
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    nameWithType: List
+    fullName: System.Collections.Generic.List
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: true
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic
+- uid: Talegen.Storage.Net.Core.IStorageService.DeleteFile*
+  commentId: Overload:Talegen.Storage.Net.Core.IStorageService.DeleteFile
+  name: DeleteFile
+  nameWithType: IStorageService.DeleteFile
+  fullName: Talegen.Storage.Net.Core.IStorageService.DeleteFile
+- uid: Talegen.Storage.Net.Core.IStorageService.CopyFile*
+  commentId: Overload:Talegen.Storage.Net.Core.IStorageService.CopyFile
+  name: CopyFile
+  nameWithType: IStorageService.CopyFile
+  fullName: Talegen.Storage.Net.Core.IStorageService.CopyFile
+- uid: Talegen.Storage.Net.Core.IStorageService.MoveFile*
+  commentId: Overload:Talegen.Storage.Net.Core.IStorageService.MoveFile
+  name: MoveFile
+  nameWithType: IStorageService.MoveFile
+  fullName: Talegen.Storage.Net.Core.IStorageService.MoveFile
+- uid: Talegen.Storage.Net.Core.IStorageService.DirectoryExists*
+  commentId: Overload:Talegen.Storage.Net.Core.IStorageService.DirectoryExists
+  name: DirectoryExists
+  nameWithType: IStorageService.DirectoryExists
+  fullName: Talegen.Storage.Net.Core.IStorageService.DirectoryExists
+- uid: Talegen.Storage.Net.Core.IStorageService.FileExists*
+  commentId: Overload:Talegen.Storage.Net.Core.IStorageService.FileExists
+  name: FileExists
+  nameWithType: IStorageService.FileExists
+  fullName: Talegen.Storage.Net.Core.IStorageService.FileExists
+- uid: Talegen.Storage.Net.Core.IStorageService.FileHash*
+  commentId: Overload:Talegen.Storage.Net.Core.IStorageService.FileHash
+  name: FileHash
+  nameWithType: IStorageService.FileHash
+  fullName: Talegen.Storage.Net.Core.IStorageService.FileHash
+- uid: Talegen.Storage.Net.Core.IStorageService.FindFiles*
+  commentId: Overload:Talegen.Storage.Net.Core.IStorageService.FindFiles
+  name: FindFiles
+  nameWithType: IStorageService.FindFiles
+  fullName: Talegen.Storage.Net.Core.IStorageService.FindFiles
+- uid: System.IO.SearchOption
+  commentId: T:System.IO.SearchOption
+  parent: System.IO
+  isExternal: true
+  name: SearchOption
+  nameWithType: SearchOption
+  fullName: System.IO.SearchOption

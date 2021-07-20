@@ -1,0 +1,652 @@
+### YamlMime:ManagedReference
+items:
+- uid: Talegen.Storage.Net.Core.Disk.ApplicationPaths
+  commentId: T:Talegen.Storage.Net.Core.Disk.ApplicationPaths
+  id: ApplicationPaths
+  parent: Talegen.Storage.Net.Core.Disk
+  children:
+  - Talegen.Storage.Net.Core.Disk.ApplicationPaths.ApplicationPath
+  - Talegen.Storage.Net.Core.Disk.ApplicationPaths.ConfigurationFilePath(System.String,System.Boolean,System.String)
+  - Talegen.Storage.Net.Core.Disk.ApplicationPaths.ConfigurationFolderExists(System.Boolean,System.String)
+  - Talegen.Storage.Net.Core.Disk.ApplicationPaths.ConfigurationFolderPath(System.Boolean,System.String)
+  - Talegen.Storage.Net.Core.Disk.ApplicationPaths.CreateConfigurationPath(System.Boolean,System.String)
+  - Talegen.Storage.Net.Core.Disk.ApplicationPaths.CurrentExecutablePath
+  langs:
+  - csharp
+  - vb
+  name: ApplicationPaths
+  nameWithType: ApplicationPaths
+  fullName: Talegen.Storage.Net.Core.Disk.ApplicationPaths
+  type: Class
+  source:
+    remote:
+      path: src/Talegen.Storage.Net.Core/Disk/ApplicationPaths.cs
+      branch: main
+      repo: https://github.com/Talegen/Talegen.Storage.Net.git
+    id: ApplicationPaths
+    path: Disk/ApplicationPaths.cs
+    startLine: 24
+  assemblies:
+  - Talegen.Storage.Net.Core
+  namespace: Talegen.Storage.Net.Core.Disk
+  summary: "\nThis class contains supporting properties and methods for managing configuration paths and files within a UAC secured Windows environment.\n"
+  example: []
+  syntax:
+    content: public static class ApplicationPaths
+    content.vb: Public Module ApplicationPaths
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+  modifiers.csharp:
+  - public
+  - static
+  - class
+  modifiers.vb:
+  - Public
+  - Module
+- uid: Talegen.Storage.Net.Core.Disk.ApplicationPaths.CurrentExecutablePath
+  commentId: P:Talegen.Storage.Net.Core.Disk.ApplicationPaths.CurrentExecutablePath
+  id: CurrentExecutablePath
+  parent: Talegen.Storage.Net.Core.Disk.ApplicationPaths
+  langs:
+  - csharp
+  - vb
+  name: CurrentExecutablePath
+  nameWithType: ApplicationPaths.CurrentExecutablePath
+  fullName: Talegen.Storage.Net.Core.Disk.ApplicationPaths.CurrentExecutablePath
+  type: Property
+  source:
+    remote:
+      path: src/Talegen.Storage.Net.Core/Disk/ApplicationPaths.cs
+      branch: main
+      repo: https://github.com/Talegen/Talegen.Storage.Net.git
+    id: CurrentExecutablePath
+    path: Disk/ApplicationPaths.cs
+    startLine: 29
+  assemblies:
+  - Talegen.Storage.Net.Core
+  namespace: Talegen.Storage.Net.Core.Disk
+  summary: "\nGets the full path to the currently running executable.\n"
+  example: []
+  syntax:
+    content: public static string CurrentExecutablePath { get; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Shared ReadOnly Property CurrentExecutablePath As String
+  overload: Talegen.Storage.Net.Core.Disk.ApplicationPaths.CurrentExecutablePath*
+  modifiers.csharp:
+  - public
+  - static
+  - get
+  modifiers.vb:
+  - Public
+  - Shared
+  - ReadOnly
+- uid: Talegen.Storage.Net.Core.Disk.ApplicationPaths.ApplicationPath
+  commentId: P:Talegen.Storage.Net.Core.Disk.ApplicationPaths.ApplicationPath
+  id: ApplicationPath
+  parent: Talegen.Storage.Net.Core.Disk.ApplicationPaths
+  langs:
+  - csharp
+  - vb
+  name: ApplicationPath
+  nameWithType: ApplicationPaths.ApplicationPath
+  fullName: Talegen.Storage.Net.Core.Disk.ApplicationPaths.ApplicationPath
+  type: Property
+  source:
+    remote:
+      path: src/Talegen.Storage.Net.Core/Disk/ApplicationPaths.cs
+      branch: main
+      repo: https://github.com/Talegen/Talegen.Storage.Net.git
+    id: ApplicationPath
+    path: Disk/ApplicationPaths.cs
+    startLine: 34
+  assemblies:
+  - Talegen.Storage.Net.Core
+  namespace: Talegen.Storage.Net.Core.Disk
+  summary: "\nGets the full path to the application base directory.\n"
+  example: []
+  syntax:
+    content: public static string ApplicationPath { get; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Shared ReadOnly Property ApplicationPath As String
+  overload: Talegen.Storage.Net.Core.Disk.ApplicationPaths.ApplicationPath*
+  modifiers.csharp:
+  - public
+  - static
+  - get
+  modifiers.vb:
+  - Public
+  - Shared
+  - ReadOnly
+- uid: Talegen.Storage.Net.Core.Disk.ApplicationPaths.ConfigurationFolderExists(System.Boolean,System.String)
+  commentId: M:Talegen.Storage.Net.Core.Disk.ApplicationPaths.ConfigurationFolderExists(System.Boolean,System.String)
+  id: ConfigurationFolderExists(System.Boolean,System.String)
+  parent: Talegen.Storage.Net.Core.Disk.ApplicationPaths
+  langs:
+  - csharp
+  - vb
+  name: ConfigurationFolderExists(Boolean, String)
+  nameWithType: ApplicationPaths.ConfigurationFolderExists(Boolean, String)
+  fullName: Talegen.Storage.Net.Core.Disk.ApplicationPaths.ConfigurationFolderExists(System.Boolean, System.String)
+  type: Method
+  source:
+    remote:
+      path: src/Talegen.Storage.Net.Core/Disk/ApplicationPaths.cs
+      branch: main
+      repo: https://github.com/Talegen/Talegen.Storage.Net.git
+    id: ConfigurationFolderExists
+    path: Disk/ApplicationPaths.cs
+    startLine: 42
+  assemblies:
+  - Talegen.Storage.Net.Core
+  namespace: Talegen.Storage.Net.Core.Disk
+  summary: "\nGets a value indicating whether the configuration folder exists.\n"
+  example: []
+  syntax:
+    content: public static bool ConfigurationFolderExists(bool forAllUsers = true, string applicationTitle = "")
+    parameters:
+    - id: forAllUsers
+      type: System.Boolean
+      description: <code>true</code> if the path is shared for all users on the system; otherwise <code>false</code>.
+    - id: applicationTitle
+      type: System.String
+      description: Contains the name of the application to append to the path.
+    return:
+      type: System.Boolean
+      description: Returns a value indicating whether the configuration folder exists.
+    content.vb: Public Shared Function ConfigurationFolderExists(forAllUsers As Boolean = True, applicationTitle As String = "") As Boolean
+  overload: Talegen.Storage.Net.Core.Disk.ApplicationPaths.ConfigurationFolderExists*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: Talegen.Storage.Net.Core.Disk.ApplicationPaths.ConfigurationFilePath(System.String,System.Boolean,System.String)
+  commentId: M:Talegen.Storage.Net.Core.Disk.ApplicationPaths.ConfigurationFilePath(System.String,System.Boolean,System.String)
+  id: ConfigurationFilePath(System.String,System.Boolean,System.String)
+  parent: Talegen.Storage.Net.Core.Disk.ApplicationPaths
+  langs:
+  - csharp
+  - vb
+  name: ConfigurationFilePath(String, Boolean, String)
+  nameWithType: ApplicationPaths.ConfigurationFilePath(String, Boolean, String)
+  fullName: Talegen.Storage.Net.Core.Disk.ApplicationPaths.ConfigurationFilePath(System.String, System.Boolean, System.String)
+  type: Method
+  source:
+    remote:
+      path: src/Talegen.Storage.Net.Core/Disk/ApplicationPaths.cs
+      branch: main
+      repo: https://github.com/Talegen/Talegen.Storage.Net.git
+    id: ConfigurationFilePath
+    path: Disk/ApplicationPaths.cs
+    startLine: 54
+  assemblies:
+  - Talegen.Storage.Net.Core
+  namespace: Talegen.Storage.Net.Core.Disk
+  summary: "\nGets the file path to the application configuration file.\n"
+  example: []
+  syntax:
+    content: public static string ConfigurationFilePath(string configurationFileName, bool forAllUsers = true, string applicationTitle = "")
+    parameters:
+    - id: configurationFileName
+      type: System.String
+      description: Contains the configuration file name.
+    - id: forAllUsers
+      type: System.Boolean
+      description: <code>true</code> if the path is shared for all users on the system; otherwise <code>false</code>.
+    - id: applicationTitle
+      type: System.String
+      description: Contains the name of the application to append to the path.
+    return:
+      type: System.String
+      description: Returns the full path to a configuration file.
+    content.vb: Public Shared Function ConfigurationFilePath(configurationFileName As String, forAllUsers As Boolean = True, applicationTitle As String = "") As String
+  overload: Talegen.Storage.Net.Core.Disk.ApplicationPaths.ConfigurationFilePath*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: Talegen.Storage.Net.Core.Disk.ApplicationPaths.ConfigurationFolderPath(System.Boolean,System.String)
+  commentId: M:Talegen.Storage.Net.Core.Disk.ApplicationPaths.ConfigurationFolderPath(System.Boolean,System.String)
+  id: ConfigurationFolderPath(System.Boolean,System.String)
+  parent: Talegen.Storage.Net.Core.Disk.ApplicationPaths
+  langs:
+  - csharp
+  - vb
+  name: ConfigurationFolderPath(Boolean, String)
+  nameWithType: ApplicationPaths.ConfigurationFolderPath(Boolean, String)
+  fullName: Talegen.Storage.Net.Core.Disk.ApplicationPaths.ConfigurationFolderPath(System.Boolean, System.String)
+  type: Method
+  source:
+    remote:
+      path: src/Talegen.Storage.Net.Core/Disk/ApplicationPaths.cs
+      branch: main
+      repo: https://github.com/Talegen/Talegen.Storage.Net.git
+    id: ConfigurationFolderPath
+    path: Disk/ApplicationPaths.cs
+    startLine: 70
+  assemblies:
+  - Talegen.Storage.Net.Core
+  namespace: Talegen.Storage.Net.Core.Disk
+  summary: "\nThis method is used to get the folder path where configuration files are stored.\n"
+  example: []
+  syntax:
+    content: public static string ConfigurationFolderPath(bool forAllUsers = true, string applicationTitle = "")
+    parameters:
+    - id: forAllUsers
+      type: System.Boolean
+      description: <code>true</code> if the path is shared for all users on the system; otherwise <code>false</code>.
+    - id: applicationTitle
+      type: System.String
+      description: Contains the name of the application to append to the path.
+    return:
+      type: System.String
+      description: Returns to a common application path where configurations can be stored.
+    content.vb: Public Shared Function ConfigurationFolderPath(forAllUsers As Boolean = True, applicationTitle As String = "") As String
+  overload: Talegen.Storage.Net.Core.Disk.ApplicationPaths.ConfigurationFolderPath*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: Talegen.Storage.Net.Core.Disk.ApplicationPaths.CreateConfigurationPath(System.Boolean,System.String)
+  commentId: M:Talegen.Storage.Net.Core.Disk.ApplicationPaths.CreateConfigurationPath(System.Boolean,System.String)
+  id: CreateConfigurationPath(System.Boolean,System.String)
+  parent: Talegen.Storage.Net.Core.Disk.ApplicationPaths
+  langs:
+  - csharp
+  - vb
+  name: CreateConfigurationPath(Boolean, String)
+  nameWithType: ApplicationPaths.CreateConfigurationPath(Boolean, String)
+  fullName: Talegen.Storage.Net.Core.Disk.ApplicationPaths.CreateConfigurationPath(System.Boolean, System.String)
+  type: Method
+  source:
+    remote:
+      path: src/Talegen.Storage.Net.Core/Disk/ApplicationPaths.cs
+      branch: main
+      repo: https://github.com/Talegen/Talegen.Storage.Net.git
+    id: CreateConfigurationPath
+    path: Disk/ApplicationPaths.cs
+    startLine: 81
+  assemblies:
+  - Talegen.Storage.Net.Core
+  namespace: Talegen.Storage.Net.Core.Disk
+  summary: "\nThis method is used to create the configuration path if it doesn&apos;t exist already.\n"
+  example: []
+  syntax:
+    content: public static bool CreateConfigurationPath(bool forAllUsers = true, string applicationTitle = "")
+    parameters:
+    - id: forAllUsers
+      type: System.Boolean
+      description: <code>true</code> if the path is shared for all users on the system; otherwise <code>false</code>.
+    - id: applicationTitle
+      type: System.String
+      description: Contains the name of the application to append to the path.
+    return:
+      type: System.Boolean
+      description: Returns a value indicating whether the configuration path was created successfully.
+    content.vb: Public Shared Function CreateConfigurationPath(forAllUsers As Boolean = True, applicationTitle As String = "") As Boolean
+  overload: Talegen.Storage.Net.Core.Disk.ApplicationPaths.CreateConfigurationPath*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+references:
+- uid: Talegen.Storage.Net.Core.Disk
+  commentId: N:Talegen.Storage.Net.Core.Disk
+  name: Talegen.Storage.Net.Core.Disk
+  nameWithType: Talegen.Storage.Net.Core.Disk
+  fullName: Talegen.Storage.Net.Core.Disk
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Talegen.Storage.Net.Core.Disk.ApplicationPaths.CurrentExecutablePath*
+  commentId: Overload:Talegen.Storage.Net.Core.Disk.ApplicationPaths.CurrentExecutablePath
+  name: CurrentExecutablePath
+  nameWithType: ApplicationPaths.CurrentExecutablePath
+  fullName: Talegen.Storage.Net.Core.Disk.ApplicationPaths.CurrentExecutablePath
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: Talegen.Storage.Net.Core.Disk.ApplicationPaths.ApplicationPath*
+  commentId: Overload:Talegen.Storage.Net.Core.Disk.ApplicationPaths.ApplicationPath
+  name: ApplicationPath
+  nameWithType: ApplicationPaths.ApplicationPath
+  fullName: Talegen.Storage.Net.Core.Disk.ApplicationPaths.ApplicationPath
+- uid: Talegen.Storage.Net.Core.Disk.ApplicationPaths.ConfigurationFolderExists*
+  commentId: Overload:Talegen.Storage.Net.Core.Disk.ApplicationPaths.ConfigurationFolderExists
+  name: ConfigurationFolderExists
+  nameWithType: ApplicationPaths.ConfigurationFolderExists
+  fullName: Talegen.Storage.Net.Core.Disk.ApplicationPaths.ConfigurationFolderExists
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
+- uid: Talegen.Storage.Net.Core.Disk.ApplicationPaths.ConfigurationFilePath*
+  commentId: Overload:Talegen.Storage.Net.Core.Disk.ApplicationPaths.ConfigurationFilePath
+  name: ConfigurationFilePath
+  nameWithType: ApplicationPaths.ConfigurationFilePath
+  fullName: Talegen.Storage.Net.Core.Disk.ApplicationPaths.ConfigurationFilePath
+- uid: Talegen.Storage.Net.Core.Disk.ApplicationPaths.ConfigurationFolderPath*
+  commentId: Overload:Talegen.Storage.Net.Core.Disk.ApplicationPaths.ConfigurationFolderPath
+  name: ConfigurationFolderPath
+  nameWithType: ApplicationPaths.ConfigurationFolderPath
+  fullName: Talegen.Storage.Net.Core.Disk.ApplicationPaths.ConfigurationFolderPath
+- uid: Talegen.Storage.Net.Core.Disk.ApplicationPaths.CreateConfigurationPath*
+  commentId: Overload:Talegen.Storage.Net.Core.Disk.ApplicationPaths.CreateConfigurationPath
+  name: CreateConfigurationPath
+  nameWithType: ApplicationPaths.CreateConfigurationPath
+  fullName: Talegen.Storage.Net.Core.Disk.ApplicationPaths.CreateConfigurationPath

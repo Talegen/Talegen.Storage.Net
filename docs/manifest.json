@@ -1,0 +1,373 @@
+{
+  "homepages": [],
+  "source_base_path": "D:/Projects/Talegen/GitHub/Talegen.Storage.Net/src/Talegen.Storage.Net.Core",
+  "xrefmap": "xrefmap.yml",
+  "files": [
+    {
+      "type": "Conceptual",
+      "source_relative_path": "../../CONTRIBUTING.md",
+      "output": {
+        ".html": {
+          "relative_path": "CONTRIBUTING.html",
+          "hash": "EtnBi9ocVaEiOTDLxpdoVzsVT9bQ17mmXcCt3ormPKQ="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "../../README.md",
+      "output": {
+        ".html": {
+          "relative_path": "README.html",
+          "hash": "S/cig2yWQPTnW1oxs+UjUfkSm+lLe6YB4x3wKRJYTaI="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "../../images/favicon.ico",
+      "output": {
+        "resource": {
+          "relative_path": "images/favicon.ico"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "../../images/logo.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/logo.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "../../ref/Talegen.Storage.Net.AzureBlobs.AzureBlobStorageContext.yml",
+      "output": {
+        ".html": {
+          "relative_path": "ref/Talegen.Storage.Net.AzureBlobs.AzureBlobStorageContext.html",
+          "hash": "v7DIF2yZEGiU6rmxEpKO0msAfGMn5oxcrFHyvbkCpmg="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "../../ref/Talegen.Storage.Net.AzureBlobs.AzureBlobStorageService.yml",
+      "output": {
+        ".html": {
+          "relative_path": "ref/Talegen.Storage.Net.AzureBlobs.AzureBlobStorageService.html",
+          "hash": "jQnL2P4OhZgbOz8e0LQx4xKUwVrvIJXp8NYgCEkSy6o="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "../../ref/Talegen.Storage.Net.AzureBlobs.yml",
+      "output": {
+        ".html": {
+          "relative_path": "ref/Talegen.Storage.Net.AzureBlobs.html",
+          "hash": "wSkNrl//H8CKJwepMEG3G8MJMWjYF/R9Ez1yGq+YOKY="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "../../ref/Talegen.Storage.Net.Core.Disk.ApplicationPaths.yml",
+      "output": {
+        ".html": {
+          "relative_path": "ref/Talegen.Storage.Net.Core.Disk.ApplicationPaths.html",
+          "hash": "O3QPc58Ma0OciZ4hRDntVaVbMndYmRFCypqzxBDTgmk="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "../../ref/Talegen.Storage.Net.Core.Disk.LocalStorageContext.yml",
+      "output": {
+        ".html": {
+          "relative_path": "ref/Talegen.Storage.Net.Core.Disk.LocalStorageContext.html",
+          "hash": "dbF5/ix6/aQzFOD3fIUpjApDybPKHoFLLZkCFit0UZI="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "../../ref/Talegen.Storage.Net.Core.Disk.LocalStorageService.yml",
+      "output": {
+        ".html": {
+          "relative_path": "ref/Talegen.Storage.Net.Core.Disk.LocalStorageService.html",
+          "hash": "RnNZ8BEgLGyXQizEJPLxft26/E2OpEU0RynGW4URoxo="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "../../ref/Talegen.Storage.Net.Core.Disk.yml",
+      "output": {
+        ".html": {
+          "relative_path": "ref/Talegen.Storage.Net.Core.Disk.html",
+          "hash": "mEGLyBGjn2ra3oL2XEX9CpORFUI7H93fx9HgOHrFZGE="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "../../ref/Talegen.Storage.Net.Core.IStorageContext.yml",
+      "output": {
+        ".html": {
+          "relative_path": "ref/Talegen.Storage.Net.Core.IStorageContext.html",
+          "hash": "30QG7GPA2c7tWS7XbNaGmBFBTmHTrlO1g+pv26D8eGU="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "../../ref/Talegen.Storage.Net.Core.IStorageService.yml",
+      "output": {
+        ".html": {
+          "relative_path": "ref/Talegen.Storage.Net.Core.IStorageService.html",
+          "hash": "5/C7o4OJeTGFAViu5iYcqvfJgAfBx9tkqam5L9OBxss="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "../../ref/Talegen.Storage.Net.Core.Memory.MemoryFolderModel.yml",
+      "output": {
+        ".html": {
+          "relative_path": "ref/Talegen.Storage.Net.Core.Memory.MemoryFolderModel.html",
+          "hash": "GiBcmcCYm6PhYkdO0fL7f17chWFyA14F5ey+ihUKiac="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "../../ref/Talegen.Storage.Net.Core.Memory.MemoryStorageContext.yml",
+      "output": {
+        ".html": {
+          "relative_path": "ref/Talegen.Storage.Net.Core.Memory.MemoryStorageContext.html",
+          "hash": "A4kdRaEq/2A4zjKsFPHrjbdfUq42UBekdhTMypJzX8o="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "../../ref/Talegen.Storage.Net.Core.Memory.MemoryStorageService.yml",
+      "output": {
+        ".html": {
+          "relative_path": "ref/Talegen.Storage.Net.Core.Memory.MemoryStorageService.html",
+          "hash": "WbLlcVMnUGOjpbsgJLIDQgCYYzvvkz7BVmS/U7xobd4="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "../../ref/Talegen.Storage.Net.Core.Memory.yml",
+      "output": {
+        ".html": {
+          "relative_path": "ref/Talegen.Storage.Net.Core.Memory.html",
+          "hash": "3fMLKywTMalc27y7RAHMwKNAUZiesk3HTNHnbriZInE="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "../../ref/Talegen.Storage.Net.Core.StorageException.yml",
+      "output": {
+        ".html": {
+          "relative_path": "ref/Talegen.Storage.Net.Core.StorageException.html",
+          "hash": "UDkijRkN14QFnZmuuyXwPBaJ97ul1RwVQ6wmDerwJqs="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "../../ref/Talegen.Storage.Net.Core.yml",
+      "output": {
+        ".html": {
+          "relative_path": "ref/Talegen.Storage.Net.Core.html",
+          "hash": "h32na71FNvzgQS+/eQZ9pKfuopOPsY/Wm7/Z6IfUSnk="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "../../ref/Talegen.Storage.Net.Tests.DiskStorageTests.yml",
+      "output": {
+        ".html": {
+          "relative_path": "ref/Talegen.Storage.Net.Tests.DiskStorageTests.html",
+          "hash": "SOhya3juhUPM0P8WR0eYJY0vndc9OP1IZjnl16r1oM8="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "../../ref/Talegen.Storage.Net.Tests.MemoryStorageTests.yml",
+      "output": {
+        ".html": {
+          "relative_path": "ref/Talegen.Storage.Net.Tests.MemoryStorageTests.html",
+          "hash": "A0190Rdr1vgkBTSYbn+T1Yr1mylWX2OvcRi3rEBnjY0="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "../../ref/Talegen.Storage.Net.Tests.StorageTestsBase.yml",
+      "output": {
+        ".html": {
+          "relative_path": "ref/Talegen.Storage.Net.Tests.StorageTestsBase.html",
+          "hash": "v3TFIehrTiDoKSDghb5eYM7MPH1eP1kVmjqbIIhGXbs="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "../../ref/Talegen.Storage.Net.Tests.UnitTestBase.yml",
+      "output": {
+        ".html": {
+          "relative_path": "ref/Talegen.Storage.Net.Tests.UnitTestBase.html",
+          "hash": "xpYjSVkavsyCz6iIuxPk5tnugasz04QoKNpt7tLxjR8="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "../../ref/Talegen.Storage.Net.Tests.yml",
+      "output": {
+        ".html": {
+          "relative_path": "ref/Talegen.Storage.Net.Tests.html",
+          "hash": "u2CFJt+rQpNz0rVsSc4MG4gkBw9yCXrt+5vE0XVDHew="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "../../ref/toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "ref/toc.html",
+          "hash": "O5MImerJQwQKhQ4odzdmfsZF4Se4VSJXWvN2FObLTwY="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "../../toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "toc.html",
+          "hash": "hpLtqAoGUkzCODgze5Ur3vLrkPGjGTg9t0aBDQ9RFGg="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    }
+  ],
+  "incremental_info": [
+    {
+      "status": {
+        "can_incremental": false,
+        "details": "Disable incremental build by force rebuild option.",
+        "incrementalPhase": "build",
+        "total_file_count": 0,
+        "skipped_file_count": 0,
+        "full_build_reason_code": "ForceRebuild"
+      },
+      "processors": {
+        "ConceptualDocumentProcessor": {
+          "can_incremental": false,
+          "incrementalPhase": "build",
+          "total_file_count": 2,
+          "skipped_file_count": 0
+        },
+        "ManagedReferenceDocumentProcessor": {
+          "can_incremental": false,
+          "incrementalPhase": "build",
+          "total_file_count": 20,
+          "skipped_file_count": 0
+        },
+        "ResourceDocumentProcessor": {
+          "can_incremental": false,
+          "details": "Processor ResourceDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
+          "incrementalPhase": "build",
+          "total_file_count": 0,
+          "skipped_file_count": 0
+        },
+        "TocDocumentProcessor": {
+          "can_incremental": false,
+          "details": "Processor TocDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
+          "incrementalPhase": "build",
+          "total_file_count": 0,
+          "skipped_file_count": 0
+        }
+      }
+    },
+    {
+      "status": {
+        "can_incremental": false,
+        "details": "Cannot support incremental post processing, the reason is: it's disabled.",
+        "incrementalPhase": "postProcessing",
+        "total_file_count": 0,
+        "skipped_file_count": 0
+      },
+      "processors": {}
+    }
+  ],
+  "version_info": {},
+  "groups": [
+    {
+      "xrefmap": "xrefmap.yml"
+    }
+  ]
+}

@@ -1,0 +1,41 @@
+### YamlMime:ManagedReference
+items:
+- uid: Talegen.Storage.Net.Core
+  commentId: N:Talegen.Storage.Net.Core
+  id: Talegen.Storage.Net.Core
+  children:
+  - Talegen.Storage.Net.Core.IStorageContext
+  - Talegen.Storage.Net.Core.IStorageService
+  - Talegen.Storage.Net.Core.StorageException
+  langs:
+  - csharp
+  - vb
+  name: Talegen.Storage.Net.Core
+  nameWithType: Talegen.Storage.Net.Core
+  fullName: Talegen.Storage.Net.Core
+  type: Namespace
+  assemblies:
+  - Talegen.Storage.Net.Core
+references:
+- uid: Talegen.Storage.Net.Core.IStorageContext
+  commentId: T:Talegen.Storage.Net.Core.IStorageContext
+  parent: Talegen.Storage.Net.Core
+  name: IStorageContext
+  nameWithType: IStorageContext
+  fullName: Talegen.Storage.Net.Core.IStorageContext
+- uid: Talegen.Storage.Net.Core.IStorageService
+  commentId: T:Talegen.Storage.Net.Core.IStorageService
+  parent: Talegen.Storage.Net.Core
+  name: IStorageService
+  nameWithType: IStorageService
+  fullName: Talegen.Storage.Net.Core.IStorageService
+- uid: Talegen.Storage.Net.Core.StorageException
+  commentId: T:Talegen.Storage.Net.Core.StorageException
+  name: StorageException
+  nameWithType: StorageException
+  fullName: Talegen.Storage.Net.Core.StorageException
+- uid: Talegen.Storage.Net.Core
+  commentId: N:Talegen.Storage.Net.Core
+  name: Talegen.Storage.Net.Core
+  nameWithType: Talegen.Storage.Net.Core
+  fullName: Talegen.Storage.Net.Core

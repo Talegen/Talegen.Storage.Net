@@ -1,0 +1,86 @@
+{
+  "metadata": [
+    {
+      "src": [
+        {
+          "files": [
+            "**.csproj"
+          ],
+          "src": "../../src"
+        }
+      ],
+      "dest": "../../ref",
+      "disableGitFeatures": false,
+      "disableDefaultFilter": false,
+      "properties": {
+        "TargetFramework": "netcoreapp3.1"
+      }
+    }
+  ],
+  "build": {
+    "content": [
+      {
+        "files": [
+          "ref/**.yml",
+          "ref/index.md"
+        ],
+        "src": "../../"
+      },
+      {
+        "files": [
+          "articles/**.md",
+          "articles/**/toc.yml",
+          "articles/toc.yml",
+          "toc.yml",
+          "*.md"
+        ],
+        "src": "../../"
+      }
+    ],
+    "resource": [
+      {
+        "files": [
+          "images/**"
+        ],
+        "src": "../../"
+      }
+    ],
+    "overwrite": [
+      {
+        "files": [
+          "refdoc/**.md"
+        ],
+        "exclude": [
+          "obj/**",
+          "_site/**"
+        ],
+        "src": "../../"
+      }
+    ],
+    "dest": "../../docs",
+    "globalMetadataFiles": [],
+    "fileMetadataFiles": [],
+    "template": [
+      "default"
+    ],
+    "postProcessors": [],
+    "markdownEngineName": "markdig",
+    "noLangKeyword": false,
+    "keepFileLink": false,
+    "cleanupCacheHistory": false,
+    "disableGitFeatures": false,
+    "globalMetadata": {
+      "_appTitle": "Talegen Storage.Net Library",
+      "_appFooter": "Copyright (c) Talegen, LLC. All rights reserved.",
+      "_appLogoPath": "images/logo.png",
+      "_appFaviconPath": "images/logo.ico",
+      "_gitContribute": {
+        "repo": "https://github.com/Talegen/Talegen.Storage.Net",
+        "branch": "main"
+      }
+    },
+    "properties": {
+      "TargetFramework": "netcoreapp3.1"
+    }
+  }
+}

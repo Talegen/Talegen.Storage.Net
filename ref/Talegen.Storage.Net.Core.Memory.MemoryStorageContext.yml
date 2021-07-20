@@ -1,0 +1,675 @@
+### YamlMime:ManagedReference
+items:
+- uid: Talegen.Storage.Net.Core.Memory.MemoryStorageContext
+  commentId: T:Talegen.Storage.Net.Core.Memory.MemoryStorageContext
+  id: MemoryStorageContext
+  parent: Talegen.Storage.Net.Core.Memory
+  children:
+  - Talegen.Storage.Net.Core.Memory.MemoryStorageContext.#ctor(System.String,System.Boolean)
+  - Talegen.Storage.Net.Core.Memory.MemoryStorageContext.#ctor(System.Uri,System.Boolean)
+  - Talegen.Storage.Net.Core.Memory.MemoryStorageContext.RootWorkspaceLocalFolderPath
+  - Talegen.Storage.Net.Core.Memory.MemoryStorageContext.StorageType
+  - Talegen.Storage.Net.Core.Memory.MemoryStorageContext.UniqueWorkspace
+  - Talegen.Storage.Net.Core.Memory.MemoryStorageContext.WorkspaceUri
+  langs:
+  - csharp
+  - vb
+  name: MemoryStorageContext
+  nameWithType: MemoryStorageContext
+  fullName: Talegen.Storage.Net.Core.Memory.MemoryStorageContext
+  type: Class
+  source:
+    remote:
+      path: src/Talegen.Storage.Net.Core/Memory/MemoryStorageContext.cs
+      branch: main
+      repo: https://github.com/Talegen/Talegen.Storage.Net.git
+    id: MemoryStorageContext
+    path: Memory/MemoryStorageContext.cs
+    startLine: 24
+  assemblies:
+  - Talegen.Storage.Net.Core
+  namespace: Talegen.Storage.Net.Core.Memory
+  summary: "\nThis class contains properties related to the storage service interfaces within the application.\n"
+  example: []
+  syntax:
+    content: 'public class MemoryStorageContext : IStorageContext'
+    content.vb: >-
+      Public Class MemoryStorageContext
+          Implements IStorageContext
+  inheritance:
+  - System.Object
+  implements:
+  - Talegen.Storage.Net.Core.IStorageContext
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Talegen.Storage.Net.Core.Memory.MemoryStorageContext.#ctor(System.String,System.Boolean)
+  commentId: M:Talegen.Storage.Net.Core.Memory.MemoryStorageContext.#ctor(System.String,System.Boolean)
+  id: '#ctor(System.String,System.Boolean)'
+  parent: Talegen.Storage.Net.Core.Memory.MemoryStorageContext
+  langs:
+  - csharp
+  - vb
+  name: MemoryStorageContext(String, Boolean)
+  nameWithType: MemoryStorageContext.MemoryStorageContext(String, Boolean)
+  fullName: Talegen.Storage.Net.Core.Memory.MemoryStorageContext.MemoryStorageContext(System.String, System.Boolean)
+  type: Constructor
+  source:
+    remote:
+      path: src/Talegen.Storage.Net.Core/Memory/MemoryStorageContext.cs
+      branch: main
+      repo: https://github.com/Talegen/Talegen.Storage.Net.git
+    id: .ctor
+    path: Memory/MemoryStorageContext.cs
+    startLine: 31
+  assemblies:
+  - Talegen.Storage.Net.Core
+  namespace: Talegen.Storage.Net.Core.Memory
+  summary: "\nInitializes a new instance of the <xref href=\"Talegen.Storage.Net.Core.Memory.MemoryStorageContext\" data-throw-if-not-resolved=\"false\"></xref> class.\n"
+  example: []
+  syntax:
+    content: public MemoryStorageContext(string workspacePath = "", bool uniqueWorkspace = true)
+    parameters:
+    - id: workspacePath
+      type: System.String
+      description: Contains an the root workspace folder Uri path string.
+    - id: uniqueWorkspace
+      type: System.Boolean
+      description: Contains a value indicating whether the storage service shall use a unique workspace sub-folder.
+    content.vb: Public Sub New(workspacePath As String = "", uniqueWorkspace As Boolean = True)
+  overload: Talegen.Storage.Net.Core.Memory.MemoryStorageContext.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Talegen.Storage.Net.Core.Memory.MemoryStorageContext.#ctor(System.Uri,System.Boolean)
+  commentId: M:Talegen.Storage.Net.Core.Memory.MemoryStorageContext.#ctor(System.Uri,System.Boolean)
+  id: '#ctor(System.Uri,System.Boolean)'
+  parent: Talegen.Storage.Net.Core.Memory.MemoryStorageContext
+  langs:
+  - csharp
+  - vb
+  name: MemoryStorageContext(Uri, Boolean)
+  nameWithType: MemoryStorageContext.MemoryStorageContext(Uri, Boolean)
+  fullName: Talegen.Storage.Net.Core.Memory.MemoryStorageContext.MemoryStorageContext(System.Uri, System.Boolean)
+  type: Constructor
+  source:
+    remote:
+      path: src/Talegen.Storage.Net.Core/Memory/MemoryStorageContext.cs
+      branch: main
+      repo: https://github.com/Talegen/Talegen.Storage.Net.git
+    id: .ctor
+    path: Memory/MemoryStorageContext.cs
+    startLine: 41
+  assemblies:
+  - Talegen.Storage.Net.Core
+  namespace: Talegen.Storage.Net.Core.Memory
+  summary: "\nInitializes a new instance of the <xref href=\"Talegen.Storage.Net.Core.Memory.MemoryStorageContext\" data-throw-if-not-resolved=\"false\"></xref> class.\n"
+  example: []
+  syntax:
+    content: public MemoryStorageContext(Uri workspaceUri, bool uniqueWorkspace = true)
+    parameters:
+    - id: workspaceUri
+      type: System.Uri
+      description: Contains a root workspace folder Uri.
+    - id: uniqueWorkspace
+      type: System.Boolean
+      description: Contains a value indicating whether the storage service shall use a unique workspace sub-folder.
+    content.vb: Public Sub New(workspaceUri As Uri, uniqueWorkspace As Boolean = True)
+  overload: Talegen.Storage.Net.Core.Memory.MemoryStorageContext.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Talegen.Storage.Net.Core.Memory.MemoryStorageContext.StorageType
+  commentId: P:Talegen.Storage.Net.Core.Memory.MemoryStorageContext.StorageType
+  id: StorageType
+  parent: Talegen.Storage.Net.Core.Memory.MemoryStorageContext
+  langs:
+  - csharp
+  - vb
+  name: StorageType
+  nameWithType: MemoryStorageContext.StorageType
+  fullName: Talegen.Storage.Net.Core.Memory.MemoryStorageContext.StorageType
+  type: Property
+  source:
+    remote:
+      path: src/Talegen.Storage.Net.Core/Memory/MemoryStorageContext.cs
+      branch: main
+      repo: https://github.com/Talegen/Talegen.Storage.Net.git
+    id: StorageType
+    path: Memory/MemoryStorageContext.cs
+    startLine: 50
+  assemblies:
+  - Talegen.Storage.Net.Core
+  namespace: Talegen.Storage.Net.Core.Memory
+  summary: "\nGets the storage type of the context.\n"
+  example: []
+  syntax:
+    content: public string StorageType { get; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public ReadOnly Property StorageType As String
+  overload: Talegen.Storage.Net.Core.Memory.MemoryStorageContext.StorageType*
+  implements:
+  - Talegen.Storage.Net.Core.IStorageContext.StorageType
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Talegen.Storage.Net.Core.Memory.MemoryStorageContext.UniqueWorkspace
+  commentId: P:Talegen.Storage.Net.Core.Memory.MemoryStorageContext.UniqueWorkspace
+  id: UniqueWorkspace
+  parent: Talegen.Storage.Net.Core.Memory.MemoryStorageContext
+  langs:
+  - csharp
+  - vb
+  name: UniqueWorkspace
+  nameWithType: MemoryStorageContext.UniqueWorkspace
+  fullName: Talegen.Storage.Net.Core.Memory.MemoryStorageContext.UniqueWorkspace
+  type: Property
+  source:
+    remote:
+      path: src/Talegen.Storage.Net.Core/Memory/MemoryStorageContext.cs
+      branch: main
+      repo: https://github.com/Talegen/Talegen.Storage.Net.git
+    id: UniqueWorkspace
+    path: Memory/MemoryStorageContext.cs
+    startLine: 55
+  assemblies:
+  - Talegen.Storage.Net.Core
+  namespace: Talegen.Storage.Net.Core.Memory
+  summary: "\nGets a value indicating whether the storage service shall use a unique workspace sub-folder.\n"
+  example: []
+  syntax:
+    content: public bool UniqueWorkspace { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property UniqueWorkspace As Boolean
+  overload: Talegen.Storage.Net.Core.Memory.MemoryStorageContext.UniqueWorkspace*
+  implements:
+  - Talegen.Storage.Net.Core.IStorageContext.UniqueWorkspace
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Talegen.Storage.Net.Core.Memory.MemoryStorageContext.WorkspaceUri
+  commentId: P:Talegen.Storage.Net.Core.Memory.MemoryStorageContext.WorkspaceUri
+  id: WorkspaceUri
+  parent: Talegen.Storage.Net.Core.Memory.MemoryStorageContext
+  langs:
+  - csharp
+  - vb
+  name: WorkspaceUri
+  nameWithType: MemoryStorageContext.WorkspaceUri
+  fullName: Talegen.Storage.Net.Core.Memory.MemoryStorageContext.WorkspaceUri
+  type: Property
+  source:
+    remote:
+      path: src/Talegen.Storage.Net.Core/Memory/MemoryStorageContext.cs
+      branch: main
+      repo: https://github.com/Talegen/Talegen.Storage.Net.git
+    id: WorkspaceUri
+    path: Memory/MemoryStorageContext.cs
+    startLine: 60
+  assemblies:
+  - Talegen.Storage.Net.Core
+  namespace: Talegen.Storage.Net.Core.Memory
+  summary: "\nGets the root storage workspace URI path.\n"
+  example: []
+  syntax:
+    content: public Uri WorkspaceUri { get; }
+    parameters: []
+    return:
+      type: System.Uri
+    content.vb: Public ReadOnly Property WorkspaceUri As Uri
+  overload: Talegen.Storage.Net.Core.Memory.MemoryStorageContext.WorkspaceUri*
+  implements:
+  - Talegen.Storage.Net.Core.IStorageContext.WorkspaceUri
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Talegen.Storage.Net.Core.Memory.MemoryStorageContext.RootWorkspaceLocalFolderPath
+  commentId: P:Talegen.Storage.Net.Core.Memory.MemoryStorageContext.RootWorkspaceLocalFolderPath
+  id: RootWorkspaceLocalFolderPath
+  parent: Talegen.Storage.Net.Core.Memory.MemoryStorageContext
+  langs:
+  - csharp
+  - vb
+  name: RootWorkspaceLocalFolderPath
+  nameWithType: MemoryStorageContext.RootWorkspaceLocalFolderPath
+  fullName: Talegen.Storage.Net.Core.Memory.MemoryStorageContext.RootWorkspaceLocalFolderPath
+  type: Property
+  source:
+    remote:
+      path: src/Talegen.Storage.Net.Core/Memory/MemoryStorageContext.cs
+      branch: main
+      repo: https://github.com/Talegen/Talegen.Storage.Net.git
+    id: RootWorkspaceLocalFolderPath
+    path: Memory/MemoryStorageContext.cs
+    startLine: 65
+  assemblies:
+  - Talegen.Storage.Net.Core
+  namespace: Talegen.Storage.Net.Core.Memory
+  summary: "\nGets the local folder path representation of the root workspace folder Uri.\n"
+  example: []
+  syntax:
+    content: public string RootWorkspaceLocalFolderPath { get; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public ReadOnly Property RootWorkspaceLocalFolderPath As String
+  overload: Talegen.Storage.Net.Core.Memory.MemoryStorageContext.RootWorkspaceLocalFolderPath*
+  implements:
+  - Talegen.Storage.Net.Core.IStorageContext.RootWorkspaceLocalFolderPath
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+references:
+- uid: Talegen.Storage.Net.Core.Memory
+  commentId: N:Talegen.Storage.Net.Core.Memory
+  name: Talegen.Storage.Net.Core.Memory
+  nameWithType: Talegen.Storage.Net.Core.Memory
+  fullName: Talegen.Storage.Net.Core.Memory
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Talegen.Storage.Net.Core.IStorageContext
+  commentId: T:Talegen.Storage.Net.Core.IStorageContext
+  parent: Talegen.Storage.Net.Core
+  name: IStorageContext
+  nameWithType: IStorageContext
+  fullName: Talegen.Storage.Net.Core.IStorageContext
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Talegen.Storage.Net.Core
+  commentId: N:Talegen.Storage.Net.Core
+  name: Talegen.Storage.Net.Core
+  nameWithType: Talegen.Storage.Net.Core
+  fullName: Talegen.Storage.Net.Core
+- uid: Talegen.Storage.Net.Core.Memory.MemoryStorageContext
+  commentId: T:Talegen.Storage.Net.Core.Memory.MemoryStorageContext
+  parent: Talegen.Storage.Net.Core.Memory
+  name: MemoryStorageContext
+  nameWithType: MemoryStorageContext
+  fullName: Talegen.Storage.Net.Core.Memory.MemoryStorageContext
+- uid: Talegen.Storage.Net.Core.Memory.MemoryStorageContext.#ctor*
+  commentId: Overload:Talegen.Storage.Net.Core.Memory.MemoryStorageContext.#ctor
+  name: MemoryStorageContext
+  nameWithType: MemoryStorageContext.MemoryStorageContext
+  fullName: Talegen.Storage.Net.Core.Memory.MemoryStorageContext.MemoryStorageContext
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
+- uid: System.Uri
+  commentId: T:System.Uri
+  parent: System
+  isExternal: true
+  name: Uri
+  nameWithType: Uri
+  fullName: System.Uri
+- uid: Talegen.Storage.Net.Core.Memory.MemoryStorageContext.StorageType*
+  commentId: Overload:Talegen.Storage.Net.Core.Memory.MemoryStorageContext.StorageType
+  name: StorageType
+  nameWithType: MemoryStorageContext.StorageType
+  fullName: Talegen.Storage.Net.Core.Memory.MemoryStorageContext.StorageType
+- uid: Talegen.Storage.Net.Core.IStorageContext.StorageType
+  commentId: P:Talegen.Storage.Net.Core.IStorageContext.StorageType
+  parent: Talegen.Storage.Net.Core.IStorageContext
+  name: StorageType
+  nameWithType: IStorageContext.StorageType
+  fullName: Talegen.Storage.Net.Core.IStorageContext.StorageType
+- uid: Talegen.Storage.Net.Core.Memory.MemoryStorageContext.UniqueWorkspace*
+  commentId: Overload:Talegen.Storage.Net.Core.Memory.MemoryStorageContext.UniqueWorkspace
+  name: UniqueWorkspace
+  nameWithType: MemoryStorageContext.UniqueWorkspace
+  fullName: Talegen.Storage.Net.Core.Memory.MemoryStorageContext.UniqueWorkspace
+- uid: Talegen.Storage.Net.Core.IStorageContext.UniqueWorkspace
+  commentId: P:Talegen.Storage.Net.Core.IStorageContext.UniqueWorkspace
+  parent: Talegen.Storage.Net.Core.IStorageContext
+  name: UniqueWorkspace
+  nameWithType: IStorageContext.UniqueWorkspace
+  fullName: Talegen.Storage.Net.Core.IStorageContext.UniqueWorkspace
+- uid: Talegen.Storage.Net.Core.Memory.MemoryStorageContext.WorkspaceUri*
+  commentId: Overload:Talegen.Storage.Net.Core.Memory.MemoryStorageContext.WorkspaceUri
+  name: WorkspaceUri
+  nameWithType: MemoryStorageContext.WorkspaceUri
+  fullName: Talegen.Storage.Net.Core.Memory.MemoryStorageContext.WorkspaceUri
+- uid: Talegen.Storage.Net.Core.IStorageContext.WorkspaceUri
+  commentId: P:Talegen.Storage.Net.Core.IStorageContext.WorkspaceUri
+  parent: Talegen.Storage.Net.Core.IStorageContext
+  name: WorkspaceUri
+  nameWithType: IStorageContext.WorkspaceUri
+  fullName: Talegen.Storage.Net.Core.IStorageContext.WorkspaceUri
+- uid: Talegen.Storage.Net.Core.Memory.MemoryStorageContext.RootWorkspaceLocalFolderPath*
+  commentId: Overload:Talegen.Storage.Net.Core.Memory.MemoryStorageContext.RootWorkspaceLocalFolderPath
+  name: RootWorkspaceLocalFolderPath
+  nameWithType: MemoryStorageContext.RootWorkspaceLocalFolderPath
+  fullName: Talegen.Storage.Net.Core.Memory.MemoryStorageContext.RootWorkspaceLocalFolderPath
+- uid: Talegen.Storage.Net.Core.IStorageContext.RootWorkspaceLocalFolderPath
+  commentId: P:Talegen.Storage.Net.Core.IStorageContext.RootWorkspaceLocalFolderPath
+  parent: Talegen.Storage.Net.Core.IStorageContext
+  name: RootWorkspaceLocalFolderPath
+  nameWithType: IStorageContext.RootWorkspaceLocalFolderPath
+  fullName: Talegen.Storage.Net.Core.IStorageContext.RootWorkspaceLocalFolderPath

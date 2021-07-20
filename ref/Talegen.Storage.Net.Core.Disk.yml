@@ -1,0 +1,40 @@
+### YamlMime:ManagedReference
+items:
+- uid: Talegen.Storage.Net.Core.Disk
+  commentId: N:Talegen.Storage.Net.Core.Disk
+  id: Talegen.Storage.Net.Core.Disk
+  children:
+  - Talegen.Storage.Net.Core.Disk.ApplicationPaths
+  - Talegen.Storage.Net.Core.Disk.LocalStorageContext
+  - Talegen.Storage.Net.Core.Disk.LocalStorageService
+  langs:
+  - csharp
+  - vb
+  name: Talegen.Storage.Net.Core.Disk
+  nameWithType: Talegen.Storage.Net.Core.Disk
+  fullName: Talegen.Storage.Net.Core.Disk
+  type: Namespace
+  assemblies:
+  - Talegen.Storage.Net.Core
+references:
+- uid: Talegen.Storage.Net.Core.Disk.ApplicationPaths
+  commentId: T:Talegen.Storage.Net.Core.Disk.ApplicationPaths
+  name: ApplicationPaths
+  nameWithType: ApplicationPaths
+  fullName: Talegen.Storage.Net.Core.Disk.ApplicationPaths
+- uid: Talegen.Storage.Net.Core.Disk.LocalStorageContext
+  commentId: T:Talegen.Storage.Net.Core.Disk.LocalStorageContext
+  parent: Talegen.Storage.Net.Core.Disk
+  name: LocalStorageContext
+  nameWithType: LocalStorageContext
+  fullName: Talegen.Storage.Net.Core.Disk.LocalStorageContext
+- uid: Talegen.Storage.Net.Core.Disk.LocalStorageService
+  commentId: T:Talegen.Storage.Net.Core.Disk.LocalStorageService
+  name: LocalStorageService
+  nameWithType: LocalStorageService
+  fullName: Talegen.Storage.Net.Core.Disk.LocalStorageService
+- uid: Talegen.Storage.Net.Core.Disk
+  commentId: N:Talegen.Storage.Net.Core.Disk
+  name: Talegen.Storage.Net.Core.Disk
+  nameWithType: Talegen.Storage.Net.Core.Disk
+  fullName: Talegen.Storage.Net.Core.Disk

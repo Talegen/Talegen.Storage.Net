@@ -19,7 +19,7 @@ We set out to create a library that does the minimum to get the common jobs we n
 
 ## Documentation
 
-For a general overview of the library, please visit the Talegen.Storage.Net documentation online.
+For a general overview of the library, please visit the [Talegen.Storage.Net documentation online](https://talegen.github.io/Talegen.Storage.Net/).
 
 ## Contributing
 

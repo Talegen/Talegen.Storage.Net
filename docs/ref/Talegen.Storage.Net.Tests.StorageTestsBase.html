@@ -1,0 +1,1111 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class StorageTestsBase
+   | Talegen Storage.Net Library </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class StorageTestsBase
+   | Talegen Storage.Net Library ">
+    <meta name="generator" content="docfx 2.58.0.0">
+    
+    <link rel="shortcut icon" href="../images/logo.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../images/logo.png" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="Talegen.Storage.Net.Tests.StorageTestsBase">
+  
+  
+  <h1 id="Talegen_Storage_Net_Tests_StorageTestsBase" data-uid="Talegen.Storage.Net.Tests.StorageTestsBase" class="text-break">Class StorageTestsBase
+  </h1>
+  <div class="markdown level0 summary"><p>This class contains unit tests for exercising the storage service.</p>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><span class="xref">System.Object</span></div>
+    <div class="level1"><a class="xref" href="Talegen.Storage.Net.Tests.UnitTestBase.html">UnitTestBase</a></div>
+    <div class="level2"><span class="xref">StorageTestsBase</span></div>
+      <div class="level3"><a class="xref" href="Talegen.Storage.Net.Tests.DiskStorageTests.html">DiskStorageTests</a></div>
+      <div class="level3"><a class="xref" href="Talegen.Storage.Net.Tests.MemoryStorageTests.html">MemoryStorageTests</a></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <a class="xref" href="Talegen.Storage.Net.Tests.UnitTestBase.html#Talegen_Storage_Net_Tests_UnitTestBase_StorageContext">UnitTestBase.StorageContext</a>
+    </div>
+    <div>
+      <a class="xref" href="Talegen.Storage.Net.Tests.UnitTestBase.html#Talegen_Storage_Net_Tests_UnitTestBase_StorageService">UnitTestBase.StorageService</a>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="Talegen.Storage.Net.Tests.html">Talegen.Storage.Net.Tests</a></h6>
+  <h6><strong>Assembly</strong>: Talegen.Storage.Net.Tests.dll</h6>
+  <h5 id="Talegen_Storage_Net_Tests_StorageTestsBase_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public abstract class StorageTestsBase : UnitTestBase</code></pre>
+  </div>
+  <h3 id="constructors">Constructors
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Talegen/Talegen.Storage.Net/new/main/apiSpec/new?filename=Talegen_Storage_Net_Tests_StorageTestsBase__ctor_Talegen_Storage_Net_Core_IStorageContext_.md&amp;value=---%0Auid%3A%20Talegen.Storage.Net.Tests.StorageTestsBase.%23ctor(Talegen.Storage.Net.Core.IStorageContext)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Talegen/Talegen.Storage.Net/blob/main/src/Talegen.Storage.Net.Tests/StorageTestsBase.cs/#L92">View Source</a>
+  </span>
+  <a id="Talegen_Storage_Net_Tests_StorageTestsBase__ctor_" data-uid="Talegen.Storage.Net.Tests.StorageTestsBase.#ctor*"></a>
+  <h4 id="Talegen_Storage_Net_Tests_StorageTestsBase__ctor_Talegen_Storage_Net_Core_IStorageContext_" data-uid="Talegen.Storage.Net.Tests.StorageTestsBase.#ctor(Talegen.Storage.Net.Core.IStorageContext)">StorageTestsBase(IStorageContext)</h4>
+  <div class="markdown level1 summary"><p>Initializes a new instance of the <a class="xref" href="Talegen.Storage.Net.Tests.StorageTestsBase.html">StorageTestsBase</a> class.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public StorageTestsBase(IStorageContext storageContext)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Talegen.Storage.Net.Core.IStorageContext.html">IStorageContext</a></td>
+        <td><span class="parametername">storageContext</span></td>
+        <td><p>The storage context.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Talegen/Talegen.Storage.Net/new/main/apiSpec/new?filename=Talegen_Storage_Net_Tests_StorageTestsBase__ctor_Talegen_Storage_Net_Core_IStorageService_.md&amp;value=---%0Auid%3A%20Talegen.Storage.Net.Tests.StorageTestsBase.%23ctor(Talegen.Storage.Net.Core.IStorageService)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Talegen/Talegen.Storage.Net/blob/main/src/Talegen.Storage.Net.Tests/StorageTestsBase.cs/#L83">View Source</a>
+  </span>
+  <a id="Talegen_Storage_Net_Tests_StorageTestsBase__ctor_" data-uid="Talegen.Storage.Net.Tests.StorageTestsBase.#ctor*"></a>
+  <h4 id="Talegen_Storage_Net_Tests_StorageTestsBase__ctor_Talegen_Storage_Net_Core_IStorageService_" data-uid="Talegen.Storage.Net.Tests.StorageTestsBase.#ctor(Talegen.Storage.Net.Core.IStorageService)">StorageTestsBase(IStorageService)</h4>
+  <div class="markdown level1 summary"><p>Initializes a new instance of the <a class="xref" href="Talegen.Storage.Net.Tests.StorageTestsBase.html">StorageTestsBase</a> class.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public StorageTestsBase(IStorageService storageService)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Talegen.Storage.Net.Core.IStorageService.html">IStorageService</a></td>
+        <td><span class="parametername">storageService</span></td>
+        <td><p>The storage service.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="methods">Methods
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Talegen/Talegen.Storage.Net/new/main/apiSpec/new?filename=Talegen_Storage_Net_Tests_StorageTestsBase_CleanupTests.md&amp;value=---%0Auid%3A%20Talegen.Storage.Net.Tests.StorageTestsBase.CleanupTests%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Talegen/Talegen.Storage.Net/blob/main/src/Talegen.Storage.Net.Tests/StorageTestsBase.cs/#L100">View Source</a>
+  </span>
+  <a id="Talegen_Storage_Net_Tests_StorageTestsBase_CleanupTests_" data-uid="Talegen.Storage.Net.Tests.StorageTestsBase.CleanupTests*"></a>
+  <h4 id="Talegen_Storage_Net_Tests_StorageTestsBase_CleanupTests" data-uid="Talegen.Storage.Net.Tests.StorageTestsBase.CleanupTests">CleanupTests()</h4>
+  <div class="markdown level1 summary"><p>Cleanups the tests.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual void CleanupTests()</code></pre>
+  </div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Talegen/Talegen.Storage.Net/new/main/apiSpec/new?filename=Talegen_Storage_Net_Tests_StorageTestsBase_CopyFileTests_System_String_System_String_System_String_System_Boolean_System_Boolean_.md&amp;value=---%0Auid%3A%20Talegen.Storage.Net.Tests.StorageTestsBase.CopyFileTests(System.String%2CSystem.String%2CSystem.String%2CSystem.Boolean%2CSystem.Boolean)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Talegen/Talegen.Storage.Net/blob/main/src/Talegen.Storage.Net.Tests/StorageTestsBase.cs/#L519">View Source</a>
+  </span>
+  <a id="Talegen_Storage_Net_Tests_StorageTestsBase_CopyFileTests_" data-uid="Talegen.Storage.Net.Tests.StorageTestsBase.CopyFileTests*"></a>
+  <h4 id="Talegen_Storage_Net_Tests_StorageTestsBase_CopyFileTests_System_String_System_String_System_String_System_Boolean_System_Boolean_" data-uid="Talegen.Storage.Net.Tests.StorageTestsBase.CopyFileTests(System.String,System.String,System.String,System.Boolean,System.Boolean)">CopyFileTests(String, String, String, Boolean, Boolean)</h4>
+  <div class="markdown level1 summary"><p>Move file tests.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[Theory]
+[InlineData(new object[]{null, &quot;Existing&quot;, &quot;&quot;, false, false})]
+[InlineData(new object[]{&quot;Existing&quot;, null, &quot;&quot;, false, false})]
+[InlineData(new object[]{&quot;Existing\\alpha.txt&quot;, &quot;Existing\\DeltaFolder&quot;, &quot;Existing\\DeltaFolder\\alpha.txt&quot;, false, true})]
+[InlineData(new object[]{&quot;Existing\\alpha.txt&quot;, &quot;Existing\\DeltaFolder\\delta.txt&quot;, &quot;Existing\\DeltaFolder\\delta.txt&quot;, false, true})]
+[InlineData(new object[]{&quot;Existing\\alpha.txt&quot;, &quot;Nonexisting\\DeltaFolder&quot;, &quot;Nonexisting\\DeltaFolder\\alpha.txt&quot;, false, true})]
+[InlineData(new object[]{&quot;Existing\\alpha.txt&quot;, &quot;Existing\\alpha.txt&quot;, &quot;&quot;, false, false})]
+[InlineData(new object[]{&quot;Existing\\alpha.txt&quot;, &quot;Existing\\SubFolder\\beta.txt&quot;, &quot;&quot;, false, false})]
+public void CopyFileTests(string sourcePathName, string targetFolderName, string expectedValue, bool overwrite, bool expectSuccess)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">sourcePathName</span></td>
+        <td><p>Name of the source path.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">targetFolderName</span></td>
+        <td><p>Name of the target folder.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">expectedValue</span></td>
+        <td><p>The expected value.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="parametername">overwrite</span></td>
+        <td><p>if set to <code>true</code> [overwrite].</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="parametername">expectSuccess</span></td>
+        <td><p>if set to <code>true</code> [expect success].</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Talegen/Talegen.Storage.Net/new/main/apiSpec/new?filename=Talegen_Storage_Net_Tests_StorageTestsBase_CreateDirectoryTests_System_String_System_Boolean_System_Boolean_.md&amp;value=---%0Auid%3A%20Talegen.Storage.Net.Tests.StorageTestsBase.CreateDirectoryTests(System.String%2CSystem.Boolean%2CSystem.Boolean)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Talegen/Talegen.Storage.Net/blob/main/src/Talegen.Storage.Net.Tests/StorageTestsBase.cs/#L125">View Source</a>
+  </span>
+  <a id="Talegen_Storage_Net_Tests_StorageTestsBase_CreateDirectoryTests_" data-uid="Talegen.Storage.Net.Tests.StorageTestsBase.CreateDirectoryTests*"></a>
+  <h4 id="Talegen_Storage_Net_Tests_StorageTestsBase_CreateDirectoryTests_System_String_System_Boolean_System_Boolean_" data-uid="Talegen.Storage.Net.Tests.StorageTestsBase.CreateDirectoryTests(System.String,System.Boolean,System.Boolean)">CreateDirectoryTests(String, Boolean, Boolean)</h4>
+  <div class="markdown level1 summary"><p>Create directory tests.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[Theory]
+[InlineData(new object[]{null, false, false})]
+[InlineData(new object[]{&quot;new&quot;, true, true})]
+[InlineData(new object[]{&quot;Existing&quot;, false, false})]
+public void CreateDirectoryTests(string folderName, bool silentExists, bool expectSuccess)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">folderName</span></td>
+        <td><p>Name of the folder.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="parametername">silentExists</span></td>
+        <td><p>if set to <code>true</code> [silent exists].</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="parametername">expectSuccess</span></td>
+        <td><p>if set to <code>true</code> [expect success].</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Talegen/Talegen.Storage.Net/new/main/apiSpec/new?filename=Talegen_Storage_Net_Tests_StorageTestsBase_DeleteDirectoryTests_System_String_System_Boolean_System_Boolean_System_Boolean_.md&amp;value=---%0Auid%3A%20Talegen.Storage.Net.Tests.StorageTestsBase.DeleteDirectoryTests(System.String%2CSystem.Boolean%2CSystem.Boolean%2CSystem.Boolean)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Talegen/Talegen.Storage.Net/blob/main/src/Talegen.Storage.Net.Tests/StorageTestsBase.cs/#L164">View Source</a>
+  </span>
+  <a id="Talegen_Storage_Net_Tests_StorageTestsBase_DeleteDirectoryTests_" data-uid="Talegen.Storage.Net.Tests.StorageTestsBase.DeleteDirectoryTests*"></a>
+  <h4 id="Talegen_Storage_Net_Tests_StorageTestsBase_DeleteDirectoryTests_System_String_System_Boolean_System_Boolean_System_Boolean_" data-uid="Talegen.Storage.Net.Tests.StorageTestsBase.DeleteDirectoryTests(System.String,System.Boolean,System.Boolean,System.Boolean)">DeleteDirectoryTests(String, Boolean, Boolean, Boolean)</h4>
+  <div class="markdown level1 summary"><p>Delete directory tests.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[Theory]
+[InlineData(new object[]{null, false, false, false})]
+[InlineData(new object[]{&quot;Nonexisting&quot;, true, false, false})]
+[InlineData(new object[]{&quot;Existing&quot;, true, false, true})]
+[InlineData(new object[]{&quot;Existing&quot;, false, true, false})]
+public void DeleteDirectoryTests(string folderName, bool recursive, bool silentNoExist, bool expectSuccess)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">folderName</span></td>
+        <td><p>Name of the folder.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="parametername">recursive</span></td>
+        <td><p>if set to <code>true</code> [recursive].</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="parametername">silentNoExist</span></td>
+        <td><p>if set to <code>true</code> [silent no exist].</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="parametername">expectSuccess</span></td>
+        <td><p>if set to <code>true</code> [expect success].</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Talegen/Talegen.Storage.Net/new/main/apiSpec/new?filename=Talegen_Storage_Net_Tests_StorageTestsBase_DeleteFilesTests.md&amp;value=---%0Auid%3A%20Talegen.Storage.Net.Tests.StorageTestsBase.DeleteFilesTests%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Talegen/Talegen.Storage.Net/blob/main/src/Talegen.Storage.Net.Tests/StorageTestsBase.cs/#L268">View Source</a>
+  </span>
+  <a id="Talegen_Storage_Net_Tests_StorageTestsBase_DeleteFilesTests_" data-uid="Talegen.Storage.Net.Tests.StorageTestsBase.DeleteFilesTests*"></a>
+  <h4 id="Talegen_Storage_Net_Tests_StorageTestsBase_DeleteFilesTests" data-uid="Talegen.Storage.Net.Tests.StorageTestsBase.DeleteFilesTests">DeleteFilesTests()</h4>
+  <div class="markdown level1 summary"><p>Delete files tests.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[Fact]
+public void DeleteFilesTests()</code></pre>
+  </div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Talegen/Talegen.Storage.Net/new/main/apiSpec/new?filename=Talegen_Storage_Net_Tests_StorageTestsBase_DeleteFileTests_System_String_System_String_System_Boolean_System_Boolean_.md&amp;value=---%0Auid%3A%20Talegen.Storage.Net.Tests.StorageTestsBase.DeleteFileTests(System.String%2CSystem.String%2CSystem.Boolean%2CSystem.Boolean)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Talegen/Talegen.Storage.Net/blob/main/src/Talegen.Storage.Net.Tests/StorageTestsBase.cs/#L213">View Source</a>
+  </span>
+  <a id="Talegen_Storage_Net_Tests_StorageTestsBase_DeleteFileTests_" data-uid="Talegen.Storage.Net.Tests.StorageTestsBase.DeleteFileTests*"></a>
+  <h4 id="Talegen_Storage_Net_Tests_StorageTestsBase_DeleteFileTests_System_String_System_String_System_Boolean_System_Boolean_" data-uid="Talegen.Storage.Net.Tests.StorageTestsBase.DeleteFileTests(System.String,System.String,System.Boolean,System.Boolean)">DeleteFileTests(String, String, Boolean, Boolean)</h4>
+  <div class="markdown level1 summary"><p>Delete file tests.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[Theory]
+[InlineData(new object[]{&quot;Existing&quot;, null, false, false})]
+[InlineData(new object[]{&quot;Existing&quot;, &quot;alpha.txt&quot;, false, true})]
+[InlineData(new object[]{&quot;Nonexisting&quot;, &quot;alpha.txt&quot;, false, false})]
+[InlineData(new object[]{&quot;Existing\\SubFolder&quot;, &quot;beta.txt&quot;, true, false})]
+[InlineData(new object[]{&quot;Existing\\DeltaFolder&quot;, &quot;delta.txt&quot;, true, true})]
+public void DeleteFileTests(string targetFolderName, string targetFileName, bool deleteDirectory, bool expectSuccess)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">targetFolderName</span></td>
+        <td><p>Name of the target folder.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">targetFileName</span></td>
+        <td><p>Name of the target file.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="parametername">deleteDirectory</span></td>
+        <td><p>if set to <code>true</code> [delete directory].</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="parametername">expectSuccess</span></td>
+        <td><p>if set to <code>true</code> [expect success].</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Talegen/Talegen.Storage.Net/new/main/apiSpec/new?filename=Talegen_Storage_Net_Tests_StorageTestsBase_DirectoryExistTests_System_String_System_Boolean_System_Boolean_.md&amp;value=---%0Auid%3A%20Talegen.Storage.Net.Tests.StorageTestsBase.DirectoryExistTests(System.String%2CSystem.Boolean%2CSystem.Boolean)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Talegen/Talegen.Storage.Net/blob/main/src/Talegen.Storage.Net.Tests/StorageTestsBase.cs/#L326">View Source</a>
+  </span>
+  <a id="Talegen_Storage_Net_Tests_StorageTestsBase_DirectoryExistTests_" data-uid="Talegen.Storage.Net.Tests.StorageTestsBase.DirectoryExistTests*"></a>
+  <h4 id="Talegen_Storage_Net_Tests_StorageTestsBase_DirectoryExistTests_System_String_System_Boolean_System_Boolean_" data-uid="Talegen.Storage.Net.Tests.StorageTestsBase.DirectoryExistTests(System.String,System.Boolean,System.Boolean)">DirectoryExistTests(String, Boolean, Boolean)</h4>
+  <div class="markdown level1 summary"><p>Directory exists tests.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[Theory]
+[InlineData(new object[]{null, false, false})]
+[InlineData(new object[]{&quot;Nonexisting&quot;, false, true})]
+[InlineData(new object[]{&quot;Existing&quot;, true, true})]
+public void DirectoryExistTests(string targetFolderName, bool expectedValue, bool expectSuccess)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">targetFolderName</span></td>
+        <td><p>Name of the target folder.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="parametername">expectedValue</span></td>
+        <td><p>if set to <code>true</code> [expected value].</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="parametername">expectSuccess</span></td>
+        <td><p>if set to <code>true</code> [expect success].</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Talegen/Talegen.Storage.Net/new/main/apiSpec/new?filename=Talegen_Storage_Net_Tests_StorageTestsBase_EmptyDirectoryTests_System_String_System_Boolean_.md&amp;value=---%0Auid%3A%20Talegen.Storage.Net.Tests.StorageTestsBase.EmptyDirectoryTests(System.String%2CSystem.Boolean)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Talegen/Talegen.Storage.Net/blob/main/src/Talegen.Storage.Net.Tests/StorageTestsBase.cs/#L388">View Source</a>
+  </span>
+  <a id="Talegen_Storage_Net_Tests_StorageTestsBase_EmptyDirectoryTests_" data-uid="Talegen.Storage.Net.Tests.StorageTestsBase.EmptyDirectoryTests*"></a>
+  <h4 id="Talegen_Storage_Net_Tests_StorageTestsBase_EmptyDirectoryTests_System_String_System_Boolean_" data-uid="Talegen.Storage.Net.Tests.StorageTestsBase.EmptyDirectoryTests(System.String,System.Boolean)">EmptyDirectoryTests(String, Boolean)</h4>
+  <div class="markdown level1 summary"><p>Empty directory tests.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[Theory]
+[InlineData(new object[]{null, false})]
+[InlineData(new object[]{&quot;Existing&quot;, true})]
+[InlineData(new object[]{&quot;Nonexisting&quot;, false})]
+public void EmptyDirectoryTests(string targetFolderName, bool expectSuccess)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">targetFolderName</span></td>
+        <td><p>Name of the target folder.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="parametername">expectSuccess</span></td>
+        <td><p>if set to <code>true</code> [expect success].</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Talegen/Talegen.Storage.Net/new/main/apiSpec/new?filename=Talegen_Storage_Net_Tests_StorageTestsBase_FileExistTests_System_String_System_Boolean_System_Boolean_.md&amp;value=---%0Auid%3A%20Talegen.Storage.Net.Tests.StorageTestsBase.FileExistTests(System.String%2CSystem.Boolean%2CSystem.Boolean)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Talegen/Talegen.Storage.Net/blob/main/src/Talegen.Storage.Net.Tests/StorageTestsBase.cs/#L357">View Source</a>
+  </span>
+  <a id="Talegen_Storage_Net_Tests_StorageTestsBase_FileExistTests_" data-uid="Talegen.Storage.Net.Tests.StorageTestsBase.FileExistTests*"></a>
+  <h4 id="Talegen_Storage_Net_Tests_StorageTestsBase_FileExistTests_System_String_System_Boolean_System_Boolean_" data-uid="Talegen.Storage.Net.Tests.StorageTestsBase.FileExistTests(System.String,System.Boolean,System.Boolean)">FileExistTests(String, Boolean, Boolean)</h4>
+  <div class="markdown level1 summary"><p>File exists tests.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[Theory]
+[InlineData(new object[]{null, false, false})]
+[InlineData(new object[]{&quot;Existing\\alpha.txt&quot;, true, true})]
+[InlineData(new object[]{&quot;Existing\\gamma.txt&quot;, false, true})]
+public void FileExistTests(string targetFilePath, bool expectedValue, bool expectSuccess)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">targetFilePath</span></td>
+        <td><p>The target file path.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="parametername">expectedValue</span></td>
+        <td><p>if set to <code>true</code> [expected value].</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="parametername">expectSuccess</span></td>
+        <td><p>if set to <code>true</code> [expect success].</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Talegen/Talegen.Storage.Net/new/main/apiSpec/new?filename=Talegen_Storage_Net_Tests_StorageTestsBase_FindFilesTests_System_String_System_String_System_IO_SearchOption_System_Boolean_System_Boolean_.md&amp;value=---%0Auid%3A%20Talegen.Storage.Net.Tests.StorageTestsBase.FindFilesTests(System.String%2CSystem.String%2CSystem.IO.SearchOption%2CSystem.Boolean%2CSystem.Boolean)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Talegen/Talegen.Storage.Net/blob/main/src/Talegen.Storage.Net.Tests/StorageTestsBase.cs/#L467">View Source</a>
+  </span>
+  <a id="Talegen_Storage_Net_Tests_StorageTestsBase_FindFilesTests_" data-uid="Talegen.Storage.Net.Tests.StorageTestsBase.FindFilesTests*"></a>
+  <h4 id="Talegen_Storage_Net_Tests_StorageTestsBase_FindFilesTests_System_String_System_String_System_IO_SearchOption_System_Boolean_System_Boolean_" data-uid="Talegen.Storage.Net.Tests.StorageTestsBase.FindFilesTests(System.String,System.String,System.IO.SearchOption,System.Boolean,System.Boolean)">FindFilesTests(String, String, SearchOption, Boolean, Boolean)</h4>
+  <div class="markdown level1 summary"><p>Find files tests.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[Theory]
+[InlineData(new object[]{null, &quot;&quot;, SearchOption.AllDirectories, false, false})]
+[InlineData(new object[]{&quot;Existing&quot;, &quot;*.*&quot;, SearchOption.AllDirectories, true, true})]
+[InlineData(new object[]{&quot;Nonexisting&quot;, &quot;*.*&quot;, SearchOption.AllDirectories, false, false})]
+[InlineData(new object[]{&quot;Existing\\SubFolder&quot;, &quot;*.txt&quot;, SearchOption.AllDirectories, true, true})]
+[InlineData(new object[]{&quot;Existing\\SubFolder&quot;, &quot;*.nothing&quot;, SearchOption.AllDirectories, false, true})]
+public void FindFilesTests(string searchPathName, string searchPattern, SearchOption options, bool expectResults, bool expectSuccess)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">searchPathName</span></td>
+        <td><p>Name of the search path.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">searchPattern</span></td>
+        <td><p>The search pattern.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.IO.SearchOption</span></td>
+        <td><span class="parametername">options</span></td>
+        <td><p>The options.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="parametername">expectResults</span></td>
+        <td><p>if set to <code>true</code> [expect results].</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="parametername">expectSuccess</span></td>
+        <td><p>if set to <code>true</code> [expect success].</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Talegen/Talegen.Storage.Net/new/main/apiSpec/new?filename=Talegen_Storage_Net_Tests_StorageTestsBase_HashFileTests_System_String_System_String_System_String_System_Boolean_.md&amp;value=---%0Auid%3A%20Talegen.Storage.Net.Tests.StorageTestsBase.HashFileTests(System.String%2CSystem.String%2CSystem.String%2CSystem.Boolean)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Talegen/Talegen.Storage.Net/blob/main/src/Talegen.Storage.Net.Tests/StorageTestsBase.cs/#L429">View Source</a>
+  </span>
+  <a id="Talegen_Storage_Net_Tests_StorageTestsBase_HashFileTests_" data-uid="Talegen.Storage.Net.Tests.StorageTestsBase.HashFileTests*"></a>
+  <h4 id="Talegen_Storage_Net_Tests_StorageTestsBase_HashFileTests_System_String_System_String_System_String_System_Boolean_" data-uid="Talegen.Storage.Net.Tests.StorageTestsBase.HashFileTests(System.String,System.String,System.String,System.Boolean)">HashFileTests(String, String, String, Boolean)</h4>
+  <div class="markdown level1 summary"><p>Hash file tests.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[Theory]
+[InlineData(new object[]{null, &quot;&quot;, &quot;&quot;, false})]
+[InlineData(new object[]{&quot;Existing\\alpha.txt&quot;, &quot;test&quot;, &quot;9f86d081884c7d659a2feaa0c55ad015a3bf4f1b2b0b822cd15d6c15b0f00a08&quot;, true})]
+[InlineData(new object[]{&quot;Nonexisting\\alpha.txt&quot;, &quot;&quot;, &quot;&quot;, false})]
+public void HashFileTests(string targetFilePath, string contents, string expectedValue, bool expectSuccess)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">targetFilePath</span></td>
+        <td><p>The target file path.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">contents</span></td>
+        <td><p>The contents.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">expectedValue</span></td>
+        <td><p>The expected value.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="parametername">expectSuccess</span></td>
+        <td><p>if set to <code>true</code> [expect success].</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Talegen/Talegen.Storage.Net/new/main/apiSpec/new?filename=Talegen_Storage_Net_Tests_StorageTestsBase_MoveFileTests_System_String_System_String_System_String_System_Boolean_System_Boolean_.md&amp;value=---%0Auid%3A%20Talegen.Storage.Net.Tests.StorageTestsBase.MoveFileTests(System.String%2CSystem.String%2CSystem.String%2CSystem.Boolean%2CSystem.Boolean)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Talegen/Talegen.Storage.Net/blob/main/src/Talegen.Storage.Net.Tests/StorageTestsBase.cs/#L573">View Source</a>
+  </span>
+  <a id="Talegen_Storage_Net_Tests_StorageTestsBase_MoveFileTests_" data-uid="Talegen.Storage.Net.Tests.StorageTestsBase.MoveFileTests*"></a>
+  <h4 id="Talegen_Storage_Net_Tests_StorageTestsBase_MoveFileTests_System_String_System_String_System_String_System_Boolean_System_Boolean_" data-uid="Talegen.Storage.Net.Tests.StorageTestsBase.MoveFileTests(System.String,System.String,System.String,System.Boolean,System.Boolean)">MoveFileTests(String, String, String, Boolean, Boolean)</h4>
+  <div class="markdown level1 summary"><p>Move file tests.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[Theory]
+[InlineData(new object[]{null, &quot;Existing&quot;, &quot;&quot;, false, false})]
+[InlineData(new object[]{&quot;Existing&quot;, null, &quot;&quot;, false, false})]
+[InlineData(new object[]{&quot;Existing\\alpha.txt&quot;, &quot;Existing\\DeltaFolder&quot;, &quot;Existing\\DeltaFolder\\alpha.txt&quot;, false, true})]
+[InlineData(new object[]{&quot;Existing\\alpha.txt&quot;, &quot;Existing\\DeltaFolder\\delta.txt&quot;, &quot;Existing\\DeltaFolder\\delta.txt&quot;, false, true})]
+[InlineData(new object[]{&quot;Existing\\alpha.txt&quot;, &quot;Nonexisting\\DeltaFolder&quot;, &quot;Nonexisting\\DeltaFolder\\alpha.txt&quot;, false, true})]
+[InlineData(new object[]{&quot;Existing\\alpha.txt&quot;, &quot;Existing\\alpha.txt&quot;, &quot;&quot;, false, false})]
+[InlineData(new object[]{&quot;Existing\\alpha.txt&quot;, &quot;Existing\\SubFolder\\beta.txt&quot;, &quot;&quot;, false, false})]
+public void MoveFileTests(string sourcePathName, string targetFolderName, string expectedValue, bool overwrite, bool expectSuccess)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">sourcePathName</span></td>
+        <td><p>Name of the source path.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">targetFolderName</span></td>
+        <td><p>Name of the target folder.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">expectedValue</span></td>
+        <td><p>The expected value.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="parametername">overwrite</span></td>
+        <td><p>if set to <code>true</code> [overwrite].</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="parametername">expectSuccess</span></td>
+        <td><p>if set to <code>true</code> [expect success].</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Talegen/Talegen.Storage.Net/new/main/apiSpec/new?filename=Talegen_Storage_Net_Tests_StorageTestsBase_ReadBinaryFileStreamTests_System_String_System_String_System_Boolean_.md&amp;value=---%0Auid%3A%20Talegen.Storage.Net.Tests.StorageTestsBase.ReadBinaryFileStreamTests(System.String%2CSystem.String%2CSystem.Boolean)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Talegen/Talegen.Storage.Net/blob/main/src/Talegen.Storage.Net.Tests/StorageTestsBase.cs/#L662">View Source</a>
+  </span>
+  <a id="Talegen_Storage_Net_Tests_StorageTestsBase_ReadBinaryFileStreamTests_" data-uid="Talegen.Storage.Net.Tests.StorageTestsBase.ReadBinaryFileStreamTests*"></a>
+  <h4 id="Talegen_Storage_Net_Tests_StorageTestsBase_ReadBinaryFileStreamTests_System_String_System_String_System_Boolean_" data-uid="Talegen.Storage.Net.Tests.StorageTestsBase.ReadBinaryFileStreamTests(System.String,System.String,System.Boolean)">ReadBinaryFileStreamTests(String, String, Boolean)</h4>
+  <div class="markdown level1 summary"><p>Read binary file stream tests.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[Theory]
+[InlineData(new object[]{null, &quot;&quot;, false})]
+[InlineData(new object[]{&quot;Existing\\alpha.txt&quot;, &quot;test&quot;, true})]
+[InlineData(new object[]{&quot;Nonexisting\\alpha.txt&quot;, &quot;&quot;, false})]
+public void ReadBinaryFileStreamTests(string sourceFilePath, string expectedValue, bool expectSuccess)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">sourceFilePath</span></td>
+        <td><p>The source file path.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">expectedValue</span></td>
+        <td><p>The expected value.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="parametername">expectSuccess</span></td>
+        <td><p>if set to <code>true</code> [expect success].</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Talegen/Talegen.Storage.Net/new/main/apiSpec/new?filename=Talegen_Storage_Net_Tests_StorageTestsBase_ReadBinaryFileTests_System_String_System_String_System_Boolean_.md&amp;value=---%0Auid%3A%20Talegen.Storage.Net.Tests.StorageTestsBase.ReadBinaryFileTests(System.String%2CSystem.String%2CSystem.Boolean)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Talegen/Talegen.Storage.Net/blob/main/src/Talegen.Storage.Net.Tests/StorageTestsBase.cs/#L625">View Source</a>
+  </span>
+  <a id="Talegen_Storage_Net_Tests_StorageTestsBase_ReadBinaryFileTests_" data-uid="Talegen.Storage.Net.Tests.StorageTestsBase.ReadBinaryFileTests*"></a>
+  <h4 id="Talegen_Storage_Net_Tests_StorageTestsBase_ReadBinaryFileTests_System_String_System_String_System_Boolean_" data-uid="Talegen.Storage.Net.Tests.StorageTestsBase.ReadBinaryFileTests(System.String,System.String,System.Boolean)">ReadBinaryFileTests(String, String, Boolean)</h4>
+  <div class="markdown level1 summary"><p>Read binary file tests.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[Theory]
+[InlineData(new object[]{null, &quot;&quot;, false})]
+[InlineData(new object[]{&quot;Existing\\alpha.txt&quot;, &quot;test&quot;, true})]
+[InlineData(new object[]{&quot;Nonexisting\\alpha.txt&quot;, &quot;&quot;, false})]
+public void ReadBinaryFileTests(string sourceFilePath, string expectedValue, bool expectSuccess)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">sourceFilePath</span></td>
+        <td><p>The source file path.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">expectedValue</span></td>
+        <td><p>The expected value.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="parametername">expectSuccess</span></td>
+        <td><p>if set to <code>true</code> [expect success].</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Talegen/Talegen.Storage.Net/new/main/apiSpec/new?filename=Talegen_Storage_Net_Tests_StorageTestsBase_ReadTextFileTests_System_String_System_String_System_Boolean_System_Boolean_.md&amp;value=---%0Auid%3A%20Talegen.Storage.Net.Tests.StorageTestsBase.ReadTextFileTests(System.String%2CSystem.String%2CSystem.Boolean%2CSystem.Boolean)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Talegen/Talegen.Storage.Net/blob/main/src/Talegen.Storage.Net.Tests/StorageTestsBase.cs/#L704">View Source</a>
+  </span>
+  <a id="Talegen_Storage_Net_Tests_StorageTestsBase_ReadTextFileTests_" data-uid="Talegen.Storage.Net.Tests.StorageTestsBase.ReadTextFileTests*"></a>
+  <h4 id="Talegen_Storage_Net_Tests_StorageTestsBase_ReadTextFileTests_System_String_System_String_System_Boolean_System_Boolean_" data-uid="Talegen.Storage.Net.Tests.StorageTestsBase.ReadTextFileTests(System.String,System.String,System.Boolean,System.Boolean)">ReadTextFileTests(String, String, Boolean, Boolean)</h4>
+  <div class="markdown level1 summary"><p>Read text file tests.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[Theory]
+[InlineData(new object[]{null, &quot;&quot;, false, false})]
+[InlineData(new object[]{&quot;Existing\\alpha.txt&quot;, &quot;test&quot;, true, true})]
+[InlineData(new object[]{&quot;Existing\\alpha.txt&quot;, &quot;test&quot;, false, true})]
+[InlineData(new object[]{&quot;Nonexisting\\alpha.txt&quot;, &quot;&quot;, false, false})]
+public void ReadTextFileTests(string sourceFilePath, string expectedValue, bool utf8, bool expectSuccess)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">sourceFilePath</span></td>
+        <td><p>The source file path.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">expectedValue</span></td>
+        <td><p>The expected value.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="parametername">utf8</span></td>
+        <td><p>if set to <code>true</code> [UTF8].</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="parametername">expectSuccess</span></td>
+        <td><p>if set to <code>true</code> [expect success].</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Talegen/Talegen.Storage.Net/new/main/apiSpec/new?filename=Talegen_Storage_Net_Tests_StorageTestsBase_VerifyPathTests.md&amp;value=---%0Auid%3A%20Talegen.Storage.Net.Tests.StorageTestsBase.VerifyPathTests%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Talegen/Talegen.Storage.Net/blob/main/src/Talegen.Storage.Net.Tests/StorageTestsBase.cs/#L107">View Source</a>
+  </span>
+  <a id="Talegen_Storage_Net_Tests_StorageTestsBase_VerifyPathTests_" data-uid="Talegen.Storage.Net.Tests.StorageTestsBase.VerifyPathTests*"></a>
+  <h4 id="Talegen_Storage_Net_Tests_StorageTestsBase_VerifyPathTests" data-uid="Talegen.Storage.Net.Tests.StorageTestsBase.VerifyPathTests">VerifyPathTests()</h4>
+  <div class="markdown level1 summary"><p>Verifies the root path tests.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[Fact]
+public void VerifyPathTests()</code></pre>
+  </div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Talegen/Talegen.Storage.Net/new/main/apiSpec/new?filename=Talegen_Storage_Net_Tests_StorageTestsBase_WriteBinaryFileStreamTests_System_String_System_String_System_Boolean_.md&amp;value=---%0Auid%3A%20Talegen.Storage.Net.Tests.StorageTestsBase.WriteBinaryFileStreamTests(System.String%2CSystem.String%2CSystem.Boolean)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Talegen/Talegen.Storage.Net/blob/main/src/Talegen.Storage.Net.Tests/StorageTestsBase.cs/#L785">View Source</a>
+  </span>
+  <a id="Talegen_Storage_Net_Tests_StorageTestsBase_WriteBinaryFileStreamTests_" data-uid="Talegen.Storage.Net.Tests.StorageTestsBase.WriteBinaryFileStreamTests*"></a>
+  <h4 id="Talegen_Storage_Net_Tests_StorageTestsBase_WriteBinaryFileStreamTests_System_String_System_String_System_Boolean_" data-uid="Talegen.Storage.Net.Tests.StorageTestsBase.WriteBinaryFileStreamTests(System.String,System.String,System.Boolean)">WriteBinaryFileStreamTests(String, String, Boolean)</h4>
+  <div class="markdown level1 summary"><p>Write binary file stream tests.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[Theory]
+[InlineData(new object[]{null, &quot;&quot;, false})]
+[InlineData(new object[]{&quot;Existing\\alpha.txt&quot;, &quot;test&quot;, true})]
+[InlineData(new object[]{&quot;Nonexisting\\alpha.txt&quot;, &quot;&quot;, true})]
+[InlineData(new object[]{&quot;Existing\\DeltaFolder\\delta.txt&quot;, &quot;test&quot;, true})]
+public void WriteBinaryFileStreamTests(string targetFilePath, string expectedValue, bool expectSuccess)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">targetFilePath</span></td>
+        <td><p>The target file path.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">expectedValue</span></td>
+        <td><p>The expected value.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="parametername">expectSuccess</span></td>
+        <td><p>if set to <code>true</code> [expect success].</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Talegen/Talegen.Storage.Net/new/main/apiSpec/new?filename=Talegen_Storage_Net_Tests_StorageTestsBase_WriteBinaryFileTests_System_String_System_String_System_Boolean_.md&amp;value=---%0Auid%3A%20Talegen.Storage.Net.Tests.StorageTestsBase.WriteBinaryFileTests(System.String%2CSystem.String%2CSystem.Boolean)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Talegen/Talegen.Storage.Net/blob/main/src/Talegen.Storage.Net.Tests/StorageTestsBase.cs/#L744">View Source</a>
+  </span>
+  <a id="Talegen_Storage_Net_Tests_StorageTestsBase_WriteBinaryFileTests_" data-uid="Talegen.Storage.Net.Tests.StorageTestsBase.WriteBinaryFileTests*"></a>
+  <h4 id="Talegen_Storage_Net_Tests_StorageTestsBase_WriteBinaryFileTests_System_String_System_String_System_Boolean_" data-uid="Talegen.Storage.Net.Tests.StorageTestsBase.WriteBinaryFileTests(System.String,System.String,System.Boolean)">WriteBinaryFileTests(String, String, Boolean)</h4>
+  <div class="markdown level1 summary"><p>Write binary file tests.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[Theory]
+[InlineData(new object[]{null, &quot;&quot;, false})]
+[InlineData(new object[]{&quot;Existing\\alpha.txt&quot;, &quot;test&quot;, true})]
+[InlineData(new object[]{&quot;Nonexisting\\alpha.txt&quot;, &quot;&quot;, true})]
+[InlineData(new object[]{&quot;Existing\\DeltaFolder\\delta.txt&quot;, &quot;test&quot;, true})]
+public void WriteBinaryFileTests(string targetFilePath, string expectedValue, bool expectSuccess)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">targetFilePath</span></td>
+        <td><p>The target file path.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">expectedValue</span></td>
+        <td><p>The expected value.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="parametername">expectSuccess</span></td>
+        <td><p>if set to <code>true</code> [expect success].</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="seealso">See Also</h3>
+  <div class="seealso">
+      <div><a class="xref" href="Talegen.Storage.Net.Tests.UnitTestBase.html">UnitTestBase</a></div>
+  </div>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/Talegen/Talegen.Storage.Net/new/main/apiSpec/new?filename=Talegen_Storage_Net_Tests_StorageTestsBase.md&amp;value=---%0Auid%3A%20Talegen.Storage.Net.Tests.StorageTestsBase%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
+                  </li>
+                  <li>
+                    <a href="https://github.com/Talegen/Talegen.Storage.Net/blob/main/src/Talegen.Storage.Net.Tests/StorageTestsBase.cs/#L32" class="contribution-link">View Source</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In This Article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            Copyright (c) Talegen, LLC. All rights reserved.
+            
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

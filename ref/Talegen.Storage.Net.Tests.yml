@@ -1,0 +1,47 @@
+### YamlMime:ManagedReference
+items:
+- uid: Talegen.Storage.Net.Tests
+  commentId: N:Talegen.Storage.Net.Tests
+  id: Talegen.Storage.Net.Tests
+  children:
+  - Talegen.Storage.Net.Tests.DiskStorageTests
+  - Talegen.Storage.Net.Tests.MemoryStorageTests
+  - Talegen.Storage.Net.Tests.StorageTestsBase
+  - Talegen.Storage.Net.Tests.UnitTestBase
+  langs:
+  - csharp
+  - vb
+  name: Talegen.Storage.Net.Tests
+  nameWithType: Talegen.Storage.Net.Tests
+  fullName: Talegen.Storage.Net.Tests
+  type: Namespace
+  assemblies:
+  - Talegen.Storage.Net.Tests
+references:
+- uid: Talegen.Storage.Net.Tests.DiskStorageTests
+  commentId: T:Talegen.Storage.Net.Tests.DiskStorageTests
+  name: DiskStorageTests
+  nameWithType: DiskStorageTests
+  fullName: Talegen.Storage.Net.Tests.DiskStorageTests
+- uid: Talegen.Storage.Net.Tests.MemoryStorageTests
+  commentId: T:Talegen.Storage.Net.Tests.MemoryStorageTests
+  name: MemoryStorageTests
+  nameWithType: MemoryStorageTests
+  fullName: Talegen.Storage.Net.Tests.MemoryStorageTests
+- uid: Talegen.Storage.Net.Tests.StorageTestsBase
+  commentId: T:Talegen.Storage.Net.Tests.StorageTestsBase
+  parent: Talegen.Storage.Net.Tests
+  name: StorageTestsBase
+  nameWithType: StorageTestsBase
+  fullName: Talegen.Storage.Net.Tests.StorageTestsBase
+- uid: Talegen.Storage.Net.Tests.UnitTestBase
+  commentId: T:Talegen.Storage.Net.Tests.UnitTestBase
+  parent: Talegen.Storage.Net.Tests
+  name: UnitTestBase
+  nameWithType: UnitTestBase
+  fullName: Talegen.Storage.Net.Tests.UnitTestBase
+- uid: Talegen.Storage.Net.Tests
+  commentId: N:Talegen.Storage.Net.Tests
+  name: Talegen.Storage.Net.Tests
+  nameWithType: Talegen.Storage.Net.Tests
+  fullName: Talegen.Storage.Net.Tests

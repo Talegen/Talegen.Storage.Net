@@ -1,0 +1,40 @@
+### YamlMime:ManagedReference
+items:
+- uid: Talegen.Storage.Net.Core.Memory
+  commentId: N:Talegen.Storage.Net.Core.Memory
+  id: Talegen.Storage.Net.Core.Memory
+  children:
+  - Talegen.Storage.Net.Core.Memory.MemoryFolderModel
+  - Talegen.Storage.Net.Core.Memory.MemoryStorageContext
+  - Talegen.Storage.Net.Core.Memory.MemoryStorageService
+  langs:
+  - csharp
+  - vb
+  name: Talegen.Storage.Net.Core.Memory
+  nameWithType: Talegen.Storage.Net.Core.Memory
+  fullName: Talegen.Storage.Net.Core.Memory
+  type: Namespace
+  assemblies:
+  - Talegen.Storage.Net.Core
+references:
+- uid: Talegen.Storage.Net.Core.Memory.MemoryFolderModel
+  commentId: T:Talegen.Storage.Net.Core.Memory.MemoryFolderModel
+  name: MemoryFolderModel
+  nameWithType: MemoryFolderModel
+  fullName: Talegen.Storage.Net.Core.Memory.MemoryFolderModel
+- uid: Talegen.Storage.Net.Core.Memory.MemoryStorageContext
+  commentId: T:Talegen.Storage.Net.Core.Memory.MemoryStorageContext
+  parent: Talegen.Storage.Net.Core.Memory
+  name: MemoryStorageContext
+  nameWithType: MemoryStorageContext
+  fullName: Talegen.Storage.Net.Core.Memory.MemoryStorageContext
+- uid: Talegen.Storage.Net.Core.Memory.MemoryStorageService
+  commentId: T:Talegen.Storage.Net.Core.Memory.MemoryStorageService
+  name: MemoryStorageService
+  nameWithType: MemoryStorageService
+  fullName: Talegen.Storage.Net.Core.Memory.MemoryStorageService
+- uid: Talegen.Storage.Net.Core.Memory
+  commentId: N:Talegen.Storage.Net.Core.Memory
+  name: Talegen.Storage.Net.Core.Memory
+  nameWithType: Talegen.Storage.Net.Core.Memory
+  fullName: Talegen.Storage.Net.Core.Memory

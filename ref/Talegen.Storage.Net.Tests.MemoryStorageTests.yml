@@ -1,0 +1,1737 @@
+### YamlMime:ManagedReference
+items:
+- uid: Talegen.Storage.Net.Tests.MemoryStorageTests
+  commentId: T:Talegen.Storage.Net.Tests.MemoryStorageTests
+  id: MemoryStorageTests
+  parent: Talegen.Storage.Net.Tests
+  children:
+  - Talegen.Storage.Net.Tests.MemoryStorageTests.#ctor
+  langs:
+  - csharp
+  - vb
+  name: MemoryStorageTests
+  nameWithType: MemoryStorageTests
+  fullName: Talegen.Storage.Net.Tests.MemoryStorageTests
+  type: Class
+  source:
+    remote:
+      path: src/Talegen.Storage.Net.Tests/MemoryStorageTests.cs
+      branch: main
+      repo: https://github.com/Talegen/Talegen.Storage.Net.git
+    id: MemoryStorageTests
+    path: ../Talegen.Storage.Net.Tests/MemoryStorageTests.cs
+    startLine: 25
+  assemblies:
+  - Talegen.Storage.Net.Tests
+  namespace: Talegen.Storage.Net.Tests
+  summary: "\nThis class contains unit tests for exercising the memory storage service.\n"
+  example: []
+  syntax:
+    content: >-
+      [Collection("Memory Storage Tests")]
+
+      public class MemoryStorageTests : StorageTestsBase
+    content.vb: >-
+      <Collection("Memory Storage Tests")>
+
+      Public Class MemoryStorageTests
+          Inherits StorageTestsBase
+  seealso:
+  - linkId: Talegen.Storage.Net.Tests.UnitTestBase
+    commentId: T:Talegen.Storage.Net.Tests.UnitTestBase
+  inheritance:
+  - System.Object
+  - Talegen.Storage.Net.Tests.UnitTestBase
+  - Talegen.Storage.Net.Tests.StorageTestsBase
+  inheritedMembers:
+  - Talegen.Storage.Net.Tests.StorageTestsBase.CleanupTests
+  - Talegen.Storage.Net.Tests.StorageTestsBase.VerifyPathTests
+  - Talegen.Storage.Net.Tests.StorageTestsBase.CreateDirectoryTests(System.String,System.Boolean,System.Boolean)
+  - Talegen.Storage.Net.Tests.StorageTestsBase.DeleteDirectoryTests(System.String,System.Boolean,System.Boolean,System.Boolean)
+  - Talegen.Storage.Net.Tests.StorageTestsBase.DeleteFileTests(System.String,System.String,System.Boolean,System.Boolean)
+  - Talegen.Storage.Net.Tests.StorageTestsBase.DeleteFilesTests
+  - Talegen.Storage.Net.Tests.StorageTestsBase.DirectoryExistTests(System.String,System.Boolean,System.Boolean)
+  - Talegen.Storage.Net.Tests.StorageTestsBase.FileExistTests(System.String,System.Boolean,System.Boolean)
+  - Talegen.Storage.Net.Tests.StorageTestsBase.EmptyDirectoryTests(System.String,System.Boolean)
+  - Talegen.Storage.Net.Tests.StorageTestsBase.HashFileTests(System.String,System.String,System.String,System.Boolean)
+  - Talegen.Storage.Net.Tests.StorageTestsBase.FindFilesTests(System.String,System.String,System.IO.SearchOption,System.Boolean,System.Boolean)
+  - Talegen.Storage.Net.Tests.StorageTestsBase.CopyFileTests(System.String,System.String,System.String,System.Boolean,System.Boolean)
+  - Talegen.Storage.Net.Tests.StorageTestsBase.MoveFileTests(System.String,System.String,System.String,System.Boolean,System.Boolean)
+  - Talegen.Storage.Net.Tests.StorageTestsBase.ReadBinaryFileTests(System.String,System.String,System.Boolean)
+  - Talegen.Storage.Net.Tests.StorageTestsBase.ReadBinaryFileStreamTests(System.String,System.String,System.Boolean)
+  - Talegen.Storage.Net.Tests.StorageTestsBase.ReadTextFileTests(System.String,System.String,System.Boolean,System.Boolean)
+  - Talegen.Storage.Net.Tests.StorageTestsBase.WriteBinaryFileTests(System.String,System.String,System.Boolean)
+  - Talegen.Storage.Net.Tests.StorageTestsBase.WriteBinaryFileStreamTests(System.String,System.String,System.Boolean)
+  - Talegen.Storage.Net.Tests.UnitTestBase.StorageContext
+  - Talegen.Storage.Net.Tests.UnitTestBase.StorageService
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+  attributes:
+  - type: Xunit.CollectionAttribute
+    ctor: Xunit.CollectionAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: Memory Storage Tests
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Talegen.Storage.Net.Tests.MemoryStorageTests.#ctor
+  commentId: M:Talegen.Storage.Net.Tests.MemoryStorageTests.#ctor
+  id: '#ctor'
+  parent: Talegen.Storage.Net.Tests.MemoryStorageTests
+  langs:
+  - csharp
+  - vb
+  name: MemoryStorageTests()
+  nameWithType: MemoryStorageTests.MemoryStorageTests()
+  fullName: Talegen.Storage.Net.Tests.MemoryStorageTests.MemoryStorageTests()
+  type: Constructor
+  source:
+    remote:
+      path: src/Talegen.Storage.Net.Tests/MemoryStorageTests.cs
+      branch: main
+      repo: https://github.com/Talegen/Talegen.Storage.Net.git
+    id: .ctor
+    path: ../Talegen.Storage.Net.Tests/MemoryStorageTests.cs
+    startLine: 31
+  assemblies:
+  - Talegen.Storage.Net.Tests
+  namespace: Talegen.Storage.Net.Tests
+  summary: "\nInitializes a new instance of the <xref href=\"Talegen.Storage.Net.Tests.StorageTestsBase\" data-throw-if-not-resolved=\"false\"></xref> class.\n"
+  example: []
+  syntax:
+    content: public MemoryStorageTests()
+    content.vb: Public Sub New
+  overload: Talegen.Storage.Net.Tests.MemoryStorageTests.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+references:
+- uid: Talegen.Storage.Net.Tests.UnitTestBase
+  commentId: T:Talegen.Storage.Net.Tests.UnitTestBase
+  parent: Talegen.Storage.Net.Tests
+  name: UnitTestBase
+  nameWithType: UnitTestBase
+  fullName: Talegen.Storage.Net.Tests.UnitTestBase
+- uid: Talegen.Storage.Net.Tests
+  commentId: N:Talegen.Storage.Net.Tests
+  name: Talegen.Storage.Net.Tests
+  nameWithType: Talegen.Storage.Net.Tests
+  fullName: Talegen.Storage.Net.Tests
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Talegen.Storage.Net.Tests.StorageTestsBase
+  commentId: T:Talegen.Storage.Net.Tests.StorageTestsBase
+  parent: Talegen.Storage.Net.Tests
+  name: StorageTestsBase
+  nameWithType: StorageTestsBase
+  fullName: Talegen.Storage.Net.Tests.StorageTestsBase
+- uid: Talegen.Storage.Net.Tests.StorageTestsBase.CleanupTests
+  commentId: M:Talegen.Storage.Net.Tests.StorageTestsBase.CleanupTests
+  parent: Talegen.Storage.Net.Tests.StorageTestsBase
+  name: CleanupTests()
+  nameWithType: StorageTestsBase.CleanupTests()
+  fullName: Talegen.Storage.Net.Tests.StorageTestsBase.CleanupTests()
+  spec.csharp:
+  - uid: Talegen.Storage.Net.Tests.StorageTestsBase.CleanupTests
+    name: CleanupTests
+    nameWithType: StorageTestsBase.CleanupTests
+    fullName: Talegen.Storage.Net.Tests.StorageTestsBase.CleanupTests
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Talegen.Storage.Net.Tests.StorageTestsBase.CleanupTests
+    name: CleanupTests
+    nameWithType: StorageTestsBase.CleanupTests
+    fullName: Talegen.Storage.Net.Tests.StorageTestsBase.CleanupTests
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Talegen.Storage.Net.Tests.StorageTestsBase.VerifyPathTests
+  commentId: M:Talegen.Storage.Net.Tests.StorageTestsBase.VerifyPathTests
+  parent: Talegen.Storage.Net.Tests.StorageTestsBase
+  name: VerifyPathTests()
+  nameWithType: StorageTestsBase.VerifyPathTests()
+  fullName: Talegen.Storage.Net.Tests.StorageTestsBase.VerifyPathTests()
+  spec.csharp:
+  - uid: Talegen.Storage.Net.Tests.StorageTestsBase.VerifyPathTests
+    name: VerifyPathTests
+    nameWithType: StorageTestsBase.VerifyPathTests
+    fullName: Talegen.Storage.Net.Tests.StorageTestsBase.VerifyPathTests
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Talegen.Storage.Net.Tests.StorageTestsBase.VerifyPathTests
+    name: VerifyPathTests
+    nameWithType: StorageTestsBase.VerifyPathTests
+    fullName: Talegen.Storage.Net.Tests.StorageTestsBase.VerifyPathTests
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Talegen.Storage.Net.Tests.StorageTestsBase.CreateDirectoryTests(System.String,System.Boolean,System.Boolean)
+  commentId: M:Talegen.Storage.Net.Tests.StorageTestsBase.CreateDirectoryTests(System.String,System.Boolean,System.Boolean)
+  parent: Talegen.Storage.Net.Tests.StorageTestsBase
+  isExternal: true
+  name: CreateDirectoryTests(String, Boolean, Boolean)
+  nameWithType: StorageTestsBase.CreateDirectoryTests(String, Boolean, Boolean)
+  fullName: Talegen.Storage.Net.Tests.StorageTestsBase.CreateDirectoryTests(System.String, System.Boolean, System.Boolean)
+  spec.csharp:
+  - uid: Talegen.Storage.Net.Tests.StorageTestsBase.CreateDirectoryTests(System.String,System.Boolean,System.Boolean)
+    name: CreateDirectoryTests
+    nameWithType: StorageTestsBase.CreateDirectoryTests
+    fullName: Talegen.Storage.Net.Tests.StorageTestsBase.CreateDirectoryTests
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Boolean
+    name: Boolean
+    nameWithType: Boolean
+    fullName: System.Boolean
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Boolean
+    name: Boolean
+    nameWithType: Boolean
+    fullName: System.Boolean
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Talegen.Storage.Net.Tests.StorageTestsBase.CreateDirectoryTests(System.String,System.Boolean,System.Boolean)
+    name: CreateDirectoryTests
+    nameWithType: StorageTestsBase.CreateDirectoryTests
+    fullName: Talegen.Storage.Net.Tests.StorageTestsBase.CreateDirectoryTests
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Boolean
+    name: Boolean
+    nameWithType: Boolean
+    fullName: System.Boolean
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Boolean
+    name: Boolean
+    nameWithType: Boolean
+    fullName: System.Boolean
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Talegen.Storage.Net.Tests.StorageTestsBase.DeleteDirectoryTests(System.String,System.Boolean,System.Boolean,System.Boolean)
+  commentId: M:Talegen.Storage.Net.Tests.StorageTestsBase.DeleteDirectoryTests(System.String,System.Boolean,System.Boolean,System.Boolean)
+  parent: Talegen.Storage.Net.Tests.StorageTestsBase
+  isExternal: true
+  name: DeleteDirectoryTests(String, Boolean, Boolean, Boolean)
+  nameWithType: StorageTestsBase.DeleteDirectoryTests(String, Boolean, Boolean, Boolean)
+  fullName: Talegen.Storage.Net.Tests.StorageTestsBase.DeleteDirectoryTests(System.String, System.Boolean, System.Boolean, System.Boolean)
+  spec.csharp:
+  - uid: Talegen.Storage.Net.Tests.StorageTestsBase.DeleteDirectoryTests(System.String,System.Boolean,System.Boolean,System.Boolean)
+    name: DeleteDirectoryTests
+    nameWithType: StorageTestsBase.DeleteDirectoryTests
+    fullName: Talegen.Storage.Net.Tests.StorageTestsBase.DeleteDirectoryTests
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Boolean
+    name: Boolean
+    nameWithType: Boolean
+    fullName: System.Boolean
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Boolean
+    name: Boolean
+    nameWithType: Boolean
+    fullName: System.Boolean
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Boolean
+    name: Boolean
+    nameWithType: Boolean
+    fullName: System.Boolean
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Talegen.Storage.Net.Tests.StorageTestsBase.DeleteDirectoryTests(System.String,System.Boolean,System.Boolean,System.Boolean)
+    name: DeleteDirectoryTests
+    nameWithType: StorageTestsBase.DeleteDirectoryTests
+    fullName: Talegen.Storage.Net.Tests.StorageTestsBase.DeleteDirectoryTests
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Boolean
+    name: Boolean
+    nameWithType: Boolean
+    fullName: System.Boolean
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Boolean
+    name: Boolean
+    nameWithType: Boolean
+    fullName: System.Boolean
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Boolean
+    name: Boolean
+    nameWithType: Boolean
+    fullName: System.Boolean
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Talegen.Storage.Net.Tests.StorageTestsBase.DeleteFileTests(System.String,System.String,System.Boolean,System.Boolean)
+  commentId: M:Talegen.Storage.Net.Tests.StorageTestsBase.DeleteFileTests(System.String,System.String,System.Boolean,System.Boolean)
+  parent: Talegen.Storage.Net.Tests.StorageTestsBase
+  isExternal: true
+  name: DeleteFileTests(String, String, Boolean, Boolean)
+  nameWithType: StorageTestsBase.DeleteFileTests(String, String, Boolean, Boolean)
+  fullName: Talegen.Storage.Net.Tests.StorageTestsBase.DeleteFileTests(System.String, System.String, System.Boolean, System.Boolean)
+  spec.csharp:
+  - uid: Talegen.Storage.Net.Tests.StorageTestsBase.DeleteFileTests(System.String,System.String,System.Boolean,System.Boolean)
+    name: DeleteFileTests
+    nameWithType: StorageTestsBase.DeleteFileTests
+    fullName: Talegen.Storage.Net.Tests.StorageTestsBase.DeleteFileTests
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Boolean
+    name: Boolean
+    nameWithType: Boolean
+    fullName: System.Boolean
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Boolean
+    name: Boolean
+    nameWithType: Boolean
+    fullName: System.Boolean
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Talegen.Storage.Net.Tests.StorageTestsBase.DeleteFileTests(System.String,System.String,System.Boolean,System.Boolean)
+    name: DeleteFileTests
+    nameWithType: StorageTestsBase.DeleteFileTests
+    fullName: Talegen.Storage.Net.Tests.StorageTestsBase.DeleteFileTests
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Boolean
+    name: Boolean
+    nameWithType: Boolean
+    fullName: System.Boolean
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Boolean
+    name: Boolean
+    nameWithType: Boolean
+    fullName: System.Boolean
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Talegen.Storage.Net.Tests.StorageTestsBase.DeleteFilesTests
+  commentId: M:Talegen.Storage.Net.Tests.StorageTestsBase.DeleteFilesTests
+  parent: Talegen.Storage.Net.Tests.StorageTestsBase
+  name: DeleteFilesTests()
+  nameWithType: StorageTestsBase.DeleteFilesTests()
+  fullName: Talegen.Storage.Net.Tests.StorageTestsBase.DeleteFilesTests()
+  spec.csharp:
+  - uid: Talegen.Storage.Net.Tests.StorageTestsBase.DeleteFilesTests
+    name: DeleteFilesTests
+    nameWithType: StorageTestsBase.DeleteFilesTests
+    fullName: Talegen.Storage.Net.Tests.StorageTestsBase.DeleteFilesTests
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Talegen.Storage.Net.Tests.StorageTestsBase.DeleteFilesTests
+    name: DeleteFilesTests
+    nameWithType: StorageTestsBase.DeleteFilesTests
+    fullName: Talegen.Storage.Net.Tests.StorageTestsBase.DeleteFilesTests
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Talegen.Storage.Net.Tests.StorageTestsBase.DirectoryExistTests(System.String,System.Boolean,System.Boolean)
+  commentId: M:Talegen.Storage.Net.Tests.StorageTestsBase.DirectoryExistTests(System.String,System.Boolean,System.Boolean)
+  parent: Talegen.Storage.Net.Tests.StorageTestsBase
+  isExternal: true
+  name: DirectoryExistTests(String, Boolean, Boolean)
+  nameWithType: StorageTestsBase.DirectoryExistTests(String, Boolean, Boolean)
+  fullName: Talegen.Storage.Net.Tests.StorageTestsBase.DirectoryExistTests(System.String, System.Boolean, System.Boolean)
+  spec.csharp:
+  - uid: Talegen.Storage.Net.Tests.StorageTestsBase.DirectoryExistTests(System.String,System.Boolean,System.Boolean)
+    name: DirectoryExistTests
+    nameWithType: StorageTestsBase.DirectoryExistTests
+    fullName: Talegen.Storage.Net.Tests.StorageTestsBase.DirectoryExistTests
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Boolean
+    name: Boolean
+    nameWithType: Boolean
+    fullName: System.Boolean
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Boolean
+    name: Boolean
+    nameWithType: Boolean
+    fullName: System.Boolean
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Talegen.Storage.Net.Tests.StorageTestsBase.DirectoryExistTests(System.String,System.Boolean,System.Boolean)
+    name: DirectoryExistTests
+    nameWithType: StorageTestsBase.DirectoryExistTests
+    fullName: Talegen.Storage.Net.Tests.StorageTestsBase.DirectoryExistTests
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Boolean
+    name: Boolean
+    nameWithType: Boolean
+    fullName: System.Boolean
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Boolean
+    name: Boolean
+    nameWithType: Boolean
+    fullName: System.Boolean
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Talegen.Storage.Net.Tests.StorageTestsBase.FileExistTests(System.String,System.Boolean,System.Boolean)
+  commentId: M:Talegen.Storage.Net.Tests.StorageTestsBase.FileExistTests(System.String,System.Boolean,System.Boolean)
+  parent: Talegen.Storage.Net.Tests.StorageTestsBase
+  isExternal: true
+  name: FileExistTests(String, Boolean, Boolean)
+  nameWithType: StorageTestsBase.FileExistTests(String, Boolean, Boolean)
+  fullName: Talegen.Storage.Net.Tests.StorageTestsBase.FileExistTests(System.String, System.Boolean, System.Boolean)
+  spec.csharp:
+  - uid: Talegen.Storage.Net.Tests.StorageTestsBase.FileExistTests(System.String,System.Boolean,System.Boolean)
+    name: FileExistTests
+    nameWithType: StorageTestsBase.FileExistTests
+    fullName: Talegen.Storage.Net.Tests.StorageTestsBase.FileExistTests
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Boolean
+    name: Boolean
+    nameWithType: Boolean
+    fullName: System.Boolean
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Boolean
+    name: Boolean
+    nameWithType: Boolean
+    fullName: System.Boolean
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Talegen.Storage.Net.Tests.StorageTestsBase.FileExistTests(System.String,System.Boolean,System.Boolean)
+    name: FileExistTests
+    nameWithType: StorageTestsBase.FileExistTests
+    fullName: Talegen.Storage.Net.Tests.StorageTestsBase.FileExistTests
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Boolean
+    name: Boolean
+    nameWithType: Boolean
+    fullName: System.Boolean
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Boolean
+    name: Boolean
+    nameWithType: Boolean
+    fullName: System.Boolean
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Talegen.Storage.Net.Tests.StorageTestsBase.EmptyDirectoryTests(System.String,System.Boolean)
+  commentId: M:Talegen.Storage.Net.Tests.StorageTestsBase.EmptyDirectoryTests(System.String,System.Boolean)
+  parent: Talegen.Storage.Net.Tests.StorageTestsBase
+  isExternal: true
+  name: EmptyDirectoryTests(String, Boolean)
+  nameWithType: StorageTestsBase.EmptyDirectoryTests(String, Boolean)
+  fullName: Talegen.Storage.Net.Tests.StorageTestsBase.EmptyDirectoryTests(System.String, System.Boolean)
+  spec.csharp:
+  - uid: Talegen.Storage.Net.Tests.StorageTestsBase.EmptyDirectoryTests(System.String,System.Boolean)
+    name: EmptyDirectoryTests
+    nameWithType: StorageTestsBase.EmptyDirectoryTests
+    fullName: Talegen.Storage.Net.Tests.StorageTestsBase.EmptyDirectoryTests
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Boolean
+    name: Boolean
+    nameWithType: Boolean
+    fullName: System.Boolean
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Talegen.Storage.Net.Tests.StorageTestsBase.EmptyDirectoryTests(System.String,System.Boolean)
+    name: EmptyDirectoryTests
+    nameWithType: StorageTestsBase.EmptyDirectoryTests
+    fullName: Talegen.Storage.Net.Tests.StorageTestsBase.EmptyDirectoryTests
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Boolean
+    name: Boolean
+    nameWithType: Boolean
+    fullName: System.Boolean
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Talegen.Storage.Net.Tests.StorageTestsBase.HashFileTests(System.String,System.String,System.String,System.Boolean)
+  commentId: M:Talegen.Storage.Net.Tests.StorageTestsBase.HashFileTests(System.String,System.String,System.String,System.Boolean)
+  parent: Talegen.Storage.Net.Tests.StorageTestsBase
+  isExternal: true
+  name: HashFileTests(String, String, String, Boolean)
+  nameWithType: StorageTestsBase.HashFileTests(String, String, String, Boolean)
+  fullName: Talegen.Storage.Net.Tests.StorageTestsBase.HashFileTests(System.String, System.String, System.String, System.Boolean)
+  spec.csharp:
+  - uid: Talegen.Storage.Net.Tests.StorageTestsBase.HashFileTests(System.String,System.String,System.String,System.Boolean)
+    name: HashFileTests
+    nameWithType: StorageTestsBase.HashFileTests
+    fullName: Talegen.Storage.Net.Tests.StorageTestsBase.HashFileTests
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Boolean
+    name: Boolean
+    nameWithType: Boolean
+    fullName: System.Boolean
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Talegen.Storage.Net.Tests.StorageTestsBase.HashFileTests(System.String,System.String,System.String,System.Boolean)
+    name: HashFileTests
+    nameWithType: StorageTestsBase.HashFileTests
+    fullName: Talegen.Storage.Net.Tests.StorageTestsBase.HashFileTests
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Boolean
+    name: Boolean
+    nameWithType: Boolean
+    fullName: System.Boolean
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Talegen.Storage.Net.Tests.StorageTestsBase.FindFilesTests(System.String,System.String,System.IO.SearchOption,System.Boolean,System.Boolean)
+  commentId: M:Talegen.Storage.Net.Tests.StorageTestsBase.FindFilesTests(System.String,System.String,System.IO.SearchOption,System.Boolean,System.Boolean)
+  parent: Talegen.Storage.Net.Tests.StorageTestsBase
+  isExternal: true
+  name: FindFilesTests(String, String, SearchOption, Boolean, Boolean)
+  nameWithType: StorageTestsBase.FindFilesTests(String, String, SearchOption, Boolean, Boolean)
+  fullName: Talegen.Storage.Net.Tests.StorageTestsBase.FindFilesTests(System.String, System.String, System.IO.SearchOption, System.Boolean, System.Boolean)
+  spec.csharp:
+  - uid: Talegen.Storage.Net.Tests.StorageTestsBase.FindFilesTests(System.String,System.String,System.IO.SearchOption,System.Boolean,System.Boolean)
+    name: FindFilesTests
+    nameWithType: StorageTestsBase.FindFilesTests
+    fullName: Talegen.Storage.Net.Tests.StorageTestsBase.FindFilesTests
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.IO.SearchOption
+    name: SearchOption
+    nameWithType: SearchOption
+    fullName: System.IO.SearchOption
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Boolean
+    name: Boolean
+    nameWithType: Boolean
+    fullName: System.Boolean
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Boolean
+    name: Boolean
+    nameWithType: Boolean
+    fullName: System.Boolean
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Talegen.Storage.Net.Tests.StorageTestsBase.FindFilesTests(System.String,System.String,System.IO.SearchOption,System.Boolean,System.Boolean)
+    name: FindFilesTests
+    nameWithType: StorageTestsBase.FindFilesTests
+    fullName: Talegen.Storage.Net.Tests.StorageTestsBase.FindFilesTests
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.IO.SearchOption
+    name: SearchOption
+    nameWithType: SearchOption
+    fullName: System.IO.SearchOption
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Boolean
+    name: Boolean
+    nameWithType: Boolean
+    fullName: System.Boolean
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Boolean
+    name: Boolean
+    nameWithType: Boolean
+    fullName: System.Boolean
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Talegen.Storage.Net.Tests.StorageTestsBase.CopyFileTests(System.String,System.String,System.String,System.Boolean,System.Boolean)
+  commentId: M:Talegen.Storage.Net.Tests.StorageTestsBase.CopyFileTests(System.String,System.String,System.String,System.Boolean,System.Boolean)
+  parent: Talegen.Storage.Net.Tests.StorageTestsBase
+  isExternal: true
+  name: CopyFileTests(String, String, String, Boolean, Boolean)
+  nameWithType: StorageTestsBase.CopyFileTests(String, String, String, Boolean, Boolean)
+  fullName: Talegen.Storage.Net.Tests.StorageTestsBase.CopyFileTests(System.String, System.String, System.String, System.Boolean, System.Boolean)
+  spec.csharp:
+  - uid: Talegen.Storage.Net.Tests.StorageTestsBase.CopyFileTests(System.String,System.String,System.String,System.Boolean,System.Boolean)
+    name: CopyFileTests
+    nameWithType: StorageTestsBase.CopyFileTests
+    fullName: Talegen.Storage.Net.Tests.StorageTestsBase.CopyFileTests
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Boolean
+    name: Boolean
+    nameWithType: Boolean
+    fullName: System.Boolean
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Boolean
+    name: Boolean
+    nameWithType: Boolean
+    fullName: System.Boolean
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Talegen.Storage.Net.Tests.StorageTestsBase.CopyFileTests(System.String,System.String,System.String,System.Boolean,System.Boolean)
+    name: CopyFileTests
+    nameWithType: StorageTestsBase.CopyFileTests
+    fullName: Talegen.Storage.Net.Tests.StorageTestsBase.CopyFileTests
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Boolean
+    name: Boolean
+    nameWithType: Boolean
+    fullName: System.Boolean
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Boolean
+    name: Boolean
+    nameWithType: Boolean
+    fullName: System.Boolean
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Talegen.Storage.Net.Tests.StorageTestsBase.MoveFileTests(System.String,System.String,System.String,System.Boolean,System.Boolean)
+  commentId: M:Talegen.Storage.Net.Tests.StorageTestsBase.MoveFileTests(System.String,System.String,System.String,System.Boolean,System.Boolean)
+  parent: Talegen.Storage.Net.Tests.StorageTestsBase
+  isExternal: true
+  name: MoveFileTests(String, String, String, Boolean, Boolean)
+  nameWithType: StorageTestsBase.MoveFileTests(String, String, String, Boolean, Boolean)
+  fullName: Talegen.Storage.Net.Tests.StorageTestsBase.MoveFileTests(System.String, System.String, System.String, System.Boolean, System.Boolean)
+  spec.csharp:
+  - uid: Talegen.Storage.Net.Tests.StorageTestsBase.MoveFileTests(System.String,System.String,System.String,System.Boolean,System.Boolean)
+    name: MoveFileTests
+    nameWithType: StorageTestsBase.MoveFileTests
+    fullName: Talegen.Storage.Net.Tests.StorageTestsBase.MoveFileTests
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Boolean
+    name: Boolean
+    nameWithType: Boolean
+    fullName: System.Boolean
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Boolean
+    name: Boolean
+    nameWithType: Boolean
+    fullName: System.Boolean
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Talegen.Storage.Net.Tests.StorageTestsBase.MoveFileTests(System.String,System.String,System.String,System.Boolean,System.Boolean)
+    name: MoveFileTests
+    nameWithType: StorageTestsBase.MoveFileTests
+    fullName: Talegen.Storage.Net.Tests.StorageTestsBase.MoveFileTests
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Boolean
+    name: Boolean
+    nameWithType: Boolean
+    fullName: System.Boolean
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Boolean
+    name: Boolean
+    nameWithType: Boolean
+    fullName: System.Boolean
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Talegen.Storage.Net.Tests.StorageTestsBase.ReadBinaryFileTests(System.String,System.String,System.Boolean)
+  commentId: M:Talegen.Storage.Net.Tests.StorageTestsBase.ReadBinaryFileTests(System.String,System.String,System.Boolean)
+  parent: Talegen.Storage.Net.Tests.StorageTestsBase
+  isExternal: true
+  name: ReadBinaryFileTests(String, String, Boolean)
+  nameWithType: StorageTestsBase.ReadBinaryFileTests(String, String, Boolean)
+  fullName: Talegen.Storage.Net.Tests.StorageTestsBase.ReadBinaryFileTests(System.String, System.String, System.Boolean)
+  spec.csharp:
+  - uid: Talegen.Storage.Net.Tests.StorageTestsBase.ReadBinaryFileTests(System.String,System.String,System.Boolean)
+    name: ReadBinaryFileTests
+    nameWithType: StorageTestsBase.ReadBinaryFileTests
+    fullName: Talegen.Storage.Net.Tests.StorageTestsBase.ReadBinaryFileTests
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Boolean
+    name: Boolean
+    nameWithType: Boolean
+    fullName: System.Boolean
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Talegen.Storage.Net.Tests.StorageTestsBase.ReadBinaryFileTests(System.String,System.String,System.Boolean)
+    name: ReadBinaryFileTests
+    nameWithType: StorageTestsBase.ReadBinaryFileTests
+    fullName: Talegen.Storage.Net.Tests.StorageTestsBase.ReadBinaryFileTests
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Boolean
+    name: Boolean
+    nameWithType: Boolean
+    fullName: System.Boolean
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Talegen.Storage.Net.Tests.StorageTestsBase.ReadBinaryFileStreamTests(System.String,System.String,System.Boolean)
+  commentId: M:Talegen.Storage.Net.Tests.StorageTestsBase.ReadBinaryFileStreamTests(System.String,System.String,System.Boolean)
+  parent: Talegen.Storage.Net.Tests.StorageTestsBase
+  isExternal: true
+  name: ReadBinaryFileStreamTests(String, String, Boolean)
+  nameWithType: StorageTestsBase.ReadBinaryFileStreamTests(String, String, Boolean)
+  fullName: Talegen.Storage.Net.Tests.StorageTestsBase.ReadBinaryFileStreamTests(System.String, System.String, System.Boolean)
+  spec.csharp:
+  - uid: Talegen.Storage.Net.Tests.StorageTestsBase.ReadBinaryFileStreamTests(System.String,System.String,System.Boolean)
+    name: ReadBinaryFileStreamTests
+    nameWithType: StorageTestsBase.ReadBinaryFileStreamTests
+    fullName: Talegen.Storage.Net.Tests.StorageTestsBase.ReadBinaryFileStreamTests
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Boolean
+    name: Boolean
+    nameWithType: Boolean
+    fullName: System.Boolean
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Talegen.Storage.Net.Tests.StorageTestsBase.ReadBinaryFileStreamTests(System.String,System.String,System.Boolean)
+    name: ReadBinaryFileStreamTests
+    nameWithType: StorageTestsBase.ReadBinaryFileStreamTests
+    fullName: Talegen.Storage.Net.Tests.StorageTestsBase.ReadBinaryFileStreamTests
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Boolean
+    name: Boolean
+    nameWithType: Boolean
+    fullName: System.Boolean
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Talegen.Storage.Net.Tests.StorageTestsBase.ReadTextFileTests(System.String,System.String,System.Boolean,System.Boolean)
+  commentId: M:Talegen.Storage.Net.Tests.StorageTestsBase.ReadTextFileTests(System.String,System.String,System.Boolean,System.Boolean)
+  parent: Talegen.Storage.Net.Tests.StorageTestsBase
+  isExternal: true
+  name: ReadTextFileTests(String, String, Boolean, Boolean)
+  nameWithType: StorageTestsBase.ReadTextFileTests(String, String, Boolean, Boolean)
+  fullName: Talegen.Storage.Net.Tests.StorageTestsBase.ReadTextFileTests(System.String, System.String, System.Boolean, System.Boolean)
+  spec.csharp:
+  - uid: Talegen.Storage.Net.Tests.StorageTestsBase.ReadTextFileTests(System.String,System.String,System.Boolean,System.Boolean)
+    name: ReadTextFileTests
+    nameWithType: StorageTestsBase.ReadTextFileTests
+    fullName: Talegen.Storage.Net.Tests.StorageTestsBase.ReadTextFileTests
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Boolean
+    name: Boolean
+    nameWithType: Boolean
+    fullName: System.Boolean
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Boolean
+    name: Boolean
+    nameWithType: Boolean
+    fullName: System.Boolean
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Talegen.Storage.Net.Tests.StorageTestsBase.ReadTextFileTests(System.String,System.String,System.Boolean,System.Boolean)
+    name: ReadTextFileTests
+    nameWithType: StorageTestsBase.ReadTextFileTests
+    fullName: Talegen.Storage.Net.Tests.StorageTestsBase.ReadTextFileTests
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Boolean
+    name: Boolean
+    nameWithType: Boolean
+    fullName: System.Boolean
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Boolean
+    name: Boolean
+    nameWithType: Boolean
+    fullName: System.Boolean
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Talegen.Storage.Net.Tests.StorageTestsBase.WriteBinaryFileTests(System.String,System.String,System.Boolean)
+  commentId: M:Talegen.Storage.Net.Tests.StorageTestsBase.WriteBinaryFileTests(System.String,System.String,System.Boolean)
+  parent: Talegen.Storage.Net.Tests.StorageTestsBase
+  isExternal: true
+  name: WriteBinaryFileTests(String, String, Boolean)
+  nameWithType: StorageTestsBase.WriteBinaryFileTests(String, String, Boolean)
+  fullName: Talegen.Storage.Net.Tests.StorageTestsBase.WriteBinaryFileTests(System.String, System.String, System.Boolean)
+  spec.csharp:
+  - uid: Talegen.Storage.Net.Tests.StorageTestsBase.WriteBinaryFileTests(System.String,System.String,System.Boolean)
+    name: WriteBinaryFileTests
+    nameWithType: StorageTestsBase.WriteBinaryFileTests
+    fullName: Talegen.Storage.Net.Tests.StorageTestsBase.WriteBinaryFileTests
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Boolean
+    name: Boolean
+    nameWithType: Boolean
+    fullName: System.Boolean
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Talegen.Storage.Net.Tests.StorageTestsBase.WriteBinaryFileTests(System.String,System.String,System.Boolean)
+    name: WriteBinaryFileTests
+    nameWithType: StorageTestsBase.WriteBinaryFileTests
+    fullName: Talegen.Storage.Net.Tests.StorageTestsBase.WriteBinaryFileTests
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Boolean
+    name: Boolean
+    nameWithType: Boolean
+    fullName: System.Boolean
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Talegen.Storage.Net.Tests.StorageTestsBase.WriteBinaryFileStreamTests(System.String,System.String,System.Boolean)
+  commentId: M:Talegen.Storage.Net.Tests.StorageTestsBase.WriteBinaryFileStreamTests(System.String,System.String,System.Boolean)
+  parent: Talegen.Storage.Net.Tests.StorageTestsBase
+  isExternal: true
+  name: WriteBinaryFileStreamTests(String, String, Boolean)
+  nameWithType: StorageTestsBase.WriteBinaryFileStreamTests(String, String, Boolean)
+  fullName: Talegen.Storage.Net.Tests.StorageTestsBase.WriteBinaryFileStreamTests(System.String, System.String, System.Boolean)
+  spec.csharp:
+  - uid: Talegen.Storage.Net.Tests.StorageTestsBase.WriteBinaryFileStreamTests(System.String,System.String,System.Boolean)
+    name: WriteBinaryFileStreamTests
+    nameWithType: StorageTestsBase.WriteBinaryFileStreamTests
+    fullName: Talegen.Storage.Net.Tests.StorageTestsBase.WriteBinaryFileStreamTests
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Boolean
+    name: Boolean
+    nameWithType: Boolean
+    fullName: System.Boolean
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Talegen.Storage.Net.Tests.StorageTestsBase.WriteBinaryFileStreamTests(System.String,System.String,System.Boolean)
+    name: WriteBinaryFileStreamTests
+    nameWithType: StorageTestsBase.WriteBinaryFileStreamTests
+    fullName: Talegen.Storage.Net.Tests.StorageTestsBase.WriteBinaryFileStreamTests
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Boolean
+    name: Boolean
+    nameWithType: Boolean
+    fullName: System.Boolean
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Talegen.Storage.Net.Tests.UnitTestBase.StorageContext
+  commentId: P:Talegen.Storage.Net.Tests.UnitTestBase.StorageContext
+  parent: Talegen.Storage.Net.Tests.UnitTestBase
+  name: StorageContext
+  nameWithType: UnitTestBase.StorageContext
+  fullName: Talegen.Storage.Net.Tests.UnitTestBase.StorageContext
+- uid: Talegen.Storage.Net.Tests.UnitTestBase.StorageService
+  commentId: P:Talegen.Storage.Net.Tests.UnitTestBase.StorageService
+  parent: Talegen.Storage.Net.Tests.UnitTestBase
+  name: StorageService
+  nameWithType: UnitTestBase.StorageService
+  fullName: Talegen.Storage.Net.Tests.UnitTestBase.StorageService
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Talegen.Storage.Net.Tests.MemoryStorageTests.#ctor*
+  commentId: Overload:Talegen.Storage.Net.Tests.MemoryStorageTests.#ctor
+  name: MemoryStorageTests
+  nameWithType: MemoryStorageTests.MemoryStorageTests
+  fullName: Talegen.Storage.Net.Tests.MemoryStorageTests.MemoryStorageTests

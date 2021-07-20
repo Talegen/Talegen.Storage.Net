@@ -1,0 +1,233 @@
+### YamlMime:ManagedReference
+items:
+- uid: Talegen.Storage.Net.Core.IStorageContext
+  commentId: T:Talegen.Storage.Net.Core.IStorageContext
+  id: IStorageContext
+  parent: Talegen.Storage.Net.Core
+  children:
+  - Talegen.Storage.Net.Core.IStorageContext.RootWorkspaceLocalFolderPath
+  - Talegen.Storage.Net.Core.IStorageContext.StorageType
+  - Talegen.Storage.Net.Core.IStorageContext.UniqueWorkspace
+  - Talegen.Storage.Net.Core.IStorageContext.WorkspaceUri
+  langs:
+  - csharp
+  - vb
+  name: IStorageContext
+  nameWithType: IStorageContext
+  fullName: Talegen.Storage.Net.Core.IStorageContext
+  type: Interface
+  source:
+    remote:
+      path: src/Talegen.Storage.Net.Core/IStorageContext.cs
+      branch: main
+      repo: https://github.com/Talegen/Talegen.Storage.Net.git
+    id: IStorageContext
+    path: IStorageContext.cs
+    startLine: 23
+  assemblies:
+  - Talegen.Storage.Net.Core
+  namespace: Talegen.Storage.Net.Core
+  summary: "\nThis class contains properties related to the storage service interfaces within the application.\n"
+  example: []
+  syntax:
+    content: public interface IStorageContext
+    content.vb: Public Interface IStorageContext
+  modifiers.csharp:
+  - public
+  - interface
+  modifiers.vb:
+  - Public
+  - Interface
+- uid: Talegen.Storage.Net.Core.IStorageContext.StorageType
+  commentId: P:Talegen.Storage.Net.Core.IStorageContext.StorageType
+  id: StorageType
+  parent: Talegen.Storage.Net.Core.IStorageContext
+  langs:
+  - csharp
+  - vb
+  name: StorageType
+  nameWithType: IStorageContext.StorageType
+  fullName: Talegen.Storage.Net.Core.IStorageContext.StorageType
+  type: Property
+  source:
+    remote:
+      path: src/Talegen.Storage.Net.Core/IStorageContext.cs
+      branch: main
+      repo: https://github.com/Talegen/Talegen.Storage.Net.git
+    id: StorageType
+    path: IStorageContext.cs
+    startLine: 28
+  assemblies:
+  - Talegen.Storage.Net.Core
+  namespace: Talegen.Storage.Net.Core
+  summary: "\nGets the type of the storage.\n"
+  example: []
+  syntax:
+    content: string StorageType { get; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: ReadOnly Property StorageType As String
+  overload: Talegen.Storage.Net.Core.IStorageContext.StorageType*
+  modifiers.csharp:
+  - get
+  modifiers.vb:
+  - ReadOnly
+- uid: Talegen.Storage.Net.Core.IStorageContext.UniqueWorkspace
+  commentId: P:Talegen.Storage.Net.Core.IStorageContext.UniqueWorkspace
+  id: UniqueWorkspace
+  parent: Talegen.Storage.Net.Core.IStorageContext
+  langs:
+  - csharp
+  - vb
+  name: UniqueWorkspace
+  nameWithType: IStorageContext.UniqueWorkspace
+  fullName: Talegen.Storage.Net.Core.IStorageContext.UniqueWorkspace
+  type: Property
+  source:
+    remote:
+      path: src/Talegen.Storage.Net.Core/IStorageContext.cs
+      branch: main
+      repo: https://github.com/Talegen/Talegen.Storage.Net.git
+    id: UniqueWorkspace
+    path: IStorageContext.cs
+    startLine: 33
+  assemblies:
+  - Talegen.Storage.Net.Core
+  namespace: Talegen.Storage.Net.Core
+  summary: "\nGets a value indicating whether the storage service shall use a unique workspace sub-folder.\n"
+  example: []
+  syntax:
+    content: bool UniqueWorkspace { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: ReadOnly Property UniqueWorkspace As Boolean
+  overload: Talegen.Storage.Net.Core.IStorageContext.UniqueWorkspace*
+  modifiers.csharp:
+  - get
+  modifiers.vb:
+  - ReadOnly
+- uid: Talegen.Storage.Net.Core.IStorageContext.WorkspaceUri
+  commentId: P:Talegen.Storage.Net.Core.IStorageContext.WorkspaceUri
+  id: WorkspaceUri
+  parent: Talegen.Storage.Net.Core.IStorageContext
+  langs:
+  - csharp
+  - vb
+  name: WorkspaceUri
+  nameWithType: IStorageContext.WorkspaceUri
+  fullName: Talegen.Storage.Net.Core.IStorageContext.WorkspaceUri
+  type: Property
+  source:
+    remote:
+      path: src/Talegen.Storage.Net.Core/IStorageContext.cs
+      branch: main
+      repo: https://github.com/Talegen/Talegen.Storage.Net.git
+    id: WorkspaceUri
+    path: IStorageContext.cs
+    startLine: 38
+  assemblies:
+  - Talegen.Storage.Net.Core
+  namespace: Talegen.Storage.Net.Core
+  summary: "\nGets the root storage workspace URI path.\n"
+  example: []
+  syntax:
+    content: Uri WorkspaceUri { get; }
+    parameters: []
+    return:
+      type: System.Uri
+    content.vb: ReadOnly Property WorkspaceUri As Uri
+  overload: Talegen.Storage.Net.Core.IStorageContext.WorkspaceUri*
+  modifiers.csharp:
+  - get
+  modifiers.vb:
+  - ReadOnly
+- uid: Talegen.Storage.Net.Core.IStorageContext.RootWorkspaceLocalFolderPath
+  commentId: P:Talegen.Storage.Net.Core.IStorageContext.RootWorkspaceLocalFolderPath
+  id: RootWorkspaceLocalFolderPath
+  parent: Talegen.Storage.Net.Core.IStorageContext
+  langs:
+  - csharp
+  - vb
+  name: RootWorkspaceLocalFolderPath
+  nameWithType: IStorageContext.RootWorkspaceLocalFolderPath
+  fullName: Talegen.Storage.Net.Core.IStorageContext.RootWorkspaceLocalFolderPath
+  type: Property
+  source:
+    remote:
+      path: src/Talegen.Storage.Net.Core/IStorageContext.cs
+      branch: main
+      repo: https://github.com/Talegen/Talegen.Storage.Net.git
+    id: RootWorkspaceLocalFolderPath
+    path: IStorageContext.cs
+    startLine: 43
+  assemblies:
+  - Talegen.Storage.Net.Core
+  namespace: Talegen.Storage.Net.Core
+  summary: "\nGets the local folder path representation of the root workspace folder Uri.\n"
+  example: []
+  syntax:
+    content: string RootWorkspaceLocalFolderPath { get; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: ReadOnly Property RootWorkspaceLocalFolderPath As String
+  overload: Talegen.Storage.Net.Core.IStorageContext.RootWorkspaceLocalFolderPath*
+  modifiers.csharp:
+  - get
+  modifiers.vb:
+  - ReadOnly
+references:
+- uid: Talegen.Storage.Net.Core
+  commentId: N:Talegen.Storage.Net.Core
+  name: Talegen.Storage.Net.Core
+  nameWithType: Talegen.Storage.Net.Core
+  fullName: Talegen.Storage.Net.Core
+- uid: Talegen.Storage.Net.Core.IStorageContext.StorageType*
+  commentId: Overload:Talegen.Storage.Net.Core.IStorageContext.StorageType
+  name: StorageType
+  nameWithType: IStorageContext.StorageType
+  fullName: Talegen.Storage.Net.Core.IStorageContext.StorageType
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Talegen.Storage.Net.Core.IStorageContext.UniqueWorkspace*
+  commentId: Overload:Talegen.Storage.Net.Core.IStorageContext.UniqueWorkspace
+  name: UniqueWorkspace
+  nameWithType: IStorageContext.UniqueWorkspace
+  fullName: Talegen.Storage.Net.Core.IStorageContext.UniqueWorkspace
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
+- uid: Talegen.Storage.Net.Core.IStorageContext.WorkspaceUri*
+  commentId: Overload:Talegen.Storage.Net.Core.IStorageContext.WorkspaceUri
+  name: WorkspaceUri
+  nameWithType: IStorageContext.WorkspaceUri
+  fullName: Talegen.Storage.Net.Core.IStorageContext.WorkspaceUri
+- uid: System.Uri
+  commentId: T:System.Uri
+  parent: System
+  isExternal: true
+  name: Uri
+  nameWithType: Uri
+  fullName: System.Uri
+- uid: Talegen.Storage.Net.Core.IStorageContext.RootWorkspaceLocalFolderPath*
+  commentId: Overload:Talegen.Storage.Net.Core.IStorageContext.RootWorkspaceLocalFolderPath
+  name: RootWorkspaceLocalFolderPath
+  nameWithType: IStorageContext.RootWorkspaceLocalFolderPath
+  fullName: Talegen.Storage.Net.Core.IStorageContext.RootWorkspaceLocalFolderPath

@@ -1,0 +1,34 @@
+### YamlMime:ManagedReference
+items:
+- uid: Talegen.Storage.Net.AzureBlobs
+  commentId: N:Talegen.Storage.Net.AzureBlobs
+  id: Talegen.Storage.Net.AzureBlobs
+  children:
+  - Talegen.Storage.Net.AzureBlobs.AzureBlobStorageContext
+  - Talegen.Storage.Net.AzureBlobs.AzureBlobStorageService
+  langs:
+  - csharp
+  - vb
+  name: Talegen.Storage.Net.AzureBlobs
+  nameWithType: Talegen.Storage.Net.AzureBlobs
+  fullName: Talegen.Storage.Net.AzureBlobs
+  type: Namespace
+  assemblies:
+  - Talegen.Storage.Net.AzureBlobs
+references:
+- uid: Talegen.Storage.Net.AzureBlobs.AzureBlobStorageContext
+  commentId: T:Talegen.Storage.Net.AzureBlobs.AzureBlobStorageContext
+  parent: Talegen.Storage.Net.AzureBlobs
+  name: AzureBlobStorageContext
+  nameWithType: AzureBlobStorageContext
+  fullName: Talegen.Storage.Net.AzureBlobs.AzureBlobStorageContext
+- uid: Talegen.Storage.Net.AzureBlobs.AzureBlobStorageService
+  commentId: T:Talegen.Storage.Net.AzureBlobs.AzureBlobStorageService
+  name: AzureBlobStorageService
+  nameWithType: AzureBlobStorageService
+  fullName: Talegen.Storage.Net.AzureBlobs.AzureBlobStorageService
+- uid: Talegen.Storage.Net.AzureBlobs
+  commentId: N:Talegen.Storage.Net.AzureBlobs
+  name: Talegen.Storage.Net.AzureBlobs
+  nameWithType: Talegen.Storage.Net.AzureBlobs
+  fullName: Talegen.Storage.Net.AzureBlobs

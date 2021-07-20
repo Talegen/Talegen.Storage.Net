@@ -1,0 +1,538 @@
+### YamlMime:ManagedReference
+items:
+- uid: Talegen.Storage.Net.Tests.UnitTestBase
+  commentId: T:Talegen.Storage.Net.Tests.UnitTestBase
+  id: UnitTestBase
+  parent: Talegen.Storage.Net.Tests
+  children:
+  - Talegen.Storage.Net.Tests.UnitTestBase.#ctor(Talegen.Storage.Net.Core.IStorageContext)
+  - Talegen.Storage.Net.Tests.UnitTestBase.#ctor(Talegen.Storage.Net.Core.IStorageService)
+  - Talegen.Storage.Net.Tests.UnitTestBase.StorageContext
+  - Talegen.Storage.Net.Tests.UnitTestBase.StorageService
+  langs:
+  - csharp
+  - vb
+  name: UnitTestBase
+  nameWithType: UnitTestBase
+  fullName: Talegen.Storage.Net.Tests.UnitTestBase
+  type: Class
+  source:
+    remote:
+      path: src/Talegen.Storage.Net.Tests/UnitTestBase.cs
+      branch: main
+      repo: https://github.com/Talegen/Talegen.Storage.Net.git
+    id: UnitTestBase
+    path: ../Talegen.Storage.Net.Tests/UnitTestBase.cs
+    startLine: 26
+  assemblies:
+  - Talegen.Storage.Net.Tests
+  namespace: Talegen.Storage.Net.Tests
+  summary: "\nThis class contains base properties and methods useful for unit tests.\n"
+  example: []
+  syntax:
+    content: public abstract class UnitTestBase
+    content.vb: Public MustInherit Class UnitTestBase
+  inheritance:
+  - System.Object
+  derivedClasses:
+  - Talegen.Storage.Net.Tests.StorageTestsBase
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+  modifiers.csharp:
+  - public
+  - abstract
+  - class
+  modifiers.vb:
+  - Public
+  - MustInherit
+  - Class
+- uid: Talegen.Storage.Net.Tests.UnitTestBase.#ctor(Talegen.Storage.Net.Core.IStorageService)
+  commentId: M:Talegen.Storage.Net.Tests.UnitTestBase.#ctor(Talegen.Storage.Net.Core.IStorageService)
+  id: '#ctor(Talegen.Storage.Net.Core.IStorageService)'
+  parent: Talegen.Storage.Net.Tests.UnitTestBase
+  langs:
+  - csharp
+  - vb
+  name: UnitTestBase(IStorageService)
+  nameWithType: UnitTestBase.UnitTestBase(IStorageService)
+  fullName: Talegen.Storage.Net.Tests.UnitTestBase.UnitTestBase(Talegen.Storage.Net.Core.IStorageService)
+  type: Constructor
+  source:
+    remote:
+      path: src/Talegen.Storage.Net.Tests/UnitTestBase.cs
+      branch: main
+      repo: https://github.com/Talegen/Talegen.Storage.Net.git
+    id: .ctor
+    path: ../Talegen.Storage.Net.Tests/UnitTestBase.cs
+    startLine: 42
+  assemblies:
+  - Talegen.Storage.Net.Tests
+  namespace: Talegen.Storage.Net.Tests
+  summary: "\nInitializes a new instance of the <xref href=\"Talegen.Storage.Net.Tests.UnitTestBase\" data-throw-if-not-resolved=\"false\"></xref> class.\n"
+  example: []
+  syntax:
+    content: public UnitTestBase(IStorageService storageService)
+    parameters:
+    - id: storageService
+      type: Talegen.Storage.Net.Core.IStorageService
+      description: The storage service.
+    content.vb: Public Sub New(storageService As IStorageService)
+  overload: Talegen.Storage.Net.Tests.UnitTestBase.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Talegen.Storage.Net.Tests.UnitTestBase.#ctor(Talegen.Storage.Net.Core.IStorageContext)
+  commentId: M:Talegen.Storage.Net.Tests.UnitTestBase.#ctor(Talegen.Storage.Net.Core.IStorageContext)
+  id: '#ctor(Talegen.Storage.Net.Core.IStorageContext)'
+  parent: Talegen.Storage.Net.Tests.UnitTestBase
+  langs:
+  - csharp
+  - vb
+  name: UnitTestBase(IStorageContext)
+  nameWithType: UnitTestBase.UnitTestBase(IStorageContext)
+  fullName: Talegen.Storage.Net.Tests.UnitTestBase.UnitTestBase(Talegen.Storage.Net.Core.IStorageContext)
+  type: Constructor
+  source:
+    remote:
+      path: src/Talegen.Storage.Net.Tests/UnitTestBase.cs
+      branch: main
+      repo: https://github.com/Talegen/Talegen.Storage.Net.git
+    id: .ctor
+    path: ../Talegen.Storage.Net.Tests/UnitTestBase.cs
+    startLine: 51
+  assemblies:
+  - Talegen.Storage.Net.Tests
+  namespace: Talegen.Storage.Net.Tests
+  summary: "\nInitializes a new instance of the <xref href=\"Talegen.Storage.Net.Tests.UnitTestBase\" data-throw-if-not-resolved=\"false\"></xref> class.\n"
+  example: []
+  syntax:
+    content: public UnitTestBase(IStorageContext storageContext)
+    parameters:
+    - id: storageContext
+      type: Talegen.Storage.Net.Core.IStorageContext
+      description: The storage context.
+    content.vb: Public Sub New(storageContext As IStorageContext)
+  overload: Talegen.Storage.Net.Tests.UnitTestBase.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Talegen.Storage.Net.Tests.UnitTestBase.StorageContext
+  commentId: P:Talegen.Storage.Net.Tests.UnitTestBase.StorageContext
+  id: StorageContext
+  parent: Talegen.Storage.Net.Tests.UnitTestBase
+  langs:
+  - csharp
+  - vb
+  name: StorageContext
+  nameWithType: UnitTestBase.StorageContext
+  fullName: Talegen.Storage.Net.Tests.UnitTestBase.StorageContext
+  type: Property
+  source:
+    remote:
+      path: src/Talegen.Storage.Net.Tests/UnitTestBase.cs
+      branch: main
+      repo: https://github.com/Talegen/Talegen.Storage.Net.git
+    id: StorageContext
+    path: ../Talegen.Storage.Net.Tests/UnitTestBase.cs
+    startLine: 74
+  assemblies:
+  - Talegen.Storage.Net.Tests
+  namespace: Talegen.Storage.Net.Tests
+  summary: "\nGets the storage context.\n"
+  example: []
+  syntax:
+    content: public IStorageContext StorageContext { get; }
+    parameters: []
+    return:
+      type: Talegen.Storage.Net.Core.IStorageContext
+      description: The storage context.
+    content.vb: Public ReadOnly Property StorageContext As IStorageContext
+  overload: Talegen.Storage.Net.Tests.UnitTestBase.StorageContext*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Talegen.Storage.Net.Tests.UnitTestBase.StorageService
+  commentId: P:Talegen.Storage.Net.Tests.UnitTestBase.StorageService
+  id: StorageService
+  parent: Talegen.Storage.Net.Tests.UnitTestBase
+  langs:
+  - csharp
+  - vb
+  name: StorageService
+  nameWithType: UnitTestBase.StorageService
+  fullName: Talegen.Storage.Net.Tests.UnitTestBase.StorageService
+  type: Property
+  source:
+    remote:
+      path: src/Talegen.Storage.Net.Tests/UnitTestBase.cs
+      branch: main
+      repo: https://github.com/Talegen/Talegen.Storage.Net.git
+    id: StorageService
+    path: ../Talegen.Storage.Net.Tests/UnitTestBase.cs
+    startLine: 80
+  assemblies:
+  - Talegen.Storage.Net.Tests
+  namespace: Talegen.Storage.Net.Tests
+  summary: "\nGets the storage service.\n"
+  example: []
+  syntax:
+    content: public IStorageService StorageService { get; }
+    parameters: []
+    return:
+      type: Talegen.Storage.Net.Core.IStorageService
+      description: The storage service.
+    content.vb: Public ReadOnly Property StorageService As IStorageService
+  overload: Talegen.Storage.Net.Tests.UnitTestBase.StorageService*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+references:
+- uid: Talegen.Storage.Net.Tests
+  commentId: N:Talegen.Storage.Net.Tests
+  name: Talegen.Storage.Net.Tests
+  nameWithType: Talegen.Storage.Net.Tests
+  fullName: Talegen.Storage.Net.Tests
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Talegen.Storage.Net.Tests.UnitTestBase
+  commentId: T:Talegen.Storage.Net.Tests.UnitTestBase
+  parent: Talegen.Storage.Net.Tests
+  name: UnitTestBase
+  nameWithType: UnitTestBase
+  fullName: Talegen.Storage.Net.Tests.UnitTestBase
+- uid: Talegen.Storage.Net.Tests.UnitTestBase.#ctor*
+  commentId: Overload:Talegen.Storage.Net.Tests.UnitTestBase.#ctor
+  name: UnitTestBase
+  nameWithType: UnitTestBase.UnitTestBase
+  fullName: Talegen.Storage.Net.Tests.UnitTestBase.UnitTestBase
+- uid: Talegen.Storage.Net.Core.IStorageService
+  commentId: T:Talegen.Storage.Net.Core.IStorageService
+  parent: Talegen.Storage.Net.Core
+  name: IStorageService
+  nameWithType: IStorageService
+  fullName: Talegen.Storage.Net.Core.IStorageService
+- uid: Talegen.Storage.Net.Core
+  commentId: N:Talegen.Storage.Net.Core
+  name: Talegen.Storage.Net.Core
+  nameWithType: Talegen.Storage.Net.Core
+  fullName: Talegen.Storage.Net.Core
+- uid: Talegen.Storage.Net.Core.IStorageContext
+  commentId: T:Talegen.Storage.Net.Core.IStorageContext
+  parent: Talegen.Storage.Net.Core
+  name: IStorageContext
+  nameWithType: IStorageContext
+  fullName: Talegen.Storage.Net.Core.IStorageContext
+- uid: Talegen.Storage.Net.Tests.UnitTestBase.StorageContext*
+  commentId: Overload:Talegen.Storage.Net.Tests.UnitTestBase.StorageContext
+  name: StorageContext
+  nameWithType: UnitTestBase.StorageContext
+  fullName: Talegen.Storage.Net.Tests.UnitTestBase.StorageContext
+- uid: Talegen.Storage.Net.Tests.UnitTestBase.StorageService*
+  commentId: Overload:Talegen.Storage.Net.Tests.UnitTestBase.StorageService
+  name: StorageService
+  nameWithType: UnitTestBase.StorageService
+  fullName: Talegen.Storage.Net.Tests.UnitTestBase.StorageService

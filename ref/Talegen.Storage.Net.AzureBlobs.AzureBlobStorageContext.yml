@@ -1,0 +1,816 @@
+### YamlMime:ManagedReference
+items:
+- uid: Talegen.Storage.Net.AzureBlobs.AzureBlobStorageContext
+  commentId: T:Talegen.Storage.Net.AzureBlobs.AzureBlobStorageContext
+  id: AzureBlobStorageContext
+  parent: Talegen.Storage.Net.AzureBlobs
+  children:
+  - Talegen.Storage.Net.AzureBlobs.AzureBlobStorageContext.#ctor(System.String,System.String,System.Boolean)
+  - Talegen.Storage.Net.AzureBlobs.AzureBlobStorageContext.#ctor(System.Uri,System.String,System.String,System.Boolean)
+  - Talegen.Storage.Net.AzureBlobs.AzureBlobStorageContext.AccountKey
+  - Talegen.Storage.Net.AzureBlobs.AzureBlobStorageContext.AccountName
+  - Talegen.Storage.Net.AzureBlobs.AzureBlobStorageContext.ConnectionString
+  - Talegen.Storage.Net.AzureBlobs.AzureBlobStorageContext.RootWorkspaceLocalFolderPath
+  - Talegen.Storage.Net.AzureBlobs.AzureBlobStorageContext.StorageType
+  - Talegen.Storage.Net.AzureBlobs.AzureBlobStorageContext.UniqueWorkspace
+  - Talegen.Storage.Net.AzureBlobs.AzureBlobStorageContext.WorkspaceUri
+  langs:
+  - csharp
+  - vb
+  name: AzureBlobStorageContext
+  nameWithType: AzureBlobStorageContext
+  fullName: Talegen.Storage.Net.AzureBlobs.AzureBlobStorageContext
+  type: Class
+  source:
+    remote:
+      path: src/Talegen.Storage.Net.AzureBlobs/AzureBlobStorageContext.cs
+      branch: main
+      repo: https://github.com/Talegen/Talegen.Storage.Net.git
+    id: AzureBlobStorageContext
+    path: ../Talegen.Storage.Net.AzureBlobs/AzureBlobStorageContext.cs
+    startLine: 24
+  assemblies:
+  - Talegen.Storage.Net.AzureBlobs
+  namespace: Talegen.Storage.Net.AzureBlobs
+  summary: "\nThis class contains properties related to the storage service interfaces within the application.\n"
+  example: []
+  syntax:
+    content: 'public class AzureBlobStorageContext : IStorageContext'
+    content.vb: >-
+      Public Class AzureBlobStorageContext
+          Implements IStorageContext
+  inheritance:
+  - System.Object
+  implements:
+  - Talegen.Storage.Net.Core.IStorageContext
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Talegen.Storage.Net.AzureBlobs.AzureBlobStorageContext.#ctor(System.Uri,System.String,System.String,System.Boolean)
+  commentId: M:Talegen.Storage.Net.AzureBlobs.AzureBlobStorageContext.#ctor(System.Uri,System.String,System.String,System.Boolean)
+  id: '#ctor(System.Uri,System.String,System.String,System.Boolean)'
+  parent: Talegen.Storage.Net.AzureBlobs.AzureBlobStorageContext
+  langs:
+  - csharp
+  - vb
+  name: AzureBlobStorageContext(Uri, String, String, Boolean)
+  nameWithType: AzureBlobStorageContext.AzureBlobStorageContext(Uri, String, String, Boolean)
+  fullName: Talegen.Storage.Net.AzureBlobs.AzureBlobStorageContext.AzureBlobStorageContext(System.Uri, System.String, System.String, System.Boolean)
+  type: Constructor
+  source:
+    remote:
+      path: src/Talegen.Storage.Net.AzureBlobs/AzureBlobStorageContext.cs
+      branch: main
+      repo: https://github.com/Talegen/Talegen.Storage.Net.git
+    id: .ctor
+    path: ../Talegen.Storage.Net.AzureBlobs/AzureBlobStorageContext.cs
+    startLine: 33
+  assemblies:
+  - Talegen.Storage.Net.AzureBlobs
+  namespace: Talegen.Storage.Net.AzureBlobs
+  summary: "\nInitializes a new instance of the <xref href=\"Talegen.Storage.Net.AzureBlobs.AzureBlobStorageContext\" data-throw-if-not-resolved=\"false\"></xref> class.\n"
+  example: []
+  syntax:
+    content: public AzureBlobStorageContext(Uri blobEndpointUri, string accountName, string accountKey, bool uniqueWorkspace = false)
+    parameters:
+    - id: blobEndpointUri
+      type: System.Uri
+      description: The BLOB endpoint URI.
+    - id: accountName
+      type: System.String
+      description: Name of the account.
+    - id: accountKey
+      type: System.String
+      description: The account key.
+    - id: uniqueWorkspace
+      type: System.Boolean
+      description: Contains a value indicating whether the storage service shall use a unique workspace sub-folder.
+    content.vb: Public Sub New(blobEndpointUri As Uri, accountName As String, accountKey As String, uniqueWorkspace As Boolean = False)
+  overload: Talegen.Storage.Net.AzureBlobs.AzureBlobStorageContext.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Talegen.Storage.Net.AzureBlobs.AzureBlobStorageContext.#ctor(System.String,System.String,System.Boolean)
+  commentId: M:Talegen.Storage.Net.AzureBlobs.AzureBlobStorageContext.#ctor(System.String,System.String,System.Boolean)
+  id: '#ctor(System.String,System.String,System.Boolean)'
+  parent: Talegen.Storage.Net.AzureBlobs.AzureBlobStorageContext
+  langs:
+  - csharp
+  - vb
+  name: AzureBlobStorageContext(String, String, Boolean)
+  nameWithType: AzureBlobStorageContext.AzureBlobStorageContext(String, String, Boolean)
+  fullName: Talegen.Storage.Net.AzureBlobs.AzureBlobStorageContext.AzureBlobStorageContext(System.String, System.String, System.Boolean)
+  type: Constructor
+  source:
+    remote:
+      path: src/Talegen.Storage.Net.AzureBlobs/AzureBlobStorageContext.cs
+      branch: main
+      repo: https://github.com/Talegen/Talegen.Storage.Net.git
+    id: .ctor
+    path: ../Talegen.Storage.Net.AzureBlobs/AzureBlobStorageContext.cs
+    startLine: 57
+  assemblies:
+  - Talegen.Storage.Net.AzureBlobs
+  namespace: Talegen.Storage.Net.AzureBlobs
+  summary: "\nInitializes a new instance of the <xref href=\"Talegen.Storage.Net.AzureBlobs.AzureBlobStorageContext\" data-throw-if-not-resolved=\"false\"></xref> class.\n"
+  example: []
+  syntax:
+    content: public AzureBlobStorageContext(string connectionString, string accountName, bool uniqueWorkspace = false)
+    parameters:
+    - id: connectionString
+      type: System.String
+      description: The connection string.
+    - id: accountName
+      type: System.String
+      description: Name of the account.
+    - id: uniqueWorkspace
+      type: System.Boolean
+      description: Contains a value indicating whether the storage service shall use a unique workspace sub-folder.
+    content.vb: Public Sub New(connectionString As String, accountName As String, uniqueWorkspace As Boolean = False)
+  overload: Talegen.Storage.Net.AzureBlobs.AzureBlobStorageContext.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Talegen.Storage.Net.AzureBlobs.AzureBlobStorageContext.AccountName
+  commentId: P:Talegen.Storage.Net.AzureBlobs.AzureBlobStorageContext.AccountName
+  id: AccountName
+  parent: Talegen.Storage.Net.AzureBlobs.AzureBlobStorageContext
+  langs:
+  - csharp
+  - vb
+  name: AccountName
+  nameWithType: AzureBlobStorageContext.AccountName
+  fullName: Talegen.Storage.Net.AzureBlobs.AzureBlobStorageContext.AccountName
+  type: Property
+  source:
+    remote:
+      path: src/Talegen.Storage.Net.AzureBlobs/AzureBlobStorageContext.cs
+      branch: main
+      repo: https://github.com/Talegen/Talegen.Storage.Net.git
+    id: AccountName
+    path: ../Talegen.Storage.Net.AzureBlobs/AzureBlobStorageContext.cs
+    startLine: 68
+  assemblies:
+  - Talegen.Storage.Net.AzureBlobs
+  namespace: Talegen.Storage.Net.AzureBlobs
+  summary: "\nGets the name of the account.\n"
+  example: []
+  syntax:
+    content: public string AccountName { get; }
+    parameters: []
+    return:
+      type: System.String
+      description: The name of the account.
+    content.vb: Public ReadOnly Property AccountName As String
+  overload: Talegen.Storage.Net.AzureBlobs.AzureBlobStorageContext.AccountName*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Talegen.Storage.Net.AzureBlobs.AzureBlobStorageContext.AccountKey
+  commentId: P:Talegen.Storage.Net.AzureBlobs.AzureBlobStorageContext.AccountKey
+  id: AccountKey
+  parent: Talegen.Storage.Net.AzureBlobs.AzureBlobStorageContext
+  langs:
+  - csharp
+  - vb
+  name: AccountKey
+  nameWithType: AzureBlobStorageContext.AccountKey
+  fullName: Talegen.Storage.Net.AzureBlobs.AzureBlobStorageContext.AccountKey
+  type: Property
+  source:
+    remote:
+      path: src/Talegen.Storage.Net.AzureBlobs/AzureBlobStorageContext.cs
+      branch: main
+      repo: https://github.com/Talegen/Talegen.Storage.Net.git
+    id: AccountKey
+    path: ../Talegen.Storage.Net.AzureBlobs/AzureBlobStorageContext.cs
+    startLine: 74
+  assemblies:
+  - Talegen.Storage.Net.AzureBlobs
+  namespace: Talegen.Storage.Net.AzureBlobs
+  summary: "\nGets the account key.\n"
+  example: []
+  syntax:
+    content: public string AccountKey { get; }
+    parameters: []
+    return:
+      type: System.String
+      description: The account key.
+    content.vb: Public ReadOnly Property AccountKey As String
+  overload: Talegen.Storage.Net.AzureBlobs.AzureBlobStorageContext.AccountKey*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Talegen.Storage.Net.AzureBlobs.AzureBlobStorageContext.ConnectionString
+  commentId: P:Talegen.Storage.Net.AzureBlobs.AzureBlobStorageContext.ConnectionString
+  id: ConnectionString
+  parent: Talegen.Storage.Net.AzureBlobs.AzureBlobStorageContext
+  langs:
+  - csharp
+  - vb
+  name: ConnectionString
+  nameWithType: AzureBlobStorageContext.ConnectionString
+  fullName: Talegen.Storage.Net.AzureBlobs.AzureBlobStorageContext.ConnectionString
+  type: Property
+  source:
+    remote:
+      path: src/Talegen.Storage.Net.AzureBlobs/AzureBlobStorageContext.cs
+      branch: main
+      repo: https://github.com/Talegen/Talegen.Storage.Net.git
+    id: ConnectionString
+    path: ../Talegen.Storage.Net.AzureBlobs/AzureBlobStorageContext.cs
+    startLine: 80
+  assemblies:
+  - Talegen.Storage.Net.AzureBlobs
+  namespace: Talegen.Storage.Net.AzureBlobs
+  summary: "\nGets the connection string.\n"
+  example: []
+  syntax:
+    content: public string ConnectionString { get; }
+    parameters: []
+    return:
+      type: System.String
+      description: The connection string.
+    content.vb: Public ReadOnly Property ConnectionString As String
+  overload: Talegen.Storage.Net.AzureBlobs.AzureBlobStorageContext.ConnectionString*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Talegen.Storage.Net.AzureBlobs.AzureBlobStorageContext.StorageType
+  commentId: P:Talegen.Storage.Net.AzureBlobs.AzureBlobStorageContext.StorageType
+  id: StorageType
+  parent: Talegen.Storage.Net.AzureBlobs.AzureBlobStorageContext
+  langs:
+  - csharp
+  - vb
+  name: StorageType
+  nameWithType: AzureBlobStorageContext.StorageType
+  fullName: Talegen.Storage.Net.AzureBlobs.AzureBlobStorageContext.StorageType
+  type: Property
+  source:
+    remote:
+      path: src/Talegen.Storage.Net.AzureBlobs/AzureBlobStorageContext.cs
+      branch: main
+      repo: https://github.com/Talegen/Talegen.Storage.Net.git
+    id: StorageType
+    path: ../Talegen.Storage.Net.AzureBlobs/AzureBlobStorageContext.cs
+    startLine: 85
+  assemblies:
+  - Talegen.Storage.Net.AzureBlobs
+  namespace: Talegen.Storage.Net.AzureBlobs
+  summary: "\nGets the storage type of the context.\n"
+  example: []
+  syntax:
+    content: public string StorageType { get; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public ReadOnly Property StorageType As String
+  overload: Talegen.Storage.Net.AzureBlobs.AzureBlobStorageContext.StorageType*
+  implements:
+  - Talegen.Storage.Net.Core.IStorageContext.StorageType
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Talegen.Storage.Net.AzureBlobs.AzureBlobStorageContext.UniqueWorkspace
+  commentId: P:Talegen.Storage.Net.AzureBlobs.AzureBlobStorageContext.UniqueWorkspace
+  id: UniqueWorkspace
+  parent: Talegen.Storage.Net.AzureBlobs.AzureBlobStorageContext
+  langs:
+  - csharp
+  - vb
+  name: UniqueWorkspace
+  nameWithType: AzureBlobStorageContext.UniqueWorkspace
+  fullName: Talegen.Storage.Net.AzureBlobs.AzureBlobStorageContext.UniqueWorkspace
+  type: Property
+  source:
+    remote:
+      path: src/Talegen.Storage.Net.AzureBlobs/AzureBlobStorageContext.cs
+      branch: main
+      repo: https://github.com/Talegen/Talegen.Storage.Net.git
+    id: UniqueWorkspace
+    path: ../Talegen.Storage.Net.AzureBlobs/AzureBlobStorageContext.cs
+    startLine: 90
+  assemblies:
+  - Talegen.Storage.Net.AzureBlobs
+  namespace: Talegen.Storage.Net.AzureBlobs
+  summary: "\nGets a value indicating whether the storage service shall use a unique workspace sub-folder.\n"
+  example: []
+  syntax:
+    content: public bool UniqueWorkspace { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property UniqueWorkspace As Boolean
+  overload: Talegen.Storage.Net.AzureBlobs.AzureBlobStorageContext.UniqueWorkspace*
+  implements:
+  - Talegen.Storage.Net.Core.IStorageContext.UniqueWorkspace
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Talegen.Storage.Net.AzureBlobs.AzureBlobStorageContext.WorkspaceUri
+  commentId: P:Talegen.Storage.Net.AzureBlobs.AzureBlobStorageContext.WorkspaceUri
+  id: WorkspaceUri
+  parent: Talegen.Storage.Net.AzureBlobs.AzureBlobStorageContext
+  langs:
+  - csharp
+  - vb
+  name: WorkspaceUri
+  nameWithType: AzureBlobStorageContext.WorkspaceUri
+  fullName: Talegen.Storage.Net.AzureBlobs.AzureBlobStorageContext.WorkspaceUri
+  type: Property
+  source:
+    remote:
+      path: src/Talegen.Storage.Net.AzureBlobs/AzureBlobStorageContext.cs
+      branch: main
+      repo: https://github.com/Talegen/Talegen.Storage.Net.git
+    id: WorkspaceUri
+    path: ../Talegen.Storage.Net.AzureBlobs/AzureBlobStorageContext.cs
+    startLine: 95
+  assemblies:
+  - Talegen.Storage.Net.AzureBlobs
+  namespace: Talegen.Storage.Net.AzureBlobs
+  summary: "\nGets the root storage workspace URI path.\n"
+  example: []
+  syntax:
+    content: public Uri WorkspaceUri { get; }
+    parameters: []
+    return:
+      type: System.Uri
+    content.vb: Public ReadOnly Property WorkspaceUri As Uri
+  overload: Talegen.Storage.Net.AzureBlobs.AzureBlobStorageContext.WorkspaceUri*
+  implements:
+  - Talegen.Storage.Net.Core.IStorageContext.WorkspaceUri
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Talegen.Storage.Net.AzureBlobs.AzureBlobStorageContext.RootWorkspaceLocalFolderPath
+  commentId: P:Talegen.Storage.Net.AzureBlobs.AzureBlobStorageContext.RootWorkspaceLocalFolderPath
+  id: RootWorkspaceLocalFolderPath
+  parent: Talegen.Storage.Net.AzureBlobs.AzureBlobStorageContext
+  langs:
+  - csharp
+  - vb
+  name: RootWorkspaceLocalFolderPath
+  nameWithType: AzureBlobStorageContext.RootWorkspaceLocalFolderPath
+  fullName: Talegen.Storage.Net.AzureBlobs.AzureBlobStorageContext.RootWorkspaceLocalFolderPath
+  type: Property
+  source:
+    remote:
+      path: src/Talegen.Storage.Net.AzureBlobs/AzureBlobStorageContext.cs
+      branch: main
+      repo: https://github.com/Talegen/Talegen.Storage.Net.git
+    id: RootWorkspaceLocalFolderPath
+    path: ../Talegen.Storage.Net.AzureBlobs/AzureBlobStorageContext.cs
+    startLine: 100
+  assemblies:
+  - Talegen.Storage.Net.AzureBlobs
+  namespace: Talegen.Storage.Net.AzureBlobs
+  summary: "\nGets the local folder path representation of the root workspace folder Uri.\n"
+  example: []
+  syntax:
+    content: public string RootWorkspaceLocalFolderPath { get; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public ReadOnly Property RootWorkspaceLocalFolderPath As String
+  overload: Talegen.Storage.Net.AzureBlobs.AzureBlobStorageContext.RootWorkspaceLocalFolderPath*
+  implements:
+  - Talegen.Storage.Net.Core.IStorageContext.RootWorkspaceLocalFolderPath
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+references:
+- uid: Talegen.Storage.Net.AzureBlobs
+  commentId: N:Talegen.Storage.Net.AzureBlobs
+  name: Talegen.Storage.Net.AzureBlobs
+  nameWithType: Talegen.Storage.Net.AzureBlobs
+  fullName: Talegen.Storage.Net.AzureBlobs
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Talegen.Storage.Net.Core.IStorageContext
+  commentId: T:Talegen.Storage.Net.Core.IStorageContext
+  parent: Talegen.Storage.Net.Core
+  name: IStorageContext
+  nameWithType: IStorageContext
+  fullName: Talegen.Storage.Net.Core.IStorageContext
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Talegen.Storage.Net.Core
+  commentId: N:Talegen.Storage.Net.Core
+  name: Talegen.Storage.Net.Core
+  nameWithType: Talegen.Storage.Net.Core
+  fullName: Talegen.Storage.Net.Core
+- uid: Talegen.Storage.Net.AzureBlobs.AzureBlobStorageContext
+  commentId: T:Talegen.Storage.Net.AzureBlobs.AzureBlobStorageContext
+  parent: Talegen.Storage.Net.AzureBlobs
+  name: AzureBlobStorageContext
+  nameWithType: AzureBlobStorageContext
+  fullName: Talegen.Storage.Net.AzureBlobs.AzureBlobStorageContext
+- uid: Talegen.Storage.Net.AzureBlobs.AzureBlobStorageContext.#ctor*
+  commentId: Overload:Talegen.Storage.Net.AzureBlobs.AzureBlobStorageContext.#ctor
+  name: AzureBlobStorageContext
+  nameWithType: AzureBlobStorageContext.AzureBlobStorageContext
+  fullName: Talegen.Storage.Net.AzureBlobs.AzureBlobStorageContext.AzureBlobStorageContext
+- uid: System.Uri
+  commentId: T:System.Uri
+  parent: System
+  isExternal: true
+  name: Uri
+  nameWithType: Uri
+  fullName: System.Uri
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
+- uid: Talegen.Storage.Net.AzureBlobs.AzureBlobStorageContext.AccountName*
+  commentId: Overload:Talegen.Storage.Net.AzureBlobs.AzureBlobStorageContext.AccountName
+  name: AccountName
+  nameWithType: AzureBlobStorageContext.AccountName
+  fullName: Talegen.Storage.Net.AzureBlobs.AzureBlobStorageContext.AccountName
+- uid: Talegen.Storage.Net.AzureBlobs.AzureBlobStorageContext.AccountKey*
+  commentId: Overload:Talegen.Storage.Net.AzureBlobs.AzureBlobStorageContext.AccountKey
+  name: AccountKey
+  nameWithType: AzureBlobStorageContext.AccountKey
+  fullName: Talegen.Storage.Net.AzureBlobs.AzureBlobStorageContext.AccountKey
+- uid: Talegen.Storage.Net.AzureBlobs.AzureBlobStorageContext.ConnectionString*
+  commentId: Overload:Talegen.Storage.Net.AzureBlobs.AzureBlobStorageContext.ConnectionString
+  name: ConnectionString
+  nameWithType: AzureBlobStorageContext.ConnectionString
+  fullName: Talegen.Storage.Net.AzureBlobs.AzureBlobStorageContext.ConnectionString
+- uid: Talegen.Storage.Net.AzureBlobs.AzureBlobStorageContext.StorageType*
+  commentId: Overload:Talegen.Storage.Net.AzureBlobs.AzureBlobStorageContext.StorageType
+  name: StorageType
+  nameWithType: AzureBlobStorageContext.StorageType
+  fullName: Talegen.Storage.Net.AzureBlobs.AzureBlobStorageContext.StorageType
+- uid: Talegen.Storage.Net.Core.IStorageContext.StorageType
+  commentId: P:Talegen.Storage.Net.Core.IStorageContext.StorageType
+  parent: Talegen.Storage.Net.Core.IStorageContext
+  name: StorageType
+  nameWithType: IStorageContext.StorageType
+  fullName: Talegen.Storage.Net.Core.IStorageContext.StorageType
+- uid: Talegen.Storage.Net.AzureBlobs.AzureBlobStorageContext.UniqueWorkspace*
+  commentId: Overload:Talegen.Storage.Net.AzureBlobs.AzureBlobStorageContext.UniqueWorkspace
+  name: UniqueWorkspace
+  nameWithType: AzureBlobStorageContext.UniqueWorkspace
+  fullName: Talegen.Storage.Net.AzureBlobs.AzureBlobStorageContext.UniqueWorkspace
+- uid: Talegen.Storage.Net.Core.IStorageContext.UniqueWorkspace
+  commentId: P:Talegen.Storage.Net.Core.IStorageContext.UniqueWorkspace
+  parent: Talegen.Storage.Net.Core.IStorageContext
+  name: UniqueWorkspace
+  nameWithType: IStorageContext.UniqueWorkspace
+  fullName: Talegen.Storage.Net.Core.IStorageContext.UniqueWorkspace
+- uid: Talegen.Storage.Net.AzureBlobs.AzureBlobStorageContext.WorkspaceUri*
+  commentId: Overload:Talegen.Storage.Net.AzureBlobs.AzureBlobStorageContext.WorkspaceUri
+  name: WorkspaceUri
+  nameWithType: AzureBlobStorageContext.WorkspaceUri
+  fullName: Talegen.Storage.Net.AzureBlobs.AzureBlobStorageContext.WorkspaceUri
+- uid: Talegen.Storage.Net.Core.IStorageContext.WorkspaceUri
+  commentId: P:Talegen.Storage.Net.Core.IStorageContext.WorkspaceUri
+  parent: Talegen.Storage.Net.Core.IStorageContext
+  name: WorkspaceUri
+  nameWithType: IStorageContext.WorkspaceUri
+  fullName: Talegen.Storage.Net.Core.IStorageContext.WorkspaceUri
+- uid: Talegen.Storage.Net.AzureBlobs.AzureBlobStorageContext.RootWorkspaceLocalFolderPath*
+  commentId: Overload:Talegen.Storage.Net.AzureBlobs.AzureBlobStorageContext.RootWorkspaceLocalFolderPath
+  name: RootWorkspaceLocalFolderPath
+  nameWithType: AzureBlobStorageContext.RootWorkspaceLocalFolderPath
+  fullName: Talegen.Storage.Net.AzureBlobs.AzureBlobStorageContext.RootWorkspaceLocalFolderPath
+- uid: Talegen.Storage.Net.Core.IStorageContext.RootWorkspaceLocalFolderPath
+  commentId: P:Talegen.Storage.Net.Core.IStorageContext.RootWorkspaceLocalFolderPath
+  parent: Talegen.Storage.Net.Core.IStorageContext
+  name: RootWorkspaceLocalFolderPath
+  nameWithType: IStorageContext.RootWorkspaceLocalFolderPath
+  fullName: Talegen.Storage.Net.Core.IStorageContext.RootWorkspaceLocalFolderPath
