@@ -17,6 +17,13 @@ There are plenty of storage abstraction libraries out on GitHub, but none of the
 
 We set out to create a library that does the minimum to get the common jobs we need to get done, and to this point, **Talegen.Storage.Net** was born.
 
+## Download
+
+Libraries can be downloaded via nuget.org at the following:
+
+ - [Talegen.Storage.Net.Core](https://www.nuget.org/packages/Talegen.Storage.Net.Core/) - Core interface classes, local disk and memory storage implementations.
+ - [Talegen.Storage.Net.AzureBlobs](https://www.nuget.org/packages/Talegen.Storage.Net.AzureBlobs/) - Azure Blob Storage File Share implementation.
+
 ## Documentation
 
 For a general overview of the library, please visit the [Talegen.Storage.Net documentation online](https://talegen.github.io/Talegen.Storage.Net/).
