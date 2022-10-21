@@ -3,7 +3,6 @@
   <PropertyGroup>
     <TargetFramework>netcoreapp3.1</TargetFramework>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-    <Version>1.0.3</Version>
     <Authors>Talegen, LLC</Authors>
     <Description>Azure Blob Storage Abstraction for Talegen Storage Library.</Description>
     <PackageLicenseExpression>Apache-2.0</PackageLicenseExpression>
@@ -13,10 +12,13 @@
     <RepositoryUrl>https://github.com/Talegen/Talegen.Storage.Net</RepositoryUrl>
     <RepositoryType>git</RepositoryType>
     <PackageTags>storage azure</PackageTags>
-    <PackageReleaseNotes>Updated to include latest Core library and keep versions in sync.</PackageReleaseNotes>
+    <PackageReleaseNotes>Updated packages to latest versions.</PackageReleaseNotes>
     <NeutralLanguage>en</NeutralLanguage>
     <ApplicationIcon />
     <EnableNETAnalyzers>true</EnableNETAnalyzers>
+    <Version>1.0.4</Version>
+    <AssemblyVersion>1.0.4.0</AssemblyVersion>
+    <FileVersion>1.0.4.0</FileVersion>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
@@ -24,9 +26,9 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Azure.Storage.Blobs" Version="12.9.1" />
-    <PackageReference Include="Azure.Storage.Files.Shares" Version="12.7.0" />
-    <PackageReference Include="docfx.console" Version="2.58.0">
+    <PackageReference Include="Azure.Storage.Blobs" Version="12.14.1" />
+    <PackageReference Include="Azure.Storage.Files.Shares" Version="12.12.0" />
+    <PackageReference Include="docfx.console" Version="2.59.4">
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageReference>

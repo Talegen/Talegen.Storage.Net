@@ -10,11 +10,11 @@
     <RepositoryType>git</RepositoryType>
     <PackageProjectUrl>https://github.com/Talegen/Talegen.Storage.Net</PackageProjectUrl>
     <PackageTags>storage</PackageTags>
-    <PackageReleaseNotes>Added additional tests for local disk storage. Cleaned up the local storage service issues to pass tests.</PackageReleaseNotes>
+    <PackageReleaseNotes>Updated packages to latest versions.</PackageReleaseNotes>
     <NeutralLanguage>en</NeutralLanguage>
-    <Version>1.0.3</Version>
-    <AssemblyVersion>1.0.3.0</AssemblyVersion>
-    <FileVersion>1.0.3.0</FileVersion>
+    <Version>1.0.4</Version>
+    <AssemblyVersion>1.0.4.0</AssemblyVersion>
+    <FileVersion>1.0.4.0</FileVersion>
     <EnableNETAnalyzers>true</EnableNETAnalyzers>
     <ApplicationIcon />
     <PackageIcon>logo.png</PackageIcon>
@@ -28,7 +28,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="docfx.console" Version="2.58.0">
+    <PackageReference Include="docfx.console" Version="2.59.4">
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageReference>

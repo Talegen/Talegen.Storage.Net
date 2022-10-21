@@ -9,7 +9,7 @@
       "output": {
         ".html": {
           "relative_path": "CONTRIBUTING.html",
-          "hash": "EtnBi9ocVaEiOTDLxpdoVzsVT9bQ17mmXcCt3ormPKQ="
+          "hash": "30uAcWnzjtgS6OhIx8+/QmKD25KvvTCuevEvd+s/mfw="
         }
       },
       "is_incremental": false,
@@ -21,7 +21,7 @@
       "output": {
         ".html": {
           "relative_path": "README.html",
-          "hash": "S/cig2yWQPTnW1oxs+UjUfkSm+lLe6YB4x3wKRJYTaI="
+          "hash": "qm3tUVa8Atja/tta3PfhOhpnA4eWyDwBqnJS1m199mw="
         }
       },
       "is_incremental": false,
@@ -55,7 +55,7 @@
       "output": {
         ".html": {
           "relative_path": "index.html",
-          "hash": "Yd/SRoh00HEuOS5jyev5S8OJYjE8A6CNot015fMY5Y0="
+          "hash": "n1Usif6mmqY45eEqd3DmX+vMRQXE9X2OtLZlOq1rgm4="
         }
       },
       "is_incremental": false,
@@ -67,7 +67,7 @@
       "output": {
         ".html": {
           "relative_path": "ref/Talegen.Storage.Net.AzureBlobs.AzureBlobStorageContext.html",
-          "hash": "v7DIF2yZEGiU6rmxEpKO0msAfGMn5oxcrFHyvbkCpmg="
+          "hash": "TK7Vm8ZgFBL+GCkoQZX2xZq77/9Qz+xzsx/0Lo4KN7A="
         }
       },
       "is_incremental": false,
@@ -79,7 +79,7 @@
       "output": {
         ".html": {
           "relative_path": "ref/Talegen.Storage.Net.AzureBlobs.AzureBlobStorageService.html",
-          "hash": "zBlknO37MbrSyq+2whaVGhoZ0t7cB76ObxotEUsZXBs="
+          "hash": "i5FeASuNttKUHJ6Ls16AmZH3T3XRy3AI8CFk6EsjfXU="
         }
       },
       "is_incremental": false,
@@ -91,7 +91,7 @@
       "output": {
         ".html": {
           "relative_path": "ref/Talegen.Storage.Net.AzureBlobs.html",
-          "hash": "wgYoy7NOiMQiXSmW3pD9I18JoyBBBxd0PRDF7HxhdFA="
+          "hash": "YdldOS/EnEttckaC2YpUHkyflbcNR1FDKkDPoCcw0LQ="
         }
       },
       "is_incremental": false,
@@ -103,7 +103,7 @@
       "output": {
         ".html": {
           "relative_path": "ref/Talegen.Storage.Net.Core.Disk.ApplicationPaths.html",
-          "hash": "O3QPc58Ma0OciZ4hRDntVaVbMndYmRFCypqzxBDTgmk="
+          "hash": "IUj1qx8A9NX75vH9o53/Ry1vL0DkJmoC/loXrZUkvLQ="
         }
       },
       "is_incremental": false,
@@ -115,7 +115,7 @@
       "output": {
         ".html": {
           "relative_path": "ref/Talegen.Storage.Net.Core.Disk.LocalStorageContext.html",
-          "hash": "dbF5/ix6/aQzFOD3fIUpjApDybPKHoFLLZkCFit0UZI="
+          "hash": "OFjbgxz/O2lcJ5jLpWbHlioZTvwEmr1vP42FY+uxhJ8="
         }
       },
       "is_incremental": false,
@@ -127,7 +127,7 @@
       "output": {
         ".html": {
           "relative_path": "ref/Talegen.Storage.Net.Core.Disk.LocalStorageService.html",
-          "hash": "RnNZ8BEgLGyXQizEJPLxft26/E2OpEU0RynGW4URoxo="
+          "hash": "Wbw8VSzZvnUGeYCWIoGpHUn+8DPG55vcB+jnf5vSt4Y="
         }
       },
       "is_incremental": false,
@@ -139,7 +139,7 @@
       "output": {
         ".html": {
           "relative_path": "ref/Talegen.Storage.Net.Core.Disk.html",
-          "hash": "mEGLyBGjn2ra3oL2XEX9CpORFUI7H93fx9HgOHrFZGE="
+          "hash": "klC64MicFe2jc2KNhNO3cdG8z7m8YAayjpp123/zpcM="
         }
       },
       "is_incremental": false,
@@ -151,7 +151,7 @@
       "output": {
         ".html": {
           "relative_path": "ref/Talegen.Storage.Net.Core.IStorageContext.html",
-          "hash": "30QG7GPA2c7tWS7XbNaGmBFBTmHTrlO1g+pv26D8eGU="
+          "hash": "Tbcikz7Mv+oA7Vf782bQnt1zkeIrPC/KgsK7AIbrZ14="
         }
       },
       "is_incremental": false,
@@ -163,7 +163,7 @@
       "output": {
         ".html": {
           "relative_path": "ref/Talegen.Storage.Net.Core.IStorageService.html",
-          "hash": "5/C7o4OJeTGFAViu5iYcqvfJgAfBx9tkqam5L9OBxss="
+          "hash": "qCoZFlmFrU2krrJ4WSQvq3UgDR8xZ1T1JYcZi+1dXJ4="
         }
       },
       "is_incremental": false,
@@ -175,7 +175,7 @@
       "output": {
         ".html": {
           "relative_path": "ref/Talegen.Storage.Net.Core.Memory.MemoryFolderModel.html",
-          "hash": "GiBcmcCYm6PhYkdO0fL7f17chWFyA14F5ey+ihUKiac="
+          "hash": "y8Yh81sMRxE53xMMWciEGEW5+BY3jndfe1ZKlbI1jKg="
         }
       },
       "is_incremental": false,
@@ -187,7 +187,7 @@
       "output": {
         ".html": {
           "relative_path": "ref/Talegen.Storage.Net.Core.Memory.MemoryStorageContext.html",
-          "hash": "A4kdRaEq/2A4zjKsFPHrjbdfUq42UBekdhTMypJzX8o="
+          "hash": "dbzwWcERa8+WBTwVho9U2e7ioT7AuZpS6i5ktiiPEI8="
         }
       },
       "is_incremental": false,
@@ -199,7 +199,7 @@
       "output": {
         ".html": {
           "relative_path": "ref/Talegen.Storage.Net.Core.Memory.MemoryStorageService.html",
-          "hash": "WbLlcVMnUGOjpbsgJLIDQgCYYzvvkz7BVmS/U7xobd4="
+          "hash": "lXDt8oUQ/UiAXjImWp1w+hyo0EgcXPhsBQTq9DzF2TA="
         }
       },
       "is_incremental": false,
@@ -211,7 +211,7 @@
       "output": {
         ".html": {
           "relative_path": "ref/Talegen.Storage.Net.Core.Memory.html",
-          "hash": "3fMLKywTMalc27y7RAHMwKNAUZiesk3HTNHnbriZInE="
+          "hash": "lIxAgAUOBpt8u6KtQHOxDkBRGGPOHt7WmCjUna4igQ0="
         }
       },
       "is_incremental": false,
@@ -223,7 +223,7 @@
       "output": {
         ".html": {
           "relative_path": "ref/Talegen.Storage.Net.Core.StorageException.html",
-          "hash": "UDkijRkN14QFnZmuuyXwPBaJ97ul1RwVQ6wmDerwJqs="
+          "hash": "xQ+awB9kVVzQNphU6LeW2xgaL3IrOEDbanizwcw93bE="
         }
       },
       "is_incremental": false,
@@ -235,7 +235,7 @@
       "output": {
         ".html": {
           "relative_path": "ref/Talegen.Storage.Net.Core.html",
-          "hash": "h32na71FNvzgQS+/eQZ9pKfuopOPsY/Wm7/Z6IfUSnk="
+          "hash": "8q4iIakybjOUvlrtT1x7xK3/iXgKIqwyvPOmcmVoKyA="
         }
       },
       "is_incremental": false,
@@ -247,7 +247,7 @@
       "output": {
         ".html": {
           "relative_path": "ref/Talegen.Storage.Net.Tests.DiskStorageTests.html",
-          "hash": "SOhya3juhUPM0P8WR0eYJY0vndc9OP1IZjnl16r1oM8="
+          "hash": "BELJODax4JKGFWNHQgy/2ialYRe8t/AqmZbP8TTrCac="
         }
       },
       "is_incremental": false,
@@ -259,7 +259,7 @@
       "output": {
         ".html": {
           "relative_path": "ref/Talegen.Storage.Net.Tests.MemoryStorageTests.html",
-          "hash": "A0190Rdr1vgkBTSYbn+T1Yr1mylWX2OvcRi3rEBnjY0="
+          "hash": "VkCZBN4OIPXa0lY5TLaffA4nDPrLVi+PjtD6yUtNo04="
         }
       },
       "is_incremental": false,
@@ -271,7 +271,7 @@
       "output": {
         ".html": {
           "relative_path": "ref/Talegen.Storage.Net.Tests.StorageTestsBase.html",
-          "hash": "v3TFIehrTiDoKSDghb5eYM7MPH1eP1kVmjqbIIhGXbs="
+          "hash": "rUb0GQeWQ73C2bFn7ViAVI2ZDVZqvRjURI0wlvClHWw="
         }
       },
       "is_incremental": false,
@@ -283,7 +283,7 @@
       "output": {
         ".html": {
           "relative_path": "ref/Talegen.Storage.Net.Tests.UnitTestBase.html",
-          "hash": "xpYjSVkavsyCz6iIuxPk5tnugasz04QoKNpt7tLxjR8="
+          "hash": "KWTrBZLZ1Be2eq1Wdw15WcSW09IAbEyfVhNuQiBKdQY="
         }
       },
       "is_incremental": false,
@@ -295,7 +295,7 @@
       "output": {
         ".html": {
           "relative_path": "ref/Talegen.Storage.Net.Tests.html",
-          "hash": "u2CFJt+rQpNz0rVsSc4MG4gkBw9yCXrt+5vE0XVDHew="
+          "hash": "uIFdzZ1cmY90zb37lQ3EKHQeuZ55WgAzs0zF6VNcICE="
         }
       },
       "is_incremental": false,
@@ -333,11 +333,11 @@
     {
       "status": {
         "can_incremental": false,
-        "details": "Disable incremental build by force rebuild option.",
+        "details": "Cannot build incrementally because docfx version changed from 2.58.0.0 to 2.59.4.0.",
         "incrementalPhase": "build",
         "total_file_count": 0,
         "skipped_file_count": 0,
-        "full_build_reason_code": "ForceRebuild"
+        "full_build_reason_code": "DocfxVersionChanged"
       },
       "processors": {
         "ConceptualDocumentProcessor": {
@@ -370,8 +370,8 @@
     },
     {
       "status": {
-        "can_incremental": false,
-        "details": "Cannot support incremental post processing, the reason is: it's disabled.",
+        "can_incremental": true,
+        "details": "Can support incremental post processing.",
         "incrementalPhase": "postProcessing",
         "total_file_count": 0,
         "skipped_file_count": 0
