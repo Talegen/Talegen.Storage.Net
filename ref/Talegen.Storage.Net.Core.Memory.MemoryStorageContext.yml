@@ -35,6 +35,7 @@ items:
     content: 'public class MemoryStorageContext : IStorageContext'
     content.vb: >-
       Public Class MemoryStorageContext
+
           Implements IStorageContext
   inheritance:
   - System.Object

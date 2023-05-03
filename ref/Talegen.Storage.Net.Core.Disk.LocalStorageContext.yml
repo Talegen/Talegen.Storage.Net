@@ -35,6 +35,7 @@ items:
     content: 'public class LocalStorageContext : IStorageContext'
     content.vb: >-
       Public Class LocalStorageContext
+
           Implements IStorageContext
   inheritance:
   - System.Object

@@ -32,7 +32,9 @@ items:
     content: 'public class StorageException : Exception, ISerializable'
     content.vb: >-
       Public Class StorageException
+
           Inherits Exception
+
           Implements ISerializable
   seealso:
   - linkId: System.Exception

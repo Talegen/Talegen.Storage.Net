@@ -53,6 +53,7 @@ items:
     content: 'public class MemoryStorageService : IStorageService'
     content.vb: >-
       Public Class MemoryStorageService
+
           Implements IStorageService
   seealso:
   - linkId: Talegen.Storage.Net.Core.IStorageService

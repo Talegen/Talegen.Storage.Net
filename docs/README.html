@@ -71,6 +71,12 @@
 <p>.NET's <a href="https://docs.microsoft.com/en-us/dotnet/api/system.io.directory">Directory</a> and <a href="https://docs.microsoft.com/en-us/dotnet/api/system.io.file">File</a> classes are great abstractions over lower-level disk IO interactions, but they work with the local disk only. What if we could write a storage abstraction with similar simple methods, that allows you to do similar directory and file interactions but with a cloud provider like Azure, or an in-memory implementation for diskless unit testing?</p>
 <p>There are plenty of storage abstraction libraries out on GitHub, but none of them took the approach of a very simplistic storage service implementation. In most cases, we can write the underlying implementation code for the simple directory and file methods found in System.IO.</p>
 <p>We set out to create a library that does the minimum to get the common jobs we need to get done, and to this point, <strong>Talegen.Storage.Net</strong> was born.</p>
+<h2 id="download">Download</h2>
+<p>Libraries can be downloaded via nuget.org at the following:</p>
+<ul>
+<li><a href="https://www.nuget.org/packages/Talegen.Storage.Net.Core/">Talegen.Storage.Net.Core</a> - Core interface classes, local disk and memory storage implementations.</li>
+<li><a href="https://www.nuget.org/packages/Talegen.Storage.Net.AzureBlobs/">Talegen.Storage.Net.AzureBlobs</a> - Azure Blob Storage File Share implementation.</li>
+</ul>
 <h2 id="documentation">Documentation</h2>
 <p>For a general overview of the library, please visit the <a href="https://talegen.github.io/Talegen.Storage.Net/">Talegen.Storage.Net documentation online</a>.</p>
 <h2 id="contributing">Contributing</h2>

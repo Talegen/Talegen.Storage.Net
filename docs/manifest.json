@@ -1,6 +1,6 @@
 {
   "homepages": [],
-  "source_base_path": "D:/Projects/Talegen/GitHub/Talegen.Storage.Net/src/Talegen.Storage.Net.Core",
+  "source_base_path": "c:/Projects/Talegen/Talegen.Storage.Net/src/Talegen.Storage.Net.Core",
   "xrefmap": "xrefmap.yml",
   "files": [
     {
@@ -12,7 +12,7 @@
           "hash": "30uAcWnzjtgS6OhIx8+/QmKD25KvvTCuevEvd+s/mfw="
         }
       },
-      "is_incremental": false,
+      "is_incremental": true,
       "version": ""
     },
     {
@@ -21,10 +21,10 @@
       "output": {
         ".html": {
           "relative_path": "README.html",
-          "hash": "qm3tUVa8Atja/tta3PfhOhpnA4eWyDwBqnJS1m199mw="
+          "hash": "f1FP+Z7ysrI7LPFoglcfY4YpWq7Hv9f5lLl1QfrI6vI="
         }
       },
-      "is_incremental": false,
+      "is_incremental": true,
       "version": ""
     },
     {
@@ -58,7 +58,7 @@
           "hash": "n1Usif6mmqY45eEqd3DmX+vMRQXE9X2OtLZlOq1rgm4="
         }
       },
-      "is_incremental": false,
+      "is_incremental": true,
       "version": ""
     },
     {
@@ -106,7 +106,7 @@
           "hash": "IUj1qx8A9NX75vH9o53/Ry1vL0DkJmoC/loXrZUkvLQ="
         }
       },
-      "is_incremental": false,
+      "is_incremental": true,
       "version": ""
     },
     {
@@ -118,7 +118,7 @@
           "hash": "OFjbgxz/O2lcJ5jLpWbHlioZTvwEmr1vP42FY+uxhJ8="
         }
       },
-      "is_incremental": false,
+      "is_incremental": true,
       "version": ""
     },
     {
@@ -130,7 +130,7 @@
           "hash": "Wbw8VSzZvnUGeYCWIoGpHUn+8DPG55vcB+jnf5vSt4Y="
         }
       },
-      "is_incremental": false,
+      "is_incremental": true,
       "version": ""
     },
     {
@@ -142,7 +142,7 @@
           "hash": "klC64MicFe2jc2KNhNO3cdG8z7m8YAayjpp123/zpcM="
         }
       },
-      "is_incremental": false,
+      "is_incremental": true,
       "version": ""
     },
     {
@@ -154,7 +154,7 @@
           "hash": "Tbcikz7Mv+oA7Vf782bQnt1zkeIrPC/KgsK7AIbrZ14="
         }
       },
-      "is_incremental": false,
+      "is_incremental": true,
       "version": ""
     },
     {
@@ -166,7 +166,7 @@
           "hash": "qCoZFlmFrU2krrJ4WSQvq3UgDR8xZ1T1JYcZi+1dXJ4="
         }
       },
-      "is_incremental": false,
+      "is_incremental": true,
       "version": ""
     },
     {
@@ -178,7 +178,7 @@
           "hash": "y8Yh81sMRxE53xMMWciEGEW5+BY3jndfe1ZKlbI1jKg="
         }
       },
-      "is_incremental": false,
+      "is_incremental": true,
       "version": ""
     },
     {
@@ -190,7 +190,7 @@
           "hash": "dbzwWcERa8+WBTwVho9U2e7ioT7AuZpS6i5ktiiPEI8="
         }
       },
-      "is_incremental": false,
+      "is_incremental": true,
       "version": ""
     },
     {
@@ -202,7 +202,7 @@
           "hash": "lXDt8oUQ/UiAXjImWp1w+hyo0EgcXPhsBQTq9DzF2TA="
         }
       },
-      "is_incremental": false,
+      "is_incremental": true,
       "version": ""
     },
     {
@@ -214,7 +214,7 @@
           "hash": "lIxAgAUOBpt8u6KtQHOxDkBRGGPOHt7WmCjUna4igQ0="
         }
       },
-      "is_incremental": false,
+      "is_incremental": true,
       "version": ""
     },
     {
@@ -226,7 +226,7 @@
           "hash": "xQ+awB9kVVzQNphU6LeW2xgaL3IrOEDbanizwcw93bE="
         }
       },
-      "is_incremental": false,
+      "is_incremental": true,
       "version": ""
     },
     {
@@ -238,7 +238,7 @@
           "hash": "8q4iIakybjOUvlrtT1x7xK3/iXgKIqwyvPOmcmVoKyA="
         }
       },
-      "is_incremental": false,
+      "is_incremental": true,
       "version": ""
     },
     {
@@ -332,25 +332,23 @@
   "incremental_info": [
     {
       "status": {
-        "can_incremental": false,
-        "details": "Cannot build incrementally because docfx version changed from 2.58.0.0 to 2.59.4.0.",
+        "can_incremental": true,
         "incrementalPhase": "build",
         "total_file_count": 0,
-        "skipped_file_count": 0,
-        "full_build_reason_code": "DocfxVersionChanged"
+        "skipped_file_count": 0
       },
       "processors": {
         "ConceptualDocumentProcessor": {
-          "can_incremental": false,
+          "can_incremental": true,
           "incrementalPhase": "build",
           "total_file_count": 3,
-          "skipped_file_count": 0
+          "skipped_file_count": 3
         },
         "ManagedReferenceDocumentProcessor": {
-          "can_incremental": false,
+          "can_incremental": true,
           "incrementalPhase": "build",
           "total_file_count": 20,
-          "skipped_file_count": 0
+          "skipped_file_count": 15
         },
         "ResourceDocumentProcessor": {
           "can_incremental": false,

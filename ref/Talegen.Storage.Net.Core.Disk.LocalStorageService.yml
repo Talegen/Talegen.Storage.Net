@@ -52,6 +52,7 @@ items:
     content: 'public class LocalStorageService : IStorageService'
     content.vb: >-
       Public Class LocalStorageService
+
           Implements IStorageService
   inheritance:
   - System.Object
