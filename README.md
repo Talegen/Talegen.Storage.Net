@@ -23,6 +23,7 @@ Libraries can be downloaded via nuget.org at the following:
 
  - [Talegen.Storage.Net.Core](https://www.nuget.org/packages/Talegen.Storage.Net.Core/) - Core interface classes, local disk and memory storage implementations.
  - [Talegen.Storage.Net.AzureBlobs](https://www.nuget.org/packages/Talegen.Storage.Net.AzureBlobs/) - Azure Blob Storage File Share implementation.
+ - [Talegen.Storage.Net.Aws](https://www.nuget.org/packages/Talegen.Storage.Net.Aws) - AWS S3 Blob Storage File Share implementation [Repository](https://github.com/Talegen/Talegen.Storage.Net.Aws).
 
 ## Documentation
 
