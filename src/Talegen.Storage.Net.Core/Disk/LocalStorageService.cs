@@ -1,7 +1,7 @@
 ﻿/*
  *
  * (c) Copyright Talegen, LLC.
- *
+ * 
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
@@ -13,15 +13,17 @@
  * limitations under the License.
  *
 */
-
 namespace Talegen.Storage.Net.Core.Disk
 {
     using System;
     using System.Collections.Generic;
     using System.IO;
     using System.Linq;
+    using System.Text;
     using System.Threading.Tasks;
+    using Newtonsoft.Json;
     using Talegen.Common.Core.Extensions;
+    using Talegen.Common.Core.Storage;
     using Talegen.Common.Core.Threading;
     using Talegen.Storage.Net.Core.Properties;
 
@@ -582,7 +584,7 @@ namespace Talegen.Storage.Net.Core.Disk
                 string absolutePath = Path.IsPathRooted(name) ? name : Path.Combine(this.RootPath, name);
 
                 // if is a directory
-                if (Path.EndsInDirectorySeparator(absolutePath) || this.IsDirectory(absolutePath))
+                if (Paths.EndsInDirectorySeparator(absolutePath) || this.IsDirectory(absolutePath))
                 {
                     localAbsoluteDirectoryPaths.Add(absolutePath);
                 }
@@ -691,7 +693,7 @@ namespace Talegen.Storage.Net.Core.Disk
             if (targetIsDirectory)
             {
                 // ensure path suffix
-                absoluteTargetPath = Path.EndsInDirectorySeparator(absoluteTargetPath) ? absoluteTargetPath : absoluteTargetPath + Path.DirectorySeparatorChar;
+                absoluteTargetPath = Paths.EndsInDirectorySeparator(absoluteTargetPath) ? absoluteTargetPath : absoluteTargetPath + Path.DirectorySeparatorChar;
             }
 
             string targetFolder = Path.GetDirectoryName(absoluteTargetPath);
@@ -753,7 +755,7 @@ namespace Talegen.Storage.Net.Core.Disk
             if (targetIsDirectory)
             {
                 // ensure path suffix
-                absoluteTargetPath = Path.EndsInDirectorySeparator(absoluteTargetPath) ? absoluteTargetPath : absoluteTargetPath + Path.DirectorySeparatorChar;
+                absoluteTargetPath = Paths.EndsInDirectorySeparator(absoluteTargetPath) ? absoluteTargetPath : absoluteTargetPath + Path.DirectorySeparatorChar;
             }
 
             if (this.FileExists(absoluteSourcePath))
@@ -786,7 +788,7 @@ namespace Talegen.Storage.Net.Core.Disk
 
                 try
                 {
-                    File.Move(absoluteSourcePath, absoluteTargetPath, overwrite);
+                    File.Move(absoluteSourcePath, absoluteTargetPath);
                 }
                 catch (UnauthorizedAccessException accessEx)
                 {

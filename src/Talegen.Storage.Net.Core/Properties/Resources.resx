@@ -120,6 +120,9 @@
   <data name="ExceptionErrorText" xml:space="preserve">
     <value>An internal unhandled error occurred. The message reported was "{0}".</value>
   </data>
+  <data name="FileContentsCannotBeDeserializedErrorText" xml:space="preserve">
+    <value>The contents of the file '{0}' could not be deserialized to type '{1}'.</value>
+  </data>
   <data name="StorageAccessDeniedErrorText" xml:space="preserve">
     <value>The path "{0}" could not be accessed due to permissions. See "{1}"</value>
   </data>

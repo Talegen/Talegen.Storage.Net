@@ -24,6 +24,7 @@ namespace Talegen.Storage.Net.AzureBlobs
     using Azure;
     using Azure.Storage.Files.Shares;
     using Azure.Storage.Files.Shares.Models;
+    using Newtonsoft.Json;
     using Talegen.Common.Core.Extensions;
     using Talegen.Storage.Net.AzureBlobs.Properties;
     using Talegen.Storage.Net.Core;

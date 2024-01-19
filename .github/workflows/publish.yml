@@ -1,41 +1,77 @@
 name: Publish to Nuget
 on:
-  push:
+ workflow_dispatch: # Allow running the workflow manually from GitHub UI
+ push:
     branches:
-      - main # Default release branch
+      - 'main'   # Run the workflow when pushing to the main branch
+ pull_request:
+   branches:
+     - '*'       # Run the workflow for all pull requests.
+ release:
+   types:
+     - published # Run the workflow when a new GitHub release is published 
+env:
+  DOTNET_SKIP_FIRST_TIME_EXPERIENCE: 1
+  DOTNET_NOLOGO: true
+  NuGetDirectory: ${{github.workspace}}/nuget
+  
 jobs:
-  publish:
-    name: build, pack & publish
+  create_nuget:
+    name: nuget Prep and Pack
     runs-on: windows-latest
     steps:
-      - uses: actions/checkout@v2
+    - uses: actions/checkout@v4
+      with:
+       fetch-depth: 0 # Get all history to allow automatic versioning using MinVer
+    # Install the .NET SDK indicated in the global.json file
+    - name: Setup .NET
+      uses: actions/setup-dotnet@v4
+      with:
+           dotnet-version: '8.0.x'
+           
+    # Create the NuGet package in the folder from the environment variable NuGetDirectory
+    - run: dotnet pack ./src/Talegen.Storage.Net.csproj --configuration Release --output ${{env.NuGetDirectory}}
 
-      - name: Setup dotnet core
-        uses: actions/setup-dotnet@v1
+    # Publish the NuGet package as an artifact, so they can be used in follow-on jobs
+    - uses: actions/upload-artifact@v4
+      with:
+        name: nuget
+        if-no-files-found: error
+        retention-days: 7
+        path: ${{env.NuGetDirectory}}/*.nupkg
+
+  run_test:
+    runs-on: windows-latest
+    steps:
+    - uses: actions/checkout@v4
+    - name: Setup .NET
+      uses: actions/setup-dotnet@v4
+      with:
+           dotnet-version: '8.0.x'
+    - name: Run tests
+      run: dotnet test ./src/Talegen.Storage.Net.sln --configuration Release
+
+  deploy:
+    # Publish only when creating a GitHub Release
+    if: github.event_name == 'release'
+    runs-on: windows-latest
+    needs: [create_nuget,run_test]
+    steps:
+      # Download the NuGet package created in the previous job
+      - uses: actions/download-artifact@v4
         with:
-           dotnet-version: '3.1.x'
+          name: nuget
+          path: ${{env.NuGetDirectory}}
 
-      # Publish Core
-      - name: publish Core on version change
-        id: publish_core_nuget
-        uses: rohith/publish-nuget@v2
+      # Install the .NET SDK
+      - name: Setup .NET core
+        uses: actions/setup-dotnet@v4
         with:
-          # Filepath of the project to be packaged, relative to root of repository
-          PROJECT_FILE_PATH: src/Talegen.Storage.Net.Core/Talegen.Storage.Net.Core.csproj
-          
-          # API key to authenticate with NuGet server
-          NUGET_KEY: ${{secrets.NUGET_API_KEY}}
+           dotnet-version: '8.0.x'
 
-      # Publish Azure Blobs
-      - name: publish Azure Blobs on version change
-        id: publish_azureblobs_nuget
-        uses: rohith/publish-nuget@v2
-        with:
-          # Filepath of the project to be packaged, relative to root of repository
-          PROJECT_FILE_PATH: src/Talegen.Storage.Net.AzureBlobs/Talegen.Storage.Net.AzureBlobs.csproj
-          
-          # API key to authenticate with NuGet server
-          NUGET_KEY: ${{secrets.NUGET_API_KEY}}
-
-          
-          
+      # Publish all NuGet packages to NuGet.org
+      - name: Publish NuGet package(s)
+        run: |
+          foreach($file in (Get-ChildItem "${{env.NuGetDirectory}}" -Recurse -Include *.nupkg)) {
+              dotnet nuget push $file --api-key "${{secrets.NUGET_API_KEY}}" --source https://api.nuget.org/v3/index.json --skip-duplicate
+          }

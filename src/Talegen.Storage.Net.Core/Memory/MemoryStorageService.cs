@@ -1,7 +1,7 @@
 ﻿/*
  *
  * (c) Copyright Talegen, LLC.
- *
+ * 
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
@@ -13,7 +13,6 @@
  * limitations under the License.
  *
 */
-
 namespace Talegen.Storage.Net.Core.Memory
 {
     using System;
@@ -23,7 +22,9 @@ namespace Talegen.Storage.Net.Core.Memory
     using System.Linq;
     using System.Text;
     using System.Text.RegularExpressions;
+    using Newtonsoft.Json;
     using Talegen.Common.Core.Extensions;
+    using Talegen.Common.Core.Storage;
     using Talegen.Storage.Net.Core.Properties;
 
     /// <summary>
@@ -131,7 +132,7 @@ namespace Talegen.Storage.Net.Core.Memory
             if (targetIsDirectory)
             {
                 // ensure path suffix
-                absoluteTargetPath = Path.EndsInDirectorySeparator(absoluteTargetPath) ? absoluteTargetPath : absoluteTargetPath + Path.DirectorySeparatorChar;
+                absoluteTargetPath = Paths.EndsInDirectorySeparator(absoluteTargetPath) ? absoluteTargetPath : absoluteTargetPath + Path.DirectorySeparatorChar;
             }
 
             if (this.FileExists(absoluteSourcePath))
@@ -501,7 +502,7 @@ namespace Talegen.Storage.Net.Core.Memory
             if (targetIsDirectory)
             {
                 // ensure path suffix
-                absoluteTargetPath = Path.EndsInDirectorySeparator(absoluteTargetPath) ? absoluteTargetPath : absoluteTargetPath + Path.DirectorySeparatorChar;
+                absoluteTargetPath = Paths.EndsInDirectorySeparator(absoluteTargetPath) ? absoluteTargetPath : absoluteTargetPath + Path.DirectorySeparatorChar;
             }
 
             if (this.FileExists(absoluteSourcePath))

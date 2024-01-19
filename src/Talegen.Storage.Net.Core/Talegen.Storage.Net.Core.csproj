@@ -1,7 +1,7 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <TargetFramework>netstandard2.1</TargetFramework>
     <Copyright>Copyright (c) Talegen, LLC. All rights reserved.</Copyright>
     <Description>Talegen Storage Abstraction Library for working with folders and files locally or in the cloud.</Description>
     <Company>Talegen, LLC</Company>
@@ -10,11 +10,11 @@
     <RepositoryType>git</RepositoryType>
     <PackageProjectUrl>https://github.com/Talegen/Talegen.Storage.Net</PackageProjectUrl>
     <PackageTags>storage</PackageTags>
-    <PackageReleaseNotes>Updated packages to latest versions.</PackageReleaseNotes>
+    <PackageReleaseNotes>Updated packages to latest versions, adding JSON object Serializer.</PackageReleaseNotes>
     <NeutralLanguage>en</NeutralLanguage>
-    <Version>1.0.4</Version>
-    <AssemblyVersion>1.0.4.0</AssemblyVersion>
-    <FileVersion>1.0.4.0</FileVersion>
+    <Version>1.0.5</Version>
+    <AssemblyVersion>1.0.5.0</AssemblyVersion>
+    <FileVersion>1.0.5.0</FileVersion>
     <EnableNETAnalyzers>true</EnableNETAnalyzers>
     <ApplicationIcon />
     <PackageIcon>logo.png</PackageIcon>
@@ -28,11 +28,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="docfx.console" Version="2.59.4">
-      <PrivateAssets>all</PrivateAssets>
-      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
-    </PackageReference>
-    <PackageReference Include="Talegen.Common.Core" Version="1.0.7" />
+    <PackageReference Include="Talegen.Common.Core" Version="1.0.12" />
   </ItemGroup>
 
   <ItemGroup>
@@ -45,7 +41,7 @@
 
   <ItemGroup>
     <EmbeddedResource Update="Properties\Resources.resx">
-      <Generator>ResXFileCodeGenerator</Generator>
+      <Generator>PublicResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
   </ItemGroup>

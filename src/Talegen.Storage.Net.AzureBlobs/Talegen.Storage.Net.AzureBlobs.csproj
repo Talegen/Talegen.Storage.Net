@@ -1,7 +1,7 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <TargetFramework>netstandard2.1</TargetFramework>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <Authors>Talegen, LLC</Authors>
     <Description>Azure Blob Storage Abstraction for Talegen Storage Library.</Description>
@@ -12,7 +12,7 @@
     <RepositoryUrl>https://github.com/Talegen/Talegen.Storage.Net</RepositoryUrl>
     <RepositoryType>git</RepositoryType>
     <PackageTags>storage azure</PackageTags>
-    <PackageReleaseNotes>Updated packages to latest versions.</PackageReleaseNotes>
+    <PackageReleaseNotes>Updated packages to latest versions, adding JSON object Serializer</PackageReleaseNotes>
     <NeutralLanguage>en</NeutralLanguage>
     <ApplicationIcon />
     <EnableNETAnalyzers>true</EnableNETAnalyzers>
@@ -26,12 +26,8 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Azure.Storage.Blobs" Version="12.16.0" />
-    <PackageReference Include="Azure.Storage.Files.Shares" Version="12.14.0" />
-    <PackageReference Include="docfx.console" Version="2.59.4">
-      <PrivateAssets>all</PrivateAssets>
-      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
-    </PackageReference>
+    <PackageReference Include="Azure.Storage.Blobs" Version="12.19.1" />
+    <PackageReference Include="Azure.Storage.Files.Shares" Version="12.17.1" />
   </ItemGroup>
 
   <ItemGroup>

@@ -18,9 +18,11 @@ namespace Talegen.Storage.Net.Tests
 {
     using System;
     using System.Collections.Generic;
+    using System.Data;
     using System.IO;
     using System.Linq;
     using System.Text;
+    using Newtonsoft.Json;
     using Talegen.Common.Core.Extensions;
     using Talegen.Storage.Net.Core;
     using Xunit;
@@ -75,6 +77,11 @@ namespace Talegen.Storage.Net.Tests
         /// Defines another test file name.
         /// </summary>
         private const string FileNameDelta = "delta.txt";
+
+        /// <summary>
+        /// Defines bad JSON data.
+        /// </summary>
+        private const string BadData = "junk";
 
         /// <summary>
         /// Initializes a new instance of the <see cref="StorageTestsBase" /> class.
@@ -804,7 +811,7 @@ namespace Talegen.Storage.Net.Tests
             }
             else
             {
-                if (targetFilePath == null)
+                if (string.IsNullOrWhiteSpace(targetFilePath))
                 {
                     Assert.Throws<ArgumentNullException>(() => this.StorageService.WriteBinaryFile(targetFilePath, stream));
                 }
@@ -816,6 +823,60 @@ namespace Talegen.Storage.Net.Tests
 
             // clean-up
             this.CleanupTests();
+        }
+
+        /// <summary>
+        /// Test serialization.
+        /// </summary>
+        [Fact]
+        public void TestSerialization()
+        {
+            SerializerTestObject testObject = SerializerTestObject.Default;
+            string goodData = JsonConvert.SerializeObject(testObject);
+            string existingTargetPath = Path.Combine(ExistingFolderName, FileNameAlpha);
+            string badTargetPath = string.Empty;
+            string nonExistingTargetPath = Path.Combine(NonExistingFolderName, FileNameBeta);
+            
+            // create a folder and existing file.
+            this.StorageService.CreateDirectory(ExistingFolderName, true);
+            this.StorageService.WriteTextFile(existingTargetPath, BadData);
+
+            // test serializing to an existing file
+            Assert.True(this.StorageService.SerializeToFile(existingTargetPath, testObject));
+
+            var contents = this.StorageService.ReadTextFile(existingTargetPath);
+            Assert.Equal(goodData, contents);
+
+            // test bad path
+            Assert.Throws<ArgumentNullException>(() => this.StorageService.SerializeToFile(badTargetPath, testObject));
+        }
+
+        /// <summary>
+        /// Test Deserialization.
+        /// </summary>
+        [Fact]
+        public void TestDeserialization()
+        {
+            string badDataTargetPath = Path.Combine(ExistingFolderName, FileNameAlpha);
+            string badTargetPath = string.Empty;
+            string nonExistingTargetPath = Path.Combine(NonExistingFolderName, FileNameBeta);
+            string expectedData = JsonConvert.SerializeObject(SerializerTestObject.Default);
+
+            // create a folder and existing file.
+            this.StorageService.CreateDirectory(ExistingFolderName, true);
+            this.StorageService.WriteTextFile(badDataTargetPath, BadData);
+
+            // check error on bad serialization data
+            Assert.Throws<StorageException>(() => this.StorageService.DeserializeFromFile<SerializerTestObject>(badDataTargetPath));
+
+            // create a good JSON file
+            this.StorageService.WriteTextFile(nonExistingTargetPath, expectedData);
+
+            // deserialize good JSON file
+            var obj = this.StorageService.DeserializeFromFile<SerializerTestObject>(nonExistingTargetPath);
+            
+            // test to ensure the good JSON was deserialized and matches expectation.
+            Assert.Equivalent(SerializerTestObject.Default, obj);
         }
     }
 }
