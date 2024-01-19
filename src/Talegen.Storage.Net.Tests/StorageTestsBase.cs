@@ -835,7 +835,7 @@ namespace Talegen.Storage.Net.Tests
             string goodData = JsonConvert.SerializeObject(testObject);
             string existingTargetPath = Path.Combine(ExistingFolderName, FileNameAlpha);
             string badTargetPath = string.Empty;
-            string nonExistingTargetPath = Path.Combine(NonExistingFolderName, FileNameBeta);
+            string nonExistingTargetPath = Path.Combine(ExistingFolderName, FileNameBeta);
             
             // create a folder and existing file.
             this.StorageService.CreateDirectory(ExistingFolderName, true);
@@ -859,7 +859,7 @@ namespace Talegen.Storage.Net.Tests
         {
             string badDataTargetPath = Path.Combine(ExistingFolderName, FileNameAlpha);
             string badTargetPath = string.Empty;
-            string nonExistingTargetPath = Path.Combine(NonExistingFolderName, FileNameBeta);
+            string nonExistingTargetPath = Path.Combine(ExistingFolderName, FileNameBeta);
             string expectedData = JsonConvert.SerializeObject(SerializerTestObject.Default);
 
             // create a folder and existing file.
