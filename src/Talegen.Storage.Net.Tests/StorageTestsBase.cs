@@ -124,6 +124,46 @@ namespace Talegen.Storage.Net.Tests
         }
 
         /// <summary>
+        /// This method is used to verify the temp path and file generation methods.
+        /// </summary>
+        [Fact]
+        public void VerifyTempPathTests()
+        {
+            string tempPath = this.StorageService.TempPath;
+            Assert.NotEmpty(tempPath);
+
+            Assert.False(this.StorageService.DirectoryExists(tempPath));
+
+            string tempFilename = this.StorageService.GenerateTempFileName("tmp");
+            Assert.NotEmpty(tempFilename);
+            Assert.False(this.StorageService.FileExists(tempFilename));
+            Assert.True(Path.HasExtension(tempFilename)); 
+            Assert.EndsWith("tmp", tempFilename);
+            Assert.False(Path.IsPathRooted(tempFilename));
+
+            string tempFilenameWithPath = this.StorageService.GenerateTempFileName("tmp", true);
+            Assert.NotEmpty(tempFilenameWithPath);
+            Assert.False(this.StorageService.FileExists(tempFilenameWithPath));
+            Assert.True(Path.HasExtension(tempFilenameWithPath));
+            Assert.EndsWith("tmp", tempFilenameWithPath);
+            Assert.True(Path.IsPathRooted(tempFilenameWithPath));
+
+            string tempFolder = this.StorageService.GenerateTempDirectory();
+            Assert.NotEmpty(tempFolder);
+            Assert.False(this.StorageService.DirectoryExists(tempFolder));
+            Assert.True(Path.IsPathRooted(tempFolder));
+
+            string tempFolderWithGuid = this.StorageService.GenerateTempDirectory(true);
+            Assert.NotEmpty(tempFolderWithGuid);
+            Assert.False(this.StorageService.DirectoryExists(tempFolderWithGuid)); 
+            string folderName = Path.GetFileName(tempFolderWithGuid);
+            Assert.True(Guid.TryParse(folderName, out _));
+
+            // clean-up
+            this.CleanupTests();
+        }
+
+        /// <summary>
         /// Create directory tests.
         /// </summary>
         /// <param name="folderName">Name of the folder.</param>

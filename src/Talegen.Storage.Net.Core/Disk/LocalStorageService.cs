@@ -66,6 +66,11 @@ namespace Talegen.Storage.Net.Core.Disk
         public string RootPath { get; set; }
 
         /// <summary>
+        /// Gets the temporary path for the current operating system.
+        /// </summary>
+        public string TempPath => Path.Combine(this.RootPath, "Temp");
+
+        /// <summary>
         /// This method is used to initialize a storage service with the specified settings provided within the <see cref="IStorageContext" /> object.
         /// </summary>
         /// <param name="storageContext">Contains the settings used to initialize the storage service.</param>
@@ -95,6 +100,27 @@ namespace Talegen.Storage.Net.Core.Disk
                 // TODO: throw error that local folder must be specified.
                 throw new ArgumentOutOfRangeException(nameof(storageContext.RootWorkspaceLocalFolderPath));
             }
+        }
+
+        /// <summary>
+        /// This method is used to generate a temporary file name.
+        /// </summary>
+        /// <param name="extension">Contains an optional extension.</param>
+        /// <param name="includePath">Contains a value indicating whether a temporary path should be generated and included in the result.</param>
+        /// <returns>Returns the generated file name.</returns>
+        public string GenerateTempFileName(string extension = null, bool includePath = false)
+        {
+            return includePath ? Path.Combine(this.GenerateTempDirectory(), Path.GetRandomFileName() + extension) : Path.GetRandomFileName() + extension;
+        }
+
+        /// <summary>
+        /// This method is used to generate a temporary directory.
+        /// </summary>
+        /// <param name="useGuidNames">Contains a value indicating whether the random sub-folder should be a GUID.</param>
+        /// <returns>Returns a temporary directory created inside the root path.</returns>
+        public string GenerateTempDirectory(bool useGuidNames = false)
+        {
+            return Path.Combine(this.TempPath, useGuidNames ? Guid.NewGuid().ToString() : Path.GetRandomFileName());
         }
 
         /// <summary>

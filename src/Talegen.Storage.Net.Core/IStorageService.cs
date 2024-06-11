@@ -35,6 +35,26 @@ namespace Talegen.Storage.Net.Core
         string RootPath { get; }
 
         /// <summary>
+        /// Gets the temporary path for the instance of the storage service.
+        /// </summary>
+        string TempPath { get; }
+
+        /// <summary>
+        /// This method is used to generate a temporary file name.
+        /// </summary>
+        /// <param name="extension">Contains an optional extension.</param>
+        /// <param name="includePath">Contains a value indicating whether a temporary path should be generated and included in the result.</param>
+        /// <returns>Returns the generated file name.</returns>
+        string GenerateTempFileName(string extension = null, bool includePath = false);
+
+        /// <summary>
+        /// This method is used to generate a temporary directory.
+        /// </summary>
+        /// <param name="useGuidNames">Contains a value indicating whether the directory name should be a GUID.</param>
+        /// <returns>Returns a temporary directory created inside the root path.</returns>
+        string GenerateTempDirectory(bool useGuidNames = false);
+
+        /// <summary>
         /// This method is used to create a temporary directory within the Inspire application path.
         /// </summary>
         /// <param name="subFolderName">Contains a sub-folder that will be included in the working directory path.</param>

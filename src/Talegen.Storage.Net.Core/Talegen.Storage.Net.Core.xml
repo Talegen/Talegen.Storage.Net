@@ -119,11 +119,31 @@
             Gets or sets the root folder path for this service instance.
             </summary>
         </member>
+        <member name="P:Talegen.Storage.Net.Core.Disk.LocalStorageService.TempPath">
+            <summary>
+            Gets the temporary path for the current operating system.
+            </summary>
+        </member>
         <member name="M:Talegen.Storage.Net.Core.Disk.LocalStorageService.Initialize(Talegen.Storage.Net.Core.Disk.LocalStorageContext)">
             <summary>
             This method is used to initialize a storage service with the specified settings provided within the <see cref="T:Talegen.Storage.Net.Core.IStorageContext" /> object.
             </summary>
             <param name="storageContext">Contains the settings used to initialize the storage service.</param>
+        </member>
+        <member name="M:Talegen.Storage.Net.Core.Disk.LocalStorageService.GenerateTempFileName(System.String,System.Boolean)">
+            <summary>
+            This method is used to generate a temporary file name.
+            </summary>
+            <param name="extension">Contains an optional extension.</param>
+            <param name="includePath">Contains a value indicating whether a temporary path should be generated and included in the result.</param>
+            <returns>Returns the generated file name.</returns>
+        </member>
+        <member name="M:Talegen.Storage.Net.Core.Disk.LocalStorageService.GenerateTempDirectory(System.Boolean)">
+            <summary>
+            This method is used to generate a temporary directory.
+            </summary>
+            <param name="useGuidNames">Contains a value indicating whether the random sub-folder should be a GUID.</param>
+            <returns>Returns a temporary directory created inside the root path.</returns>
         </member>
         <member name="M:Talegen.Storage.Net.Core.Disk.LocalStorageService.CreateDirectory(System.String,System.Boolean)">
             <summary>
@@ -333,6 +353,26 @@
             <summary>
             Gets or sets the storage path for the instance of the storage service.
             </summary>
+        </member>
+        <member name="P:Talegen.Storage.Net.Core.IStorageService.TempPath">
+            <summary>
+            Gets the temporary path for the instance of the storage service.
+            </summary>
+        </member>
+        <member name="M:Talegen.Storage.Net.Core.IStorageService.GenerateTempFileName(System.String,System.Boolean)">
+            <summary>
+            This method is used to generate a temporary file name.
+            </summary>
+            <param name="extension">Contains an optional extension.</param>
+            <param name="includePath">Contains a value indicating whether a temporary path should be generated and included in the result.</param>
+            <returns>Returns the generated file name.</returns>
+        </member>
+        <member name="M:Talegen.Storage.Net.Core.IStorageService.GenerateTempDirectory(System.Boolean)">
+            <summary>
+            This method is used to generate a temporary directory.
+            </summary>
+            <param name="useGuidNames">Contains a value indicating whether the directory name should be a GUID.</param>
+            <returns>Returns a temporary directory created inside the root path.</returns>
         </member>
         <member name="M:Talegen.Storage.Net.Core.IStorageService.CreateDirectory(System.String,System.Boolean)">
             <summary>
@@ -561,11 +601,31 @@
             Gets or sets the root folder path for this service instance.
             </summary>
         </member>
+        <member name="P:Talegen.Storage.Net.Core.Memory.MemoryStorageService.TempPath">
+            <summary>
+            Gets the temporary path for the storage service.
+            </summary>
+        </member>
         <member name="M:Talegen.Storage.Net.Core.Memory.MemoryStorageService.Initialize(Talegen.Storage.Net.Core.Memory.MemoryStorageContext)">
             <summary>
             This method is used to initialize a storage service with the specified settings provided within the <see cref="T:Talegen.Storage.Net.Core.Memory.MemoryStorageContext" /> object.
             </summary>
             <param name="storageContext">Contains the settings used to initialize the storage service.</param>
+        </member>
+        <member name="M:Talegen.Storage.Net.Core.Memory.MemoryStorageService.GenerateTempFileName(System.String,System.Boolean)">
+            <summary>
+            This method is used to generate a temporary file name.
+            </summary>
+            <param name="extension">Contains an optional extension.</param>
+            <param name="includePath">Contains a value indicating whether a temporary path should be generated and included in the result.</param>
+            <returns>Returns the generated file name.</returns>
+        </member>
+        <member name="M:Talegen.Storage.Net.Core.Memory.MemoryStorageService.GenerateTempDirectory(System.Boolean)">
+            <summary>
+            This method is used to generate a temporary directory.
+            </summary>
+            <param name="useGuidNames">Contains a value indicating whether the random sub-folder should be a GUID.</param>
+            <returns>Returns a temporary directory created inside the root path.</returns>
         </member>
         <member name="M:Talegen.Storage.Net.Core.Memory.MemoryStorageService.CopyFile(System.String,System.String,System.Boolean)">
             <summary>

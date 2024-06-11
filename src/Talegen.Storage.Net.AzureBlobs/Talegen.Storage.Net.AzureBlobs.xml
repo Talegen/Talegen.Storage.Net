@@ -117,11 +117,31 @@
             Gets or sets the root folder path for this service instance.
             </summary>
         </member>
+        <member name="P:Talegen.Storage.Net.AzureBlobs.AzureBlobStorageService.TempPath">
+            <summary>
+            Gets the temporary path for this service instance.
+            </summary>
+        </member>
         <member name="M:Talegen.Storage.Net.AzureBlobs.AzureBlobStorageService.Initialize(Talegen.Storage.Net.AzureBlobs.AzureBlobStorageContext)">
             <summary>
             This method is used to initialize a storage service with the specified settings provided within the <see cref="T:Talegen.Storage.Net.Core.IStorageContext" /> object.
             </summary>
             <param name="storageContext">Contains the settings used to initialize the storage service.</param>
+        </member>
+        <member name="M:Talegen.Storage.Net.AzureBlobs.AzureBlobStorageService.GenerateTempFileName(System.String,System.Boolean)">
+            <summary>
+            This method is used to generate a temporary file name.
+            </summary>
+            <param name="extension">Contains an optional extension.</param>
+            <param name="includePath">Contains a value indicating whether a temporary path should be generated and included in the result.</param>
+            <returns>Returns the generated file name.</returns>
+        </member>
+        <member name="M:Talegen.Storage.Net.AzureBlobs.AzureBlobStorageService.GenerateTempDirectory(System.Boolean)">
+            <summary>
+            This method is used to generate a temporary directory.
+            </summary>
+            <param name="useGuidNames">Contains a value indicating whether the random sub-folder should be a GUID.</param>
+            <returns>Returns a temporary directory created inside the root path.</returns>
         </member>
         <member name="M:Talegen.Storage.Net.AzureBlobs.AzureBlobStorageService.CreateDirectory(System.String,System.Boolean)">
             <summary>
