@@ -22,7 +22,6 @@ namespace Talegen.Storage.Net.Core.Memory
     using System.Linq;
     using System.Text;
     using System.Text.RegularExpressions;
-    using Newtonsoft.Json;
     using Talegen.Common.Core.Extensions;
     using Talegen.Common.Core.Storage;
     using Talegen.Storage.Net.Core.Properties;

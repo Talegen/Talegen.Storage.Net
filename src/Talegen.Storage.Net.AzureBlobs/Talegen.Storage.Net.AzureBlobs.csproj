@@ -12,13 +12,13 @@
     <RepositoryUrl>https://github.com/Talegen/Talegen.Storage.Net</RepositoryUrl>
     <RepositoryType>git</RepositoryType>
     <PackageTags>storage azure</PackageTags>
-    <PackageReleaseNotes>Updated packages to latest versions, added temp file and path generation methods.</PackageReleaseNotes>
+    <PackageReleaseNotes>Updated Dependencies.</PackageReleaseNotes>
     <NeutralLanguage>en</NeutralLanguage>
     <ApplicationIcon />
     <EnableNETAnalyzers>true</EnableNETAnalyzers>
-    <Version>1.0.6</Version>
-    <AssemblyVersion>1.0.6.0</AssemblyVersion>
-    <FileVersion>1.0.6.0</FileVersion>
+    <Version>1.0.7</Version>
+    <AssemblyVersion>1.0.7.0</AssemblyVersion>
+    <FileVersion>1.0.7.0</FileVersion>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
@@ -26,8 +26,8 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Azure.Storage.Blobs" Version="12.20.0" />
-    <PackageReference Include="Azure.Storage.Files.Shares" Version="12.18.0" />
+    <PackageReference Include="Azure.Storage.Blobs" Version="12.22.0" />
+    <PackageReference Include="Azure.Storage.Files.Shares" Version="12.20.0" />
   </ItemGroup>
 
   <ItemGroup>

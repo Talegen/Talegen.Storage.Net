@@ -19,9 +19,8 @@ namespace Talegen.Storage.Net.Core.Disk
     using System.Collections.Generic;
     using System.IO;
     using System.Linq;
-    using System.Text;
+    using System.Text.Json;
     using System.Threading.Tasks;
-    using Newtonsoft.Json;
     using Talegen.Common.Core.Extensions;
     using Talegen.Common.Core.Storage;
     using Talegen.Common.Core.Threading;

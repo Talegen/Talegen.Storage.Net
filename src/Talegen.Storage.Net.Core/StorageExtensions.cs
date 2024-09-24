@@ -18,7 +18,6 @@ namespace Talegen.Storage.Net.Core
     using System;
     using System.IO;
     using System.Text;
-    using Newtonsoft.Json;
     using Talegen.Storage.Net.Core.Properties;
 
     /// <summary>
@@ -42,7 +41,7 @@ namespace Talegen.Storage.Net.Core
                 throw new ArgumentNullException(nameof(storageService));
             }
             
-            string contents = JsonConvert.SerializeObject(obj);
+            string contents = System.Text.Json.JsonSerializer.Serialize(obj);
             return storageService.WriteTextFile(filePath, contents, encoding);
         }
 
@@ -68,9 +67,9 @@ namespace Talegen.Storage.Net.Core
             {
                 try
                 {
-                    result = JsonConvert.DeserializeObject<T>(contents);
+                    result = System.Text.Json.JsonSerializer.Deserialize<T>(contents);
                 }
-                catch (JsonReaderException readEx)
+                catch (System.Text.Json.JsonException readEx)
                 {
                     throw new StorageException(string.Format(Resources.FileContentsCannotBeDeserializedErrorText, filePath, nameof(T)), readEx);
                 }
